@@ -1,7 +1,5 @@
 *.o
 TAGS
-*.o
-TAGS
 autom4te.cache
 Makefile
 Makefile.in
@@ -14,7 +12,6 @@ config.status
 libtool
 m4/generated
 m4/config
-makefile.dependencies
 .deps
 .libs
 *.lo
@@ -25,7 +22,6 @@ makefile.dependencies
 *.d_fat_o
 po/*.msg
 bin
-src/makefile
 src/pd
 src/pd-watchdog
 src/pdreceive
