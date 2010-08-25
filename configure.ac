@@ -212,24 +212,30 @@ if test x$fftw = xyes; then
 fi
 AM_CONDITIONAL(FFTW, test x$fftw = xyes)
 
+dnl are any of these actually needed on any platform we use?
+dnl Currently, our build system does not actually do anything with the
+dnl results of these tests, so there is not a lot of reason to include
+dnl them, and they sure do slow down the build process.
+
 # Checks for header files.
 AC_FUNC_ALLOCA
-AC_CHECK_HEADERS([fcntl.h limits.h malloc.h netdb.h netinet/in.h stddef.h stdlib.h string.h sys/ioctl.h sys/param.h sys/socket.h sys/soundcard.h sys/time.h sys/timeb.h unistd.h])
+AC_CHECK_HEADERS([sys/soundcard.h unistd.h bstring.h])
+#AC_CHECK_HEADERS([fcntl.h limits.h malloc.h netdb.h netinet/in.h stddef.h stdlib.h string.h sys/ioctl.h sys/param.h sys/socket.h sys/soundcard.h sys/time.h sys/timeb.h unistd.h])
 
 # Checks for typedefs, structures, and compiler characteristics.
-AC_TYPE_INT16_T
-AC_TYPE_INT32_T
-AC_TYPE_OFF_T
-AC_TYPE_PID_T
-AC_TYPE_SIZE_T
+#AC_TYPE_INT16_T
+#AC_TYPE_INT32_T
+#AC_TYPE_OFF_T
+#AC_TYPE_PID_T
+#AC_TYPE_SIZE_T
 
 # Checks for library functions.
-AC_FUNC_ERROR_AT_LINE
-AC_FUNC_FORK
-AC_FUNC_MALLOC
-AC_FUNC_REALLOC
-AC_TYPE_SIGNAL
-AC_CHECK_FUNCS([dup2 floor getcwd gethostbyname gettimeofday memmove memset pow regcomp select socket sqrt strchr strerror strrchr strstr strtol])
+#AC_FUNC_ERROR_AT_LINE
+#AC_FUNC_FORK
+#AC_FUNC_MALLOC
+#AC_FUNC_REALLOC
+#AC_TYPE_SIGNAL
+#AC_CHECK_FUNCS([dup2 floor getcwd gethostbyname gettimeofday memmove memset pow regcomp select socket sqrt strchr strerror strrchr strstr strtol])
 
 # check for programs
 AC_CHECK_PROG(HAVE_MSGFMT, [msgfmt], yes, no)
@@ -267,6 +273,6 @@ AS_IF([test x$windows = xyes], [
     AS_IF([test x$asio = xno], [
 	    AC_MSG_RESULT(
 ASIO SDK not found! You need to download asiosdk2.2.zip from: 
-    http://www.steinberg.net/en/company/3rd_party_developer.html)])])
+    http://www.steinberg.net/en/company/developer.html)])])
 
 
