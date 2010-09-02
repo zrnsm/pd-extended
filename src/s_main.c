@@ -501,7 +501,17 @@ void sys_findprogdir(char *progname)
 #ifdef MSW
     sys_libdir = gensym(sbuf2);
 #else
-    strncpy(sbuf, sbuf2, MAXPDSTRING-30);
+    /* normalize all paths to absolute */
+    if (sys_isabsolutepath(sbuf2))
+        strncpy(sbuf, sbuf2, MAXPDSTRING-30);
+    else
+    {
+        char buf[MAXPDSTRING];
+        getcwd(buf, MAXPDSTRING-30);
+        strncat(buf, "/", MAXPDSTRING-30);
+        strncat(buf, sbuf2, MAXPDSTRING-30);
+        strncpy(sbuf2, buf, MAXPDSTRING-30);
+    }
     sbuf[MAXPDSTRING-30] = 0;
     strcat(sbuf, "/lib/pd");
     if (stat(sbuf, &statbuf) >= 0)
