@@ -31,7 +31,7 @@ pd_SOURCES = g_canvas.c g_graph.c g_text.c g_rtext.c g_array.c g_template.c \
     x_acoustics.c d_soundfile.c \
 	e_gfxstub.c e_dac.c
 
-pd_includedir = ${includedir}/pd
+pd_includedir = ${includedir}/pdextended
 pd_include_HEADERS = m_pd.h m_imp.h g_canvas.h s_stuff.h g_all_guis.h
 # compatibility: m_pd.h also goes into ${includedir}/
 include_HEADERS = m_pd.h
