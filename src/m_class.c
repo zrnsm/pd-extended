@@ -303,6 +303,7 @@ void class_addmethod(t_class *c, t_method fn, t_symbol *sel,
     }
     else
     {
+        /* Pd-extended doesn't use the aliasing automagic
         int i;
         for (i = 0; i < c->c_nmethod; i++)
             if (c->c_methods[i].me_name == sel)
@@ -316,6 +317,7 @@ void class_addmethod(t_class *c, t_method fn, t_symbol *sel,
             else post("warning: old method '%s' for class '%s' renamed '%s'",
                 sel->s_name, c->c_name->s_name, nbuf);
         }
+        */
         c->c_methods = t_resizebytes(c->c_methods,
             c->c_nmethod * sizeof(*c->c_methods),
             (c->c_nmethod + 1) * sizeof(*c->c_methods));
