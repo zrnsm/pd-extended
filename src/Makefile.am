@@ -25,11 +25,11 @@ pd_SOURCES = g_canvas.c g_graph.c g_text.c g_rtext.c g_array.c g_template.c \
     s_loader.c s_path.c s_entry.c s_audio.c s_midi.c \
     s_utf8.c \
     d_ugen.c d_ctl.c d_arithmetic.c d_osc.c d_filter.c \
-    d_math.c d_fft.c d_array.c d_global.c \
+    d_array.c d_global.c \
     d_resample.c \
     x_arithmetic.c x_connective.c x_midi.c \
     x_acoustics.c d_soundfile.c \
-	e_gfxstub.c e_dac.c
+    e_fft.c e_sqrt.c e_gfxstub.c e_dac.c
 
 pd_includedir = ${includedir}/pdextended
 pd_include_HEADERS = m_pd.h m_imp.h g_canvas.h s_stuff.h g_all_guis.h
