@@ -28,6 +28,8 @@ void d_osc_setup(void);
 void d_soundfile_setup(void);
 void d_ugen_setup(void);
 void gfxstub_setup(void);
+/* kludge until there is a declare API for externals, hans@eds.org */
+void import_setup(void);
 
 void conf_init(void)
 {
@@ -52,5 +54,6 @@ void conf_init(void)
     d_soundfile_setup();
     d_ugen_setup();
     gfxstub_setup();
+    import_setup();
 }
 
