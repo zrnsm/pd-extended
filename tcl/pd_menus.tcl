@@ -288,22 +288,17 @@ proc ::pd_menus::build_window_menu {mymenu} {
 }
 
 proc ::pd_menus::build_help_menu {mymenu} {
+    variable accelerator
     if {$::windowingsystem ne "aqua"} {
         $mymenu add command -label [_ "About Pd"] -command {menu_aboutpd} 
     }
-    $mymenu add command -label [_ "HTML Manual..."] \
-        -command {menu_doc_open doc/1.manual index.htm}
-    $mymenu add command -label [_ "Browser..."] \
-        -command {menu_helpbrowser} 
+    $mymenu add command -label [_ "Start Here!"] \
+        -command {menu_openfile {http://puredata.info/docs/}} 
+    $mymenu add command -label [_ "Help Browser..."] \
+        -command {menu_helpbrowser} -accelerator "$accelerator+B"
     $mymenu add  separator
-    $mymenu add command -label [_ "puredata.info"] \
-        -command {menu_openfile {http://puredata.info}} 
     $mymenu add command -label [_ "Report a bug"] -command {menu_openfile \
         {http://sourceforge.net/tracker/?func=add&group_id=55736&atid=478070}} 
-    $mymenu add  separator
-    $mymenu add command -label [_ "Tcl prompt"] -command \
-        {::pdwindow::create_tcl_entry} 
-
 }
 
 #------------------------------------------------------------------------------#
