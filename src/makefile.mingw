@@ -200,9 +200,6 @@ pd.res: pd.rc
 #	$(DLLWRAP) --export-all-symbols --output-def vst.def \
 #	--output-lib=vst.a --dllname=vstschedlib.dll s_audio_vst.o pd.a $(LIBS)
 
-externs: 
-	make -C ../extra all
-
 # kludge to put stuff into the pd/bin dir for testing
 testbin: $(PDEXEC) $(PDDLL) pd.com
 	echo "Copying files to $(BIN_DIR)"
@@ -217,8 +214,6 @@ ABOUT_FILE=$(DESTDIR)$(pddocdir)/1.manual/1.introduction.txt
 install:  all
 # locales
 	make libpddir=$(libpddir) -C ../po install
-# install extra stuff
-	make libpddir=$(libpddir) -C ../extra install
 # the real install
 	install -d $(DESTDIR)$(bindir)
 	install -p *.tcl $(DESTDIR)$(bindir)/
@@ -242,12 +237,6 @@ install:  all
 	cat $(ABOUT_FILE).tmp | sed 's|PD_VERSION|Pd version $(PD_VERSION)|' \
 		> $(ABOUT_FILE)
 	rm $(ABOUT_FILE).tmp
-	install -d $(DESTDIR)$(libpddir)/extra
-	install -p $(pd_src)/extra/*/*.dll $(DESTDIR)$(libpddir)/extra
-	install -p $(pd_src)/extra/*.pd $(DESTDIR)$(libpddir)/extra
-	install -d $(DESTDIR)$(pddocdir)/5.reference
-	install -p ../extra/*/*.pd $(DESTDIR)$(pddocdir)/5.reference
-	install -p ../extra/*-help.pd $(DESTDIR)$(pddocdir)/5.reference
 	install -d $(DESTDIR)$(prefix)/startup
 	install -p $(pd_src)/startup/*.* $(DESTDIR)$(prefix)/startup
 	install -d $(DESTDIR)$(prefix)/startup/disabled
@@ -263,7 +252,6 @@ clean:
 	-rm -f -- *.o *.a *.def
 	-rm -f -- pd*.exe pd*.dll pd.com
 	-rm -f -- $(OBJ) $(GOBJ) $(SROBJ) $(PAOBJ) $(ASIOOBJ) $(PMOBJ)
-	-rm -f -- $(pd_src)/extra/*/*.dll $(pd_src)/extra/*/*.o
 	-rm -f makefile.dependencies
 
 distclean: clean
