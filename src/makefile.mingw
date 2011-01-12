@@ -212,11 +212,11 @@ testbin: $(PDEXEC) $(PDDLL) pd.com
 
 ABOUT_FILE=$(DESTDIR)$(pddocdir)/1.manual/1.introduction.txt
 install:  all
-# locales
-	make libpddir=$(libpddir) -C ../po install
+# locales don't have a MinGW makefile yet, but the pd-gui-rewrite one could work
+#	make libpddir=$(libpddir) -C ../po install
 # the real install
-	install -d $(DESTDIR)$(bindir)
-	install -p *.tcl $(DESTDIR)$(bindir)/
+	install -d $(DESTDIR)$(bindir)/../tcl/
+	install -p ../tcl/*.tcl $(DESTDIR)$(bindir)/../tcl/
 	install -p $(PDEXEC) $(DESTDIR)$(bindir)/$(PDEXEC)
 	install -p pd.com $(DESTDIR)$(bindir)/pd.com
 	install -p pd.dll $(DESTDIR)$(bindir)/pd.dll
@@ -237,13 +237,11 @@ install:  all
 	cat $(ABOUT_FILE).tmp | sed 's|PD_VERSION|Pd version $(PD_VERSION)|' \
 		> $(ABOUT_FILE)
 	rm $(ABOUT_FILE).tmp
-	install -d $(DESTDIR)$(prefix)/startup
-	install -p $(pd_src)/startup/*.* $(DESTDIR)$(prefix)/startup
-	install -d $(DESTDIR)$(prefix)/startup/disabled
-	install -p $(pd_src)/startup/disabled/*.* $(DESTDIR)$(prefix)/startup/disabled
 	install -d $(DESTDIR)$(includedir)
-	install -p m_pd.h $(DESTDIR)$(includedir)/m_pd.h
-	install -p s_stuff.h $(DESTDIR)$(includedir)/s_stuff.h
+	install -p m_pd.h $(DESTDIR)$(includedir)
+	install -d $(DESTDIR)$(includedir)/pdextended
+	install -p g_all_guis.h g_canvas.h m_imp.h m_pd.h s_stuff.h \
+		$(DESTDIR)$(includedir)/pdextended
 	@echo "Pd install succeeded."
 
 
