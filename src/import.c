@@ -169,8 +169,11 @@ void import_setup(void)
     class_addmethod(import_class,(t_method) import_rewind,
                     gensym("rewind"), 0);
 
-    post("[import] %s",version);  
-    post("\t[import] is still in development, the interface could change!");
-    post("\tcompiled against Pd version %d.%d.%d", PD_MAJOR_VERSION, 
-         PD_MINOR_VERSION, PD_BUGFIX_VERSION);
+    if(sys_verbose) 
+    {
+        post("[import] %s", version);  
+        post("\t[import] is still in development, the interface could change!");
+        post("\tcompiled against Pd version %d.%d.%d", PD_MAJOR_VERSION, 
+             PD_MINOR_VERSION, PD_BUGFIX_VERSION);
+    }
 }
