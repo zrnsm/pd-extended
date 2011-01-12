@@ -71,23 +71,22 @@ static void load_arguments(t_import *x, int argc, t_atom *argv)
     while (argc--) {
         switch (argv->a_type) {
         case A_FLOAT:
-            pd_error(x, "[import]: floats not supported: '%f'",
+            logpost(x, 1, "[import]: floats not supported: '%f'",
                      atom_getfloat(argv));
             break;
         case A_SYMBOL:
             library_name = atom_getsymbol(argv);
             if (!load_library(x,library_name->s_name))
-                pd_error(x, "[import]: can't load library in '%s'", 
+                logpost(x, 1, "[import]: can't load library in '%s'",
                          library_name->s_name);
             else
             {
                 loaded_libs = namelist_append(loaded_libs, library_name->s_name, 0);
-                if(sys_verbose)
-                    post("[import] loaded library: '%s'", library_name->s_name);
+                logpost(x, 3, "[import] loaded library: '%s'", library_name->s_name);
             }
             break;
         default:
-            pd_error(x, "[import]: Unsupported atom type");
+            logpost(x, 1, "[import]: Unsupported atom type");
         }
         argv++;
     }
@@ -169,8 +168,8 @@ void import_setup(void)
     class_addmethod(import_class,(t_method) import_rewind,
                     gensym("rewind"), 0);
 
-    post("[import] %s",version);  
-    post("\t[import] is still in development, the interface could change!");
-    post("\tcompiled against Pd version %d.%d.%d", PD_MAJOR_VERSION, 
-         PD_MINOR_VERSION, PD_BUGFIX_VERSION);
+    logpost(NULL, 3, "[import] %s", version);
+    logpost(NULL, 4, "\t[import] is still in development, the interface could change!");
+    logpost(NULL, 4, "\tcompiled against Pd version %d.%d.%d", PD_MAJOR_VERSION,
+            PD_MINOR_VERSION, PD_BUGFIX_VERSION);
 }
