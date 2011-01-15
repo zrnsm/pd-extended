@@ -147,7 +147,7 @@ endif
 #  ------------------ targets ------------------------------------
 #
 
-.PHONY: all install clean externs testbin
+.PHONY: all install clean testbin
 
 all: $(PDDLL) $(PDEXEC) pdsend.exe pdreceive.exe pd.com
 
@@ -237,6 +237,8 @@ install:  all
 	cat $(ABOUT_FILE).tmp | sed 's|PD_VERSION|Pd version $(PD_VERSION)|' \
 		> $(ABOUT_FILE)
 	rm $(ABOUT_FILE).tmp
+	install -d $(DESTDIR)/extra
+	install -p ../extra/output~.pd ../extra/output~-help.pd $(DESTDIR)/extra
 	install -d $(DESTDIR)$(includedir)
 	install -p m_pd.h $(DESTDIR)$(includedir)
 	install -d $(DESTDIR)$(includedir)/pdextended
