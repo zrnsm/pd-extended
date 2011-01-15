@@ -51,6 +51,8 @@ locales:
 	make -C po all
 
 install-data-local:
+	$(INSTALL) -d $(DESTDIR)$(libpddir)/extra
+	$(INSTALL_DATA) extra/output~.pd extra/output~-help.pd $(DESTDIR)$(libpddir)/extra
 	$(INSTALL) -d $(DESTDIR)$(libpddir)/startup
 	$(INSTALL) -d $(DESTDIR)$(libpddir)/startup/disabled
 
@@ -254,7 +256,6 @@ nobase_dist_libpd_DATA = \
 	doc/3.audio.examples/J08.classicsynth.pd \
 	doc/3.audio.examples/J09.bandlimited.pd \
 	doc/3.audio.examples/osc-voice.pd \
-	doc/3.audio.examples/output~.pd \
 	doc/3.audio.examples/partial.pd \
 	doc/3.audio.examples/qlist-sampler.txt \
 	doc/3.audio.examples/qlist.txt \
@@ -286,7 +287,6 @@ nobase_dist_libpd_DATA = \
 	doc/4.data.structures/data-start.pd \
 	doc/4.data.structures/file.txt \
 	doc/4.data.structures/osc-voice.pd \
-	doc/4.data.structures/output~.pd \
 	doc/4.data.structures/voice.pd \
 	doc/4.data.structures/z.txt \
 	doc/5.reference/0_all_guis-INTRO.txt \
@@ -461,4 +461,6 @@ nobase_dist_libpd_DATA = \
 	doc/7.stuff/tools/testtone16.pd \
 	doc/sound/bell.aiff \
 	doc/sound/voice.wav \
-	doc/sound/voice2.wav
+	doc/sound/voice2.wav \
+	extra/output~-help.pd \
+	extra/output~.pd
