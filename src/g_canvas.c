@@ -1039,6 +1039,52 @@ t_canvas *canvas_getrootfor(t_canvas *x)
         return (x);
     else return (canvas_getrootfor(x->gl_owner));
 }
+/* JMZ:
+ * initbang is emitted after the canvas is done, but before the parent canvas is done
+ * therefore, initbangs cannot reach to the outlets
+ */
+void canvas_initbang(t_canvas *x)
+{
+    t_gobj *y;
+    t_symbol *s = gensym("initbang");
+    /* run "initbang" for all subpatches, but NOT for the child abstractions */
+    for (y = x->gl_list; y; y = y->g_next)
+      if (pd_class(&y->g_pd) == canvas_class)
+        {
+          if (!canvas_isabstraction((t_canvas *)y))
+            canvas_initbang((t_canvas *)y);
+        }
+
+    /* call the initbang()-method for objects that have one */
+    for (y = x->gl_list; y; y = y->g_next)
+      {
+        if ((pd_class(&y->g_pd) != canvas_class) && zgetfn(&y->g_pd, s))
+          {
+            pd_vmess(&y->g_pd, s, "");
+          }
+      }
+}
+/* JMZ:
+ * closebang is emitted before the canvas is destroyed
+ * and BEFORE subpatches/abstractions in this canvas are destroyed
+ */
+void canvas_closebang(t_canvas *x)
+{
+    t_gobj *y;
+    t_symbol *s = gensym("closebang");
+
+    /* call the closebang()-method for objects that have one 
+     * but NOT for subpatches/abstractions: these are called separately
+     * from g_graph:glist_delete()
+     */
+    for (y = x->gl_list; y; y = y->g_next)
+      {
+        if ((pd_class(&y->g_pd) != canvas_class) && zgetfn(&y->g_pd, s))
+          {
+            pd_vmess(&y->g_pd, s, "");
+          }
+      }
+}
 
 /* ------------------------- DSP chain handling ------------------------- */
 
