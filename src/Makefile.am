@@ -29,7 +29,8 @@ pd_SOURCES = g_canvas.c g_graph.c g_text.c g_rtext.c g_array.c g_template.c \
     d_resample.c \
     x_arithmetic.c x_connective.c x_midi.c \
     x_acoustics.c d_soundfile.c \
-    import.c e_fft.c e_sqrt.c e_gfxstub.c e_dac.c
+    e_fft.c e_sqrt.c e_gfxstub.c e_dac.c \
+    import.c closebang.c initbang.c 
 
 pd_includedir = ${includedir}/pdextended
 pd_include_HEADERS = m_pd.h m_imp.h g_canvas.h s_stuff.h g_all_guis.h
