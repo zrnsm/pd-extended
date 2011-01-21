@@ -28,4 +28,4 @@ src/pdreceive
 src/pdsend
 ASIOSDK2
 pd-0.*
-pd.pc
+pdextended.pc
