@@ -6,7 +6,7 @@ EXTRA_SUBDIRS =
 
 # pkg-config support
 pkgconfigdir = $(libdir)/pkgconfig
-pkgconfig_DATA = pd.pc
+pkgconfig_DATA = pdextended.pc
 
 if ASIO
 EXTRA_SUBDIRS += asio
