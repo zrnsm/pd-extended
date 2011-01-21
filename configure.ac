@@ -251,7 +251,7 @@ AC_CONFIG_FILES([Makefile
                 tcl/Makefile
                 po/Makefile
                 src/Makefile
-                pd.pc
+                pdextended.pc
                 ])
 
 AC_OUTPUT
