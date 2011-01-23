@@ -129,7 +129,9 @@ void glist_selectline(t_glist *x, t_outconnect *oc, int index1,
         x->gl_editor->e_selectline_index2 = index2;
         x->gl_editor->e_selectline_inno = inno;
         x->gl_editor->e_selectline_tag = oc;
-        sys_vgui(".x%lx.c itemconfigure l%lx -fill blue\n",
+        sys_vgui(".x%lx.c itemconfigure l%lx -fill $select_color\n",
+            x, x->gl_editor->e_selectline_tag);
+        sys_vgui(".x%lx.c raise l%lx\n",
             x, x->gl_editor->e_selectline_tag);
     }    
 }
@@ -138,9 +140,21 @@ void glist_deselectline(t_glist *x)
 {
     if (x->gl_editor)
     {
+        t_linetraverser t;
+        t_outconnect *oc;
         x->gl_editor->e_selectedline = 0;
-        sys_vgui(".x%lx.c itemconfigure l%lx -fill black\n",
-            x, x->gl_editor->e_selectline_tag);
+        linetraverser_start(&t, glist_getcanvas(x));
+        do {
+            oc = linetraverser_next(&t);
+        } while (oc && oc != x->gl_editor->e_selectline_tag);
+        int issignal;
+        if(outlet_getsymbol(t.tr_outlet) == &s_signal)
+            issignal = 1;
+        else
+            issignal = 0;
+        sys_vgui(".x%lx.c itemconfigure l%lx -fill %s\n",
+            x, x->gl_editor->e_selectline_tag,
+            (issignal ? "$signal_cord" : "$msg_cord"));
     }    
 }
 
@@ -1506,6 +1520,7 @@ void canvas_doconnect(t_canvas *x, int xpos, int ypos, int which, int doit)
             }
             if (doit)
             {
+                int issignal = obj_issignaloutlet(ob1, closest1);
                 oc = obj_connect(ob1, closest1, ob2, closest2);
                 lx1 = x11 + (noutlet1 > 1 ?
                         ((x12-x11-IOWIDTH) * closest1)/(noutlet1-1) : 0)
@@ -1515,10 +1530,12 @@ void canvas_doconnect(t_canvas *x, int xpos, int ypos, int which, int doit)
                         ((x22-x21-IOWIDTH) * closest2)/(ninlet2-1) : 0)
                             + IOMIDDLE;
                 ly2 = y21;
-                sys_vgui(".x%lx.c create line %d %d %d %d -width %d -tags [list l%lx cord]\n",
+                sys_vgui(".x%lx.c create line %d %d %d %d -fill %s -width %d -tags [list l%lx cord]\n",
                     glist_getcanvas(x),
                         lx1, ly1, lx2, ly2,
-                            (obj_issignaloutlet(ob1, closest1) ? 2 : 1), oc);
+                    (issignal ? "$signal_cord" : "$msg_cord"),
+                    (issignal ? 2 : 1), 
+                    oc);
                 canvas_dirty(x, 1);
                 canvas_setundo(x, canvas_undo_connect,
                     canvas_undo_set_connect(x, 
@@ -2450,9 +2467,10 @@ void canvas_connect(t_canvas *x, t_floatarg fwhoout, t_floatarg foutno,
     if (!(oc = obj_connect(objsrc, outno, objsink, inno))) goto bad;
     if (glist_isvisible(x))
     {
-        sys_vgui(".x%lx.c create line %d %d %d %d -width %d -tags [list l%lx cord]\n",
+        sys_vgui(".x%lx.c create line %d %d %d %d -width %d -fill %s -tags [list l%lx cord]\n",
             glist_getcanvas(x), 0, 0, 0, 0,
-            (obj_issignaloutlet(objsrc, outno) ? 2 : 1),oc);
+            (obj_issignaloutlet(objsrc, outno) ? 2 : 1),
+            (obj_issignaloutlet(objsrc, outno) ? "$signal_cord" : "$msg_cord"), oc);
         canvas_fixlinesfor(x, objsrc);
     }
     return;
