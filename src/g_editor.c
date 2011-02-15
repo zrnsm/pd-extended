@@ -32,6 +32,7 @@ static t_binbuf *copy_binbuf;
 static char *canvas_textcopybuf;
 static int canvas_textcopybufsize;
 static t_glist *glist_finddirty(t_glist *x);
+static int paste_xyoffset = 0; /* a counter of pastes to make x,y offsets */
 
 /* ---------------- generic widget behavior ------------------------- */
 
@@ -2187,6 +2188,7 @@ static void canvas_copy(t_canvas *x)
         return;
     binbuf_free(copy_binbuf);
     copy_binbuf = canvas_docopy(x);
+    paste_xyoffset = 1;
     if (x->gl_editor->e_textedfor)
     {
         char *buf;
@@ -2296,6 +2298,7 @@ static void canvas_cut(t_canvas *x)
             canvas_undo_set_cut(x, UCUT_CUT), "cut");
         canvas_copy(x);
         canvas_doclear(x);
+        paste_xyoffset = 0;
         sys_vgui("pdtk_canvas_getscroll .x%lx.c\n", x);
     }
 }
@@ -2312,6 +2315,14 @@ static void glist_donewloadbangs(t_glist *x)
             if (pd_class(&sel->sel_what->g_pd) == canvas_class)
                 canvas_loadbang((t_canvas *)(&sel->sel_what->g_pd));
     }
+}
+
+static void canvas_paste_xyoffset(t_canvas *x)
+{
+    t_selection *sel;
+    for (sel = x->gl_editor->e_selection; sel; sel = sel->sel_next)
+        gobj_displace(sel->sel_what, x, paste_xyoffset*10, paste_xyoffset*10);
+    paste_xyoffset++;
 }
 
 static void canvas_dopaste(t_canvas *x, t_binbuf *b)
@@ -2353,6 +2364,7 @@ static void canvas_paste(t_canvas *x)
         canvas_setundo(x, canvas_undo_paste, canvas_undo_set_paste(x),
             "paste");
         canvas_dopaste(x, copy_binbuf);
+        canvas_paste_xyoffset(x);
     }
 }
 
@@ -2362,14 +2374,11 @@ static void canvas_duplicate(t_canvas *x)
         return;
     if (x->gl_editor->e_onmotion == MA_NONE && x->gl_editor->e_selection)
     {
-        t_selection *y;
         canvas_copy(x);
         canvas_setundo(x, canvas_undo_paste, canvas_undo_set_paste(x),
             "duplicate");
         canvas_dopaste(x, copy_binbuf);
-        for (y = x->gl_editor->e_selection; y; y = y->sel_next)
-            gobj_displace(y->sel_what, x,
-                10, 10);
+        canvas_paste_xyoffset(x);
         canvas_dirty(x, 1);
     }
 }
