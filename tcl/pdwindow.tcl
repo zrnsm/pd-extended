@@ -2,16 +2,16 @@
 package provide pdwindow 0.1
 
 namespace eval ::pdwindow:: {
-    variable printout_buffer ""
+    variable logbuffer {}
     variable pdwindow_search_index
     variable tclentry {}
     variable tclentry_history {"console show"}
     variable history_position 0
     variable linecolor 0 ;# is toggled to alternate text line colors
     variable maxverbosity 5
-    variable defaultverbosity 4
+    variable defaultverbosity 3
 
-    variable lasttag "line0"
+    variable lastlevel 0
 
     namespace export create_window
     namespace export pdtk_post
@@ -21,22 +21,18 @@ namespace eval ::pdwindow:: {
 }
 
 # TODO make the Pd window save its size and location between running
+# TODO make the colors work better
 
 proc ::pdwindow::set_layout {} {
-    #fatal
-    .pdwindow.text tag configure verbosetext0 -background red
-    #error
-    .pdwindow.text tag configure verbosetext1 -background red
-    #warning
-    .pdwindow.text tag configure verbosetext2 -background orange
-    #info
-    .pdwindow.text tag configure verbosetext3
+    .pdwindow.text tag configure log0 -foreground "#880000" -background "#ffdddd"
+    .pdwindow.text tag configure log1 -foreground "#880000" -background "#fff0e0"
+    .pdwindow.text tag configure log2 -foreground "#880000"
+    # log3 messages are normal black on white
 
-    #verbose
-    for { set i 4 } { $i <= $::pdwindow::maxverbosity } { incr i } {
-        set j [ expr 100 - int($i * 50 / $::pdwindow::maxverbosity ) ]
-  
-        .pdwindow.text tag configure verbosetext${i} -background grey${j}
+    set start 4 ;# start of 'verbose' levels for debugging
+    for {set i $start} {$i <= $::pdwindow::maxverbosity} {incr i} {
+        set B [expr int(($i - $start) * 40 / ($::pdwindow::maxverbosity - $start))+40]
+        .pdwindow.text tag configure log${i} -foreground grey${B}
     }
 }
 
@@ -56,74 +52,60 @@ proc ::pdwindow::busyrelease {} {
 # ------------------------------------------------------------------------------
 # pdtk functions for 'pd' to send data to the Pd window
 
-# if there is no console, this stores the current message in a buffer and returns true
-# if there is a console, the buffer is sent to the console and "false" is returned
-
-proc ::pdwindow::buffer_message { message } {
-    variable printout_buffer
-   if { ! [winfo exists .pdwindow.text]} {
-        set printout_buffer "$printout_buffer\n$message"
-       return true
-    } else {
-        if {$printout_buffer ne ""} {
-            .pdwindow.text insert end "$printout_buffer\n"
-            set printout_buffer ""
-        }
-    }
-    return false
+proc ::pdwindow::buffer_message {level message} {
+    variable logbuffer
+    lappend logbuffer $level $message
 }
 
-proc ::pdwindow::do_post {message {tag verbosetext3}} {
-    if { ! [buffer_message $message ] } {
-        variable lasttag
-        .pdwindow.text insert end $message $tag
-        .pdwindow.text yview end
-        set lasttag $tag
+# this has 'args' to satisfy trace, but its not used
+proc ::pdwindow::filter_buffer_to_text {args} {
+    variable logbuffer
+    .pdwindow.text delete 0.0 end
+    update idletasks ;# this could take a while, so update GUI beforehand
+    foreach {level message} $logbuffer {
+        if { $level <= $::verbose } {
+            .pdwindow.text insert end $message log$level
+        }
+    }
+    after idle .pdwindow.text yview end
+}
+
+proc ::pdwindow::logpost {level message} {
+    variable lastlevel $level
+
+    buffer_message $level $message
+    if {[winfo exists .pdwindow.text] && $level <= $::verbose} {
+        after cancel .pdwindow.text yview end
+        .pdwindow.text insert end $message log$level
+        after idle .pdwindow.text yview end
     }
     # -stderr only sets $::stderr if 'pd-gui' is started before 'pd'
     if {$::stderr} {puts stderr $message}
 }
 
-proc ::pdwindow::post {level message} {
-# log4X levels
-#    0 fatal (not yet used)
-#    1 error (error)
-#    2 warning (bug)
-#    3 info (post)
-#    4... debug
-    if { $level <= $::verbose } {
-        do_post "$message" verbosetext$level
-    }
+proc ::pdwindow::error {message} {logpost 1 $message}
+proc ::pdwindow::warn {message} {logpost 2 $message}
+proc ::pdwindow::post {message} {logpost 3 $message}
+proc ::pdwindow::info {message} {logpost 4 $message}
+
+## for backwards compatibility
+proc ::pdwindow::pdtk_post {message} {
+    post $message
 }
 
 proc ::pdwindow::endpost {} {
     variable linecolor
-    do_post "\n" $::pdwindow::lasttag
+    variable lastlevel
+    logpost $lastlevel "\n"
     set linecolor [expr ! $linecolor]
 }
 
-# convenience functions
-proc ::pdwindow::fatal {message} {
-    post 0 "$message"
-}
-proc ::pdwindow::error {message} {
-    post 1 "$message"
-}
-proc ::pdwindow::warn {message} {
-    post 2 "$message"
-}
-proc ::pdwindow::info {message} {
-    post 3 "$message"
-}
+# this verbose proc has a separate numbering scheme since its for
+# debugging implementations, and therefore falls outside of the 0-5
+# numbering on the Pd window
 proc ::pdwindow::verbose {level message} {
     incr level 4
-    post $level "$message"
-}
-
-
-## for backwards compatibility
-proc ::pdwindow::pdtk_post {message} {
-    post 3 $message
+    logpost $level $message
 }
 
 # set the checkbox on the "Compute Audio" menuitem and checkbox
@@ -246,20 +228,21 @@ proc ::pdwindow::eval_tclentry {} {
     variable tclentry
     variable tclentry_history
     variable history_position 0
+    if {$tclentry eq ""} {return} ;# no need to do anything if empty
     if {[catch {uplevel #0 $tclentry} errorname]} {
         global errorInfo
         switch -regexp -- $errorname { 
             "missing close-brace" {
-                post 0 [concat [_ "(Tcl) MISSING CLOSE-BRACE '\}': "] $errorInfo]
+                logpost 1 [concat [_ "(Tcl) MISSING CLOSE-BRACE '\}': "] $errorInfo]
             } "missing close-bracket" {
-                post 0 [concat [_ "(Tcl) MISSING CLOSE-BRACKET '\]': "] $errorInfo]
+                logpost 1 [concat [_ "(Tcl) MISSING CLOSE-BRACKET '\]': "] $errorInfo]
             } "^invalid command name" {
-                post 0 [concat [_ "(Tcl) INVALID COMMAND NAME: "] $errorInfo]
+                logpost 1 [concat [_ "(Tcl) INVALID COMMAND NAME: "] $errorInfo]
             } default {
-                post 0 [concat [_ "(Tcl) UNHANDLED ERROR: "] $errorInfo]
+                logpost 1 [concat [_ "(Tcl) UNHANDLED ERROR: "] $errorInfo]
             }
         }
-    }    
+    }
     lappend tclentry_history $tclentry
     set tclentry {}
 }
@@ -350,9 +333,8 @@ proc ::pdwindow::create_window {} {
 
     for { set i 0 } { $i <=  $::pdwindow::maxverbosity } { incr i} {lappend vlist $i }
     set logmenu [eval tk_optionMenu .pdwindow.tcl.logmenu ::verbose $vlist]
-
     set ::verbose  $::pdwindow::defaultverbosity
-
+    trace add variable ::verbose write ::pdwindow::filter_buffer_to_text
 
     # TODO figure out how to make the menu traversable with the keyboard
     #.pdwindow.tcl.logmenu configure -takefocus 1
@@ -369,7 +351,8 @@ proc ::pdwindow::create_window {} {
     text .pdwindow.text -relief raised -bd 2 -font {-size 10} \
         -highlightthickness 0 -borderwidth 1 -relief flat \
         -yscrollcommand ".pdwindow.scroll set" -width 60 \
-        -undo true -autoseparators true -maxundo -1 -takefocus 0   
+        -undo false -autoseparators false -maxundo 1 -insertofftime 0 \
+        -takefocus 0
     scrollbar .pdwindow.scroll -command ".pdwindow.text yview"
     pack .pdwindow.scroll -side right -fill y
     pack .pdwindow.text -side right -fill both -expand 1
@@ -379,7 +362,7 @@ proc ::pdwindow::create_window {} {
     pdwindow_bindings
 
     # print whatever is in the queue
-    ::pdwindow::do_post {}    
+    filter_buffer_to_text
 
     set ::loaded(.pdwindow) 1
 
