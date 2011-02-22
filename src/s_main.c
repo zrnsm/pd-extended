@@ -7,6 +7,7 @@
 #include "s_stuff.h"
 #include <sys/types.h>
 #include <sys/stat.h>
+#include <dirent.h>
 #include <limits.h>
 #include <string.h>
 #include <stdio.h>
@@ -44,6 +45,8 @@ void sys_addhelppath(char *p);
 #ifdef USEAPI_ALSA
 void alsa_adddev(char *name);
 #endif
+
+static void sys_loadstartup(void);
 
 int sys_debuglevel;
 int sys_verbose;
@@ -239,6 +242,8 @@ void glob_initfromgui(void *dummy, t_symbol *s, int argc, t_atom *argv)
             sys_fontlist[i].fi_width,
             sys_fontlist[i].fi_height);
 #endif
+        /* auto-load anything in that is in startupdir */
+    sys_loadstartup();
         /* load dynamic libraries specified with "-lib" args */
     for  (nl = sys_externlist; nl; nl = nl->nl_next)
         if (!sys_load_lib(0, nl->nl_string))
@@ -1027,4 +1032,49 @@ static void sys_afterargparse(void)
 static void sys_addreferencepath(void)
 {
     char sbuf[MAXPDSTRING];
+}
+
+static void sys_loadstartup(void)
+{
+    char startupdir[MAXPDSTRING];
+    struct stat statbuf;
+
+    strncpy(startupdir, sys_libdir->s_name, MAXPDSTRING);
+    strcat(startupdir, "/startup");
+    if (stat(startupdir, &statbuf) == 0 && statbuf.st_mode & S_IFDIR)
+    {
+        DIR* dirp;
+        struct dirent *dp;
+        struct stat statbuf;
+        char buf[MAXPDSTRING];
+        char* extension;
+        if(sys_verbose)
+            post("Using %s as startup.", startupdir);
+        dirp = opendir(startupdir);
+        while ((dp = readdir(dirp)) != NULL)
+        {
+            if(strcmp(".", dp->d_name) == 0 || strcmp("..", dp->d_name) == 0)
+                continue;
+            strncpy(buf, startupdir, MAXPDSTRING);
+            strcat(buf, "/");
+            strncat(buf, dp->d_name, MAXPDSTRING - strlen(buf) - 1);
+            stat(buf, &statbuf);
+#ifdef _WIN32 /* Win32 has no symlinks... */
+            if (S_ISREG(statbuf.st_mode))
+#else
+            if (S_ISREG(statbuf.st_mode) || S_ISLNK(statbuf.st_mode))
+#endif
+            {
+                if(sys_verbose)
+                    post("Loading %s\n", buf);
+                /* remove the extension for sys_load_lib() */
+                extension = strrchr(buf, '.');
+                if (extension != NULL)
+                    *extension = 0;
+                if (!sys_load_lib(0, buf))
+                    error("%s: can't load startup library'!\n", buf);
+            }
+        }
+        (void)closedir(dirp);
+    }
 }
