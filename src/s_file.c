@@ -145,9 +145,14 @@ static void sys_initsavepreferences( void)
 
 static void sys_putpreference(const char *key, const char *value)
 {
-    if (sys_prefsavefp)
-        fprintf(sys_prefsavefp, "%s: %s\n",
-            key, value);
+    /* don't save if the path is inside the standard install since its
+     * probably set by the libdir loader */
+    if (! (strncmp(key, "path", 4) == 0 && 
+           strncmp(value, sys_libdir->s_name, 
+                   strlen(sys_libdir->s_name)) == 0))
+        if (sys_prefsavefp)
+            fprintf(sys_prefsavefp, "%s: %s\n",
+                    key, value);
 }
 
 static void sys_donesavepreferences( void)
@@ -197,19 +202,30 @@ static void sys_initsavepreferences( void)
 
 static void sys_putpreference(const char *key, const char *value)
 {
-    HKEY hkey;
-    LONG err = RegCreateKeyEx(HKEY_LOCAL_MACHINE,
-        "Software\\Pd-extended", 0, NULL, REG_OPTION_NON_VOLATILE, KEY_SET_VALUE,
-        NULL, &hkey, NULL);
-    if (err != ERROR_SUCCESS)
+    /* don't save if the path is inside the standard install since its
+     * probably set by the libdir loader */
+    if (! (strncmp(key, "path", 4) == 0 && 
+           strncmp(value, sys_libdir->s_name, 
+                   strlen(sys_libdir->s_name)) == 0))
     {
-        post("unable to create registry entry: %s\n", key);
-        return;
+        HKEY hkey;
+        LONG err = RegCreateKeyEx(HKEY_LOCAL_MACHINE,
+                                  "Software\\Pd-extended", 
+                                  0,
+                                  NULL, 
+                                  REG_OPTION_NON_VOLATILE,
+                                  KEY_SET_VALUE,
+                                  NULL, &hkey, NULL);
+        if (err != ERROR_SUCCESS)
+        {
+            post("unable to create registry entry: %s\n", key);
+            return;
+        }
+        err = RegSetValueEx(hkey, key, 0, REG_EXPAND_SZ, value, strlen(value)+1);
+        if (err != ERROR_SUCCESS)
+            post("unable to set registry entry: %s\n", key);
+        RegCloseKey(hkey);
     }
-    err = RegSetValueEx(hkey, key, 0, REG_EXPAND_SZ, value, strlen(value)+1);
-    if (err != ERROR_SUCCESS)
-        post("unable to set registry entry: %s\n", key);
-    RegCloseKey(hkey);
 }
 
 static void sys_donesavepreferences( void)
@@ -292,11 +308,18 @@ static void sys_initsavepreferences( void)
 
 static void sys_putpreference(const char *key, const char *value)
 {
-    char cmdbuf[MAXPDSTRING];
-    snprintf(cmdbuf, MAXPDSTRING, 
-             "defaults write '%s' %s \"%s\" 2> /dev/null\n",
-             current_prefs, key, value);
-    system(cmdbuf);
+    /* don't save if the path is inside the standard install since its
+     * probably set by the libdir loader */
+    if (! (strncmp(key, "path", 4) == 0 && 
+           strncmp(value, sys_libdir->s_name, 
+                   strlen(sys_libdir->s_name)) == 0))
+    {
+        char cmdbuf[MAXPDSTRING];
+        snprintf(cmdbuf, MAXPDSTRING, 
+                 "defaults write '%s' %s \"%s\" 2> /dev/null\n",
+                 current_prefs, key, value);
+        system(cmdbuf);
+    }
 }
 
 static void sys_donesavepreferences( void)

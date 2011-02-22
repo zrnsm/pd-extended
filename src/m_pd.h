@@ -451,6 +451,7 @@ EXTERN t_propertiesfn class_getpropertiesfn(t_class *c);
 
 /* ------------   printing --------------------------------- */
 EXTERN void post(const char *fmt, ...);
+EXTERN void logpost(int level, const char *fmt, ...) ATTRIBUTE_FORMAT_PRINTF(2, 3);
 EXTERN void startpost(const char *fmt, ...);
 EXTERN void poststring(const char *s);
 EXTERN void postfloat(t_floatarg f);

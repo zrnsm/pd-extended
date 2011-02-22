@@ -441,7 +441,7 @@ proc find_default_font {} {
             break
         }
     }
-    ::pdwindow::verbose 1 "DEFAULT FONT: $::font_family"
+    ::pdwindow::logpost 5 "Default font: $::font_family\n"
 }
 
 proc set_base_font {family weight} {
@@ -653,7 +653,7 @@ proc check_for_running_instances {argc argv} {
 proc load_plugin_script {filename} {
     global errorInfo
 
-    ::pdwindow::verbose 1 "Loading plugin: $filename\n"
+    ::pdwindow::logpost 4 "Loading plugin: $filename\n"
     set tclfile [open $filename]
     set tclcode [read $tclfile]
     close $tclfile
@@ -704,7 +704,7 @@ proc main {argc argv} {
             set ::fileopendir $::env(HOME)
         }
     }
-    ::pdwindow::verbose 1 "------------------ done with main ----------------------"
+    ::pdwindow::logpost 5 "------------------ done with main ----------------------\n"
 }
 
 main $::argc $::argv

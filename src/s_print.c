@@ -47,7 +47,7 @@ static void dopost(const char *s)
     else
     {
         char upbuf[MAXPDSTRING];
-        sys_vgui("::pdwindow::post 3 {%s}\n", strnescape(upbuf, s, MAXPDSTRING));
+        sys_vgui("::pdwindow::logpost 3 {%s}\n", strnescape(upbuf, s, MAXPDSTRING));
     }
 }
 
@@ -66,10 +66,11 @@ static void doerror(const char *s)
         fprintf(stderr, "error: %s", s);
     else
     {
-        sys_vgui("::pdwindow::post 1 {%s}\n", strnescape(upbuf, s, MAXPDSTRING));
+        sys_vgui("::pdwindow::logpost 1 {%s}\n", strnescape(upbuf, s, MAXPDSTRING));
     }
 }
-static void doverbose(int level, const char *s)
+
+static void dologpost(int level, const char *s)
 {
     char upbuf[MAXPDSTRING];
     upbuf[MAXPDSTRING-1]=0;
@@ -86,7 +87,7 @@ static void doverbose(int level, const char *s)
     }
     else
     {
-        sys_vgui("::pdwindow::post %d {%s}\n", level+4, strnescape(upbuf, s, MAXPDSTRING));
+        sys_vgui("::pdwindow::logpost %d {%s}\n", level, strnescape(upbuf, s, MAXPDSTRING));
     }
 }
 
@@ -106,10 +107,23 @@ static void dobug(const char *s)
     else
     {
         char upbuf[MAXPDSTRING];
-        sys_vgui("::pdwindow::post 3 {%s}\n", strnescape(upbuf, s, MAXPDSTRING));
+        sys_vgui("::pdwindow::logpost 3 {%s}\n", strnescape(upbuf, s, MAXPDSTRING));
     }
 }
 
+void logpost(int level, const char *fmt, ...)
+{
+    char buf[MAXPDSTRING];
+    va_list ap;
+    t_int arg[8];
+    int i;
+    va_start(ap, fmt);
+    vsnprintf(buf, MAXPDSTRING-1, fmt, ap);
+    va_end(ap);
+    strcat(buf, "\n");
+
+    dologpost(level, buf);
+}
 
 void post(const char *fmt, ...)
 {
@@ -201,7 +215,7 @@ void verbose(int level, const char *fmt, ...)
     va_start(ap, fmt);
     vsnprintf(buf, MAXPDSTRING-1, fmt, ap);
     va_end(ap);
-    doverbose(level, buf);
+    dologpost(level+4, buf);
 
     endpost();
 }
