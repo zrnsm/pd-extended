@@ -1053,18 +1053,18 @@ static void sys_loadstartup(void)
         dirp = opendir(startupdir);
         while ((dp = readdir(dirp)) != NULL)
         {
-            stat(dp->d_name, &statbuf);
             if(strcmp(".", dp->d_name) == 0 || strcmp("..", dp->d_name) == 0)
                 continue;
+            strncpy(buf, startupdir, MAXPDSTRING);
+            strcat(buf, "/");
+            strncat(buf, dp->d_name, MAXPDSTRING - strlen(buf) - 1);
+            stat(buf, &statbuf);
 #ifdef _WIN32 /* Win32 has no symlinks... */
             if (S_ISREG(statbuf.st_mode))
 #else
             if (S_ISREG(statbuf.st_mode) || S_ISLNK(statbuf.st_mode))
 #endif
             {
-                strncpy(buf, startupdir, MAXPDSTRING);
-                strcat(buf, "/");
-                strncat(buf, dp->d_name, MAXPDSTRING - strlen(buf) - 1);
                 if(sys_verbose)
                     post("Loading %s\n", buf);
                 /* remove the extension for sys_load_lib() */
