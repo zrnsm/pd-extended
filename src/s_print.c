@@ -38,6 +38,14 @@ static char* strnescape(char *dest, const char *src, size_t len)
     return dest;
 }
 
+static char* strnpointerid(char *dest, const void *pointer, size_t len)
+{
+    *dest=0;
+    if(pointer) 
+        snprintf(dest, len, ".x%lx", pointer);
+    return dest;
+}
+
 static void dopost(const char *s)
 {
     if (sys_printhook)
@@ -47,11 +55,11 @@ static void dopost(const char *s)
     else
     {
         char upbuf[MAXPDSTRING];
-        sys_vgui("::pdwindow::logpost 3 {%s}\n", strnescape(upbuf, s, MAXPDSTRING));
+        sys_vgui("::pdwindow::post {%s}\n", strnescape(upbuf, s, MAXPDSTRING));
     }
 }
 
-static void doerror(const char *s)
+static void doerror(const void *object, const char *s)
 {
     char upbuf[MAXPDSTRING];
     upbuf[MAXPDSTRING-1]=0;
@@ -66,11 +74,14 @@ static void doerror(const char *s)
         fprintf(stderr, "error: %s", s);
     else
     {
-        sys_vgui("::pdwindow::logpost 1 {%s}\n", strnescape(upbuf, s, MAXPDSTRING));
+        char obuf[MAXPDSTRING];
+        sys_vgui("::pdwindow::logpost {%s} 1 {%s}\n",
+                 strnpointerid(obuf, object, MAXPDSTRING), 
+                 strnescape(upbuf, s, MAXPDSTRING));
     }
 }
 
-static void dologpost(int level, const char *s)
+static void dologpost(const void *object, const int level, const char *s)
 {
     char upbuf[MAXPDSTRING];
     upbuf[MAXPDSTRING-1]=0;
@@ -87,7 +98,10 @@ static void dologpost(int level, const char *s)
     }
     else
     {
-        sys_vgui("::pdwindow::logpost %d {%s}\n", level, strnescape(upbuf, s, MAXPDSTRING));
+        char obuf[MAXPDSTRING];
+        sys_vgui("::pdwindow::logpost {%s} %d {%s}\n", 
+                 strnpointerid(obuf, object, MAXPDSTRING), 
+                 level, strnescape(upbuf, s, MAXPDSTRING));
     }
 }
 
@@ -107,11 +121,11 @@ static void dobug(const char *s)
     else
     {
         char upbuf[MAXPDSTRING];
-        sys_vgui("::pdwindow::logpost 3 {%s}\n", strnescape(upbuf, s, MAXPDSTRING));
+        sys_vgui("::pdwindow::bug {%s}\n", strnescape(upbuf, s, MAXPDSTRING));
     }
 }
 
-void logpost(int level, const char *fmt, ...)
+void logpost(const void *object, const int level, const char *fmt, ...)
 {
     char buf[MAXPDSTRING];
     va_list ap;
@@ -122,7 +136,7 @@ void logpost(int level, const char *fmt, ...)
     va_end(ap);
     strcat(buf, "\n");
 
-    dologpost(level, buf);
+    dologpost(object, level, buf);
 }
 
 void post(const char *fmt, ...)
@@ -199,7 +213,7 @@ void error(const char *fmt, ...)
     vsnprintf(buf, MAXPDSTRING-1, fmt, ap);
     va_end(ap);
 
-    doerror(buf);
+    doerror(NULL, buf);
     endpost();
 }
 
@@ -215,7 +229,7 @@ void verbose(int level, const char *fmt, ...)
     va_start(ap, fmt);
     vsnprintf(buf, MAXPDSTRING-1, fmt, ap);
     va_end(ap);
-    dologpost(level+4, buf);
+    dologpost(NULL, level+4, buf);
 
     endpost();
 }
@@ -240,13 +254,14 @@ void pd_error(void *object, const char *fmt, ...)
     vsnprintf(buf, MAXPDSTRING-1, fmt, ap);
     va_end(ap);
 
-    doerror(buf);
+    doerror(object, buf);
     endpost();  
 
     error_object = object;
     if (!saidit)
     {
-        verbose(0, "... you might be able to track this down from the Find menu.");
+        logpost(NULL, 4,
+                "... you might be able to track this down from the Find menu.");
         saidit = 1;
     }
 }
@@ -261,6 +276,17 @@ void glob_finderror(t_pd *dummy)
         post("%s", error_string);
         canvas_finderror(error_object);
     }
+}
+
+void glob_findinstance(t_pd *dummy, t_symbol*s)
+{
+  // revert s to (potential) pointer to object
+  void*obj=NULL;
+  if(sscanf(s->s_name, ".x%lx", &obj)) {
+    if(obj) {
+      canvas_finderror(obj);
+    }
+  }
 }
 
 void bug(const char *fmt, ...)

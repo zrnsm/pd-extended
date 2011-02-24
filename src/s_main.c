@@ -1045,6 +1045,7 @@ static void sys_loadstartup(void)
     {
         DIR* dirp;
         struct dirent *dp;
+        struct stat statbuf;
         char buf[MAXPDSTRING];
         char* extension;
         if(sys_verbose)
@@ -1052,7 +1053,14 @@ static void sys_loadstartup(void)
         dirp = opendir(startupdir);
         while ((dp = readdir(dirp)) != NULL)
         {
-            if (dp->d_type == DT_REG || dp->d_type == DT_LNK)
+            stat(dp->d_name, &statbuf);
+            if(strcmp(".", dp->d_name) == 0 || strcmp("..", dp->d_name) == 0)
+                continue;
+#ifdef _WIN32 /* Win32 has no symlinks... */
+            if (S_ISREG(statbuf.st_mode))
+#else
+            if (S_ISREG(statbuf.st_mode) || S_ISLNK(statbuf.st_mode))
+#endif
             {
                 strncpy(buf, startupdir, MAXPDSTRING);
                 strcat(buf, "/");
