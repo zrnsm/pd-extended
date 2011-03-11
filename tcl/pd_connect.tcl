@@ -19,11 +19,7 @@ proc ::pd_connect::configure_socket {sock} {
 # if pd opens first, it starts pd-gui, then pd-gui connects to the port pd sent
 proc ::pd_connect::to_pd {port {host localhost}} {
     variable pd_socket
-<<<<<<< HEAD
-    ::pdwindow::info "'pd-gui' connecting to 'pd' on localhost $port ...\n"
-=======
     ::pdwindow::debug "'pd-gui' connecting to 'pd' on localhost $port ...\n"
->>>>>>> pure-data
     if {[catch {set pd_socket [socket $host $port]}]} {
         puts stderr "WARNING: connect to pd failed, retrying port $host:$port."
         after 1000 ::pd_connect::to_pd $port $host
@@ -44,11 +40,7 @@ proc ::pd_connect::create_socket {} {
 
 proc ::pd_connect::from_pd {channel clientaddr clientport} {
     variable pd_socket $channel
-<<<<<<< HEAD
-    ::pdwindow::info "Connection from 'pd' to 'pd-gui' on $clientaddr:$clientport\n"
-=======
     ::pdwindow::debug "Connection from 'pd' to 'pd-gui' on $clientaddr:$clientport\n"
->>>>>>> pure-data
     ::pd_connect::configure_socket $pd_socket
 }
 
