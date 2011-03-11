@@ -11,6 +11,7 @@ namespace eval ::pdwindow:: {
     variable maxloglevel 4
 
     variable lastlevel 0
+    variable filtering 0 ;# flag to mark when the filtering is running
 
     namespace export create_window
     namespace export pdtk_post
@@ -76,17 +77,24 @@ proc ::pdwindow::insert_log_line {object_id level message} {
 proc ::pdwindow::filter_buffer_to_text {args} {
     variable logbuffer
     variable maxloglevel
+    variable filtering 
+    set filtering 1
+    # set the mouse cursor to a watch while busy
+    set currentcursor [.pdwindow.text.internal cget -cursor]
+    .pdwindow.text.internal configure -cursor watch
     .pdwindow.text.internal delete 0.0 end
     set i 0
     foreach {object_id level message} $logbuffer {
         if { $level <= $::loglevel || $maxloglevel == $::loglevel} {
             insert_log_line $object_id $level $message
         }
-        # this could take a while, so update the GUI every 10000 lines
-        if { [expr $i % 10000] == 0} {update idletasks}
+        # this could take a while, so update the GUI every 1000 lines
+        if { [expr $i % 1000] == 0} {update}
         incr i
     }
     .pdwindow.text.internal yview end
+    .pdwindow.text.internal configure -cursor $currentcursor
+    set filtering 0
     ::pdwindow::verbose 10 "The Pd window filtered $i lines\n"
 }
 
@@ -106,8 +114,12 @@ proc ::pdwindow::logpost {object_id level message} {
     variable lastlevel $level
 
     buffer_message $object_id $level $message
-    if {[llength [info commands .pdwindow.text.internal]] && 
-        ($level <= $::loglevel || $maxloglevel == $::loglevel)} {
+    # if the level is low enough, and the Pd window is not busy
+    # filtering thru the buffer, and the pdwindow has already been
+    # created, then insert the message into the Pd window text widget
+    if {$level <= $::loglevel &&
+        ! $::pdwindow::filtering && 
+        [llength [info commands .pdwindow.text.internal]] } {
         # cancel any pending move of the scrollbar, and schedule it
         # after writing a line. This way the scrollbar is only moved once
         # when the inserting has finished, greatly speeding things up
@@ -363,6 +375,10 @@ proc ::pdwindow::create_window {} {
     bind .pdwindow <KeyPress> "+::pdwindow::set_findinstance_cursor %W %K %s"
     bind .pdwindow <KeyRelease> "+::pdwindow::set_findinstance_cursor %W %K %s"
 
+    # wait until .pdwindow.text is visible before opening files so that
+    # the loading logic can grab it and put up the busy cursor
+    tkwait visibility .pdwindow.text
+
     # hack to make a good read-only text widget from http://wiki.tcl.tk/1152
     rename ::.pdwindow.text ::.pdwindow.text.internal
     proc ::.pdwindow.text {args} {
@@ -380,9 +396,4 @@ proc ::pdwindow::create_window {} {
 
     # set some layout variables
     ::pdwindow::set_layout
-
-    # wait until .pdwindow.tcl.entry is visible before opening files so that
-    # the loading logic can grab it and put up the busy cursor
-    tkwait visibility .pdwindow.text
-#    create_tcl_entry
 }
