@@ -8,6 +8,7 @@ namespace eval ::pdwindow:: {
     variable tclentry_history {"console show"}
     variable history_position 0
     variable linecolor 0 ;# is toggled to alternate text line colors
+    variable logmenuitems
     variable maxloglevel 4
 
     variable lastlevel 0
@@ -15,37 +16,39 @@ namespace eval ::pdwindow:: {
     namespace export create_window
     namespace export pdtk_post
     namespace export pdtk_pd_dsp
-    namespace export pdtk_pd_meters
     namespace export pdtk_pd_dio
 }
 
 # TODO make the Pd window save its size and location between running
-# TODO make the colors work better
 
 proc ::pdwindow::set_layout {} {
     variable maxloglevel
-    .pdwindow.text tag configure log0 -foreground "#d00" -background "#ffe0e8"
-    .pdwindow.text tag configure log1 -foreground "#d00"
+    .pdwindow.text.internal tag configure log0 -foreground "#d00" -background "#ffe0e8"
+    .pdwindow.text.internal tag configure log1 -foreground "#d00"
     # log2 messages are normal black on white
+    .pdwindow.text.internal tag configure log3 -foreground "#484848"
 
-    set start 3 ;# start of 'verbose' levels for debugging
-    for {set i $start} {$i <= $maxloglevel} {incr i} {
-        set B [expr int(($i - $start) * (60 / ($maxloglevel - $start))) + 30]
-        .pdwindow.text tag configure log${i} -foreground grey${B}
+    # 0-20(4-24) is a rough useful range of 'verbose' levels for impl debugging
+    set start 4
+    set end 25
+    for {set i $start} {$i < $end} {incr i} {
+        set B [expr int(($i - $start) * (40 / ($end - $start))) + 50]
+        .pdwindow.text.internal tag configure log${i} -foreground grey${B}
     }
 }
+
 
 # grab focus on part of the Pd window when Pd is busy
 proc ::pdwindow::busygrab {} {
     # set the mouse cursor to look busy and grab focus so it stays that way    
-    .pdwindow.tcl.entry configure -cursor watch
-    grab set .pdwindow.tcl.entry
+    .pdwindow.text configure -cursor watch
+    grab set .pdwindow.text
 }
 
 # release focus on part of the Pd window when Pd is finished
 proc ::pdwindow::busyrelease {} {
-    .pdwindow.tcl.entry configure -cursor xterm
-    grab release .pdwindow.tcl.entry
+    .pdwindow.text configure -cursor xterm
+    grab release .pdwindow.text
 }
 
 # ------------------------------------------------------------------------------
@@ -58,26 +61,34 @@ proc ::pdwindow::buffer_message {object_id level message} {
 
 proc ::pdwindow::insert_log_line {object_id level message} {
     if {$object_id eq ""} {
-        .pdwindow.text insert end $message log$level
+        .pdwindow.text.internal insert end $message log$level
     } else {
-        .pdwindow.text insert end $message [list log$level obj$object_id]
-        .pdwindow.text tag bind obj$object_id <$::modifier-ButtonRelease-1> \
-                "::pdwindow::select_by_id $object_id; break"
+        .pdwindow.text.internal insert end $message [list log$level obj$object_id]
+        .pdwindow.text.internal tag bind obj$object_id <$::modifier-ButtonRelease-1> \
+            "::pdwindow::select_by_id $object_id; break"
+        .pdwindow.text.internal tag bind obj$object_id <Key-Return> \
+            "::pdwindow::select_by_id $object_id; break"
+        .pdwindow.text.internal tag bind obj$object_id <Key-KP_Enter> \
+            "::pdwindow::select_by_id $object_id; break"
     }
-}                                   
+}
 
 # this has 'args' to satisfy trace, but its not used
 proc ::pdwindow::filter_buffer_to_text {args} {
     variable logbuffer
     variable maxloglevel
-    .pdwindow.text delete 0.0 end
-    update idletasks ;# this could take a while, so update GUI beforehand
+    .pdwindow.text.internal delete 0.0 end
+    set i 0
     foreach {object_id level message} $logbuffer {
         if { $level <= $::loglevel || $maxloglevel == $::loglevel} {
             insert_log_line $object_id $level $message
         }
+        # this could take a while, so update the GUI every 10000 lines
+        if { [expr $i % 10000] == 0} {update idletasks}
+        incr i
     }
-    after idle .pdwindow.text yview end
+    .pdwindow.text.internal yview end
+    ::pdwindow::verbose 10 "The Pd window filtered $i lines\n"
 }
 
 proc ::pdwindow::select_by_id {args} {
@@ -96,11 +107,14 @@ proc ::pdwindow::logpost {object_id level message} {
     variable lastlevel $level
 
     buffer_message $object_id $level $message
-    if {[winfo exists .pdwindow.text] && 
+    if {[llength [info commands .pdwindow.text.internal]] && 
         ($level <= $::loglevel || $maxloglevel == $::loglevel)} {
-        after cancel .pdwindow.text yview end
+        # cancel any pending move of the scrollbar, and schedule it
+        # after writing a line. This way the scrollbar is only moved once
+        # when the inserting has finished, greatly speeding things up
+        after cancel .pdwindow.text.internal yview end
         insert_log_line $object_id $level $message
-        after idle .pdwindow.text yview end
+        after idle .pdwindow.text.internal yview end
     }
     # -stderr only sets $::stderr if 'pd-gui' is started before 'pd'
     if {$::stderr} {puts stderr $message}
@@ -110,7 +124,7 @@ proc ::pdwindow::logpost {object_id level message} {
 proc ::pdwindow::fatal {message} {logpost {} 0 $message}
 proc ::pdwindow::error {message} {logpost {} 1 $message}
 proc ::pdwindow::post {message} {logpost {} 2 $message}
-proc ::pdwindow::info {message} {logpost {} 3 $message}
+proc ::pdwindow::debug {message} {logpost {} 3 $message}
 # for backwards compatibility
 proc ::pdwindow::bug {message} {logpost {} 3 $message}
 proc ::pdwindow::pdtk_post {message} {post $message}
@@ -130,78 +144,31 @@ proc ::pdwindow::verbose {level message} {
     logpost {} $level $message
 }
 
+# clear the log and the buffer
+proc ::pdwindow::clear_console {} {
+    variable logbuffer {}
+    .pdwindow.text.internal delete 0.0 end
+}
+
+#--compute audio/DSP checkbutton-----------------------------------------------#
+
 # set the checkbox on the "Compute Audio" menuitem and checkbox
 proc ::pdwindow::pdtk_pd_dsp {value} {
     # TODO canvas_startdsp/stopdsp should really send 1 or 0, not "ON" or "OFF"
     if {$value eq "ON"} {
         set ::dsp 1
-        .pdwindow.header.dsp configure -background green
     } else {
         set ::dsp 0
-        .pdwindow.header.dsp configure -background grey
     }
 }
 
 proc ::pdwindow::pdtk_pd_dio {red} {
     if {$red == 1} {
-        .pdwindow.header.dio configure -background red \
-            -highlightbackground red
+        .pdwindow.header.dio configure -foreground red
     } else {
-        .pdwindow.header.dio configure -background lightgrey \
-            -highlightbackground grey
+        .pdwindow.header.dio configure -foreground lightgrey
     }
         
-}
-
-#--VU meter procedures---------------------------------------------------------#
-
-proc ::pdwindow::calc_vu_color {position} {
-    if {$position > 32} {
-        return "#DF3A32"
-    } elseif {$position > 30} {
-        return "#EEAD54"
-    } elseif {$position > 25} {
-        return "#E9E448"
-    } elseif {$position > 0} {
-        return "#65DF37"
-    } else {
-        return "#6CEFF1"
-    }
-}
-
-proc ::pdwindow::create_vu {tkcanvas name} {
-    for {set i 0} {$i<40} {incr i} {
-        set x [expr $i * 4]
-        $tkcanvas create line $x 2 $x 18 -width 3 -tag "$name$i" \
-            -fill [calc_vu_color $i] -state hidden
-    }
-}
-
-proc ::pdwindow::set_vu {name db} {
-    # TODO figure out the actual math here to properly map the incoming values
-    set elements [expr ($db + 1) / 3]
-    for {set i 0} {$i<$elements} {incr i} {
-        .pdwindow.header.vu.$name itemconfigure "$name$i" -state normal
-    }
-    for {set i $elements} {$i<40} {incr i} {
-        .pdwindow.header.vu.$name itemconfigure "$name$i" -state hidden
-    }
-}
-
-proc ::pdwindow::pdtk_pd_meters {indb outdb inclip outclip} {
-#    puts stderr [concat meters $indb $outdb $inclip $outclip]
-    set_vu in $indb
-    if {$inclip == 1} {
-        .pdwindow.header.cliplabel.in configure -background red
-    } else {
-        .pdwindow.header.cliplabel.in configure -background grey
-    }
-    set_vu out $outdb
-    if {$outclip == 1} {
-        .pdwindow.header.cliplabel.out configure -background red
-    } else {
-        .pdwindow.header.cliplabel.out configure -background grey
-    }
 }
 
 #--bindings specific to the Pd window------------------------------------------#
@@ -216,14 +183,6 @@ proc ::pdwindow::pdwindow_bindings {} {
     # Select All doesn't seem to work unless its applied to the whole window
     bind .pdwindow <$::modifier-Key-a> ".pdwindow.text tag add sel 1.0 end"
     # the "; break" part stops executing another binds, like from the Text class
-    bind .pdwindow.text <Key-Tab> "focus .pdwindow.tcl.entry; break"
-
-    # bindings for the Tcl entry widget
-    bind .pdwindow.tcl.entry <$::modifier-Key-a> "%W selection range 0 end; break"
-    bind .pdwindow.tcl.entry <Return> "::pdwindow::eval_tclentry"
-    bind .pdwindow.tcl.entry <Up>     "::pdwindow::get_history 1"
-    bind .pdwindow.tcl.entry <Down>   "::pdwindow::get_history -1"
-    bind .pdwindow.tcl.entry <KeyRelease> +"::pdwindow::validate_tcl"
 
     # these don't do anything in the Pd window, so alert the user, then break
     # so no more bindings run
@@ -255,13 +214,13 @@ proc ::pdwindow::eval_tclentry {} {
         global errorInfo
         switch -regexp -- $errorname { 
             "missing close-brace" {
-                ::pdwindow::error [concat [_ "(Tcl) MISSING CLOSE-BRACE '\}': "] $errorInfo]
+                ::pdwindow::error [concat [_ "(Tcl) MISSING CLOSE-BRACE '\}': "] $errorInfo]\n
             } "missing close-bracket" {
-                ::pdwindow::error [concat [_ "(Tcl) MISSING CLOSE-BRACKET '\]': "] $errorInfo]
+                ::pdwindow::error [concat [_ "(Tcl) MISSING CLOSE-BRACKET '\]': "] $errorInfo]\n
             } "^invalid command name" {
-                ::pdwindow::error [concat [_ "(Tcl) INVALID COMMAND NAME: "] $errorInfo]
+                ::pdwindow::error [concat [_ "(Tcl) INVALID COMMAND NAME: "] $errorInfo]\n
             } default {
-                ::pdwindow::error [concat [_ "(Tcl) UNHANDLED ERROR: "] $errorInfo]
+                ::pdwindow::error [concat [_ "(Tcl) UNHANDLED ERROR: "] $errorInfo]\n
             }
         }
     }
@@ -285,16 +244,48 @@ proc ::pdwindow::get_history {direction} {
 
 proc ::pdwindow::validate_tcl {} {
     variable tclentry
-    if {[::info complete $tclentry]} {
+    if {[info complete $tclentry]} {
         .pdwindow.tcl.entry configure -background "white"
     } else {
         .pdwindow.tcl.entry configure -background "#FFF0F0"
     }
 }
 
+#--create tcl entry-----------------------------------------------------------#
+
+proc ::pdwindow::create_tcl_entry {} {
+# Tcl entry box frame
+    label .pdwindow.tcl.label -text [_ "Tcl:"] -anchor e
+    pack .pdwindow.tcl.label -side left
+    entry .pdwindow.tcl.entry -width 200 \
+       -exportselection 1 -insertwidth 2 -insertbackground blue \
+       -textvariable ::pdwindow::tclentry -font {$::font_family 12}
+    pack .pdwindow.tcl.entry -side left -fill x
+# bindings for the Tcl entry widget
+    bind .pdwindow.tcl.entry <$::modifier-Key-a> "%W selection range 0 end; break"
+    bind .pdwindow.tcl.entry <Return> "::pdwindow::eval_tclentry"
+    bind .pdwindow.tcl.entry <Up>     "::pdwindow::get_history 1"
+    bind .pdwindow.tcl.entry <Down>   "::pdwindow::get_history -1"
+    bind .pdwindow.tcl.entry <KeyRelease> +"::pdwindow::validate_tcl"
+
+    bind .pdwindow.text <Key-Tab> "focus .pdwindow.tcl.entry; break"
+}
+
+proc ::pdwindow::set_findinstance_cursor {widget key state} {
+    set triggerkeys [list Control_L Control_R Meta_L Meta_R]
+    if {[lsearch -exact $triggerkeys $key] > -1} {
+        if {$state == 0} {
+            $widget configure -cursor xterm
+        } else {
+            $widget configure -cursor based_arrow_up
+        }
+    }
+}
+
 #--create the window-----------------------------------------------------------#
 
 proc ::pdwindow::create_window {} {
+    variable logmenuitems
     set ::loaded(.pdwindow) 0
 
     # colorize by class before creating anything
@@ -307,86 +298,81 @@ proc ::pdwindow::create_window {} {
     option add *PdWindow*Entry.background "white" startupFile
 
     toplevel .pdwindow -class PdWindow
-    wm title .pdwindow [_ "Pd window"]
-    set ::windowname(.pdwindow) [_ "Pd window"]
+    wm title .pdwindow [_ "Pd"]
+    set ::windowname(.pdwindow) [_ "Pd"]
     if {$::windowingsystem eq "x11"} {
         wm minsize .pdwindow 400 75
     } else {
         wm minsize .pdwindow 400 51
     }
-    wm geometry .pdwindow =500x450+20+50
+    wm geometry .pdwindow =500x400+20+50
     .pdwindow configure -menu .menubar
-    ::pd_menus::configure_for_pdwindow
 
-    frame .pdwindow.header -borderwidth 1 -relief flat
+    frame .pdwindow.header -borderwidth 1 -relief flat -background lightgray
     pack .pdwindow.header -side top -fill x -ipady 5
-    checkbutton .pdwindow.header.meters -variable ::meters -takefocus 1 \
-        -command {pdsend "pd meters $::meters"}
-    pack .pdwindow.header.meters -side left -fill y -anchor w -pady 10
-    frame .pdwindow.header.vu -borderwidth 0
-    pack .pdwindow.header.vu -side left
-    canvas .pdwindow.header.vu.in -width 150 -height 20 -background "#3F3F3F" \
-        -highlightthickness 1 -highlightbackground grey
-    create_vu .pdwindow.header.vu.in "in"
-    canvas .pdwindow.header.vu.out -width 150 -height 20 -background "#3F3F3F" \
-        -highlightthickness 1 -highlightbackground grey
-    create_vu .pdwindow.header.vu.out "out"
-    pack .pdwindow.header.vu.in -side top
-    pack .pdwindow.header.vu.out -side top
-    frame .pdwindow.header.cliplabel -borderwidth 0
-    pack .pdwindow.header.cliplabel -side left
-    label .pdwindow.header.cliplabel.in -text [_ "IN"] -width 4
-    label .pdwindow.header.cliplabel.out -text [_ "OUT"] -width 4
-    pack .pdwindow.header.cliplabel.in .pdwindow.header.cliplabel.out -side top
-    checkbutton .pdwindow.header.dsp -text [_ "DSP"] -variable ::dsp \
-        -font {$::font_family 18 bold} -takefocus 1 \
-        -command {pdsend "pd dsp $::dsp"}
-    pack .pdwindow.header.dsp -side right -fill y -anchor e -padx 5 -pady 10
-# perf button
-    checkbutton .pdwindow.header.perf -text [_ "perf"] -variable ::sys_perf \
-        -font {$::font_family 12} -takefocus 1 \
-        -command {pdsend "pd perf $::sys_perf"}
-    pack .pdwindow.header.perf -side right -fill y -anchor e -padx 5 -pady 10
-# Tcl entry box and log level frame
-    frame .pdwindow.tcl -borderwidth 0
-    pack .pdwindow.tcl -side bottom -fill x
-    frame .pdwindow.tcl.pad
-    pack .pdwindow.tcl.pad -side right -padx 12
 
-    for { set i 0 } { $i <=  $::pdwindow::maxloglevel } { incr i} {lappend vlist $i }
-    set logmenu [eval tk_optionMenu .pdwindow.tcl.logmenu ::loglevel $vlist]
-    $logmenu entryconfigure 0 -label "0 [_ fatal]"
-    $logmenu entryconfigure 1 -label "1 [_ error]"
-    $logmenu entryconfigure 2 -label "2 [_ normal]"
-    $logmenu entryconfigure 3 -label "3 [_ info]"
-    $logmenu entryconfigure 4 -label "4 [_ all]"
+    frame .pdwindow.header.pad1
+    pack .pdwindow.header.pad1 -side left -padx 12
+
+    checkbutton .pdwindow.header.dsp -text [_ "DSP"] -variable ::dsp \
+        -font {$::font_family 18 bold} -takefocus 1 -background lightgray \
+        -borderwidth 0  -command {pdsend "pd dsp $::dsp"}
+    pack .pdwindow.header.dsp -side right -fill y -anchor e -padx 5 -pady 0
+# DIO button
+    label .pdwindow.header.dio -text [_ "audio I/O error"] -borderwidth 0 \
+        -background lightgrey -foreground lightgray \
+        -takefocus 0 \
+        -font {$::font_family 14}
+    pack .pdwindow.header.dio -side right -fill y -padx 30 -pady 0
+
+    label .pdwindow.header.loglabel -text [_ "Log:"] -anchor e \
+        -background lightgray
+    pack .pdwindow.header.loglabel -side left
+
+    set loglevels {0 1 2 3 4}
+    lappend logmenuitems "0 [_ fatal]"
+    lappend logmenuitems "1 [_ error]"
+    lappend logmenuitems "2 [_ normal]"
+    lappend logmenuitems "3 [_ debug]"
+    lappend logmenuitems "4 [_ all]"
+    set logmenu \
+        [eval tk_optionMenu .pdwindow.header.logmenu ::loglevel $loglevels]
+    foreach i $loglevels {
+        $logmenu entryconfigure $i -label [lindex $logmenuitems $i]
+    }
     trace add variable ::loglevel write ::pdwindow::filter_buffer_to_text
 
     # TODO figure out how to make the menu traversable with the keyboard
-    #.pdwindow.tcl.logmenu configure -takefocus 1
-    pack .pdwindow.tcl.logmenu -side right
-    label .pdwindow.tcl.loglabel -text [_ "Log:"] -anchor e
-    pack .pdwindow.tcl.loglabel -side right
-    label .pdwindow.tcl.label -text [_ "Tcl:"] -anchor e
-    pack .pdwindow.tcl.label -side left
-    entry .pdwindow.tcl.entry -width 200 \
-        -exportselection 1 -insertwidth 2 -insertbackground blue \
-        -textvariable ::pdwindow::tclentry -font {$::font_family 12}
-    pack .pdwindow.tcl.entry -side left -fill x
+    #.pdwindow.header.logmenu configure -takefocus 1
+    pack .pdwindow.header.logmenu -side left
+    frame .pdwindow.tcl -borderwidth 0
+    pack .pdwindow.tcl -side bottom -fill x
 # TODO this should use the pd_font_$size created in pd-gui.tcl    
     text .pdwindow.text -relief raised -bd 2 -font {-size 10} \
         -highlightthickness 0 -borderwidth 1 -relief flat \
         -yscrollcommand ".pdwindow.scroll set" -width 60 \
-        -undo false -autoseparators false -maxundo 1 -insertofftime 0 \
-        -takefocus 0
-    scrollbar .pdwindow.scroll -command ".pdwindow.text yview"
+        -undo false -autoseparators false -maxundo 1 -takefocus 0
+    scrollbar .pdwindow.scroll -command ".pdwindow.text.internal yview"
     pack .pdwindow.scroll -side right -fill y
     pack .pdwindow.text -side right -fill both -expand 1
     raise .pdwindow
-    focus .pdwindow.tcl.entry
+    focus .pdwindow.text
     # run bindings last so that .pdwindow.tcl.entry exists
     pdwindow_bindings
+    # set cursor to show when clicking in 'findinstance' mode
+    bind .pdwindow <KeyPress> "+::pdwindow::set_findinstance_cursor %W %K %s"
+    bind .pdwindow <KeyRelease> "+::pdwindow::set_findinstance_cursor %W %K %s"
 
+    # hack to make a good read-only text widget from http://wiki.tcl.tk/1152
+    rename ::.pdwindow.text ::.pdwindow.text.internal
+    proc ::.pdwindow.text {args} {
+        switch -exact -- [lindex $args 0] {
+            "insert" {}
+            "delete" {}
+            "default" { return [eval ::.pdwindow.text.internal $args] }
+        }
+    }
+    
     # print whatever is in the queue
     filter_buffer_to_text
 
@@ -397,6 +383,6 @@ proc ::pdwindow::create_window {} {
 
     # wait until .pdwindow.tcl.entry is visible before opening files so that
     # the loading logic can grab it and put up the busy cursor
-    tkwait visibility .pdwindow.tcl.entry
+    tkwait visibility .pdwindow.text
+#    create_tcl_entry
 }
-
