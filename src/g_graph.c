@@ -665,7 +665,6 @@ void glist_redraw(t_glist *x)
             canvas_drawredrect(x, 0);
             if (x->gl_goprect)
             {
-                post("draw it");
                 canvas_drawredrect(x, 1);
             }
         }
