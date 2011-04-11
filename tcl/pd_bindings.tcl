@@ -77,6 +77,9 @@ proc ::pd_bindings::global_bindings {} {
     bind all <$::modifier-Shift-Key-W> {menu_send_float %W menuclose 1}
     bind all <$::modifier-Shift-Key-Z> {menu_redo}
 
+    # command that change the editor behavior, always with Alt/Option
+    bind all <$::modifier-$::altkey-Key-a> {menu_toggle_autopatch}
+
     # OS-specific bindings
     if {$::windowingsystem eq "aqua"} {
         # Cmd-m = Minimize and Cmd-t = Font on Mac OS X for all apps

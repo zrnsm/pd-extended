@@ -73,6 +73,18 @@ proc ::pd_menucommands::menu_toggle_editmode {} {
     menu_editmode [expr {! $::editmode_button}]
 }
 
+proc ::pd_menucommands::menu_autopatch {state} {
+    if {[winfo class $::focused_window] ne "PatchWindow"} {return}
+    set ::autopatch_button $state
+    set ::autopatch($::focused_window) $state
+    # TODO does 'pd' need to track the autopatch state per patch?
+    pdsend "pd autopatch $state"
+}
+
+proc ::pd_menucommands::menu_toggle_autopatch {} {
+    menu_autopatch [expr {! $::autopatch_button}]
+}
+
 # ------------------------------------------------------------------------------
 # generic procs for sending menu events
 
