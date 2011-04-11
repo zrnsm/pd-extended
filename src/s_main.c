@@ -69,12 +69,12 @@ int sys_midiindevlist[MAXMIDIINDEV] = {1};
 int sys_midioutdevlist[MAXMIDIOUTDEV] = {1};
 
 #ifdef __APPLE__
-char sys_font[100] = "Monaco";
-char sys_fontweight[10] = "normal";
+# define DEFAULT_FONT "Monaco"
 #else
-char sys_font[100] = "Courier";
-char sys_fontweight[10] = "bold";
+# define DEFAULT_FONT "DejaVu Sans Mono"
 #endif
+char sys_font[MAXPDSTRING] = DEFAULT_FONT;
+char sys_fontweight[MAXPDSTRING] = "normal";
 static int sys_main_srate;
 static int sys_main_advance;
 static int sys_main_callback;
@@ -382,7 +382,7 @@ static char *(usagemessage[]) = {
 "-open <file>     -- open file(s) on startup\n",
 "-lib <file>      -- load object library(s)\n",
 "-font-size <n>     -- specify default font size in points\n",
-"-font-face <name>  -- specify default font\n",
+"-font-face <name>  -- specify default font (default: " DEFAULT_FONT ")\n",
 "-font-weight <name>-- specify default font weight (normal or bold)\n",
 "-verbose         -- extra printout on startup and when searching for files\n",
 "-version         -- don't run Pd; just print out which version it is \n",
