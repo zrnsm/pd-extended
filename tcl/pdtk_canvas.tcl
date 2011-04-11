@@ -6,6 +6,7 @@ package require pd_bindings
 namespace eval ::pdtk_canvas:: {
     namespace export pdtk_canvas_popup
     namespace export pdtk_canvas_editmode
+    namespace export pdtk_canvas_autopatch
     namespace export pdtk_canvas_getscroll
     namespace export pdtk_canvas_setparents
     namespace export pdtk_canvas_reflecttitle
@@ -91,6 +92,7 @@ proc pdtk_canvas_new {mytoplevel width height geometry editable} {
     # init patch properties arrays
     set ::editingtext($mytoplevel) 0
     set ::childwindows($mytoplevel) {}
+    set ::autopatch($mytoplevel) 0
 
     # this should be at the end so that the window and canvas are all ready
     # before this variable changes.
@@ -275,6 +277,15 @@ proc ::pdtk_canvas::pdtk_canvas_editmode {mytoplevel state} {
     set ::editmode_button $state
     set ::editmode($mytoplevel) $state
     event generate $mytoplevel <<EditMode>>
+}
+
+# check or uncheck the "Autopatch" menu item
+proc ::pdtk_canvas::pdtk_canvas_autopatch {mytoplevel state} {
+    set ::autopatch_button $state
+    set ::autopatch($mytoplevel) $state
+    event generate $mytoplevel <<Autopatch>>
+    # 'pd' doesn't know about autopatch per-canvas, so we tell it here
+    pdsend "pd autopatch $state"
 }
 
 # message from Pd to update the currently available undo/redo action

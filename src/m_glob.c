@@ -63,6 +63,12 @@ static void glob_perf(t_pd *dummy, float f)
     sys_perf = (f != 0);
 }
 
+extern int sys_autopatch;
+static void glob_autopatch(t_pd *dummy, float f)
+{
+    sys_autopatch = (f != 0);
+}
+
 void max_default(t_pd *x, t_symbol *s, int argc, t_atom *argv)
 {
     int i;
@@ -133,6 +139,8 @@ void glob_init(void)
         gensym("version"), A_FLOAT, 0);
     class_addmethod(glob_pdobject, (t_method)glob_perf,
         gensym("perf"), A_FLOAT, 0);
+    class_addmethod(glob_pdobject, (t_method)glob_autopatch,
+        gensym("autopatch"), A_FLOAT, 0);
 #if defined(__linux__) || defined(IRIX) || defined(__FreeBSD_kernel__)
     class_addmethod(glob_pdobject, (t_method)glob_watchdog,
         gensym("watchdog"), 0);
