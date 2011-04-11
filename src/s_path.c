@@ -412,7 +412,8 @@ int sys_close(int fd)
     search attempts. */
 void open_via_helppath(const char *name, const char *dir)
 {
-    char realname[MAXPDSTRING], dirbuf[MAXPDSTRING], *basename;
+    char realname[MAXPDSTRING], propername[MAXPDSTRING], dirbuf[MAXPDSTRING];
+    char *basename;
         /* make up a silly "dir" if none is supplied */
     const char *usedir = (*dir ? dir : "./");
     int fd;
@@ -423,6 +424,7 @@ void open_via_helppath(const char *name, const char *dir)
     if (strlen(realname) > 3 && !strcmp(realname+strlen(realname)-3, ".pd"))
         realname[strlen(realname)-3] = 0;
     strcat(realname, "-help.pd");
+    strncpy(propername, realname, MAXPDSTRING);
     if ((fd = do_open_via_path(dir, realname, "", dirbuf, &basename, 
         MAXPDSTRING, 0, sys_helppath)) >= 0)
             goto gotone;
@@ -433,14 +435,17 @@ void open_via_helppath(const char *name, const char *dir)
     realname[MAXPDSTRING-1] = 0;
     if ((fd = do_open_via_path(dir, realname, "", dirbuf, &basename, 
         MAXPDSTRING, 0, sys_helppath)) >= 0)
-            goto gotone;
+            goto gotone_deprecated;
 
         /* 3. "objectname.pd" */
     if ((fd = do_open_via_path(dir, name, "", dirbuf, &basename, 
         MAXPDSTRING, 0, sys_helppath)) >= 0)
-            goto gotone;
+            goto gotone_deprecated;
     post("sorry, couldn't find help patch for \"%s\"", name);
     return;
+gotone_deprecated:
+    post("'%s' is a deprecated name format for a help patch.\n\tPlease rename to '%s'!",
+          basename, propername);
 gotone:
     close (fd);
     glob_evalfile(0, gensym((char*)basename), gensym(dirbuf));
