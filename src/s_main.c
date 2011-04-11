@@ -88,7 +88,7 @@ int sys_extraflags;
 char sys_extraflagsstring[MAXPDSTRING];
 int sys_run_scheduler(const char *externalschedlibname,
     const char *sys_extraflagsstring);
-int sys_noautopatch;    /* temporary hack to defeat new 0.42 editing */
+int sys_autopatch = 1;    /* state of autopatch automatic connections */
 
     /* here the "-1" counts signify that the corresponding vector hasn't been
     specified in command line arguments; sys_set_audio_settings will detect it
@@ -851,9 +851,14 @@ int sys_argparse(int argc, char **argv)
             sys_printtostderr = sys_nogui = 1;
             argc--; argv++;
         }
+        else if (!strcmp(*argv, "-autopatch"))
+        {
+            sys_autopatch = 1;
+            argc--; argv++;
+        }
         else if (!strcmp(*argv, "-noautopatch"))
         {
-            sys_noautopatch = 1;
+            sys_autopatch = 0;
             argc--; argv++;
         }
 #ifdef HAVE_UNISTD_H
