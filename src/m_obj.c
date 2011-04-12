@@ -553,7 +553,7 @@ void obj_disconnect(t_object *source, int outno, t_object *sink, int inno)
     if (!i) return;
     to = &i->i_pd;
 doit:
-    if (!(oc = o->o_connections)) return;
+    if (!o || !(oc = o->o_connections)) return;
     if (oc->oc_to == to)
     {
         o->o_connections = oc->oc_next;
