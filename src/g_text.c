@@ -327,6 +327,11 @@ static void messresponder_symbol(t_messresponder *x, t_symbol *s)
     outlet_symbol(x->mr_outlet, s);
 }
 
+static void messresponder_blob(t_messresponder *x, t_blob *st)
+{ /* MP 20070107 blob type */
+    outlet_blob(x->mr_outlet, st);
+}
+
 static void messresponder_list(t_messresponder *x, 
     t_symbol *s, int argc, t_atom *argv)
 {
@@ -355,6 +360,13 @@ static void message_symbol(t_message *x, t_symbol *s)
 {
     t_atom at;
     SETSYMBOL(&at, s);
+    binbuf_eval(x->m_text.te_binbuf, &x->m_messresponder.mr_pd, 1, &at);
+}
+
+static void message_blob(t_message *x, t_blob *st)
+{
+    t_atom at;
+    SETBLOB(&at, st);
     binbuf_eval(x->m_text.te_binbuf, &x->m_messresponder.mr_pd, 1, &at);
 }
 
@@ -1433,6 +1445,7 @@ void g_text_setup(void)
     class_addbang(message_class, message_bang);
     class_addfloat(message_class, message_float);
     class_addsymbol(message_class, message_symbol);
+    class_addblob(message_class, message_blob);
     class_addlist(message_class, message_list);
     class_addanything(message_class, message_list);
 

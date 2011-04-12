@@ -112,6 +112,16 @@ typedef struct _gpointer           /* pointer to a gobj in a glist */
     t_gstub *gp_stub;               /* stub which points to glist/array */
 } t_gpointer;
 
+#define PD_BLOBS 1 /* MP20070211 Use this to test for blob capability */
+/* MP20061223 blob type: */
+typedef struct _blob /* pointer to a blob */
+{
+   unsigned long s_length; /* length of blob in bytes */
+   unsigned char *s_data; /* pointer to 1st byte of blob */
+} t_blob;
+/* ...MP20061223 blob type */
+
+
 typedef union word
 {
     t_float w_float;
@@ -120,6 +130,7 @@ typedef union word
     t_array *w_array;
     struct _glist *w_list;
     int w_index;
+    t_blob *w_blob; /* MP20061223 blob type */
 } t_word;
 
 typedef enum
@@ -135,7 +146,8 @@ typedef enum
     A_DOLLAR, 
     A_DOLLSYM,
     A_GIMME,
-    A_CANT
+    A_CANT,
+    A_BLOB /* MP20061223 blob type */
 }  t_atomtype;
 
 #define A_DEFSYMBOL A_DEFSYM    /* better name for this */
@@ -222,6 +234,7 @@ EXTERN t_pd pd_canvasmaker;     /* factory for creating canvases */
 EXTERN t_symbol s_pointer;
 EXTERN t_symbol s_float;
 EXTERN t_symbol s_symbol;
+EXTERN t_symbol s_blob;
 EXTERN t_symbol s_bang;
 EXTERN t_symbol s_list;
 EXTERN t_symbol s_anything;
@@ -265,6 +278,7 @@ EXTERN void *resizebytes(void *x, size_t oldsize, size_t newsize);
 #define SETFLOAT(atom, f) ((atom)->a_type = A_FLOAT, (atom)->a_w.w_float = (f))
 #define SETSYMBOL(atom, s) ((atom)->a_type = A_SYMBOL, \
     (atom)->a_w.w_symbol = (s))
+#define SETBLOB(atom, st) ((atom)->a_type = A_BLOB, (atom)->a_w.w_blob = (st)) /* MP 20061226 blob type */
 #define SETDOLLAR(atom, n) ((atom)->a_type = A_DOLLAR, \
     (atom)->a_w.w_index = (n))
 #define SETDOLLSYM(atom, s) ((atom)->a_type = A_DOLLSYM, \
@@ -273,6 +287,7 @@ EXTERN void *resizebytes(void *x, size_t oldsize, size_t newsize);
 EXTERN t_float atom_getfloat(t_atom *a);
 EXTERN t_int atom_getint(t_atom *a);
 EXTERN t_symbol *atom_getsymbol(t_atom *a);
+EXTERN t_blob *atom_getblob(t_atom *a);/* MP 20070108 blob type */
 EXTERN t_symbol *atom_gensym(t_atom *a);
 EXTERN t_float atom_getfloatarg(int which, int argc, t_atom *argv);
 EXTERN t_int atom_getintarg(int which, int argc, t_atom *argv);
@@ -336,6 +351,7 @@ EXTERN void pd_bang(t_pd *x);
 EXTERN void pd_pointer(t_pd *x, t_gpointer *gp);
 EXTERN void pd_float(t_pd *x, t_float f);
 EXTERN void pd_symbol(t_pd *x, t_symbol *s);
+EXTERN void pd_blob(t_pd *x, t_blob *st); /* MP 20061226 blob type */
 EXTERN void pd_list(t_pd *x, t_symbol *s, int argc, t_atom *argv);
 EXTERN void pd_anything(t_pd *x, t_symbol *s, int argc, t_atom *argv);
 #define pd_class(x) (*(x))
@@ -360,6 +376,7 @@ EXTERN void outlet_bang(t_outlet *x);
 EXTERN void outlet_pointer(t_outlet *x, t_gpointer *gp);
 EXTERN void outlet_float(t_outlet *x, t_float f);
 EXTERN void outlet_symbol(t_outlet *x, t_symbol *s);
+EXTERN void outlet_blob(t_outlet *x, t_blob *st); /* MP 20061226 blob type */
 EXTERN void outlet_list(t_outlet *x, t_symbol *s, int argc, t_atom *argv);
 EXTERN void outlet_anything(t_outlet *x, t_symbol *s, int argc, t_atom *argv);
 EXTERN t_symbol *outlet_getsymbol(t_outlet *x);
@@ -416,6 +433,7 @@ EXTERN void class_addbang(t_class *c, t_method fn);
 EXTERN void class_addpointer(t_class *c, t_method fn);
 EXTERN void class_doaddfloat(t_class *c, t_method fn);
 EXTERN void class_addsymbol(t_class *c, t_method fn);
+EXTERN void class_addblob(t_class *c, t_method fn);/* MP 20061226 blob type */
 EXTERN void class_addlist(t_class *c, t_method fn);
 EXTERN void class_addanything(t_class *c, t_method fn);
 EXTERN void class_sethelpsymbol(t_class *c, t_symbol *s);
@@ -445,6 +463,7 @@ EXTERN t_propertiesfn class_getpropertiesfn(t_class *c);
 #define class_addpointer(x, y) class_addpointer((x), (t_method)(y))
 #define class_addfloat(x, y) class_doaddfloat((x), (t_method)(y))
 #define class_addsymbol(x, y) class_addsymbol((x), (t_method)(y))
+#define class_addblob(x, y) class_addblob((x), (t_method)(y)) /* MP20061226 blob type */
 #define class_addlist(x, y) class_addlist((x), (t_method)(y))
 #define class_addanything(x, y) class_addanything((x), (t_method)(y))
 #endif
