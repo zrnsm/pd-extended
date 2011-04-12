@@ -61,6 +61,7 @@ namespace import ::pdwindow::pdtk_pd_dsp
 namespace import ::pdwindow::pdtk_pd_meters
 namespace import ::pdtk_canvas::pdtk_canvas_popup
 namespace import ::pdtk_canvas::pdtk_canvas_editmode
+namespace import ::pdtk_canvas::pdtk_canvas_magicglass
 namespace import ::pdtk_canvas::pdtk_canvas_getscroll
 namespace import ::pdtk_canvas::pdtk_canvas_setparents
 namespace import ::pdtk_canvas::pdtk_canvas_reflecttitle
@@ -177,6 +178,8 @@ set popup_ycanvas 0
 set modifier ""
 # current state of the Edit Mode menu item
 set editmode_button 0
+# current state of the Magic Glass menu item
+set magicglass_button 0
 
 
 ## per toplevel/patch data
@@ -185,7 +188,8 @@ set menubarsize 0           ;# Mac OS X and other platforms have a menubar on to
 set windowframex 0      ;# different platforms have different window frames
 set windowframey 0      ;# different platforms have different window frames
 # patch properties
-array set editmode {}   ;# store editmode for each open patch canvas
+array set editmode {}   ;# store editmode state for each open PatchWindow
+array set magicglass {} ;# store magicglass state for each open PatchWindow
 array set editingtext {};# if an obj, msg, or comment is being edited, per patch
 array set loaded {}     ;# store whether a patch has completed loading
 array set xscrollable {};# keep track of whether the scrollbars are present

@@ -69,12 +69,12 @@ int sys_midiindevlist[MAXMIDIINDEV] = {1};
 int sys_midioutdevlist[MAXMIDIOUTDEV] = {1};
 
 #ifdef __APPLE__
-char sys_font[100] = "Monaco";
-char sys_fontweight[10] = "normal";
+# define DEFAULT_FONT "Monaco"
 #else
-char sys_font[100] = "Courier";
-char sys_fontweight[10] = "bold";
+# define DEFAULT_FONT "DejaVu Sans Mono"
 #endif
+char sys_font[MAXPDSTRING] = DEFAULT_FONT;
+char sys_fontweight[MAXPDSTRING] = "normal";
 static int sys_main_srate;
 static int sys_main_advance;
 static int sys_main_callback;
@@ -88,7 +88,7 @@ int sys_extraflags;
 char sys_extraflagsstring[MAXPDSTRING];
 int sys_run_scheduler(const char *externalschedlibname,
     const char *sys_extraflagsstring);
-int sys_noautopatch;    /* temporary hack to defeat new 0.42 editing */
+int sys_noautopatch = 1;    /* temporary hack to defeat new 0.42 editing */
 
     /* here the "-1" counts signify that the corresponding vector hasn't been
     specified in command line arguments; sys_set_audio_settings will detect it
@@ -179,11 +179,7 @@ int sys_fontheight(int fontsize)
 }
 
 int sys_defaultfont;
-#ifdef MSW
-#define DEFAULTFONT 12
-#else
 #define DEFAULTFONT 10
-#endif
 
 static void openit(const char *dirname, const char *filename)
 {
@@ -386,7 +382,7 @@ static char *(usagemessage[]) = {
 "-open <file>     -- open file(s) on startup\n",
 "-lib <file>      -- load object library(s)\n",
 "-font-size <n>     -- specify default font size in points\n",
-"-font-face <name>  -- specify default font\n",
+"-font-face <name>  -- specify default font (default: " DEFAULT_FONT ")\n",
 "-font-weight <name>-- specify default font weight (normal or bold)\n",
 "-verbose         -- extra printout on startup and when searching for files\n",
 "-version         -- don't run Pd; just print out which version it is \n",
@@ -406,7 +402,7 @@ static char *(usagemessage[]) = {
 "-schedlib <file> -- plug in external scheduler\n",
 "-extraflags <s>  -- string argument to send schedlib\n",
 "-batch           -- run off-line as a batch process\n",
-"-noautopatch     -- defeat auto-patching new from selected objects\n",
+"-autopatch       -- enable auto-patching new from selected objects\n",
 };
 
 static void sys_parsedevlist(int *np, int *vecp, int max, char *str)
@@ -853,6 +849,11 @@ int sys_argparse(int argc, char **argv)
         {
             sys_batch = 1;
             sys_printtostderr = sys_nogui = 1;
+            argc--; argv++;
+        }
+        else if (!strcmp(*argv, "-autopatch"))
+        {
+            sys_noautopatch = 0;
             argc--; argv++;
         }
         else if (!strcmp(*argv, "-noautopatch"))

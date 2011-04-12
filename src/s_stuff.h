@@ -239,10 +239,12 @@ void sys_setalarm(int microsec);
 #define DEFMIDIDEV 0
 
 #define DEFAULTSRATE 44100
-#ifdef MSW
-#define DEFAULTADVANCE 70
+#ifdef _WIN32
+# define DEFAULTADVANCE 100
+#elif defined(__APPLE__)
+# define DEFAULTADVANCE 20
 #else
-#define DEFAULTADVANCE 25
+# define DEFAULTADVANCE 50
 #endif
 
 typedef void (*t_audiocallback)(void);
