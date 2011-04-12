@@ -73,6 +73,17 @@ proc ::pd_menucommands::menu_toggle_editmode {} {
     menu_editmode [expr {! $::editmode_button}]
 }
 
+proc ::pd_menucommands::menu_magicglass {state} {
+    if {[winfo class $::focused_window] ne "PatchWindow"} {return}
+    set ::magicglass_button $state
+    set ::magicglass($::focused_window) $state
+    pdsend "$::focused_window magicglass 0"
+}
+
+proc ::pd_menucommands::menu_toggle_magicglass {} {
+    menu_magicglass [expr {! $::magicglass_button}]
+}
+
 # ------------------------------------------------------------------------------
 # generic procs for sending menu events
 

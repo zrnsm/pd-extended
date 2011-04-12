@@ -65,6 +65,7 @@ proc ::pd_bindings::global_bindings {} {
     bind all <$::modifier-Shift-Key-B> {menu_send %W bng}
     bind all <$::modifier-Shift-Key-C> {menu_send %W mycnv}
     bind all <$::modifier-Shift-Key-D> {menu_send %W vradio}
+    bind all <$::modifier-Shift-Key-G> {menu_toggle_magicglass}
     bind all <$::modifier-Shift-Key-H> {menu_send %W hslider}
     bind all <$::modifier-Shift-Key-I> {menu_send %W hradio}
     bind all <$::modifier-Shift-Key-L> {menu_clear_console}

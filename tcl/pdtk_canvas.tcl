@@ -6,6 +6,7 @@ package require pd_bindings
 namespace eval ::pdtk_canvas:: {
     namespace export pdtk_canvas_popup
     namespace export pdtk_canvas_editmode
+    namespace export pdtk_canvas_magicglass
     namespace export pdtk_canvas_getscroll
     namespace export pdtk_canvas_setparents
     namespace export pdtk_canvas_reflecttitle
@@ -90,6 +91,7 @@ proc pdtk_canvas_new {mytoplevel width height geometry editable} {
     # init patch properties arrays
     set ::editingtext($mytoplevel) 0
     set ::childwindows($mytoplevel) {}
+    set ::magicglass($mytoplevel) 0
 
     # this should be at the end so that the window and canvas are all ready
     # before this variable changes.
@@ -272,6 +274,20 @@ proc ::pdtk_canvas::pdtk_canvas_editmode {mytoplevel state} {
         $::pd_menus::menubar.edit entryconfigure [_ "Edit Mode"] -background {}
     } else {
         $::pd_menus::menubar.edit entryconfigure [_ "Edit Mode"] -background green
+    }
+}
+
+# check or uncheck the "edit" menu item
+proc ::pdtk_canvas::pdtk_canvas_magicglass {mytoplevel state} {
+    set ::magicglass_button $state
+    set ::magicglass($mytoplevel) $state
+    event generate $mytoplevel <<MagicGlass>>
+    # can't change the menu background color on Aqua
+    if {$::windowingsystem eq "aqua"} {return}
+    if {$state == 0} {
+        $::pd_menus::menubar.edit entryconfigure [_ "Magic Glass"] -background {}
+    } else {
+        $::pd_menus::menubar.edit entryconfigure [_ "Magic Glass"] -background green
     }
 }
 
