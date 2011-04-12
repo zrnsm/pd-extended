@@ -30,13 +30,14 @@ pd_SOURCES = g_canvas.c g_graph.c g_text.c g_rtext.c g_array.c g_template.c \
     x_arithmetic.c x_connective.c x_midi.c \
     x_acoustics.c d_soundfile.c \
     e_fft.c e_sqrt.c e_gfxstub.c e_dac.c \
+    g_magicglass.c \
     import.c closebang.c initbang.c 
 
 pd_includedir = ${includedir}/pdextended
 pd_include_HEADERS = m_pd.h m_imp.h g_canvas.h s_stuff.h g_all_guis.h
 # compatibility: m_pd.h also goes into ${includedir}/
 include_HEADERS = m_pd.h
-noinst_HEADERS = g_all_guis.h s_audio_alsa.h s_audio_paring.h s_utf8.h
+noinst_HEADERS = g_all_guis.h s_audio_alsa.h s_audio_paring.h s_utf8.h g_magicglass.h
 
 # we want these in the dist tarball
 EXTRA_DIST = CHANGELOG.txt notes.txt makefile.mingw

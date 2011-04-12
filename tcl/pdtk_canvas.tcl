@@ -7,6 +7,7 @@ namespace eval ::pdtk_canvas:: {
     namespace export pdtk_canvas_popup
     namespace export pdtk_canvas_editmode
     namespace export pdtk_canvas_autopatch
+    namespace export pdtk_canvas_magicglass
     namespace export pdtk_canvas_getscroll
     namespace export pdtk_canvas_setparents
     namespace export pdtk_canvas_reflecttitle
@@ -93,6 +94,7 @@ proc pdtk_canvas_new {mytoplevel width height geometry editable} {
     set ::editingtext($mytoplevel) 0
     set ::childwindows($mytoplevel) {}
     set ::autopatch($mytoplevel) 0
+    set ::magicglass($mytoplevel) 0
 
     # this should be at the end so that the window and canvas are all ready
     # before this variable changes.
@@ -286,6 +288,13 @@ proc ::pdtk_canvas::pdtk_canvas_autopatch {mytoplevel state} {
     event generate $mytoplevel <<Autopatch>>
     # 'pd' doesn't know about autopatch per-canvas, so we tell it here
     pdsend "pd autopatch $state"
+}
+
+# check or uncheck the "Magic Glass" menu item
+proc ::pdtk_canvas::pdtk_canvas_magicglass {mytoplevel state} {
+    set ::magicglass_button $state
+    set ::magicglass($mytoplevel) $state
+    event generate $mytoplevel <<MagicGlass>>
 }
 
 # message from Pd to update the currently available undo/redo action
