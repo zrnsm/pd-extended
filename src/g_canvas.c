@@ -10,6 +10,7 @@ to be different but are now unified except for some fossilized names.) */
 #include "m_pd.h"
 #include "m_imp.h"
 #include "s_stuff.h"
+#include "g_magicglass.h"
 #include "g_canvas.h"
 #include <string.h>
 #include "g_all_guis.h"
@@ -314,6 +315,9 @@ t_canvas *canvas_new(void *dummy, t_symbol *sel, int argc, t_atom *argv)
     int xloc = 0, yloc = GLIST_DEFCANVASYLOC;
     int font = (owner ? owner->gl_font : sys_defaultfont);
     glist_init(x);
+    // jsarlo
+    x->gl_magic_glass = magicGlass_new(x);
+    // end jsarlo
     x->gl_obj.te_type = T_OBJECT;
     if (!owner)
         canvas_addtolist(x);
@@ -699,6 +703,10 @@ void canvas_free(t_canvas *x)
 {
     t_gobj *y;
     int dspstate = canvas_suspend_dsp();
+    // jsarlo
+    if (x->gl_magic_glass)
+      magicGlass_free(x->gl_magic_glass);
+    // end jsarlo
     canvas_noundo(x);
     if (canvas_editing == x)
         canvas_editing = 0;
@@ -1123,6 +1131,10 @@ static void canvas_dodsp(t_canvas *x, int toplevel, t_signal **sp)
     dc = ugen_start_graph(toplevel, sp,
         obj_nsiginlets(&x->gl_obj),
         obj_nsigoutlets(&x->gl_obj));
+
+    ob = &x->gl_magic_glass->x_obj;
+    if (ob && x->gl_magic_glass->x_connectedObj)
+		ugen_add(dc, ob);  // this t_canvas could be an array, hence no gl_magic_glass
 
         /* find all the "dsp" boxes and add them to the graph */
     
