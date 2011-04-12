@@ -32,6 +32,7 @@ void gfxstub_setup(void);
 void import_setup(void);
 void initbang_setup(void);
 void closebang_setup(void);
+void magicGlass_setup(void);
 
 void conf_init(void)
 {
@@ -59,5 +60,6 @@ void conf_init(void)
     import_setup();
     initbang_setup();
     closebang_setup();
+    magicGlass_setup();
 }
 
