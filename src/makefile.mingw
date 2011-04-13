@@ -95,7 +95,7 @@ PMSRC = $(PMDIR)/pm_common/portmidi.c \
 
 PMOBJ =  $(PMSRC:.c=.o)
 
-HEADERS = g_all_guis.h m_imp.h g_canvas.h m_pd.h s_stuff.h \
+HEADERS = g_all_guis.h m_imp.h g_canvas.h m_pd.h s_stuff.h g_magicglass.h \
 	$(wildcard ../portaudio/common/*.h) s_audio_paring.h
 
 SRC = g_canvas.c g_graph.c g_text.c g_rtext.c g_array.c g_template.c \
@@ -112,6 +112,7 @@ SRC = g_canvas.c g_graph.c g_text.c g_rtext.c g_array.c g_template.c \
     x_arithmetic.c x_connective.c x_midi.c \
     x_acoustics.c d_soundfile.c \
     e_fft.c e_sqrt.c e_gfxstub.c e_dac.c \
+    g_magicglass.c \
     import.c closebang.c initbang.c 
 
 # FFTW
