@@ -129,6 +129,8 @@ proc pdtk_canvas_saveas {name initialfile initialdir} {
     set basename [file tail $filename]
     pdsend "$name savetofile [enquote_path $basename] [enquote_path $dirname]"
     set ::filenewdir $dirname
+    # add to recentfiles
+    ::pd_guiprefs::update_recentfiles $filename
 }
 
 ##### ask user Save? Discard? Cancel?, and if so, send a message on to Pd ######
