@@ -375,6 +375,10 @@ proc ::pdwindow::create_window {} {
     bind .pdwindow <KeyPress> "+::pdwindow::set_findinstance_cursor %W %K %s"
     bind .pdwindow <KeyRelease> "+::pdwindow::set_findinstance_cursor %W %K %s"
 
+    # wait until .pdwindow.text is visible before opening files so that
+    # the loading logic can grab it and put up the busy cursor
+    tkwait visibility .pdwindow.text
+
     # hack to make a good read-only text widget from http://wiki.tcl.tk/1152
     rename ::.pdwindow.text ::.pdwindow.text.internal
     proc ::.pdwindow.text {args} {
@@ -392,9 +396,4 @@ proc ::pdwindow::create_window {} {
 
     # set some layout variables
     ::pdwindow::set_layout
-
-    # wait until .pdwindow.tcl.entry is visible before opening files so that
-    # the loading logic can grab it and put up the busy cursor
-    tkwait visibility .pdwindow.text
-#    create_tcl_entry
 }
