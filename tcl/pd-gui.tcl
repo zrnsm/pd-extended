@@ -180,6 +180,8 @@ set popup_xcanvas 0
 set popup_ycanvas 0
 # modifier for key commands (Ctrl/Control on most platforms, Cmd/Mod1 on MacOSX)
 set modifier ""
+# Alt key for key commands (Alt on most platforms, Option on Mac OS X)
+set altkey ""
 # current state of the Edit Mode menu item
 set editmode_button 0
 
@@ -284,6 +286,7 @@ proc init_for_platform {} {
     switch -- $::windowingsystem {
         "x11" {
             set ::modifier "Control"
+            set ::altkey "Alt"
             option add *PatchWindow*Canvas.background "white" startupFile
             # add control to show/hide hidden files in the open panel (load
             # the tk_getOpenFile dialog once, otherwise it will not work)
@@ -317,6 +320,7 @@ proc init_for_platform {} {
         }
         "aqua" {
             set ::modifier "Mod1"
+            set ::altkey "Option"
             option add *DialogWindow*background "#E8E8E8" startupFile
             option add *DialogWindow*Entry.highlightBackground "#E8E8E8" startupFile
             option add *DialogWindow*Button.highlightBackground "#E8E8E8" startupFile
@@ -349,6 +353,7 @@ proc init_for_platform {} {
         }
         "win32" {
             set ::modifier "Control"
+            set ::altkey "Alt"
             option add *PatchWindow*Canvas.background "white" startupFile
             # fix menu font size on Windows with tk scaling = 1
             font create menufont -family Tahoma -size -11
