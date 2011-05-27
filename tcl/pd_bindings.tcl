@@ -144,6 +144,7 @@ proc ::pd_bindings::patch_bindings {mytoplevel} {
     }
     bind $tkcanvas <MouseWheel>       {::pdtk_canvas::scroll %W y %D}
     bind $tkcanvas <Shift-MouseWheel> {::pdtk_canvas::scroll %W x %D}
+    bind $tkcanvas <$::altkey-ButtonPress-1> "pdtk_canvas_mouse %W %x %y %b 3"
 
     # "right clicks" are defined differently on each platform
     switch -- $::windowingsystem { 
@@ -151,15 +152,12 @@ proc ::pd_bindings::patch_bindings {mytoplevel} {
             bind $tkcanvas <ButtonPress-2>      "pdtk_canvas_rightclick %W %x %y %b"
             # on Mac OS X, make a rightclick with Ctrl-click for 1 button mice
             bind $tkcanvas <Control-Button-1> "pdtk_canvas_rightclick %W %x %y %b"
-            bind $tkcanvas <Option-ButtonPress-1> "pdtk_canvas_mouse %W %x %y %b 3"    
         } "x11" {
             bind $tkcanvas <ButtonPress-3>    "pdtk_canvas_rightclick %W %x %y %b"
             # on X11, button 2 "pastes" from the X windows clipboard
             bind $tkcanvas <ButtonPress-2>   "pdtk_canvas_clickpaste %W %x %y %b"
-            bind $tkcanvas <Alt-ButtonPress-1> "pdtk_canvas_mouse %W %x %y %b 3"
         } "win32" {
             bind $tkcanvas <ButtonPress-3>   "pdtk_canvas_rightclick %W %x %y %b"
-            bind $tkcanvas <Alt-ButtonPress-1> "pdtk_canvas_mouse %W %x %y %b 3"
         }
     }
 
