@@ -65,7 +65,6 @@ proc ::pd_bindings::global_bindings {} {
     bind all <$::modifier-Shift-Key-B> {menu_send %W bng}
     bind all <$::modifier-Shift-Key-C> {menu_send %W mycnv}
     bind all <$::modifier-Shift-Key-D> {menu_send %W vradio}
-    bind all <$::modifier-Shift-Key-G> {menu_toggle_magicglass}
     bind all <$::modifier-Shift-Key-H> {menu_send %W hslider}
     bind all <$::modifier-Shift-Key-I> {menu_send %W hradio}
     bind all <$::modifier-Shift-Key-L> {menu_clear_console}
@@ -77,6 +76,10 @@ proc ::pd_bindings::global_bindings {} {
     bind all <$::modifier-Shift-Key-V> {menu_send %W vslider}
     bind all <$::modifier-Shift-Key-W> {menu_send_float %W menuclose 1}
     bind all <$::modifier-Shift-Key-Z> {menu_redo}
+
+    # command that change the editor behavior, always with Alt/Option
+    bind all <$::modifier-$::altkey-Key-a> {menu_toggle_autopatch}
+    bind all <$::modifier-$::altkey-Key-g> {menu_toggle_magicglass}
 
     # OS-specific bindings
     if {$::windowingsystem eq "aqua"} {
@@ -145,6 +148,7 @@ proc ::pd_bindings::patch_bindings {mytoplevel} {
     }
     bind $tkcanvas <MouseWheel>       {::pdtk_canvas::scroll %W y %D}
     bind $tkcanvas <Shift-MouseWheel> {::pdtk_canvas::scroll %W x %D}
+    bind $tkcanvas <$::altkey-ButtonPress-1> "pdtk_canvas_mouse %W %x %y %b 3"
 
     # "right clicks" are defined differently on each platform
     switch -- $::windowingsystem { 
@@ -152,15 +156,12 @@ proc ::pd_bindings::patch_bindings {mytoplevel} {
             bind $tkcanvas <ButtonPress-2>      "pdtk_canvas_rightclick %W %x %y %b"
             # on Mac OS X, make a rightclick with Ctrl-click for 1 button mice
             bind $tkcanvas <Control-Button-1> "pdtk_canvas_rightclick %W %x %y %b"
-            bind $tkcanvas <Option-ButtonPress-1> "pdtk_canvas_mouse %W %x %y %b 3"    
         } "x11" {
             bind $tkcanvas <ButtonPress-3>    "pdtk_canvas_rightclick %W %x %y %b"
             # on X11, button 2 "pastes" from the X windows clipboard
             bind $tkcanvas <ButtonPress-2>   "pdtk_canvas_clickpaste %W %x %y %b"
-            bind $tkcanvas <Alt-ButtonPress-1> "pdtk_canvas_mouse %W %x %y %b 3"
         } "win32" {
             bind $tkcanvas <ButtonPress-3>   "pdtk_canvas_rightclick %W %x %y %b"
-            bind $tkcanvas <Alt-ButtonPress-1> "pdtk_canvas_mouse %W %x %y %b 3"
         }
     }
 

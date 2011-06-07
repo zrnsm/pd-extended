@@ -73,11 +73,23 @@ proc ::pd_menucommands::menu_toggle_editmode {} {
     menu_editmode [expr {! $::editmode_button}]
 }
 
+proc ::pd_menucommands::menu_autopatch {state} {
+    if {[winfo class $::focused_window] ne "PatchWindow"} {return}
+    set ::autopatch_button $state
+    set ::autopatch($::focused_window) $state
+    # TODO does 'pd' need to track the autopatch state per patch?
+    pdsend "pd autopatch $state"
+}
+
+proc ::pd_menucommands::menu_toggle_autopatch {} {
+    menu_autopatch [expr {! $::autopatch_button}]
+}
+
 proc ::pd_menucommands::menu_magicglass {state} {
     if {[winfo class $::focused_window] ne "PatchWindow"} {return}
     set ::magicglass_button $state
     set ::magicglass($::focused_window) $state
-    pdsend "$::focused_window magicglass 0"
+    pdsend "$::focused_window magicglass $state"
 }
 
 proc ::pd_menucommands::menu_toggle_magicglass {} {

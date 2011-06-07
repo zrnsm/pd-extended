@@ -64,9 +64,11 @@ proc ::pd_menus::configure_for_pdwindow {} {
     # Edit menu
     $menubar.edit entryconfigure [_ "Duplicate"] -state disabled
     $menubar.edit entryconfigure [_ "Tidy Up"] -state disabled
+    $menubar.edit entryconfigure [_ "Autopatch"] -state disabled
     $menubar.edit entryconfigure [_ "Magic Glass"] -state disabled
     $menubar.edit entryconfigure [_ "Edit Mode"] -state disabled
     pdtk_canvas_editmode .pdwindow 0
+    pdtk_canvas_autopatch .pdwindow 0
     pdtk_canvas_magicglass .pdwindow 0
     # Undo/Redo change names, they need to have the asterisk (*) after
     $menubar.edit entryconfigure 0 -state disabled -label [_ "Undo"]
@@ -88,9 +90,11 @@ proc ::pd_menus::configure_for_canvas {mytoplevel} {
     # Edit menu
     $menubar.edit entryconfigure [_ "Duplicate"] -state normal
     $menubar.edit entryconfigure [_ "Tidy Up"] -state normal
+    $menubar.edit entryconfigure [_ "Autopatch"] -state normal
     $menubar.edit entryconfigure [_ "Magic Glass"] -state normal
     $menubar.edit entryconfigure [_ "Edit Mode"] -state normal
     pdtk_canvas_editmode $mytoplevel $::editmode($mytoplevel)
+    pdtk_canvas_autopatch $mytoplevel $::autopatch($mytoplevel)
     pdtk_canvas_magicglass $mytoplevel $::magicglass($mytoplevel)
     # Put menu
     for {set i 0} {$i <= [$menubar.put index end]} {incr i} {
@@ -116,9 +120,11 @@ proc ::pd_menus::configure_for_dialog {mytoplevel} {
     # Edit menu
     $menubar.edit entryconfigure [_ "Duplicate"] -state disabled
     $menubar.edit entryconfigure [_ "Tidy Up"] -state disabled
+    $menubar.edit entryconfigure [_ "Autopatch"] -state disabled
     $menubar.edit entryconfigure [_ "Magic Glass"] -state disabled
     $menubar.edit entryconfigure [_ "Edit Mode"] -state disabled
     pdtk_canvas_editmode $mytoplevel 0
+    pdtk_canvas_autopatch $mytoplevel 0
     pdtk_canvas_magicglass $mytoplevel 0
     # Undo/Redo change names, they need to have the asterisk (*) after
     $menubar.edit entryconfigure 0 -state disabled -label [_ "Undo"]
@@ -183,7 +189,11 @@ proc ::pd_menus::build_edit_menu {mymenu} {
         -command {menu_send $::focused_window tidy}
     $mymenu add command -label [_ "Clear Console"] \
         -accelerator "Shift+$accelerator+L" -command {menu_clear_console}
-    $mymenu add check -label [_ "Magic Glass"] -accelerator "Shift-$accelerator+G" \
+    $mymenu add  separator
+    $mymenu add check -label [_ "Autopatch"] -accelerator "$::altkey-$accelerator+A" \
+        -selectcolor grey85 -variable ::autopatch_button \
+        -command {menu_autopatch $::autopatch_button}
+    $mymenu add check -label [_ "Magic Glass"] -accelerator "$::altkey-$accelerator+G" \
         -selectcolor grey85 -variable ::magicglass_button \
         -command {menu_magicglass $::magicglass_button}
     $mymenu add  separator

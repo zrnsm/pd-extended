@@ -66,6 +66,7 @@ namespace import ::pdwindow::pdtk_pd_dsp
 namespace import ::pdwindow::pdtk_pd_meters
 namespace import ::pdtk_canvas::pdtk_canvas_popup
 namespace import ::pdtk_canvas::pdtk_canvas_editmode
+namespace import ::pdtk_canvas::pdtk_canvas_autopatch
 namespace import ::pdtk_canvas::pdtk_canvas_magicglass
 namespace import ::pdtk_canvas::pdtk_canvas_getscroll
 namespace import ::pdtk_canvas::pdtk_canvas_setparents
@@ -181,8 +182,12 @@ set popup_xcanvas 0
 set popup_ycanvas 0
 # modifier for key commands (Ctrl/Control on most platforms, Cmd/Mod1 on MacOSX)
 set modifier ""
+# Alt key for key commands (Alt on most platforms, Option on Mac OS X)
+set altkey ""
 # current state of the Edit Mode menu item
 set editmode_button 0
+# current state of the Autopatch menu item
+set autopatch_button 0
 # current state of the Magic Glass menu item
 set magicglass_button 0
 
@@ -194,6 +199,7 @@ set windowframex 0      ;# different platforms have different window frames
 set windowframey 0      ;# different platforms have different window frames
 # patch properties
 array set editmode {}   ;# store editmode state for each open PatchWindow
+array set autopatch {}  ;# store autopatch state for each open PatchWindow
 array set magicglass {} ;# store magicglass state for each open PatchWindow
 array set editingtext {};# if an obj, msg, or comment is being edited, per patch
 array set loaded {}     ;# store whether a patch has completed loading
@@ -288,6 +294,7 @@ proc init_for_platform {} {
     switch -- $::windowingsystem {
         "x11" {
             set ::modifier "Control"
+            set ::altkey "Alt"
             option add *PatchWindow*Canvas.background "white" startupFile
             # add control to show/hide hidden files in the open panel (load
             # the tk_getOpenFile dialog once, otherwise it will not work)
@@ -321,6 +328,7 @@ proc init_for_platform {} {
         }
         "aqua" {
             set ::modifier "Mod1"
+            set ::altkey "Option"
             option add *DialogWindow*background "#E8E8E8" startupFile
             option add *DialogWindow*Entry.highlightBackground "#E8E8E8" startupFile
             option add *DialogWindow*Button.highlightBackground "#E8E8E8" startupFile
@@ -353,6 +361,7 @@ proc init_for_platform {} {
         }
         "win32" {
             set ::modifier "Control"
+            set ::altkey "Alt"
             option add *PatchWindow*Canvas.background "white" startupFile
             # fix menu font size on Windows with tk scaling = 1
             font create menufont -family Tahoma -size -11
