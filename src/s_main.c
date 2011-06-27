@@ -515,7 +515,7 @@ void sys_findprogdir(char *progname)
         strncpy(sbuf2, buf, MAXPDSTRING-30);
     }
     sbuf[MAXPDSTRING-30] = 0;
-    strcat(sbuf, "/lib/pd");
+    strcat(sbuf, "/lib/pd-extended");
     if (stat(sbuf, &statbuf) >= 0)
     {
             /* complicated layout: lib dir is the one we just stat-ed above */
