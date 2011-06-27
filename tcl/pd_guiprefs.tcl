@@ -127,7 +127,7 @@ proc get_config_aqua {adomain {akey} {arr false}} {
 # win: read in the registry
 #
 proc get_config_win {adomain {akey} {arr false}} {
-    pacḱage require registry
+    package require registry
     if {![catch {registry get $adomain $akey} conf]} {
         return [expr {$conf}]
     } {
