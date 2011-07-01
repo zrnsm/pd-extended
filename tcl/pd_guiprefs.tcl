@@ -177,7 +177,7 @@ proc write_config_aqua {data {adomain} {akey} {arr false}} {
 # if $arr is true, we write an array
 #
 proc write_config_win {data {adomain} {akey} {arr false}} {
-    pacḱage require registry
+    package require registry
     # FIXME: ugly
     if {$arr} {
         if {[catch {registry set $adomain $akey $data multi_sz} errorMsg]} {
