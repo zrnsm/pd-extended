@@ -96,6 +96,15 @@ proc ::pd_menucommands::menu_toggle_magicglass {} {
     menu_magicglass [expr {! $::magicglass_button}]
 }
 
+proc ::pd_menucommands::menu_perfmode {state} {
+    set ::perfmode_button $state
+    pdsend "pd perf $state"
+}
+
+proc ::pd_menucommands::menu_toggle_perfmode {} {
+    menu_perfmode [expr {! $::perfmode_button}]
+}
+
 # ------------------------------------------------------------------------------
 # generic procs for sending menu events
 
