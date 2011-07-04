@@ -917,5 +917,5 @@ msgstr ""
 msgid "GUI"
 msgstr ""
 
-#~ msgid "Patch Font"
-#~ msgstr "Patchtypsnitt"
+msgid "Patch Font"
+msgstr "Patchtypsnitt"
