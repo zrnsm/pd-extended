@@ -889,7 +889,7 @@ msgstr "Egyéb"
 msgid "GUI"
 msgstr "Kezelőfelület"
 
-#~ msgid "Patch Font"
-#~ msgstr "Patch betűkészlet"
+msgid "Patch Font"
+msgstr "Patch betűkészlet"
 
  	  	 
