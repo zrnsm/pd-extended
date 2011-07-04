@@ -184,12 +184,11 @@ set popup_ycanvas 0
 set modifier ""
 # Alt key for key commands (Alt on most platforms, Option on Mac OS X)
 set altkey ""
-# current state of the Edit Mode menu item
-set editmode_button 0
-# current state of the Autopatch menu item
+# current state of each 'editor meta' menu item
 set autopatch_button 0
-# current state of the Magic Glass menu item
+set editmode_button 0
 set magicglass_button 0
+set perfmode_button 0
 
 
 ## per toplevel/patch data
