@@ -1147,6 +1147,6 @@ msgid "GUI"
 msgstr ""
 
 #, fuzzy
-#~ msgid "Patch Font"
-#~ msgstr "Γραμματοσειρά του Patch"
+msgid "Patch Font"
+msgstr "Γραμματοσειρά του Patch"
 
