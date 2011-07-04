@@ -7,8 +7,18 @@
 # If these are changed in the src/*.c files, then need to be
 # manually updated here.
 
+puts [_ "File"]
+puts [_ "Edit"]
+puts [_ "Put"]
+puts [_ "Find"]
+puts [_ "Media"]
+puts [_ "Window"]
+puts [_ "Help"]
+
 puts [_ "Do you want to save the changes you made in '%s'?"]
 puts [_ "Discard changes to '%s'?"]
+puts [_ "Close this window?"]
+puts [_ "really quit?"]
 
 puts [_ "Undo clear"]
 puts [_ "Undo connect"]
