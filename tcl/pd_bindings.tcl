@@ -79,6 +79,7 @@ proc ::pd_bindings::global_bindings {} {
 
     # command that change the editor behavior, always with Alt/Option
     bind all <$::modifier-$::altkey-Key-a> {menu_toggle_autopatch}
+    bind all <$::modifier-$::altkey-Key-e> {menu_toggle_editmode}
     bind all <$::modifier-$::altkey-Key-g> {menu_toggle_magicglass}
 
     # OS-specific bindings
