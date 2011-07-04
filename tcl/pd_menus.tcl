@@ -199,6 +199,9 @@ proc ::pd_menus::build_edit_menu {mymenu} {
     $mymenu add check -label [_ "Magic Glass"] -accelerator "$::altkey-$accelerator+G" \
         -variable ::magicglass_button \
         -command {menu_magicglass $::magicglass_button}
+    $mymenu add check -label [_ "Perf Mode"] -accelerator "$::altkey-$accelerator+P" \
+        -variable ::perfmode_button \
+        -command {menu_perfmode $::perfmode_button}
     $mymenu add  separator
     #TODO madness! how to set the state of the check box without invoking the menu!
     $mymenu add check -label [_ "Edit Mode"] -accelerator "$accelerator+E" \
