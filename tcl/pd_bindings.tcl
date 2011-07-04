@@ -81,6 +81,7 @@ proc ::pd_bindings::global_bindings {} {
     bind all <$::modifier-$::altkey-Key-a> {menu_toggle_autopatch}
     bind all <$::modifier-$::altkey-Key-e> {menu_toggle_editmode}
     bind all <$::modifier-$::altkey-Key-g> {menu_toggle_magicglass}
+    bind all <$::modifier-$::altkey-Key-p> {menu_toggle_perfmode}
 
     # OS-specific bindings
     if {$::windowingsystem eq "aqua"} {
