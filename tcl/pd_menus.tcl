@@ -193,6 +193,9 @@ proc ::pd_menus::build_edit_menu {mymenu} {
     $mymenu add check -label [_ "Autopatch"] -accelerator "$::altkey-$accelerator+A" \
         -variable ::autopatch_button \
         -command {menu_autopatch $::autopatch_button}
+    $mymenu add check -label [_ "Edit Mode"] -accelerator "$::altkey-$accelerator+E" \
+        -variable ::editmode_button \
+        -command {menu_editmode $::editmode_button}
     $mymenu add check -label [_ "Magic Glass"] -accelerator "$::altkey-$accelerator+G" \
         -variable ::magicglass_button \
         -command {menu_magicglass $::magicglass_button}
