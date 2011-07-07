@@ -275,7 +275,8 @@ proc ::pdtk_canvas::pdtk_canvas_editmode {mytoplevel state} {
     if {$state == 0} {
         $::pd_menus::menubar.edit entryconfigure [_ "Edit Mode"] -background {}
     } else {
-        $::pd_menus::menubar.edit entryconfigure [_ "Edit Mode"] -background green
+        $::pd_menus::menubar.edit entryconfigure [_ "Edit Mode"] \
+            -background $::menu_active
     }
 }
 
@@ -291,7 +292,8 @@ proc ::pdtk_canvas::pdtk_canvas_autopatch {mytoplevel state} {
     if {$state == 0} {
         $::pd_menus::menubar.edit entryconfigure [_ "Autopatch"] -background {}
     } else {
-        $::pd_menus::menubar.edit entryconfigure [_ "Autopatch"] -background green
+        $::pd_menus::menubar.edit entryconfigure [_ "Autopatch"] \
+            -background $::menu_active
     }
 }
 
@@ -305,7 +307,8 @@ proc ::pdtk_canvas::pdtk_canvas_magicglass {mytoplevel state} {
     if {$state == 0} {
         $::pd_menus::menubar.edit entryconfigure [_ "Magic Glass"] -background {}
     } else {
-        $::pd_menus::menubar.edit entryconfigure [_ "Magic Glass"] -background green
+        $::pd_menus::menubar.edit entryconfigure [_ "Magic Glass"] \
+            -background $::menu_active
     }
 }
 
