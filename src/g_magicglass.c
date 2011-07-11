@@ -77,12 +77,12 @@ void magicGlass_updateText(t_magicGlass *x, int moved)
                 color = "#e87216";
                 clock_delay(x->x_flashClock, MG_CLOCK_FLASH_DELAY);
             }
-            sys_vgui(".x%x.c itemconfigure magicGlassText -text {%s} -fill %s\n",
+            sys_vgui(".x%lx.c itemconfigure magicGlassText -text {%s} -fill %s\n",
                      x->x_c,
                      x->x_string,
                      color);
         } else {
-            sys_vgui(".x%x.c itemconfigure magicGlassText -text {%s}\n",
+            sys_vgui(".x%lx.c itemconfigure magicGlassText -text {%s}\n",
                      x->x_c,
                      x->x_string);
         }
@@ -92,11 +92,11 @@ void magicGlass_updateText(t_magicGlass *x, int moved)
             if (strlen(x->x_string) > x->x_maxSize) x->x_maxSize = strlen(x->x_string);
         }
         bgSize = x->x_x + (int)((30.0 * font) + ((font * 7.0) * (float)x->x_maxSize));
-        sys_vgui(".x%x.c coords magicGlassText %d %d\n",
+        sys_vgui(".x%lx.c coords magicGlassText %d %d\n",
                  x->x_c,
                  x->x_x + 20,
                  x->x_y);
-        sys_vgui(".x%x.c coords magicGlassLine %d %d %d %d %d %d\n",
+        sys_vgui(".x%lx.c coords magicGlassLine %d %d %d %d %d %d\n",
                  x->x_c,
                  x->x_x + 3,
                  x->x_y,
@@ -104,7 +104,7 @@ void magicGlass_updateText(t_magicGlass *x, int moved)
                  x->x_y + 5,
                  x->x_x + 13,
                  x->x_y - 5);
-        sys_vgui(".x%x.c coords magicGlassBg %d %d %d %d\n",
+        sys_vgui(".x%lx.c coords magicGlassBg %d %d %d %d\n",
                  x->x_c,
                  x->x_x + 13,
                  x->x_y - (int)(12.0 * font),
@@ -115,15 +115,15 @@ void magicGlass_updateText(t_magicGlass *x, int moved)
 
 void magicGlass_drawNew(t_magicGlass *x)
 {
-    sys_vgui(".x%x.c create rectangle 0 0 0 0 -outline #ffffff -fill #000000 -tags magicGlassBg\n",
+    sys_vgui(".x%lx.c create rectangle 0 0 0 0 -outline #ffffff -fill #000000 -tags magicGlassBg\n",
              x->x_c);
-    sys_vgui(".x%x.c create polygon 0 0 0 0 0 0 -fill #000000 -width 4 -tags magicGlassLine\n",
+    sys_vgui(".x%lx.c create polygon 0 0 0 0 0 0 -fill #000000 -width 4 -tags magicGlassLine\n",
              x->x_c);
-    sys_vgui(".x%x.c create text 0 0 -text {} -anchor w -fill #e87216 -font {{%s} %d %s} -tags magicGlassText\n",
+    sys_vgui(".x%lx.c create text 0 0 -text {} -anchor w -fill #e87216 -font {{%s} %d %s} -tags magicGlassText\n",
              x->x_c, sys_font, x->x_display_font, sys_fontweight);
-    sys_vgui(".x%x.c raise magicGlassBg\n",
+    sys_vgui(".x%lx.c raise magicGlassBg\n",
              x->x_c);
-    sys_vgui(".x%x.c raise magicGlassText\n",
+    sys_vgui(".x%lx.c raise magicGlassText\n",
              x->x_c);
     magicGlass_updateText(x, 0);
     clock_delay(x->x_flashClock, MG_CLOCK_FLASH_DELAY);
@@ -131,14 +131,14 @@ void magicGlass_drawNew(t_magicGlass *x)
 
 void magicGlass_undraw(t_magicGlass *x)
 {
-    sys_vgui(".x%x.c delete magicGlassBg\n", x->x_c);
-    sys_vgui(".x%x.c delete magicGlassLine\n", x->x_c);
-    sys_vgui(".x%x.c delete magicGlassText\n", x->x_c);
+    sys_vgui(".x%lx.c delete magicGlassBg\n", x->x_c);
+    sys_vgui(".x%lx.c delete magicGlassLine\n", x->x_c);
+    sys_vgui(".x%lx.c delete magicGlassText\n", x->x_c);
 }
 
 void magicGlass_flashText(t_magicGlass *x)
 {
-    sys_vgui(".x%x.c itemconfigure magicGlassText -fill #ffffff\n",
+    sys_vgui(".x%lx.c itemconfigure magicGlassText -fill #ffffff\n",
              x->x_c);
 }
 
