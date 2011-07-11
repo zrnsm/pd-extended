@@ -4,6 +4,10 @@ PATH=/sw/bin:$PATH
 
 PWD=${0%/*}
 
+# if using the same directory with different versions of autotools,
+# then libtool barfs in a big way on the stuff in ${PWD}/m4/generated
+# Delete it here to be sure.
+rm -rf ${PWD}/m4/generated
 
 ## git cannot really handle empty directories
 ## so let's create the missing ones
