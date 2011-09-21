@@ -178,8 +178,7 @@ gotone:
     }
     makeout = (t_xxx)dlsym(dlobj,  symname);
     /* fprintf(stderr, "symbol %s\n", symname); */
-#endif
-#ifdef _WIN32
+#elif defined(_WIN32)
     sys_bashfilename(filename, filename);
     ntdll = LoadLibrary(filename);
     if (!ntdll)
@@ -189,6 +188,8 @@ gotone:
         return (0);
     }
     makeout = (t_xxx)GetProcAddress(ntdll, symname);  
+#else
+# warning "No dynamic loading mechanism specified, libdl or WIN32 required for loading externals!"
 #endif
 
     if (!makeout)
