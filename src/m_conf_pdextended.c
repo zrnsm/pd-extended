@@ -51,6 +51,7 @@ void conf_init(void)
     d_arithmetic_setup();
     d_array_setup();
     d_ctl_setup();
+    d_delay_setup();
     d_filter_setup();
     d_global_setup();
     d_osc_setup();
