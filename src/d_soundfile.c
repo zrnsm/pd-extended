@@ -294,8 +294,9 @@ int open_soundfile_via_fd(int fd, int headersize,
             {
                 long chunksize = swap4(wavechunk->wc_size,
                     swap), seekto = headersize + chunksize + 8, seekout;
-                
-                if (!strncmp(wavechunk->wc_id, "fmt ", 4))
+                if (seekto & 1)     /* pad up to even number of bytes */
+                    seekto++;                
+                if (!strncmp(((t_wavechunk *)buf)->wc_id, "fmt ", 4))
                 {
                     long commblockonset = headersize + 8;
                     t_fmt*fmtchunk;
@@ -350,6 +351,8 @@ int open_soundfile_via_fd(int fd, int headersize,
             {
                 long chunksize = swap4(datachunk->dc_size,
                     swap), seekto = headersize + chunksize + 8, seekout;
+                if (seekto & 1)     /* pad up to even number of bytes */
+                    seekto++;
                 /* post("chunk %c %c %c %c seek %d",
                     datachunk->dc_id[0],
                     datachunk->dc_id[1],
@@ -382,8 +385,8 @@ int open_soundfile_via_fd(int fd, int headersize,
                         goto badheader;
                 headersize = seekto;
             }
-            bytelimit = swap4(datachunk->dc_size, swap);
-            headersize += 8;
+            bytelimit = swap4(((t_datachunk *)buf)->dc_size, swap) - 8;
+            headersize += sizeof(t_datachunk);
         }
     }
         /* seek past header and any sample frames to skip */
@@ -798,7 +801,7 @@ static int create_soundfile(t_canvas *canvas, const char *filename,
         memcpy(&aiffhdr->a_nframeshi, &longtmp, 4);
         aiffhdr->a_bitspersamp = swap2(8 * bytespersamp, swap);
         memcpy(aiffhdr->a_samprate, dogdoo, sizeof(dogdoo));
-        longtmp = swap4(datasize, swap);
+        longtmp = swap4(datasize + 8, swap);
         memcpy(aiffhdr->a_samprate + sizeof(dogdoo), &longtmp, 4);
         memset(aiffhdr->a_samprate + sizeof(dogdoo) + 4, 0, 8);
         headersize = AIFFPLUS;
