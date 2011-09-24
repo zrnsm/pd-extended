@@ -12,11 +12,11 @@ libportaudio_la_SOURCES = src/common/pa_allocation.c  \
         src/common/pa_dither.c      \
         src/common/pa_front.c       \
         src/common/pa_process.c     \
-        src/common/pa_skeleton.c    \
         src/common/pa_stream.c      \
         src/common/pa_trace.c       \
         src/common/pa_debugprint.c  \
-        src/common/pa_ringbuffer.c 
+        src/common/pa_ringbuffer.c  \
+	src/hostapi/skeleton/pa_hostapi_skeleton.c
 
 
 if ALSA
@@ -25,19 +25,17 @@ libportaudio_la_SOURCES += src/hostapi/alsa/pa_linux_alsa.c
 endif
 
 if ASIO
-libportaudio_la_CPPFLAGS = -DWINVER=0x0501 #kludge to work around Portaudio/ASIO bug
+AM_CFLAGS += -DPA_USE_ASIO
 libportaudio_la_SOURCES += src/hostapi/asio/pa_asio.cpp \
 	src/hostapi/asio/iasiothiscallresolver.cpp
 INCLUDES += -I../asio/ASIOSDK2/host -I../asio/ASIOSDK2/host/pc -I../asio/ASIOSDK2/common
-else
-AM_CFLAGS += -DPA_NO_ASIO
 endif
 
 if COREAUDIO
 AM_CFLAGS += -DPA_USE_COREAUDIO
 INCLUDES += -Isrc/os/mac_osx
 libportaudio_la_SOURCES += src/os/unix/pa_unix_util.c     \
-        src/os/mac_osx/pa_mac_hostapis.c   \
+        src/os/unix/pa_unix_hostapis.c   \
         src/hostapi/coreaudio/pa_mac_core.c  \
         src/hostapi/coreaudio/pa_mac_core_blocking.c  \
         src/hostapi/coreaudio/pa_mac_core_utilities.c
@@ -47,6 +45,7 @@ endif
 # handle a single MIDI API
 if OSS
 if !WINDOWS
+AM_CFLAGS += -DPA_USE_OSS
 libportaudio_la_SOURCES += src/hostapi/oss/pa_unix_oss.c
 endif
 endif
@@ -58,7 +57,7 @@ libportaudio_la_SOURCES += src/os/unix/pa_unix_hostapis.c \
 endif
 
 if WINDOWS
-AM_CFLAGS += -DPA_NO_DS -DPA19 -DPA_LITTLE_ENDIAN
+AM_CFLAGS += -DPA_USE_WMME
 INCLUDES += -Isrc/os/win
 libportaudio_la_SOURCES += src/os/win/pa_win_hostapis.c \
         src/os/win/pa_win_util.c \

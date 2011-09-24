@@ -49,9 +49,8 @@ OPT_CFLAGS =
 
 WARN_CFLAGS = -Wall -W -Wstrict-prototypes -Wno-unused \
     -Wno-unused-parameter -Wno-parentheses -Wno-switch
-ARCH_CFLAGS = -DPD -DPD_INTERNAL -DMSW -D_WIN32 -DPA_NO_DS -DUSEAPI_MMIO \
-	-DUSEAPI_PORTAUDIO -DPA19 -DPA_LITTLE_ENDIAN -mms-bitfields \
-	-DWISHAPP='"wish85.exe"'
+ARCH_CFLAGS = -DPD -DPD_INTERNAL -DMSW -D_WIN32 -DPA_USE_ASIO -DPA_USE_WMME \
+	-DUSEAPI_MMIO -DUSEAPI_PORTAUDIO -mms-bitfields -DWISHAPP='"wish85.exe"'
 
 CFLAGS += $(ARCH_CFLAGS) $(WARN_CFLAGS) $(OPT_CFLAGS) $(MORECFLAGS)
 
@@ -63,7 +62,6 @@ PASRC = s_audio_pa.c s_audio_paring.c \
 	s_audio_mmio.c s_midi_mmio.c \
 	$(PADIR)/src/common/pa_stream.c \
         $(PADIR)/src/common/pa_trace.c \
-        $(PADIR)/src/common/pa_skeleton.c \
         $(PADIR)/src/common/pa_process.c \
         $(PADIR)/src/common/pa_front.c \
         $(PADIR)/src/common/pa_dither.c \
@@ -74,6 +72,7 @@ PASRC = s_audio_pa.c s_audio_paring.c \
         $(PADIR)/src/os/win/pa_win_hostapis.c \
         $(PADIR)/src/os/win/pa_win_util.c \
         $(PADIR)/src/os/win/pa_win_waveformat.c \
+        $(PADIR)/src/hostapi/skeleton/pa_hostapi_skeleton.c \
         $(PADIR)/src/hostapi/wmme/pa_win_wmme.c
 
 ASIOSRC = 	$(PADIR)/src/hostapi/asio/iasiothiscallresolver.cpp \
