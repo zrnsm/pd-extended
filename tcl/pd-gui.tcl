@@ -224,6 +224,7 @@ set ::redo_action "no"
 set ::undo_toplevel "."
 
 # color scheme
+set ::canvas_fill "white"
 set ::text_color "#000"
 set ::select_color "#00f"
 set ::dash_outline "#f00"

@@ -251,12 +251,12 @@ int open_soundfile_via_fd(int fd, int headersize,
         swap = (bigendian != garray_ambigendian());
         if (format == FORMAT_NEXT)   /* nextstep header */
         {
-            t_nextstep*nsbuf=(t_nextstep *)buf;
+            uint32 param;
             if (bytesread < (int)sizeof(t_nextstep))
                 goto badheader;
-            nchannels = swap4(nsbuf->ns_nchans, swap);
-            format = swap4(nsbuf->ns_format, swap);
-            headersize = swap4(nsbuf->ns_onset, swap);
+            nchannels = swap4(((t_nextstep *)buf)->ns_nchans, swap);
+            format = swap4(((t_nextstep *)buf)->ns_format, swap);
+            headersize = swap4(((t_nextstep *)buf)->ns_onset, swap);
             if (format == NS_FORMAT_LINEAR_16)
                 bytespersamp = 2;
             else if (format == NS_FORMAT_LINEAR_24)
@@ -268,8 +268,6 @@ int open_soundfile_via_fd(int fd, int headersize,
         }
         else if (format == FORMAT_WAVE)     /* wave header */
         {
-            t_wavechunk*wavechunk;
-
                /*  This is awful.  You have to skip over chunks,
                except that if one happens to be a "fmt" chunk, you want to
                find out the format from that one.  The case where the
@@ -283,31 +281,28 @@ int open_soundfile_via_fd(int fd, int headersize,
             bytespersamp = 2;
                 /* copy the first chunk header to beginnning of buffer. */
             memcpy(buf, buf + headersize, sizeof(t_wavechunk));
-            wavechunk=(t_wavechunk *)buf;
             /* post("chunk %c %c %c %c",
                     ((t_wavechunk *)buf)->wc_id[0],
                     ((t_wavechunk *)buf)->wc_id[1],
                     ((t_wavechunk *)buf)->wc_id[2],
                     ((t_wavechunk *)buf)->wc_id[3]); */
                 /* read chunks in loop until we get to the data chunk */
-            while (strncmp(wavechunk->wc_id, "data", 4))
+            while (strncmp(((t_wavechunk *)buf)->wc_id, "data", 4))
             {
-                long chunksize = swap4(wavechunk->wc_size,
+                long chunksize = swap4(((t_wavechunk *)buf)->wc_size,
                     swap), seekto = headersize + chunksize + 8, seekout;
                 if (seekto & 1)     /* pad up to even number of bytes */
                     seekto++;                
                 if (!strncmp(((t_wavechunk *)buf)->wc_id, "fmt ", 4))
                 {
                     long commblockonset = headersize + 8;
-                    t_fmt*fmtchunk;
                     seekout = lseek(fd, commblockonset, SEEK_SET);
                     if (seekout != commblockonset)
                         goto badheader;
                     if (read(fd, buf, sizeof(t_fmt)) < (int) sizeof(t_fmt))
                             goto badheader;
-                    fmtchunk=(t_fmt*)buf;
-                    nchannels = swap2(fmtchunk->f_nchannels, swap);
-                    format = swap2(fmtchunk->f_nbitspersample, swap);
+                    nchannels = swap2(((t_fmt *)buf)->f_nchannels, swap);
+                    format = swap2(((t_fmt *)buf)->f_nbitspersample, swap);
                     if (format == 16)
                         bytespersamp = 2;
                     else if (format == 24)
@@ -323,19 +318,18 @@ int open_soundfile_via_fd(int fd, int headersize,
                     (int) sizeof(t_wavechunk))
                         goto badheader;
                 /* post("new chunk %c %c %c %c at %d",
-                    wavechunk->wc_id[0],
-                    wavechunk->wc_id[1],
-                    wavechunk->wc_id[2],
-                    wavechunk->wc_id[3], seekto); */
+                    ((t_wavechunk *)buf)->wc_id[0],
+                    ((t_wavechunk *)buf)->wc_id[1],
+                    ((t_wavechunk *)buf)->wc_id[2],
+                    ((t_wavechunk *)buf)->wc_id[3], seekto); */
                 headersize = seekto;
             }
-            bytelimit = swap4(wavechunk->wc_size, swap);
+            bytelimit = swap4(((t_wavechunk *)buf)->wc_size, swap);
             headersize += 8;
         }
         else
         {
                 /* AIFF.  same as WAVE; actually predates it.  Disgusting. */
-            t_datachunk*datachunk;
             headersize = 12;
             if (bytesread < 20)
                 goto badheader;
@@ -346,31 +340,28 @@ int open_soundfile_via_fd(int fd, int headersize,
                 /* copy the first chunk header to beginnning of buffer. */
             memcpy(buf, buf + headersize, sizeof(t_datachunk));
                 /* read chunks in loop until we get to the data chunk */
-            datachunk=(t_datachunk*)buf;
-            while (strncmp(datachunk->dc_id, "SSND", 4))
+            while (strncmp(((t_datachunk *)buf)->dc_id, "SSND", 4))
             {
-                long chunksize = swap4(datachunk->dc_size,
+                long chunksize = swap4(((t_datachunk *)buf)->dc_size,
                     swap), seekto = headersize + chunksize + 8, seekout;
                 if (seekto & 1)     /* pad up to even number of bytes */
                     seekto++;
                 /* post("chunk %c %c %c %c seek %d",
-                    datachunk->dc_id[0],
-                    datachunk->dc_id[1],
-                    datachunk->dc_id[2],
-                    datachunk->dc_id[3], seekto); */
-                if (!strncmp(datachunk->dc_id, "COMM", 4))
+                    ((t_datachunk *)buf)->dc_id[0],
+                    ((t_datachunk *)buf)->dc_id[1],
+                    ((t_datachunk *)buf)->dc_id[2],
+                    ((t_datachunk *)buf)->dc_id[3], seekto); */
+                if (!strncmp(((t_datachunk *)buf)->dc_id, "COMM", 4))
                 {
                     long commblockonset = headersize + 8;
-                    t_comm*commchunk;
                     seekout = lseek(fd, commblockonset, SEEK_SET);
                     if (seekout != commblockonset)
                         goto badheader;
                     if (read(fd, buf, sizeof(t_comm)) <
                         (int) sizeof(t_comm))
                             goto badheader;
-                    commchunk=(t_comm *)buf;
-                    nchannels = swap2(commchunk->c_nchannels, swap);
-                    format = swap2(commchunk->c_bitspersamp, swap);
+                    nchannels = swap2(((t_comm *)buf)->c_nchannels, swap);
+                    format = swap2(((t_comm *)buf)->c_bitspersamp, swap);
                     if (format == 16)
                         bytespersamp = 2;
                     else if (format == 24)
