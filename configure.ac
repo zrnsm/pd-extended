@@ -51,7 +51,7 @@ case $host in
 	MINGW=yes
     asio=yes
 	portaudio=yes
-	CFLAGS="$CFLAGS -O6 -funroll-loops -fomit-frame-pointer"
+	CFLAGS="$CFLAGS -O6 -funroll-loops -fomit-frame-pointer -DWINVER=0x0501 -D_WIN32_WINNT=0x0501"
 	EXTERNAL_CFLAGS="-mms-bitfields"
 	EXTERNAL_LDFLAGS="-s -shared -Wl,--enable-auto-import -lpd"
 	EXTERNAL_EXTENSION=dll
