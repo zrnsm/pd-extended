@@ -1041,42 +1041,57 @@ static void sys_addreferencepath(void)
 
 static void sys_loadstartup(void)
 {
-    char startupdir[MAXPDSTRING];
+    char startupdir[PATH_MAX];
     struct stat statbuf;
 
-    strncpy(startupdir, sys_libdir->s_name, MAXPDSTRING);
+    strncpy(startupdir, sys_libdir->s_name, PATH_MAX - 8);
     strcat(startupdir, "/startup");
     if (stat(startupdir, &statbuf) == 0 && statbuf.st_mode & S_IFDIR)
     {
         DIR* dirp;
         struct dirent *dp;
         struct stat statbuf;
-        char buf[MAXPDSTRING];
+        char buf[PATH_MAX];
         char* extension;
-        if(sys_verbose)
-            post("Using %s as startup.", startupdir);
+        logpost(NULL, 5, "Using %s as startup.", startupdir);
         dirp = opendir(startupdir);
         while ((dp = readdir(dirp)) != NULL)
         {
             if(strcmp(".", dp->d_name) == 0 || strcmp("..", dp->d_name) == 0)
                 continue;
-            strncpy(buf, startupdir, MAXPDSTRING);
+            strncpy(buf, startupdir, PATH_MAX - 1);
             strcat(buf, "/");
-            strncat(buf, dp->d_name, MAXPDSTRING - strlen(buf) - 1);
-            stat(buf, &statbuf);
-#ifdef _WIN32 /* Win32 has no symlinks... */
-            if (S_ISREG(statbuf.st_mode))
+            strncat(buf, dp->d_name, PATH_MAX - strlen(buf) - 1);
+#ifdef __gnu_linux__
+            /* safe, non-standard format of realpath(), with NULL resolved_name */
+            char* tmp = realpath(buf, NULL);
+            char resolved_path[strlen(tmp)];
+            strcpy(resolved_path, tmp);
+            free(tmp);
 #else
-            if (S_ISREG(statbuf.st_mode) || S_ISLNK(statbuf.st_mode))
-#endif
+            char resolved_path[PATH_MAX];
+            realpath(buf, resolved_path);
+#endif /* __gnu_linux__ */
+            stat(resolved_path, &statbuf);
+            if (S_ISREG(statbuf.st_mode))
             {
-                if(sys_verbose)
-                    post("Loading %s\n", buf);
-                /* remove the extension for sys_load_lib() */
-                extension = strrchr(buf, '.');
-                if (extension != NULL)
-                    *extension = 0;
-                if (!sys_load_lib(0, buf))
+                /* don't open GUI plugins */
+                if (strcmp("-plugin.tcl", strrchr(resolved_path, '-')) != 0)
+                {
+                    logpost(NULL, 4, "Loading %s", buf);
+                    /* remove the extension for sys_load_lib() */
+                    extension = strrchr(resolved_path, '.');
+                    if (extension != NULL)
+                        *extension = 0;
+                    if (!sys_load_lib(0, resolved_path))
+                        error("%s: can't load startup library'!\n", buf);
+                }
+            }
+            else if (S_ISDIR(statbuf.st_mode))
+            {
+                /* try lib-in-folder style, i.e. mylib/mylib.pd_linux */
+                logpost(NULL, 4, "Loading %s in %s", dp->d_name, buf);
+                if (!sys_load_lib(0, dp->d_name))
                     error("%s: can't load startup library'!\n", buf);
             }
         }
