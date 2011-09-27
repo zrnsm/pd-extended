@@ -54,7 +54,6 @@ install-data-local:
 	$(INSTALL) -d $(DESTDIR)$(libpddir)/extra
 	$(INSTALL_DATA) extra/output~.pd extra/output~-help.pd $(DESTDIR)$(libpddir)/extra
 	$(INSTALL) -d $(DESTDIR)$(libpddir)/startup
-	$(INSTALL) -d $(DESTDIR)$(libpddir)/startup/disabled
 
 # this is at the end because its loooong
 # these files go into libpddir defined above
