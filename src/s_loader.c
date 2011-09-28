@@ -52,7 +52,7 @@ static char sys_dllextent[] = ".d_ppc", sys_dllextent2[] = ".pd_darwin";
 # endif
 #elif defined(_WIN32) || defined(__CYGWIN__)
 static char sys_dllextent[] = ".m_i386", sys_dllextent2[] = ".dll";
-#elif defined(ANDROID)
+#elif defined(__ANDROID__)
 static char sys_dllextent[] = ".l_arm", sys_dllextent2[] = ".pd_linux";
 #endif
 

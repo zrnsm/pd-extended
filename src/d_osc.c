@@ -19,7 +19,7 @@
 #include <machine/endian.h>
 #endif
 
-#if defined(__linux__) || defined(__CYGWIN__) || defined(__GNU__) || defined(ANDROID)
+#if defined(__linux__) || defined(__CYGWIN__) || defined(__GNU__) || defined(__ANDROID__)
 #include <endian.h>
 #endif
 
