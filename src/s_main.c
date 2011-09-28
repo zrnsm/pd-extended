@@ -1065,7 +1065,7 @@ static void sys_loadstartup(void)
 #ifdef _WIN32
             char resolved_path[PATH_MAX];
             strncpy(resolved_path, buf, PATH_MAX);
-#elif defined(__gnu_linux__)
+#elif defined(__gnu_linux__) || defined(__AVAILABLE_MAC_OS_X_VERSION_10_6_AND_LATER)
             /* safe, non-standard format of realpath(), with NULL resolved_name */
             char* tmp = realpath(buf, NULL);
             char resolved_path[strlen(tmp)];
