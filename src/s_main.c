@@ -1062,7 +1062,10 @@ static void sys_loadstartup(void)
             strncpy(buf, startupdir, PATH_MAX - 1);
             strcat(buf, "/");
             strncat(buf, dp->d_name, PATH_MAX - strlen(buf) - 1);
-#ifdef __gnu_linux__
+#ifdef _WIN32
+            char resolved_path[PATH_MAX];
+            strncpy(resolved_path, buf, PATH_MAX);
+#elif defined(__gnu_linux__)
             /* safe, non-standard format of realpath(), with NULL resolved_name */
             char* tmp = realpath(buf, NULL);
             char resolved_path[strlen(tmp)];
@@ -1071,7 +1074,7 @@ static void sys_loadstartup(void)
 #else
             char resolved_path[PATH_MAX];
             realpath(buf, resolved_path);
-#endif /* __gnu_linux__ */
+#endif /* _WIN32 elif __gnu_linux__ */
             stat(resolved_path, &statbuf);
             if (S_ISREG(statbuf.st_mode))
             {
