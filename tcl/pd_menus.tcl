@@ -197,7 +197,7 @@ proc ::pd_menus::build_edit_menu {mymenu} {
         -variable ::editmode_button \
         -command {menu_editmode $::editmode_button}
     $mymenu add check -label [_ "Magic Glass"] -accelerator "$::altkey-$accelerator+G" \
-        -selectcolor grey85 -variable ::magicglass_button \
+        -variable ::magicglass_button \
         -command {menu_magicglass $::magicglass_button}
     $mymenu add check -label [_ "Perf Mode"] -accelerator "$::altkey-$accelerator+P" \
         -variable ::perfmode_button \
