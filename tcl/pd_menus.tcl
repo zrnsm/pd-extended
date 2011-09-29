@@ -191,7 +191,7 @@ proc ::pd_menus::build_edit_menu {mymenu} {
         -accelerator "Shift+$accelerator+L" -command {menu_clear_console}
     $mymenu add  separator
     $mymenu add check -label [_ "Autopatch"] -accelerator "$::altkey-$accelerator+A" \
-        -selectcolor grey85 -variable ::autopatch_button \
+        -variable ::autopatch_button \
         -command {menu_autopatch $::autopatch_button}
     $mymenu add check -label [_ "Edit Mode"] -accelerator "$::altkey-$accelerator+E" \
         -selectcolor grey85 -variable ::editmode_button \
