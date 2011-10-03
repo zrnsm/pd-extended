@@ -1086,17 +1086,13 @@ static void sys_loadstartup(void)
             stat(resolved_path, &statbuf);
             if (S_ISREG(statbuf.st_mode))
             {
-                /* don't open GUI plugins */
-                if (strcmp("-plugin.tcl", strrchr(resolved_path, '-')) != 0)
-                {
-                    logpost(NULL, 4, "Loading %s", buf);
-                    /* remove the extension for sys_load_lib() */
-                    extension = strrchr(resolved_path, '.');
-                    if (extension != NULL)
-                        *extension = 0;
-                    if (!sys_load_lib(0, resolved_path))
-                        error("%s: can't load startup library'!\n", buf);
-                }
+                logpost(NULL, 4, "Loading %s", buf);
+                /* remove the extension for sys_load_lib() */
+                extension = strrchr(resolved_path, '.');
+                if (extension != NULL)
+                    *extension = 0;
+                if (!sys_load_lib(0, resolved_path))
+                    error("%s: can't load startup library'!\n", buf);
             }
             else if (S_ISDIR(statbuf.st_mode))
             {
