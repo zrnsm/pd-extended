@@ -55,6 +55,7 @@ int sys_nogui;
 int sys_hipriority = -1;    /* -1 = don't care; 0 = no; 1 = yes */
 int sys_guisetportnumber;   /* if started from the GUI, this is the port # */
 int sys_nosleep = 0;  /* skip all "sleep" calls and spin instead */
+static int sys_nostartup = 0;  /* skip loading stuff from the 'startup' folder */
 
 char *sys_guicmd;
 t_symbol *sys_libdir;
@@ -240,7 +241,8 @@ void glob_initfromgui(void *dummy, t_symbol *s, int argc, t_atom *argv)
             sys_fontlist[i].fi_height);
 #endif
         /* auto-load anything in that is in startupdir */
-    sys_loadstartup();
+    if(!sys_nostartup)
+        sys_loadstartup();
         /* load dynamic libraries specified with "-lib" args */
     for  (nl = sys_externlist; nl; nl = nl->nl_next)
         if (!sys_load_lib(0, nl->nl_string))
@@ -394,6 +396,7 @@ static char *(usagemessage[]) = {
 "-guicmd \"cmd...\" -- start alternatve GUI program (e.g., remote via ssh)\n",
 "-send \"msg...\"   -- send a message at startup, after patches are loaded\n",
 "-noprefs         -- suppress loading preferences on startup\n",
+"-nostartup       -- suppress loading things from the 'startup' folder\n",
 #ifdef HAVE_UNISTD_H
 "-rt or -realtime -- use real-time priority\n",
 "-nrt             -- don't use real-time priority\n",
@@ -907,6 +910,11 @@ int sys_argparse(int argc, char **argv)
                 goto usage;
             argc -= 2; argv += 2;
         }
+        else if (!strcmp(*argv, "-nostartup")) /* did this earlier */
+        {
+            sys_nostartup = 1;
+            argc--, argv++;
+        }
         else if (!strcmp(*argv, "-noprefs")) /* did this earlier */
             argc--, argv++;
         else
@@ -1078,17 +1086,13 @@ static void sys_loadstartup(void)
             stat(resolved_path, &statbuf);
             if (S_ISREG(statbuf.st_mode))
             {
-                /* don't open GUI plugins */
-                if (strcmp("-plugin.tcl", strrchr(resolved_path, '-')) != 0)
-                {
-                    logpost(NULL, 4, "Loading %s", buf);
-                    /* remove the extension for sys_load_lib() */
-                    extension = strrchr(resolved_path, '.');
-                    if (extension != NULL)
-                        *extension = 0;
-                    if (!sys_load_lib(0, resolved_path))
-                        error("%s: can't load startup library'!\n", buf);
-                }
+                logpost(NULL, 4, "Loading %s", buf);
+                /* remove the extension for sys_load_lib() */
+                extension = strrchr(resolved_path, '.');
+                if (extension != NULL)
+                    *extension = 0;
+                if (!sys_load_lib(0, resolved_path))
+                    error("%s: can't load startup library'!\n", buf);
             }
             else if (S_ISDIR(statbuf.st_mode))
             {
