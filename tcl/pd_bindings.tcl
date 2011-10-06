@@ -139,6 +139,15 @@ proc ::pd_bindings::patch_bindings {mytoplevel} {
     bind $tkcanvas <$::modifier-ButtonPress-1>  "pdtk_canvas_mouse %W %x %y %b 2"
     bind $tkcanvas <Shift-ButtonPress-1>        "pdtk_canvas_mouse %W %x %y %b 1"
 
+    # canvas bindings ---------------------------------------------------------
+    # just for tooltips right now
+    $tkcanvas bind inlet <Enter> "pdtk_canvas_enteritem %W %x %y inlet %#"
+    $tkcanvas bind outlet <Enter> "pdtk_canvas_enteritem %W %x %y outlet %#"
+    $tkcanvas bind text <Enter> "pdtk_canvas_enteritem %W %x %y text %#"
+    $tkcanvas bind inlet <Leave> "pdtk_canvas_leaveitem %W inlet"
+    $tkcanvas bind outlet <Leave> "pdtk_canvas_leaveitem %W outlet"
+    $tkcanvas bind text <Leave> "pdtk_canvas_leaveitem %W text"
+
     if {$::windowingsystem eq "x11"} {
         # from http://wiki.tcl.tk/3893
         bind all <Button-4> \

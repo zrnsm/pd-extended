@@ -2122,6 +2122,69 @@ void canvas_startmotion(t_canvas *x)
     x->gl_editor->e_ywas = yval; 
 }
 
+static void canvas_enterobj(t_canvas *x, t_symbol *item, t_floatarg xpos,
+    t_floatarg ypos, t_floatarg xletno)
+{
+    t_symbol *name = 0, *helpname, *dir;
+    int yoffset = 0, xoffset = 0;
+    if (item == gensym("inlet"))
+    {
+	yoffset = 1;
+        xoffset = xletno==0 ? 1 : -1;
+    }
+    else if (item == gensym("outlet"))
+    {
+	yoffset = -1;
+	xoffset = xletno== 0 ? 1 : -1;
+    }
+    int x1, y1, x2, y2;
+    t_gobj *g;
+    if (g = canvas_findhitbox(x, xpos+xoffset, ypos+yoffset,
+	&x1, &y1, &x2, &y2))
+    {
+        if (pd_class((t_pd *)g)==canvas_class ?
+	    canvas_isabstraction((t_canvas *)g) : 0)
+	{
+	    t_canvas *z = (t_canvas *)g;
+	    name = z->gl_name;
+	    helpname = z->gl_name;
+	    dir = canvas_getdir(z);
+	}
+	else
+	{
+	    name = g->g_pd->c_name;
+	    helpname = g->g_pd->c_helpname;
+	    dir = g->g_pd->c_externdir;
+	}
+        sys_vgui("pdtk_gettip .x%lx.c %s %d \
+	    [list %s] [list %s] [list %s]\n",
+	    x, item->s_name, (int)xletno,
+	    name->s_name, helpname->s_name, dir->s_name);
+    }
+}
+
+static void canvas_tip(t_canvas *x, t_symbol *s, int argc, t_atom *argv)
+{
+    if (s == gensym("echo"))
+	return;
+    if (argv->a_type != A_FLOAT)
+        error("canvas_tip: bad argument");
+    else
+    {
+	    sys_vgui("pdtk_tip .x%lx.c 1", x);
+	    t_atom *at = argv;
+	    int i;
+	    for (i=0; i<argc; i++)
+	    {
+		if (at[i].a_type == A_FLOAT)
+		    sys_vgui(" %g", at[i].a_w.w_float);
+		else if (at[i].a_type == A_SYMBOL)
+		    sys_vgui(" %s", at[i].a_w.w_symbol->s_name);
+	    }
+	    sys_gui("\n");
+    }
+}
+
 /* ----------------------------- window stuff ----------------------- */
 extern int sys_perf;
 
@@ -3002,6 +3065,12 @@ void g_editor_setup(void)
         A_GIMME, A_NULL);
     class_addmethod(canvas_class, (t_method)canvas_motion, gensym("motion"),
         A_FLOAT, A_FLOAT, A_FLOAT, A_NULL);
+    class_addmethod(canvas_class, (t_method)canvas_enterobj, gensym("enter"),
+	A_SYMBOL, A_FLOAT, A_FLOAT, A_FLOAT, A_NULL);
+    class_addmethod(canvas_class, (t_method)canvas_tip, gensym("tip"),
+	A_GIMME, A_NULL);
+    class_addmethod(canvas_class, (t_method)canvas_tip, gensym("echo"),
+        A_GIMME, A_NULL);
 
 /* ------------------------ menu actions ---------------------------- */
     class_addmethod(canvas_class, (t_method)canvas_menuclose,

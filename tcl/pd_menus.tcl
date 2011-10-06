@@ -203,6 +203,7 @@ proc ::pd_menus::build_edit_menu {mymenu} {
         -variable ::perfmode_button \
         -command {menu_perfmode $::perfmode_button}
     $mymenu add  separator
+    $mymenu add checkbutton -label [_ "Autotips"] -variable ::autotips_button
     #TODO madness! how to set the state of the check box without invoking the menu!
     $mymenu add check -label [_ "Edit Mode"] -accelerator "$accelerator+E" \
         -variable ::editmode_button \
