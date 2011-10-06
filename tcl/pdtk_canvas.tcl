@@ -464,14 +464,6 @@ proc ::pdtk_canvas::pdtk_canvas_autopatch {mytoplevel state} {
     event generate $mytoplevel <<Autopatch>>
     # 'pd' doesn't know about autopatch per-canvas, so we tell it here
     pdsend "pd autopatch $state"
-    # can't change the menu background color on Aqua
-    if {$::windowingsystem eq "aqua"} {return}
-    if {$state == 0} {
-        $::pd_menus::menubar.edit entryconfigure [_ "Autopatch"] -background {}
-    } else {
-        $::pd_menus::menubar.edit entryconfigure [_ "Autopatch"] \
-            -background $::menu_active
-    }
 }
 
 # check or uncheck the "Magic Glass" menu item
