@@ -479,14 +479,6 @@ proc ::pdtk_canvas::pdtk_canvas_magicglass {mytoplevel state} {
     set ::magicglass_button $state
     set ::magicglass($mytoplevel) $state
     event generate $mytoplevel <<MagicGlass>>
-    # can't change the menu background color on Aqua
-    if {$::windowingsystem eq "aqua"} {return}
-    if {$state == 0} {
-        $::pd_menus::menubar.edit entryconfigure [_ "Magic Glass"] -background {}
-    } else {
-        $::pd_menus::menubar.edit entryconfigure [_ "Magic Glass"] \
-            -background $::menu_active
-    }
 }
 
 # message from Pd to update the currently available undo/redo action
