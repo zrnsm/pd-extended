@@ -241,7 +241,6 @@ set ::msg_cord_highlight "#474"
 set ::msg_cord "#121"
 set ::msg_nlet "#fff"
 set :mixed_nlet "#88aaff"
-set ::menu_active "lightgreen"
 
 #------------------------------------------------------------------------------#
 # coding style

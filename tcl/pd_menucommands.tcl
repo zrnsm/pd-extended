@@ -99,12 +99,6 @@ proc ::pd_menucommands::menu_toggle_magicglass {} {
 proc ::pd_menucommands::menu_perfmode {state} {
     set ::perfmode_button $state
     pdsend "pd perf $state"
-    if {$state == 0} {
-        $::pd_menus::menubar.edit entryconfigure [_ "Perf Mode"] -background {}
-    } else {
-        $::pd_menus::menubar.edit entryconfigure [_ "Perf Mode"] \
-            -background $::menu_active
-    }
 }
 
 proc ::pd_menucommands::menu_toggle_perfmode {} {
