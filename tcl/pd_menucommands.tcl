@@ -111,6 +111,14 @@ proc ::pd_menucommands::menu_toggle_perfmode {} {
     menu_perfmode [expr {! $::perfmode_button}]
 }
 
+proc ::pd_menucommands::menu_autotips {state} {
+    set ::autotips_button $state
+}
+
+proc ::pd_menucommands::menu_toggle_autotips {} {
+    menu_autotips [expr {! $::autotips_button}]
+}
+
 # ------------------------------------------------------------------------------
 # generic procs for sending menu events
 
