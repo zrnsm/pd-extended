@@ -205,6 +205,11 @@ proc ::pd_menus::build_edit_menu {mymenu} {
     $mymenu add checkbutton -label [_ "Autotips"] \
 		-accelerator "$::altkey-$accelerator+T" \
 		-variable ::autotips_button
+    if {$::windowingsystem ne "aqua"} {
+        $mymenu add  separator
+        $mymenu add command -label [_ "Preferences"] \
+            -command {pdsend "pd start-path-dialog"}
+    }
     $mymenu add  separator
     #TODO madness! how to set the state of the check box without invoking the menu!
     $mymenu add check -label [_ "Edit Mode"] -accelerator "$accelerator+E" \
@@ -291,11 +296,11 @@ proc ::pd_menus::build_media_menu {mymenu} {
             -value [lindex [lindex $::midi_apilist $x] 1]\
             -command {pdsend "pd midi-setapi $::pd_whichmidiapi"}
     }
-    if {$::windowingsystem ne "aqua"} {
-        $mymenu add  separator
-        create_preferences_menu $mymenu.preferences
-        $mymenu add cascade -label [_ "Preferences"] -menu $mymenu.preferences
-    }
+    $mymenu add  separator
+    $mymenu add command -label [_ "Audio Settings..."] \
+        -command {pdsend "pd audio-properties"}
+    $mymenu add command -label [_ "MIDI Settings..."] \
+        -command {pdsend "pd midi-properties"}
 }
 
 proc ::pd_menus::build_window_menu {mymenu} {
@@ -497,21 +502,6 @@ proc ::pd_menus::update_window_menu {} {
 }
 
 # ------------------------------------------------------------------------------
-# submenu for Preferences, now used on all platforms
-
-proc ::pd_menus::create_preferences_menu {mymenu} {
-    menu $mymenu
-    $mymenu add command -label [_ "Path..."] \
-        -command {pdsend "pd start-path-dialog"}
-    $mymenu add command -label [_ "Startup..."] \
-        -command {pdsend "pd start-startup-dialog"}
-    $mymenu add command -label [_ "Audio Settings..."] \
-        -command {pdsend "pd audio-properties"}
-    $mymenu add command -label [_ "MIDI Settings..."] \
-        -command {pdsend "pd midi-properties"}
-}
-
-# ------------------------------------------------------------------------------
 # menu building functions for Mac OS X/aqua
 
 # for Mac OS X only
@@ -520,9 +510,6 @@ proc ::pd_menus::create_apple_menu {mymenu} {
     menu $mymenu.apple
     $mymenu.apple add command -label [_ "About Pd"] -command {menu_aboutpd}
     $mymenu.apple add  separator
-    create_preferences_menu $mymenu.apple.preferences
-    $mymenu.apple add cascade -label [_ "Preferences"] \
-        -menu $mymenu.apple.preferences
     # this needs to be last for things to function properly
     $mymenu add cascade -label "Apple" -menu $mymenu.apple
     
@@ -615,8 +602,6 @@ proc ::pd_menus::build_file_menu_win32 {mymenu} {
     #    $mymenu add command -label "Revert"
     $mymenu add  separator
     $mymenu add command -label [_ "Message..."]  -accelerator "$accelerator+M"
-    create_preferences_menu $mymenu.preferences
-    $mymenu add cascade -label [_ "Preferences"] -menu $mymenu.preferences
     $mymenu add command -label [_ "Print..."] -accelerator "$accelerator+P"
     $mymenu add  separator
     # the recent files get inserted in here by update_recentfiles_on_menu
