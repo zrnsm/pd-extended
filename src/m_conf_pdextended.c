@@ -59,6 +59,7 @@ void conf_init(void)
     d_ugen_setup();
     gfxstub_setup();
     import_setup();
+    loadbang_setup();
     initbang_setup();
     closebang_setup();
     magicGlass_setup();
