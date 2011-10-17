@@ -39,20 +39,20 @@ proc ::pd_guiprefs::init {} {
 
 proc ::pd_guiprefs::init_aqua {} {
     # osx has a "Open Recent" menu with 10 recent files (others have 5 inlined)
-    set ::recentfiles_domain org.puredata
+    set ::recentfiles_domain org.puredata.pdextended.pd-gui
     set ::recentfiles_key "NSRecentDocuments"
     set ::total_recentfiles 10
 }
 
 proc ::pd_guiprefs::init_win {} {
     # windows uses registry
-    set ::recentfiles_domain "HKEY_CURRENT_USER\\Software\\Pure-Data"
+    set ::recentfiles_domain "HKEY_CURRENT_USER\\Software\\Pd-extended"
     set ::recentfiles_key "RecentDocs"
 }
 
 proc ::pd_guiprefs::init_x11 {} {
-    # linux uses ~/.config/pure-data dir
-    set ::recentfiles_domain "~/.config/pure-data"
+    # linux uses ~/.config/pd-extended dir
+    set ::recentfiles_domain "~/.config/pd-extended"
     set ::recentfiles_key "recentfiles.conf"
     prepare_configdir
 }
