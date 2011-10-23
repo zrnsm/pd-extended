@@ -172,7 +172,7 @@ proc ::pdwindow::pdtk_pd_dsp {value} {
         .pdwindow.header.dsp configure -background green
     } else {
         set ::dsp 0
-        .pdwindow.header.dsp configure -background grey
+        .pdwindow.header.dsp configure -background lightgray
     }
 }
 
