@@ -137,7 +137,6 @@ set font_fixed_metrics {
     30 18 37
     36 22 44
 }
-set font_measured_metrics {}
 
 # root path to lib of Pd's files, see s_main.c for more info
 set sys_libdir {}
@@ -483,32 +482,20 @@ proc set_base_font {family weight} {
 # creates all the base fonts (i.e. pd_font_8 thru pd_font_36) so that they fit
 # into the metrics given by $::font_fixed_metrics for any given font/weight
 proc fit_font_into_metrics {} {
-# TODO the fonts picked seem too small, probably on fixed width
     foreach {size width height} $::font_fixed_metrics {
-        set myfont [get_font_for_size $size]
-        font create $myfont -family $::font_family -weight $::font_weight \
-            -size [expr {-$height}]
-        set height2 $height
-        set giveup 0
-        while {[font measure $myfont M] > $width || \
-            [font metrics $myfont -linespace] > $height} {
-            incr height2 -1
-            font configure $myfont -size [expr {-$height2}]
-            if {$height2 * 2 <= $height} {
-                set giveup 1
-                set ::font_measured_metrics $::font_fixed_metrics
-                break
-            }
+        set pixelheight [expr -1 * $height]
+        font create tmpfont -family $::font_family -weight $::font_weight \
+            -size $pixelheight
+        while {[font measure tmpfont M] > $width || \
+            [font metrics tmpfont -linespace] > $height} {
+            # this actually makes it smaller since pixel heights are negative
+            incr pixelheight 1
+            font configure tmpfont -size $pixelheight
         }
-        set ::font_measured_metrics \
-            "$::font_measured_metrics  $size\
-                [font measure $myfont M] [font metrics $myfont -linespace]"
-        if {$giveup} {
-            ::pdwindow::post [format \
-    [_ "WARNING: %s failed to find font size (%s) that fits into %sx%s!\n"]\
-               [lindex [info level 0] 0] $size $width $height]
-            continue
-        }
+        ::pdwindow::logpost "" 8 "Creating $size font at {$pixelheight $width $height}\n"
+        font create [get_font_for_size $size] \
+            -family $::font_family -weight $::font_weight -size $pixelheight
+        font delete tmpfont
     }
 }
 
@@ -529,7 +516,7 @@ proc pdtk_pd_startup {major minor bugfix test
     set_base_font $sys_font $sys_fontweight
     fit_font_into_metrics
     ::pd_guiprefs::init
-    pdsend "pd init [enquote_path [pwd]] $oldtclversion $::font_measured_metrics"
+    pdsend "pd init [enquote_path [pwd]] $oldtclversion $::font_fixed_metrics"
     ::pd_bindings::class_bindings
     ::pd_bindings::global_bindings
     ::pd_menus::create_menubar
