@@ -169,10 +169,10 @@ proc ::pdwindow::pdtk_pd_dsp {value} {
     # TODO canvas_startdsp/stopdsp should really send 1 or 0, not "ON" or "OFF"
     if {$value eq "ON"} {
         set ::dsp 1
-        .pdwindow.header.dsp configure -background green
+        .pdwindow.header.frame.dsp configure -background green
     } else {
         set ::dsp 0
-        .pdwindow.header.dsp configure -background lightgray
+        .pdwindow.header.frame.dsp configure -background lightgray
     }
 }
 
@@ -383,9 +383,11 @@ proc ::pdwindow::create_window {} {
 
     frame .pdwindow.header -borderwidth 1 -relief flat
     pack .pdwindow.header -side top -fill x -ipady 5
+    frame .pdwindow.header.spacer -borderwidth 0
+    pack .pdwindow.header.spacer -side left -fill y -anchor w -ipadx 1
     checkbutton .pdwindow.header.meters -variable ::meters -takefocus 1 \
         -command {pdsend "pd meters $::meters"}
-    pack .pdwindow.header.meters -side left -fill y -anchor w -pady 10
+    pack .pdwindow.header.meters -side left -fill y -anchor w -padx 5 -pady 10
     frame .pdwindow.header.vu -borderwidth 0
     pack .pdwindow.header.vu -side left
     canvas .pdwindow.header.vu.in -width 150 -height 20 -background "#3F3F3F" \
@@ -401,10 +403,12 @@ proc ::pdwindow::create_window {} {
     label .pdwindow.header.cliplabel.in -text [_ "IN"] -width 4
     label .pdwindow.header.cliplabel.out -text [_ "OUT"] -width 4
     pack .pdwindow.header.cliplabel.in .pdwindow.header.cliplabel.out -side top
-    checkbutton .pdwindow.header.dsp -text [_ "DSP"] -variable ::dsp \
-        -font {$::font_family 18 bold} -takefocus 1 \
+    frame .pdwindow.header.frame -borderwidth 0 -padx 5
+    pack .pdwindow.header.frame -side right
+    checkbutton .pdwindow.header.frame.dsp -text [_ "DSP"] -variable ::dsp \
+        -font {$::font_family 18 bold} -takefocus 1 -padx 5 \
         -borderwidth 0  -command {pdsend "pd dsp $::dsp"}
-    pack .pdwindow.header.dsp -side right -fill y -anchor e -padx 5 -pady 0
+    pack .pdwindow.header.frame.dsp -side right -fill y -anchor e -padx 5 -pady 0
 # DIO button
     label .pdwindow.header.dio -text [_ "audio I/O error"] -borderwidth 0 \
         -foreground lightgray -takefocus 0 -font {$::font_family 14}
