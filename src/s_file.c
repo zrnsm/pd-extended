@@ -315,7 +315,7 @@ static void sys_putpreference(const char *key, const char *value)
                    strlen(sys_libdir->s_name)) == 0))
     {
         char cmdbuf[MAXPDSTRING];
-        snprintf(cmdbuf, MAXPDSTRING,
+        snprintf(cmdbuf, MAXPDSTRING, 
                  "defaults write '%s' %s \"%s\" 2> /dev/null\n",
                  current_prefs, key, value);
         system(cmdbuf);
