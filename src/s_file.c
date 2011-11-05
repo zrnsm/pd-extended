@@ -245,7 +245,7 @@ static void sys_initloadpreferences( void)
 
 static int sys_getpreference(const char *key, char *value, int size)
 {
-    char cmdbuf[256];
+    char cmdbuf[MAXPDSTRING];
     int nread = 0, nleft = size;
 	char default_prefs[MAXPDSTRING]; // default prefs embedded in the package
 	char embedded_prefs[MAXPDSTRING]; // overrides others for standalone app
@@ -263,19 +263,19 @@ static int sys_getpreference(const char *key, char *value, int size)
 			 "%s/Library/Preferences/org.puredata.pdextended.plist", homedir);
 	if (stat(embedded_prefs_file, &statbuf) == 0) 
 	{
-		snprintf(cmdbuf, MAXPDSTRING + 20, 
+		snprintf(cmdbuf, MAXPDSTRING,
 				 "defaults read '%s' %s 2> /dev/null\n", embedded_prefs, key);
         strncpy(current_prefs, embedded_prefs, MAXPDSTRING);
 	}
 	else if (stat(user_prefs_file, &statbuf) == 0) 
 	{
-		snprintf(cmdbuf, MAXPDSTRING + 20, 
+		snprintf(cmdbuf, MAXPDSTRING,
 				 "defaults read org.puredata.pdextended %s 2> /dev/null\n", key);
         strcpy(current_prefs, "org.puredata.pdextended");
 	}
 	else 
 	{
-		snprintf(cmdbuf, MAXPDSTRING + 20, 
+		snprintf(cmdbuf, MAXPDSTRING,
 				 "defaults read '%s' %s 2> /dev/null\n", default_prefs, key);
         strcpy(current_prefs, "org.puredata.pdextended");
 	}
@@ -315,7 +315,7 @@ static void sys_putpreference(const char *key, const char *value)
                    strlen(sys_libdir->s_name)) == 0))
     {
         char cmdbuf[MAXPDSTRING];
-        snprintf(cmdbuf, MAXPDSTRING, 
+        snprintf(cmdbuf, MAXPDSTRING,
                  "defaults write '%s' %s \"%s\" 2> /dev/null\n",
                  current_prefs, key, value);
         system(cmdbuf);

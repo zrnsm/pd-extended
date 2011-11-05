@@ -168,7 +168,7 @@ proc ::pd_guiprefs::write_config_aqua {data {adomain} {akey} {arr false}} {
     if {$arr} {
         foreach filepath $data {
             set escaped [escape_for_plist $filepath]
-            exec defaults write $adomain $akey -array-add '$escaped'
+            exec defaults write $adomain $akey -array-add "$escaped"
         }
     } else {
         set escaped [escape_for_plist $data]
