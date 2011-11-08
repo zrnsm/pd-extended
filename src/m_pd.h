@@ -65,17 +65,17 @@ extern "C" {
 #define PD_LONGINTTYPE long
 #endif
 
-#if !defined(PD_FLOATSIZE)
+#if !defined(PD_FLOATPRECISION)
   /* normally, our floats (t_float, t_sample,...) are 32bit */
-# define PD_FLOATSIZE 32
+# define PD_FLOATPRECISION 32
 #endif
 
-#if PD_FLOATSIZE == 32
+#if PD_FLOATPRECISION == 32
 # define PD_FLOATTYPE float
 /* an unsigned int of the same size as FLOATTYPE: */
 # define PD_FLOATUINTTYPE unsigned int
 
-#elif PD_FLOATSIZE == 64
+#elif PD_FLOATPRECISION == 64
 # define PD_FLOATTYPE double
 # define PD_FLOATUINTTYPE unsigned long
 #else
@@ -679,7 +679,7 @@ defined, there is a "te_xpix" field in objects, not a "te_xpos" as before: */
 
 #if defined(__i386__) || defined(__x86_64__)
 /* a test for NANs and denormals.  Should only be necessary on i386. */
-# if PD_FLOATSIZE == 32
+# if PD_FLOATPRECISION == 32
 static inline int PD_BADFLOAT(t_sample f) {
   t_sampleint_union u;
   u.f=f;
