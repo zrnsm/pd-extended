@@ -1056,52 +1056,59 @@ static void sys_loadstartup(void)
     strcat(startupdir, "/startup");
     if (stat(startupdir, &statbuf) == 0 && statbuf.st_mode & S_IFDIR)
     {
-        DIR* dirp;
+        struct dirent **namelist;
         struct dirent *dp;
+        int n, i;
         struct stat statbuf;
         char buf[PATH_MAX];
         char* extension;
         logpost(NULL, 5, "Using %s as startup.", startupdir);
-        dirp = opendir(startupdir);
-        while ((dp = readdir(dirp)) != NULL)
-        {
-            if(strcmp(".", dp->d_name) == 0 || strcmp("..", dp->d_name) == 0)
-                continue;
-            strncpy(buf, startupdir, PATH_MAX - 1);
-            strcat(buf, "/");
-            strncat(buf, dp->d_name, PATH_MAX - strlen(buf) - 1);
+        n = scandir(startupdir, &namelist, NULL, alphasort);
+        if (n < 0)
+            error("scandir failed on startup dir %s", startupdir);
+        else {
+            for (i = 0; i < n; i++)
+            {
+                dp = namelist[i];
+                if(strcmp(".", dp->d_name) == 0 || strcmp("..", dp->d_name) == 0)
+                    continue;
+                strncpy(buf, startupdir, PATH_MAX - 1);
+                strcat(buf, "/");
+                strncat(buf, dp->d_name, PATH_MAX - strlen(buf) - 1);
 #ifdef _WIN32
-            char resolved_path[PATH_MAX];
-            strncpy(resolved_path, buf, PATH_MAX);
+                char resolved_path[PATH_MAX];
+                strncpy(resolved_path, buf, PATH_MAX);
 #elif defined(__gnu_linux__) || defined(__AVAILABLE_MAC_OS_X_VERSION_10_6_AND_LATER)
-            /* safe, non-standard format of realpath(), with NULL resolved_name */
-            char* tmp = realpath(buf, NULL);
-            char resolved_path[strlen(tmp)];
-            strcpy(resolved_path, tmp);
-            free(tmp);
+                /* safe, non-standard format of realpath(), with NULL resolved_name */
+                char* tmp = realpath(buf, NULL);
+                char resolved_path[strlen(tmp)];
+                strcpy(resolved_path, tmp);
+                free(tmp);
 #else
-            char resolved_path[PATH_MAX];
-            realpath(buf, resolved_path);
+                char resolved_path[PATH_MAX];
+                realpath(buf, resolved_path);
 #endif /* _WIN32 elif __gnu_linux__ */
-            stat(resolved_path, &statbuf);
-            if (S_ISREG(statbuf.st_mode))
-            {
-                logpost(NULL, 4, "Loading %s", buf);
-                /* remove the extension for sys_load_lib() */
-                extension = strrchr(resolved_path, '.');
-                if (extension != NULL)
-                    *extension = 0;
-                if (!sys_load_lib(0, resolved_path))
-                    error("%s: can't load startup library'!\n", buf);
+                stat(resolved_path, &statbuf);
+                if (S_ISREG(statbuf.st_mode))
+                {
+                    logpost(NULL, 4, "Loading %s", buf);
+                    /* remove the extension for sys_load_lib() */
+                    extension = strrchr(resolved_path, '.');
+                    if (extension != NULL)
+                        *extension = 0;
+                    if (!sys_load_lib(0, resolved_path))
+                        error("%s: can't load startup library'!\n", buf);
+                }
+                else if (S_ISDIR(statbuf.st_mode))
+                {
+                    /* try lib-in-folder style, i.e. mylib/mylib.pd_linux */
+                    logpost(NULL, 4, "Loading %s in %s", dp->d_name, buf);
+                    if (!sys_load_lib(0, dp->d_name))
+                        error("%s: can't load startup library'!\n", buf);
+                }
+                free(namelist[i]);
             }
-            else if (S_ISDIR(statbuf.st_mode))
-            {
-                /* try lib-in-folder style, i.e. mylib/mylib.pd_linux */
-                logpost(NULL, 4, "Loading %s in %s", dp->d_name, buf);
-                if (!sys_load_lib(0, dp->d_name))
-                    error("%s: can't load startup library'!\n", buf);
-            }
+            free(namelist);
         }
-        (void)closedir(dirp);
     }
 }
