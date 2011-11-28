@@ -285,3 +285,38 @@ proc ::pd_menucommands::menu_bringalltofront {} {
     }
     wm deiconify .
 }
+
+proc ::pd_menucommands::menu_makeapp {isdir} {
+    set top_window [lindex [wm stackorder .] end]
+    set patch [::makeapp::getpatchname $top_window]
+    if {$patch == ""} {
+        pdtk_post \
+            "No patch found! Select an open parent patch with the mouse, then try again.\n"
+        return
+    }
+    # TODO set -parent to patch being turned into app
+    pdtk_post [_ "Select name for app to build...\n"]
+    set appdir [tk_getSaveFile -filetypes { {{Mac OS X Application} {.app}} } \
+                    -parent $top_window -defaultextension .app \
+                    -title [_ "Save application to..."]]
+    if {$appdir != ""} {
+        if {![string match "*.app" $appdir]} {
+            set appdir "$appdir.app"
+            #			pdtk_post "Adding .app extension: $appdir\n"
+        }
+        if {[::makeapp::promptreplace $appdir]} {
+            ::makeapp::busypanel $appdir
+            ::makeapp::createapp $appdir
+            .makeapp.label configure -text [_ "Configuring Info.plist..."]
+            ::makeapp::makeinfoplist $appdir
+            .makeapp.label configure -text [_ "Setting patch name..."]
+            regexp {.*/(.*?)\.pd} $patch -> patchname
+            .makeapp.label configure -text [_ "Copying current patch..."]
+            ::makeapp::copycurrentpatch $appdir $patch $patchname $isdir
+            .makeapp.label configure -text [_ "Setting embedded preferences..."]
+            ::makeapp::embedprefs $appdir "app-auto-load/$patchname.pd"
+            pdtk_post [_ "$appdir is complete!\n"]
+            destroy .makeapp
+        }
+    }
+}
