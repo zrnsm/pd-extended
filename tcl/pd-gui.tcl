@@ -40,6 +40,7 @@ package require dialog_midi
 package require dialog_path
 package require dialog_startup
 package require helpbrowser
+package require makeapp
 package require pd_menucommands
 package require opt_parser
 package require pdtk_canvas
