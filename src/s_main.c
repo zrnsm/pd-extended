@@ -21,6 +21,8 @@
 #include <io.h>
 #include <windows.h>
 #include <winbase.h>
+/* Win32 doesn't have scandir() so include this implementation */
+#include "scandir.h"
 #endif
 #ifdef _MSC_VER  /* This is only for Microsoft's compiler, not cygwin, e.g. */
 #define snprintf sprintf_s
