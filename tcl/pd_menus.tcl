@@ -520,6 +520,9 @@ proc ::pd_menus::build_file_menu_aqua {mymenu} {
     #$mymenu add command -label [_ "Save All"]
     #$mymenu add command -label [_ "Revert to Saved"]
     $mymenu add  separator
+    $mymenu add command -label "Make app from patch..." -command {menu_makeapp 0}
+    $mymenu add command -label "Make app from folder..." -command {menu_makeapp 1}
+    $mymenu add  separator
     $mymenu add command -label [_ "Message..."]
     $mymenu add  separator
     $mymenu add command -label [_ "Print..."]   -accelerator "$accelerator+P"
