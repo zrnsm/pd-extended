@@ -6,6 +6,17 @@
 
 #include "m_pd.h"
 
+t_symbol *bendin_sym;
+t_symbol *ctlin_sym;
+t_symbol *midiclkin_sym;
+t_symbol *midiin_sym;
+t_symbol *midirealtimein_sym;
+t_symbol *notein_sym;
+t_symbol *pgmin_sym;
+t_symbol *polytouchin_sym;
+t_symbol *sysexin_sym;
+t_symbol *touchin_sym;
+
 void inmidi_byte(int portno, int byte)
 {
     t_atom at[2];
@@ -132,4 +143,18 @@ void inmidi_realtimein(int portno, int SysMsg)
         SETFLOAT(at+1, SysMsg);
         pd_list(midirealtimein_sym->s_thing, &s_list, 2, at);
     }
+}
+
+void e_midi_setup(void)
+{
+    bendin_sym = gensym("#bendin");
+    ctlin_sym = gensym("#ctlin");
+    midiclkin_sym = gensym("#midiclkin");
+    midiin_sym = gensym("#midiin");
+    midirealtimein_sym = gensym("#midirealtimein");
+    notein_sym = gensym("#notein");
+    pgmin_sym = gensym("#pgmin");
+    polytouchin_sym = gensym("#polytouchin");
+    sysexin_sym = gensym("#sysexin");
+    touchin_sym = gensym("#touchin");
 }

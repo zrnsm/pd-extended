@@ -28,9 +28,9 @@ pd_SOURCES = g_canvas.c g_graph.c g_text.c g_rtext.c g_array.c g_template.c \
     d_array.c d_global.c \
     d_delay.c \
     d_resample.c \
-    x_arithmetic.c x_connective.c x_midi.c \
+    x_arithmetic.c x_connective.c \
     x_acoustics.c d_soundfile.c \
-    e_fft.c e_sqrt.c e_gfxstub.c e_dac.c \
+    e_fft.c e_sqrt.c e_gfxstub.c e_dac.c e_midi.c \
     g_magicglass.c \
     import.c closebang.c initbang.c loadbang.c
 
