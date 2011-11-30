@@ -6,16 +6,16 @@
 
 #include "m_pd.h"
 
-t_symbol *bendin_sym;
-t_symbol *ctlin_sym;
-t_symbol *midiclkin_sym;
-t_symbol *midiin_sym;
-t_symbol *midirealtimein_sym;
-t_symbol *notein_sym;
-t_symbol *pgmin_sym;
-t_symbol *polytouchin_sym;
-t_symbol *sysexin_sym;
-t_symbol *touchin_sym;
+static t_symbol *bendin_sym;
+static t_symbol *ctlin_sym;
+static t_symbol *midiclkin_sym;
+static t_symbol *midiin_sym;
+static t_symbol *midirealtimein_sym;
+static t_symbol *notein_sym;
+static t_symbol *pgmin_sym;
+static t_symbol *polytouchin_sym;
+static t_symbol *sysexin_sym;
+static t_symbol *touchin_sym;
 
 void inmidi_byte(int portno, int byte)
 {
