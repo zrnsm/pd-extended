@@ -31,6 +31,7 @@ void gfxstub_setup(void);
 void e_midi_setup(void);
 /* kludge until there is a declare API for externals, hans@eds.org */
 void import_setup(void);
+void path_setup(void);
 void initbang_setup(void);
 void closebang_setup(void);
 void magicGlass_setup(void);
@@ -61,6 +62,7 @@ void conf_init(void)
     gfxstub_setup();
     e_midi_setup();
     import_setup();
+    path_setup();
     loadbang_setup();
     initbang_setup();
     closebang_setup();
