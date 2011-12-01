@@ -1314,6 +1314,7 @@ before any objects are created in it. */
 
 static t_class *declare_class;
 extern t_class *import_class;
+extern t_class *path_class;
 
 typedef struct _declare
 {
@@ -1360,6 +1361,21 @@ void canvas_savedeclarationsto(t_canvas *x, t_binbuf *b)
             for(i = 0; i < argc; ++i)
             {
                 binbuf_addv(b, "s", gensym("-lib"));
+                binbuf_add(b, 1, argv + i);
+            }
+            binbuf_addv(b, ";");
+        }
+        else if (pd_class(&y->g_pd) == path_class)
+        {
+            int i, argc;
+            t_atom *argv;
+            binbuf_addv(b, "s", gensym("#X"));
+            binbuf_addv(b, "s", gensym("declare"));
+            argc = binbuf_getnatom(((t_object *)y)->te_binbuf) - 1;
+            argv = binbuf_getvec(((t_object *)y)->te_binbuf) + 1;
+            for(i = 0; i < argc; ++i)
+            {
+                binbuf_addv(b, "s", gensym("-path"));
                 binbuf_add(b, 1, argv + i);
             }
             binbuf_addv(b, ";");
