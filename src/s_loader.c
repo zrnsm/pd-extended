@@ -46,9 +46,9 @@ static char sys_dllextent[] = ".l_i386", sys_dllextent2[] = ".pd_linux";
 # endif
 #elif defined(__APPLE__)
 # ifndef MACOSX3
-static char sys_dllextent[] = ".d_fat", sys_dllextent2[] = ".pd_darwin";
+static char sys_dllextent[] = ".pd_darwin", sys_dllextent2[] = ".pd_darwin";
 # else
-static char sys_dllextent[] = ".d_ppc", sys_dllextent2[] = ".pd_darwin";
+static char sys_dllextent[] = ".pd_darwin", sys_dllextent2[] = ".pd_darwin";
 # endif
 #elif defined(_WIN32) || defined(__CYGWIN__)
 static char sys_dllextent[] = ".m_i386", sys_dllextent2[] = ".dll";
@@ -141,9 +141,11 @@ static int sys_do_load_lib(t_canvas *canvas, char *objectname)
         dirbuf, &nameptr, MAXPDSTRING, 1)) >= 0)
             goto gotone;
         /* same, with the more generic sys_dllextent2 */
+#ifndef __APPLE__
     if ((fd = canvas_open(canvas, objectname, sys_dllextent2,
         dirbuf, &nameptr, MAXPDSTRING, 1)) >= 0)
             goto gotone;
+#endif /* __APPLE__ */
         /* next try (objectname)/(classname).(sys_dllextent) ... */
     strncpy(filename, objectname, MAXPDSTRING);
     filename[MAXPDSTRING-2] = 0;
@@ -153,9 +155,11 @@ static int sys_do_load_lib(t_canvas *canvas, char *objectname)
     if ((fd = canvas_open(canvas, filename, sys_dllextent,
         dirbuf, &nameptr, MAXPDSTRING, 1)) >= 0)
             goto gotone;
+#ifndef __APPLE__
     if ((fd = canvas_open(canvas, filename, sys_dllextent2,
         dirbuf, &nameptr, MAXPDSTRING, 1)) >= 0)
             goto gotone;
+#endif /* __APPLE__ */
     return (0);
 gotone:
     close(fd);
