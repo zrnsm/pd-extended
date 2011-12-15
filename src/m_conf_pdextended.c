@@ -24,6 +24,7 @@ void d_array_setup(void);
 void d_ctl_setup(void);
 void d_filter_setup(void);
 void d_global_setup(void);
+void d_math_setup(void);
 void d_osc_setup(void);
 void d_soundfile_setup(void);
 void d_ugen_setup(void);
@@ -56,6 +57,7 @@ void conf_init(void)
     d_delay_setup();
     d_filter_setup();
     d_global_setup();
+    d_math_setup();
     d_osc_setup();
     d_soundfile_setup();
     d_ugen_setup();
