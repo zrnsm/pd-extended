@@ -62,6 +62,7 @@ INCLUDES += -Isrc/os/win
 libportaudio_la_SOURCES += src/os/win/pa_win_hostapis.c \
         src/os/win/pa_win_util.c \
         src/os/win/pa_win_waveformat.c \
+        src/os/win/pa_win_coinitialize.c \
         src/hostapi/wmme/pa_win_wmme.c
 endif
 
@@ -93,6 +94,7 @@ nobase_noinst_HEADERS = \
 	src/hostapi/coreaudio/pa_mac_core_internal.h \
 	src/hostapi/coreaudio/pa_mac_core_utilities.h \
 	src/os/unix/pa_unix_util.h \
+	src/os/win/pa_win_coinitialize.h \
 	src/os/win/pa_win_wdmks_utils.h \
 	src/os/win/pa_x86_plain_converters.h
 

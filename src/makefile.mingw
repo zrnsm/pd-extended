@@ -38,7 +38,7 @@ ASIODIR = $(pd_src)/asio/ASIOSDK2
 # there is some old code in ASIO/common/combase.h that needs to be ignored, we
 # do this by setting the WINVER macro
 ASIOINC = -I$(ASIODIR)/common -I$(ASIODIR)/host -I$(ASIODIR)/host/pc -DWINVER=0xffff
-INCPA = -I$(PADIR) -I$(PADIR)/include -I$(PADIR)/src/common $(ASIOINC)
+INCPA = -I$(PADIR) -I$(PADIR)/include -I$(PADIR)/src/common -I$(PADIR)/src/os/win $(ASIOINC)
 INCLUDE = -I$(pd_src)/src 
 GINCLUDE = -I/usr/local/include $(INCLUDE)
 
@@ -72,6 +72,7 @@ PASRC = s_audio_pa.c s_audio_paring.c \
         $(PADIR)/src/os/win/pa_win_hostapis.c \
         $(PADIR)/src/os/win/pa_win_util.c \
         $(PADIR)/src/os/win/pa_win_waveformat.c \
+        $(PADIR)/src/os/win/pa_win_coinitialize.c \
         $(PADIR)/src/hostapi/skeleton/pa_hostapi_skeleton.c \
         $(PADIR)/src/hostapi/wmme/pa_win_wmme.c
 
@@ -95,7 +96,8 @@ PMSRC = $(PMDIR)/pm_common/portmidi.c \
 PMOBJ =  $(PMSRC:.c=.o)
 
 HEADERS = g_all_guis.h m_imp.h g_canvas.h m_pd.h s_stuff.h g_magicglass.h \
-	$(wildcard ../portaudio/common/*.h) s_audio_paring.h scandir.h
+	$(wildcard ../portaudio/common/*.h) s_audio_paring.h scandir.h \
+	../portaudio/src/os/win/pa_win_coinitialize.h
 
 SRC = g_canvas.c g_graph.c g_text.c g_rtext.c g_array.c g_template.c \
 	g_io.c g_scalar.c g_traversal.c g_guiconnect.c g_readwrite.c g_editor.c \
