@@ -143,16 +143,15 @@ proc ::pd_guiprefs::get_config_win {adomain {akey} {arr false}} {
 proc ::pd_guiprefs::get_config_x11 {adomain {akey} {arr false}} {
     set filename [file join $adomain $akey]
     set conf {}
-    if {
-        [file exists $filename] == 1
-        && [file readable $filename]
-    } else {
+    if {[file readable $filename]} {
         set fl [open $filename r]
         while {[gets $fl line] >= 0} {
            lappend conf $line
         }
         close $fl
-    }
+    } else {
+		::pdwindow::error [_ "Cannot read GUI prefs file: "]"$filename"
+	}
     return $conf
 }
 

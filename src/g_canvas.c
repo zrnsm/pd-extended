@@ -468,7 +468,8 @@ t_glist *glist_addglist(t_glist *g, t_symbol *sym,
     x->gl_pixheight = py2 - py1;
     x->gl_font =  (canvas_getcurrent() ?
         canvas_getcurrent()->gl_font : sys_defaultfont);
-    x->gl_screenx1 = x->gl_screeny1 = 0;
+    x->gl_screenx1 = 0;
+    x->gl_screeny1 = GLIST_DEFCANVASYLOC;
     x->gl_screenx2 = 450;
     x->gl_screeny2 = 300;
     if (strcmp(x->gl_name->s_name, "Pd"))
@@ -783,7 +784,7 @@ void canvas_deletelinesfor(t_canvas *x, t_text *text)
     {
         if (t.tr_ob == text || t.tr_ob2 == text)
         {
-            if (x->gl_editor)
+            if (glist_isvisible(x))
             {
                 sys_vgui(".x%lx.c delete l%lx\n",
                     glist_getcanvas(x), oc);
@@ -805,7 +806,7 @@ void canvas_deletelinesforio(t_canvas *x, t_text *text,
         if ((t.tr_ob == text && t.tr_outlet == outp) ||
             (t.tr_ob2 == text && t.tr_inlet == inp))
         {
-            if (x->gl_editor)
+            if (glist_isvisible(x))
             {
                 sys_vgui(".x%lx.c delete l%lx\n",
                     glist_getcanvas(x), oc);
