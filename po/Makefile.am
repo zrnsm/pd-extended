@@ -2,9 +2,8 @@ AUTOMAKE_OPTIONS = foreign
 
 SUFFIXES = .po .pot .msg
 
-# this is the only way to get gettext 0.17 with Fink
-#UNAME := $(shell uname -s)
-#ifeq ($(UNAME),Darwin)
+# this is the only way to get gettext 0.17 with old Fink packages, with an
+# up-to-date Fink, you need to: "fink install gettext-bin gettext-tools"
 if MACOSX
   PATH := /sw/lib/gettext-tools-0.17/bin:${PATH}
 endif
@@ -48,7 +47,7 @@ $(TEMPLATE): $(FILES)
 		--package-name="Pure Data" --package-version=0.43 \
 		--copyright-holder='This file is put in the public domain' \
 		--foreign-user \
-		--msgid-bugs-address=pd-dev@iem.at \
+		--msgid-bugs-address=http://bugs.puredata.info \
 		$(FILES)
 
 # I guess officially, the .po file should depend on the template.pot, but its
