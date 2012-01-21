@@ -128,7 +128,7 @@ proc ::dialog_iemgui::clip_fontsize {mytoplevel} {
     
     if {[eval concat $$var_iemgui_gn_fs] < $define_min_fontsize} {
         set $var_iemgui_gn_fs $define_min_fontsize
-        $mytoplevel.label.fs_ent configure -textvariable $var_iemgui_gn_fs
+        $mytoplevel.label.fontsize_entry configure -textvariable $var_iemgui_gn_fs
     }
 }
 
