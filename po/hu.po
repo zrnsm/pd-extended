@@ -1,15 +1,16 @@
-# Hungarian translation of Pure Data.
-# This file is put in the public domain
-#
+# SOME DESCRIPTIVE TITLE.
+# This file is put in the public domain.
+# 
 # Translators:
-# Andras Muranyi <muranyia@gmail.com>, 2009, 2010, 2011.
+# Andras Muranyi <muranyia@gmail.com>, 2009, 2010.
+#   <muranyia@gmail.com>, 2011.
 msgid ""
 msgstr ""
-"Project-Id-Version: Pure Data 0.43\n"
+"Project-Id-Version: Pure Data\n"
 "Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=55736&atid=478070\n"
-"POT-Creation-Date: 2011-07-04 01:45-0400\n"
-"PO-Revision-Date: 2011-12-09 22:44+0000\n"
-"Last-Translator: muranyia <muranyia@gmail.com>\n"
+"POT-Creation-Date: 2012-01-17 18:37-0500\n"
+"PO-Revision-Date: 2012-01-19 14:31+0000\n"
+"Last-Translator: Hans-Christoph Steiner <hans@eds.org>\n"
 "Language-Team: Hungarian (http://www.transifex.net/projects/p/puredata/team/hu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -243,7 +244,7 @@ msgstr "Küld (Ctrl s)"
 
 #: ../tcl/dialog_data.tcl:39
 msgid "OK (Ctrl t)"
-msgstr ""
+msgstr "OK (Ctrl t)"
 
 #: ../tcl/dialog_find.tcl:108
 #, tcl-format
@@ -259,7 +260,8 @@ msgstr "Keres"
 msgid "Search in"
 msgstr "Keresés itt:"
 
-#: ../tcl/dialog_find.tcl:146 ../tcl/pd_menus.tcl:283 ../tcl/pd_menus.tcl:317
+#: ../tcl/dialog_find.tcl:146 ../tcl/pd_menus.tcl:283 ../tcl/pd_menus.tcl:316
+#: ../tcl/pd_menus.tcl:317
 msgid "Pd window"
 msgstr "Pd ablak"
 
@@ -274,8 +276,9 @@ msgstr "Csak egész szavas egyezés"
 #: ../tcl/dialog_find.tcl:171 ../tcl/pd_menus.tcl:58 ../tcl/pd_menus.tcl:63
 #: ../tcl/pd_menus.tcl:80 ../tcl/pd_menus.tcl:89 ../tcl/pd_menus.tcl:106
 #: ../tcl/pd_menus.tcl:119 ../tcl/pd_menus.tcl:133 ../tcl/pd_menus.tcl:150
-#: ../tcl/pd_menus.tcl:487 ../tcl/pd_menus.tcl:525 ../tcl/pd_menus.tcl:534
-#: ../tcl/pd_menus.tcl:572 ../tcl/pd_menus.tcl:619
+#: ../tcl/pd_menus.tcl:487 ../tcl/pd_menus.tcl:517 ../tcl/pd_menus.tcl:525
+#: ../tcl/pd_menus.tcl:534 ../tcl/pd_menus.tcl:558 ../tcl/pd_menus.tcl:572
+#: ../tcl/pd_menus.tcl:603 ../tcl/pd_menus.tcl:619
 msgid "Close"
 msgstr "Bezár"
 
@@ -393,8 +396,9 @@ msgstr "%s tulajdonságai"
 #: ../tcl/dialog_iemgui.tcl:557 ../tcl/pd_menus.tcl:55 ../tcl/pd_menus.tcl:60
 #: ../tcl/pd_menus.tcl:77 ../tcl/pd_menus.tcl:86 ../tcl/pd_menus.tcl:102
 #: ../tcl/pd_menus.tcl:115 ../tcl/pd_menus.tcl:130 ../tcl/pd_menus.tcl:147
-#: ../tcl/pd_menus.tcl:488 ../tcl/pd_menus.tcl:516 ../tcl/pd_menus.tcl:535
-#: ../tcl/pd_menus.tcl:561 ../tcl/pd_menus.tcl:563 ../tcl/pd_menus.tcl:608
+#: ../tcl/pd_menus.tcl:488 ../tcl/pd_menus.tcl:516 ../tcl/pd_menus.tcl:518
+#: ../tcl/pd_menus.tcl:535 ../tcl/pd_menus.tcl:549 ../tcl/pd_menus.tcl:561
+#: ../tcl/pd_menus.tcl:563 ../tcl/pd_menus.tcl:594 ../tcl/pd_menus.tcl:608
 msgid "Save"
 msgstr "Ment"
 
@@ -492,33 +496,63 @@ msgid "Help Browser"
 msgstr "Súgó böngésző"
 
 #: ../tcl/pd_connect.tcl:74 ../tcl/pd_connect.tcl:82 ../tcl/pdwindow.tcl:221
-#: ../tcl/pdwindow.tcl:232
+#: ../tcl/pdwindow.tcl:232 ../tcl/pdwindow.tcl:316
 msgid "(Tcl) INVALID COMMAND NAME: "
 msgstr "(Tcl) HIBÁS PARANCSSZÓ:"
 
 #: ../tcl/pd_connect.tcl:76 ../tcl/pd_connect.tcl:84 ../tcl/pdwindow.tcl:223
-#: ../tcl/pdwindow.tcl:234
+#: ../tcl/pdwindow.tcl:234 ../tcl/pdwindow.tcl:318
 msgid "(Tcl) UNHANDLED ERROR: "
 msgstr "(Tcl) KEZELETLEN HIBA:"
 
+#: ../tcl/pd_guiprefs.tcl:153
+msgid "Cannot read GUI prefs file: "
+msgstr ""
+
 #: ../tcl/pd_menucommands.tcl:201 ../tcl/pd_menucommands.tcl:233
-#: ../tcl/pd_menus.tcl:292 ../tcl/pd_menus.tcl:327 ../tcl/pd_menus.tcl:470
-#: ../tcl/pd_menus.tcl:516
+#: ../tcl/pd_menus.tcl:292 ../tcl/pd_menus.tcl:326 ../tcl/pd_menus.tcl:327
+#: ../tcl/pd_menus.tcl:470 ../tcl/pd_menus.tcl:502 ../tcl/pd_menus.tcl:516
 msgid "About Pd"
 msgstr "A Pd-ről"
+
+#: ../tcl/pd_menucommands.tcl:298
+msgid "Select name for app to build...\n"
+msgstr ""
+
+#: ../tcl/pd_menucommands.tcl:301
+msgid "Save application to..."
+msgstr ""
+
+#: ../tcl/pd_menucommands.tcl:310
+msgid "Configuring Info.plist..."
+msgstr ""
+
+#: ../tcl/pd_menucommands.tcl:312
+msgid "Setting patch name..."
+msgstr ""
+
+#: ../tcl/pd_menucommands.tcl:314
+msgid "Copying current patch..."
+msgstr ""
+
+#: ../tcl/pd_menucommands.tcl:316
+msgid "Setting embedded preferences..."
+msgstr ""
 
 #: ../tcl/pd_menus.tcl:56 ../tcl/pd_menus.tcl:61 ../tcl/pd_menus.tcl:78
 #: ../tcl/pd_menus.tcl:87 ../tcl/pd_menus.tcl:103 ../tcl/pd_menus.tcl:116
 #: ../tcl/pd_menus.tcl:131 ../tcl/pd_menus.tcl:148 ../tcl/pd_menus.tcl:489
-#: ../tcl/pd_menus.tcl:517 ../tcl/pd_menus.tcl:536 ../tcl/pd_menus.tcl:562
-#: ../tcl/pd_menus.tcl:564 ../tcl/pd_menus.tcl:609
+#: ../tcl/pd_menus.tcl:517 ../tcl/pd_menus.tcl:519 ../tcl/pd_menus.tcl:536
+#: ../tcl/pd_menus.tcl:550 ../tcl/pd_menus.tcl:562 ../tcl/pd_menus.tcl:564
+#: ../tcl/pd_menus.tcl:595 ../tcl/pd_menus.tcl:609
 msgid "Save As..."
 msgstr "Ment új néven..."
 
 #: ../tcl/pd_menus.tcl:57 ../tcl/pd_menus.tcl:62 ../tcl/pd_menus.tcl:79
 #: ../tcl/pd_menus.tcl:88 ../tcl/pd_menus.tcl:104 ../tcl/pd_menus.tcl:117
 #: ../tcl/pd_menus.tcl:135 ../tcl/pd_menus.tcl:152 ../tcl/pd_menus.tcl:495
-#: ../tcl/pd_menus.tcl:521 ../tcl/pd_menus.tcl:542 ../tcl/pd_menus.tcl:568
+#: ../tcl/pd_menus.tcl:521 ../tcl/pd_menus.tcl:528 ../tcl/pd_menus.tcl:542
+#: ../tcl/pd_menus.tcl:554 ../tcl/pd_menus.tcl:568 ../tcl/pd_menus.tcl:599
 #: ../tcl/pd_menus.tcl:615
 msgid "Print..."
 msgstr "Nyomtat..."
@@ -531,14 +565,15 @@ msgstr "Duplikál"
 
 #: ../tcl/pd_menus.tcl:61 ../tcl/pd_menus.tcl:66 ../tcl/pd_menus.tcl:83
 #: ../tcl/pd_menus.tcl:92 ../tcl/pd_menus.tcl:109 ../tcl/pd_menus.tcl:122
-#: ../tcl/pd_menus.tcl:167 ../tcl/pd_menus.tcl:188
+#: ../tcl/pd_menus.tcl:167 ../tcl/pd_menus.tcl:179 ../tcl/pd_menus.tcl:188
 msgid "Tidy Up"
 msgstr "Elrendez"
 
 #: ../tcl/pd_menus.tcl:62 ../tcl/pd_menus.tcl:69 ../tcl/pd_menus.tcl:84
 #: ../tcl/pd_menus.tcl:95 ../tcl/pd_menus.tcl:110 ../tcl/pd_menus.tcl:125
-#: ../tcl/pd_menus.tcl:173 ../tcl/pd_menus.tcl:196 ../tcl/pd_menus.tcl:207
-#: ../tcl/pd_menus.tcl:549 ../tcl/pd_menus.tcl:596 ../tcl/pdtk_canvas.tcl:270
+#: ../tcl/pd_menus.tcl:173 ../tcl/pd_menus.tcl:187 ../tcl/pd_menus.tcl:196
+#: ../tcl/pd_menus.tcl:206 ../tcl/pd_menus.tcl:207 ../tcl/pd_menus.tcl:549
+#: ../tcl/pd_menus.tcl:582 ../tcl/pd_menus.tcl:596 ../tcl/pdtk_canvas.tcl:270
 #: ../tcl/pdtk_canvas.tcl:272 ../tcl/pdtk_canvas.tcl:276
 #: ../tcl/pdtk_canvas.tcl:278
 msgid "Edit Mode"
@@ -546,46 +581,50 @@ msgstr "Szerkesztő üzemmód"
 
 #: ../tcl/pd_menus.tcl:65 ../tcl/pd_menus.tcl:74 ../tcl/pd_menus.tcl:113
 #: ../tcl/pd_menus.tcl:130 ../tcl/pd_menus.tcl:140 ../tcl/pd_menus.tcl:161
-#: ../tcl/pd_menus.tcl:318 ../tcl/pd_menus.tcl:347
+#: ../tcl/pd_menus.tcl:318 ../tcl/pd_menus.tcl:346 ../tcl/pd_menus.tcl:347
 msgid "Undo"
 msgstr "Mégsem"
 
 #: ../tcl/pd_menus.tcl:66 ../tcl/pd_menus.tcl:75 ../tcl/pd_menus.tcl:114
 #: ../tcl/pd_menus.tcl:131 ../tcl/pd_menus.tcl:142 ../tcl/pd_menus.tcl:163
-#: ../tcl/pd_menus.tcl:324 ../tcl/pd_menus.tcl:353
+#: ../tcl/pd_menus.tcl:324 ../tcl/pd_menus.tcl:352 ../tcl/pd_menus.tcl:353
 msgid "Redo"
 msgstr "Mégis!"
 
 #: ../tcl/pd_menus.tcl:67 ../tcl/pd_menus.tcl:93 ../tcl/pd_menus.tcl:123
-#: ../tcl/pd_menus.tcl:193 ../tcl/pdtk_canvas.tcl:292
+#: ../tcl/pd_menus.tcl:184 ../tcl/pd_menus.tcl:193 ../tcl/pdtk_canvas.tcl:292
 #: ../tcl/pdtk_canvas.tcl:294
 msgid "Autopatch"
 msgstr "Önműködő kábelezés"
 
 #: ../tcl/pd_menus.tcl:68 ../tcl/pd_menus.tcl:94 ../tcl/pd_menus.tcl:124
-#: ../tcl/pd_menus.tcl:199 ../tcl/pdtk_canvas.tcl:306
+#: ../tcl/pd_menus.tcl:190 ../tcl/pd_menus.tcl:199 ../tcl/pdtk_canvas.tcl:306
 #: ../tcl/pdtk_canvas.tcl:308
 msgid "Magic Glass"
 msgstr ""
 
 #: ../tcl/pd_menus.tcl:128 ../tcl/pd_menus.tcl:145 ../tcl/pd_menus.tcl:482
-#: ../tcl/pd_menus.tcl:513 ../tcl/pd_menus.tcl:528 ../tcl/pd_menus.tcl:558
-#: ../tcl/pd_menus.tcl:560 ../tcl/pd_menus.tcl:605
+#: ../tcl/pd_menus.tcl:511 ../tcl/pd_menus.tcl:513 ../tcl/pd_menus.tcl:528
+#: ../tcl/pd_menus.tcl:546 ../tcl/pd_menus.tcl:558 ../tcl/pd_menus.tcl:560
+#: ../tcl/pd_menus.tcl:591 ../tcl/pd_menus.tcl:605
 msgid "New"
 msgstr "Új"
 
 #: ../tcl/pd_menus.tcl:129 ../tcl/pd_menus.tcl:146 ../tcl/pd_menus.tcl:483
-#: ../tcl/pd_menus.tcl:514 ../tcl/pd_menus.tcl:529 ../tcl/pd_menus.tcl:559
-#: ../tcl/pd_menus.tcl:561 ../tcl/pd_menus.tcl:606 ../tcl/pdtk_canvas.tcl:200
+#: ../tcl/pd_menus.tcl:512 ../tcl/pd_menus.tcl:514 ../tcl/pd_menus.tcl:529
+#: ../tcl/pd_menus.tcl:547 ../tcl/pd_menus.tcl:559 ../tcl/pd_menus.tcl:561
+#: ../tcl/pd_menus.tcl:592 ../tcl/pd_menus.tcl:606 ../tcl/pdtk_canvas.tcl:200
 #: ../tcl/pdtk_canvas.tcl:206 ../tcl/pdtk_canvas.tcl:220
 #: ../tcl/pdtk_canvas.tcl:222 ../tcl/pdtk_canvas.tcl:226
-#: ../tcl/pdtk_canvas.tcl:228
+#: ../tcl/pdtk_canvas.tcl:228 ../tcl/pdtk_canvas.tcl:391
+#: ../tcl/pdtk_canvas.tcl:411 ../tcl/pdtk_canvas.tcl:413
 msgid "Open"
 msgstr "Megnyit"
 
 #: ../tcl/pd_menus.tcl:134 ../tcl/pd_menus.tcl:151 ../tcl/pd_menus.tcl:493
-#: ../tcl/pd_menus.tcl:520 ../tcl/pd_menus.tcl:540 ../tcl/pd_menus.tcl:565
-#: ../tcl/pd_menus.tcl:567 ../tcl/pd_menus.tcl:612
+#: ../tcl/pd_menus.tcl:520 ../tcl/pd_menus.tcl:526 ../tcl/pd_menus.tcl:540
+#: ../tcl/pd_menus.tcl:553 ../tcl/pd_menus.tcl:565 ../tcl/pd_menus.tcl:567
+#: ../tcl/pd_menus.tcl:598 ../tcl/pd_menus.tcl:612
 msgid "Message..."
 msgstr "Üzenet..."
 
@@ -597,139 +636,152 @@ msgstr "Kivág"
 msgid "Select All"
 msgstr "Mindent kijelöl"
 
-#: ../tcl/pd_menus.tcl:159 ../tcl/pd_menus.tcl:164 ../tcl/pd_menus.tcl:180
-#: ../tcl/pd_menus.tcl:185
+#: ../tcl/pd_menus.tcl:159 ../tcl/pd_menus.tcl:164 ../tcl/pd_menus.tcl:177
+#: ../tcl/pd_menus.tcl:180 ../tcl/pd_menus.tcl:185
 msgid "Font"
 msgstr "Betű"
 
-#: ../tcl/pd_menus.tcl:169 ../tcl/pd_menus.tcl:190
+#: ../tcl/pd_menus.tcl:169 ../tcl/pd_menus.tcl:181 ../tcl/pd_menus.tcl:190
 msgid "Clear Console"
 msgstr "Konzolt ürít"
 
-#: ../tcl/pd_menus.tcl:183 ../tcl/pd_menus.tcl:217
+#: ../tcl/pd_menus.tcl:183 ../tcl/pd_menus.tcl:216 ../tcl/pd_menus.tcl:217
 msgid "Object"
 msgstr "Objektum"
 
-#: ../tcl/pd_menus.tcl:185 ../tcl/pd_menus.tcl:219
+#: ../tcl/pd_menus.tcl:185 ../tcl/pd_menus.tcl:218 ../tcl/pd_menus.tcl:219
 msgid "Message"
 msgstr "Üzenet"
 
-#: ../tcl/pd_menus.tcl:187 ../tcl/pd_menus.tcl:221
+#: ../tcl/pd_menus.tcl:187 ../tcl/pd_menus.tcl:220 ../tcl/pd_menus.tcl:221
 msgid "Number"
 msgstr "Szám"
 
-#: ../tcl/pd_menus.tcl:189 ../tcl/pd_menus.tcl:223
+#: ../tcl/pd_menus.tcl:189 ../tcl/pd_menus.tcl:222 ../tcl/pd_menus.tcl:223
 msgid "Symbol"
 msgstr "Szimbólum"
 
-#: ../tcl/pd_menus.tcl:191 ../tcl/pd_menus.tcl:225
+#: ../tcl/pd_menus.tcl:191 ../tcl/pd_menus.tcl:224 ../tcl/pd_menus.tcl:225
 msgid "Comment"
 msgstr "Megjegyzés"
 
-#: ../tcl/pd_menus.tcl:194 ../tcl/pd_menus.tcl:228
-msgid "Bang"
-msgstr "Bang"
-
-#: ../tcl/pd_menus.tcl:196 ../tcl/pd_menus.tcl:230
-msgid "Toggle"
-msgstr "kapcsoló"
-
-#: ../tcl/pd_menus.tcl:198 ../tcl/pd_menus.tcl:232
-msgid "Number2"
-msgstr "Szám2"
-
-#: ../tcl/pd_menus.tcl:200 ../tcl/pd_menus.tcl:234
-msgid "Vslider"
-msgstr "Vslider"
-
-#: ../tcl/pd_menus.tcl:202 ../tcl/pd_menus.tcl:236
-msgid "Hslider"
-msgstr "Hslider"
-
-#: ../tcl/pd_menus.tcl:202
+#: ../tcl/pd_menus.tcl:193 ../tcl/pd_menus.tcl:202
 msgid "Perf Mode"
 msgstr ""
 
-#: ../tcl/pd_menus.tcl:204 ../tcl/pd_menus.tcl:238
-msgid "Vradio"
-msgstr "Vradio"
+#: ../tcl/pd_menus.tcl:194 ../tcl/pd_menus.tcl:227 ../tcl/pd_menus.tcl:228
+msgid "Bang"
+msgstr "Bang"
 
-#: ../tcl/pd_menus.tcl:206 ../tcl/pd_menus.tcl:240
-msgid "Hradio"
-msgstr "Hradio"
+#: ../tcl/pd_menus.tcl:196
+msgid "Autotips"
+msgstr ""
 
-#: ../tcl/pd_menus.tcl:208 ../tcl/pd_menus.tcl:242
-msgid "VU Meter"
-msgstr "Kivezérlésjelző"
+#: ../tcl/pd_menus.tcl:196 ../tcl/pd_menus.tcl:229 ../tcl/pd_menus.tcl:230
+msgid "Toggle"
+msgstr "kapcsoló"
 
-#: ../tcl/pd_menus.tcl:210 ../tcl/pd_menus.tcl:244
-msgid "Canvas"
-msgstr "Canvas"
+#: ../tcl/pd_menus.tcl:198 ../tcl/pd_menus.tcl:231 ../tcl/pd_menus.tcl:232
+msgid "Number2"
+msgstr "Szám2"
 
-#: ../tcl/pd_menus.tcl:213 ../tcl/pd_menus.tcl:247
-msgid "Graph"
-msgstr "Gráf"
+#: ../tcl/pd_menus.tcl:200 ../tcl/pd_menus.tcl:233 ../tcl/pd_menus.tcl:234
+msgid "Vslider"
+msgstr "Vslider"
 
-#: ../tcl/pd_menus.tcl:214 ../tcl/pd_menus.tcl:248
-msgid "Array"
-msgstr "Tömb"
-
-#: ../tcl/pd_menus.tcl:219 ../tcl/pd_menus.tcl:253
-msgid "Find..."
-msgstr "Keres..."
-
-#: ../tcl/pd_menus.tcl:221 ../tcl/pd_menus.tcl:255
-msgid "Find Again"
-msgstr "Újra keres"
-
-#: ../tcl/pd_menus.tcl:223 ../tcl/pd_menus.tcl:257
-msgid "Find Last Error"
-msgstr "Legutóbbi hiba helye"
-
-#: ../tcl/pd_menus.tcl:229 ../tcl/pd_menus.tcl:263
-msgid "DSP On"
-msgstr "DSP be"
-
-#: ../tcl/pd_menus.tcl:231 ../tcl/pd_menus.tcl:265
-msgid "DSP Off"
-msgstr "DSP ki"
-
-#: ../tcl/pd_menus.tcl:235 ../tcl/pd_menus.tcl:269
-msgid "Test Audio and MIDI..."
-msgstr "Hang és MIDI tesztelése..."
-
-#: ../tcl/pd_menus.tcl:237 ../tcl/pd_menus.tcl:271
-msgid "Load Meter"
-msgstr "Terhelésmérő"
-
-#: ../tcl/pd_menus.tcl:260 ../tcl/pd_menus.tcl:294 ../tcl/pd_menus.tcl:473
-#: ../tcl/pd_menus.tcl:519 ../tcl/pd_menus.tcl:567 ../tcl/pd_menus.tcl:614
+#: ../tcl/pd_menus.tcl:201 ../tcl/pd_menus.tcl:260 ../tcl/pd_menus.tcl:294
+#: ../tcl/pd_menus.tcl:473 ../tcl/pd_menus.tcl:519 ../tcl/pd_menus.tcl:567
+#: ../tcl/pd_menus.tcl:614
 msgid "Preferences"
 msgstr "Beállítások"
 
-#: ../tcl/pd_menus.tcl:267 ../tcl/pd_menus.tcl:301
+#: ../tcl/pd_menus.tcl:202 ../tcl/pd_menus.tcl:235 ../tcl/pd_menus.tcl:236
+msgid "Hslider"
+msgstr "Hslider"
+
+#: ../tcl/pd_menus.tcl:204 ../tcl/pd_menus.tcl:237 ../tcl/pd_menus.tcl:238
+msgid "Vradio"
+msgstr "Vradio"
+
+#: ../tcl/pd_menus.tcl:206 ../tcl/pd_menus.tcl:239 ../tcl/pd_menus.tcl:240
+msgid "Hradio"
+msgstr "Hradio"
+
+#: ../tcl/pd_menus.tcl:208 ../tcl/pd_menus.tcl:241 ../tcl/pd_menus.tcl:242
+msgid "VU Meter"
+msgstr "Kivezérlésjelző"
+
+#: ../tcl/pd_menus.tcl:210 ../tcl/pd_menus.tcl:243 ../tcl/pd_menus.tcl:244
+msgid "Canvas"
+msgstr "Canvas"
+
+#: ../tcl/pd_menus.tcl:213 ../tcl/pd_menus.tcl:246 ../tcl/pd_menus.tcl:247
+msgid "Graph"
+msgstr "Gráf"
+
+#: ../tcl/pd_menus.tcl:214 ../tcl/pd_menus.tcl:247 ../tcl/pd_menus.tcl:248
+msgid "Array"
+msgstr "Tömb"
+
+#: ../tcl/pd_menus.tcl:219 ../tcl/pd_menus.tcl:252 ../tcl/pd_menus.tcl:253
+msgid "Find..."
+msgstr "Keres..."
+
+#: ../tcl/pd_menus.tcl:221 ../tcl/pd_menus.tcl:254 ../tcl/pd_menus.tcl:255
+msgid "Find Again"
+msgstr "Újra keres"
+
+#: ../tcl/pd_menus.tcl:223 ../tcl/pd_menus.tcl:256 ../tcl/pd_menus.tcl:257
+msgid "Find Last Error"
+msgstr "Legutóbbi hiba helye"
+
+#: ../tcl/pd_menus.tcl:229 ../tcl/pd_menus.tcl:262 ../tcl/pd_menus.tcl:263
+msgid "DSP On"
+msgstr "DSP be"
+
+#: ../tcl/pd_menus.tcl:231 ../tcl/pd_menus.tcl:264 ../tcl/pd_menus.tcl:265
+msgid "DSP Off"
+msgstr "DSP ki"
+
+#: ../tcl/pd_menus.tcl:235 ../tcl/pd_menus.tcl:268 ../tcl/pd_menus.tcl:269
+msgid "Test Audio and MIDI..."
+msgstr "Hang és MIDI tesztelése..."
+
+#: ../tcl/pd_menus.tcl:237 ../tcl/pd_menus.tcl:270 ../tcl/pd_menus.tcl:271
+msgid "Load Meter"
+msgstr "Terhelésmérő"
+
+#: ../tcl/pd_menus.tcl:267 ../tcl/pd_menus.tcl:300 ../tcl/pd_menus.tcl:301
 msgid "Minimize"
 msgstr "Kicsinyít"
 
-#: ../tcl/pd_menus.tcl:269 ../tcl/pd_menus.tcl:303
+#: ../tcl/pd_menus.tcl:269 ../tcl/pd_menus.tcl:302 ../tcl/pd_menus.tcl:303
 msgid "Zoom"
 msgstr "Nagyító"
 
-#: ../tcl/pd_menus.tcl:272 ../tcl/pd_menus.tcl:306
+#: ../tcl/pd_menus.tcl:272 ../tcl/pd_menus.tcl:305 ../tcl/pd_menus.tcl:306
 msgid "Bring All to Front"
 msgstr "Mindent előtérbe hoz"
 
-#: ../tcl/pd_menus.tcl:275 ../tcl/pd_menus.tcl:309
+#: ../tcl/pd_menus.tcl:275 ../tcl/pd_menus.tcl:308 ../tcl/pd_menus.tcl:309
 msgid "Next Window"
 msgstr "Következő ablak"
 
-#: ../tcl/pd_menus.tcl:278 ../tcl/pd_menus.tcl:312
+#: ../tcl/pd_menus.tcl:278 ../tcl/pd_menus.tcl:311 ../tcl/pd_menus.tcl:312
 msgid "Previous Window"
 msgstr "Előző ablak"
 
-#: ../tcl/pd_menus.tcl:285 ../tcl/pd_menus.tcl:319
+#: ../tcl/pd_menus.tcl:285 ../tcl/pd_menus.tcl:318 ../tcl/pd_menus.tcl:319
 msgid "Parent Window"
 msgstr "Szülő ablak"
+
+#: ../tcl/pd_menus.tcl:291 ../tcl/pd_menus.tcl:457 ../tcl/pd_menus.tcl:503
+msgid "Audio Settings..."
+msgstr "Hang beállítások..."
+
+#: ../tcl/pd_menus.tcl:293 ../tcl/pd_menus.tcl:459 ../tcl/pd_menus.tcl:505
+msgid "MIDI Settings..."
+msgstr "MIDI beállítások..."
 
 #: ../tcl/pd_menus.tcl:294
 msgid "HTML Manual..."
@@ -743,7 +795,7 @@ msgstr "Beépített böngésző..."
 msgid "puredata.info"
 msgstr "puredata.info"
 
-#: ../tcl/pd_menus.tcl:301 ../tcl/pd_menus.tcl:334
+#: ../tcl/pd_menus.tcl:301 ../tcl/pd_menus.tcl:333 ../tcl/pd_menus.tcl:334
 msgid "Report a bug"
 msgstr "Hibabejelentés"
 
@@ -751,15 +803,15 @@ msgstr "Hibabejelentés"
 msgid "Tcl prompt"
 msgstr "Tcl parancssor"
 
-#: ../tcl/pd_menus.tcl:329
+#: ../tcl/pd_menus.tcl:328 ../tcl/pd_menus.tcl:329
 msgid "Pd Help Browser..."
 msgstr "Pd súgó böngésző..."
 
-#: ../tcl/pd_menus.tcl:331
+#: ../tcl/pd_menus.tcl:330 ../tcl/pd_menus.tcl:331
 msgid "Start Here!"
 msgstr "Itt kezdd!"
 
-#: ../tcl/pd_menus.tcl:348 ../tcl/pd_menus.tcl:386
+#: ../tcl/pd_menus.tcl:348 ../tcl/pd_menus.tcl:385 ../tcl/pd_menus.tcl:386
 msgid "Clear Menu"
 msgstr "Menüt ürít"
 
@@ -771,42 +823,42 @@ msgstr "Elérési út..."
 msgid "Startup..."
 msgstr "Indítás..."
 
-#: ../tcl/pd_menus.tcl:457 ../tcl/pd_menus.tcl:503
-msgid "Audio Settings..."
-msgstr "Hang beállítások..."
-
-#: ../tcl/pd_menus.tcl:459 ../tcl/pd_menus.tcl:505
-msgid "MIDI Settings..."
-msgstr "MIDI beállítások..."
-
-#: ../tcl/pd_menus.tcl:485 ../tcl/pd_menus.tcl:532
+#: ../tcl/pd_menus.tcl:485 ../tcl/pd_menus.tcl:515 ../tcl/pd_menus.tcl:532
 msgid "Open Recent"
 msgstr "Legutóbbi fájlok"
 
-#: ../tcl/pd_menus.tcl:526 ../tcl/pd_menus.tcl:573 ../tcl/pd_menus.tcl:620
+#: ../tcl/pd_menus.tcl:526 ../tcl/pd_menus.tcl:559 ../tcl/pd_menus.tcl:573
+#: ../tcl/pd_menus.tcl:604 ../tcl/pd_menus.tcl:620
 msgid "Quit"
 msgstr "Kilép"
 
 #: ../tcl/pdtk_canvas.tcl:198 ../tcl/pdtk_canvas.tcl:204
 #: ../tcl/pdtk_canvas.tcl:215 ../tcl/pdtk_canvas.tcl:217
 #: ../tcl/pdtk_canvas.tcl:221 ../tcl/pdtk_canvas.tcl:223
+#: ../tcl/pdtk_canvas.tcl:389 ../tcl/pdtk_canvas.tcl:406
+#: ../tcl/pdtk_canvas.tcl:408
 msgid "Properties"
 msgstr "Tulajdonságok"
 
 #: ../tcl/pdtk_canvas.tcl:202 ../tcl/pdtk_canvas.tcl:208
-#: pd_dynamic_strings.tcl:16
+#: ../tcl/pdtk_canvas.tcl:393 pd_dynamic_strings.tcl:16
 msgid "Help"
 msgstr "Súgó"
 
-#: ../tcl/pdwindow.tcl:217 ../tcl/pdwindow.tcl:228
+#: ../tcl/pdtk_canvas.tcl:319
+msgid " "
+msgstr ""
+
+#: ../tcl/pdwindow.tcl:217 ../tcl/pdwindow.tcl:228 ../tcl/pdwindow.tcl:312
 msgid "(Tcl) MISSING CLOSE-BRACE '}': "
 msgstr "(Tcl) HIÁNYZÓ ZÁRÓJEL '}':"
 
-#: ../tcl/pdwindow.tcl:219 ../tcl/pdwindow.tcl:230
+#: ../tcl/pdwindow.tcl:219 ../tcl/pdwindow.tcl:230 ../tcl/pdwindow.tcl:314
 msgid "(Tcl) MISSING CLOSE-BRACKET ']': "
 msgstr "(Tcl) HIÁNYZÓ ZÁRÓJEL ']':"
 
-#: ../tcl/pdwindow.tcl:258 ../tcl/pdwindow.tcl:269
+#: ../tcl/pdwindow.tcl:258 ../tcl/pdwindow.tcl:269 ../tcl/pdwindow.tcl:353
+#: ../tcl/pdwindow.tcl:464
 msgid "Tcl:"
 msgstr "Tcl:"
 
@@ -815,37 +867,49 @@ msgstr "Tcl:"
 msgid "Pd"
 msgstr "Pd"
 
-#: ../tcl/pdwindow.tcl:317 ../tcl/pdwindow.tcl:328
+#: ../tcl/pdwindow.tcl:317 ../tcl/pdwindow.tcl:328 ../tcl/pdwindow.tcl:430
 msgid "DSP"
 msgstr "DSP"
 
-#: ../tcl/pdwindow.tcl:322 ../tcl/pdwindow.tcl:333
+#: ../tcl/pdwindow.tcl:322 ../tcl/pdwindow.tcl:333 ../tcl/pdwindow.tcl:435
 msgid "audio I/O error"
 msgstr "hang I/O hiba"
 
-#: ../tcl/pdwindow.tcl:328 ../tcl/pdwindow.tcl:339
+#: ../tcl/pdwindow.tcl:328 ../tcl/pdwindow.tcl:339 ../tcl/pdwindow.tcl:462
 msgid "Log:"
 msgstr "Napló:"
 
-#: ../tcl/pdwindow.tcl:333 ../tcl/pdwindow.tcl:344
+#: ../tcl/pdwindow.tcl:333 ../tcl/pdwindow.tcl:344 ../tcl/pdwindow.tcl:446
 msgid "fatal"
 msgstr "végzetes"
 
-#: ../tcl/pdwindow.tcl:334 ../tcl/pdwindow.tcl:345
+#: ../tcl/pdwindow.tcl:334 ../tcl/pdwindow.tcl:345 ../tcl/pdwindow.tcl:447
 msgid "error"
 msgstr "hiba"
 
-#: ../tcl/pdwindow.tcl:335 ../tcl/pdwindow.tcl:346
+#: ../tcl/pdwindow.tcl:335 ../tcl/pdwindow.tcl:346 ../tcl/pdwindow.tcl:448
 msgid "normal"
 msgstr "normál"
 
-#: ../tcl/pdwindow.tcl:336 ../tcl/pdwindow.tcl:347
+#: ../tcl/pdwindow.tcl:336 ../tcl/pdwindow.tcl:347 ../tcl/pdwindow.tcl:449
 msgid "debug"
 msgstr "hibakeresés"
 
-#: ../tcl/pdwindow.tcl:337 ../tcl/pdwindow.tcl:348
+#: ../tcl/pdwindow.tcl:337 ../tcl/pdwindow.tcl:348 ../tcl/pdwindow.tcl:450
 msgid "all"
 msgstr "minden"
+
+#: ../tcl/pdwindow.tcl:396 ../tcl/pdwindow.tcl:397
+msgid "Pd-extended"
+msgstr ""
+
+#: ../tcl/pdwindow.tcl:425
+msgid "IN"
+msgstr ""
+
+#: ../tcl/pdwindow.tcl:426
+msgid "OUT"
+msgstr ""
 
 #: ../tcl/wheredoesthisgo.tcl:18 ../tcl/wheredoesthisgo.tcl:19
 #, tcl-format
