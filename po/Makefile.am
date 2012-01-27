@@ -13,7 +13,7 @@ TCLFILES = apple_events.tcl dialog_canvas.tcl dialog_gatom.tcl dialog_path.tcl p
 FILES = $(addprefix ../tcl/, $(TCLFILES)) iemgui_dynamic_strings.tcl pd_dynamic_strings.tcl
 
 # these are the supported languages, 
-ALL_LINGUAS = af az be bg de el en_ca eu fr gu he hi hu it pa pt_br pt_pt sq sv vi
+ALL_LINGUAS = af az be bg de el en_ca en_gb eu fr gu he hi hu it pa pt_br pt_pt sq sv vi
 POFILES = $(ALL_LINGUAS:=.po)
 MSGFILES = $(ALL_LINGUAS:=.msg)
 
