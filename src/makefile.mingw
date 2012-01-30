@@ -115,7 +115,7 @@ SRC = g_canvas.c g_graph.c g_text.c g_rtext.c g_array.c g_template.c \
     e_fft.c e_gfxstub.c e_dac.c e_midi.c \
     g_magicglass.c \
     scandir.c \
-    import.c path.c closebang.c initbang.c loadbang.c
+    import.c path.c print.c closebang.c initbang.c loadbang.c
 
 # FFTW
 #SRC +=  d_fft_fftw.c d_fftroutine.c
