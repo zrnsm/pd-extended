@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Pure Data\n"
 "Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=55736&atid=478070\n"
 "POT-Creation-Date: 2012-01-17 18:37-0500\n"
-"PO-Revision-Date: 2012-01-25 22:10+0000\n"
+"PO-Revision-Date: 2012-01-27 16:10+0000\n"
 "Last-Translator: maxn <maxneupert@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -254,7 +254,7 @@ msgstr "Konnte '%s' in %s nicht finden"
 #: ../tcl/dialog_find.tcl:126 ../tcl/dialog_find.tcl:167
 #: pd_dynamic_strings.tcl:13
 msgid "Find"
-msgstr "Finde"
+msgstr "Suche"
 
 #: ../tcl/dialog_find.tcl:145
 msgid "Search in"
@@ -404,11 +404,11 @@ msgstr "Speichern"
 
 #: ../tcl/dialog_iemgui.tcl:618
 msgid "X offset"
-msgstr "X Verschiebung"
+msgstr "Versatz X "
 
 #: ../tcl/dialog_iemgui.tcl:621
 msgid "Y offset"
-msgstr "Y Verschiebung"
+msgstr "Versatz Y"
 
 #: ../tcl/dialog_iemgui.tcl:653
 msgid "Colors"
@@ -516,7 +516,7 @@ msgstr "Über Pd"
 
 #: ../tcl/pd_menucommands.tcl:298
 msgid "Select name for app to build...\n"
-msgstr ""
+msgstr "Name für die zu erstellende App wählen...\n"
 
 #: ../tcl/pd_menucommands.tcl:301
 msgid "Save application to..."
@@ -524,19 +524,19 @@ msgstr "Programm speichern unter..."
 
 #: ../tcl/pd_menucommands.tcl:310
 msgid "Configuring Info.plist..."
-msgstr ""
+msgstr "Konfiguriere Info.plist..."
 
 #: ../tcl/pd_menucommands.tcl:312
 msgid "Setting patch name..."
-msgstr ""
+msgstr "Setze Patch-Name..."
 
 #: ../tcl/pd_menucommands.tcl:314
 msgid "Copying current patch..."
-msgstr ""
+msgstr "Kopiere aktuellen Patch ..."
 
 #: ../tcl/pd_menucommands.tcl:316
 msgid "Setting embedded preferences..."
-msgstr ""
+msgstr "Eingebettete Voreinstellungen setzen..."
 
 #: ../tcl/pd_menus.tcl:56 ../tcl/pd_menus.tcl:61 ../tcl/pd_menus.tcl:78
 #: ../tcl/pd_menus.tcl:87 ../tcl/pd_menus.tcl:103 ../tcl/pd_menus.tcl:116
@@ -594,7 +594,7 @@ msgstr "Wiederholen"
 #: ../tcl/pd_menus.tcl:184 ../tcl/pd_menus.tcl:193 ../tcl/pdtk_canvas.tcl:292
 #: ../tcl/pdtk_canvas.tcl:294
 msgid "Autopatch"
-msgstr ""
+msgstr "Automatisch verbinden"
 
 #: ../tcl/pd_menus.tcl:68 ../tcl/pd_menus.tcl:94 ../tcl/pd_menus.tcl:124
 #: ../tcl/pd_menus.tcl:190 ../tcl/pd_menus.tcl:199 ../tcl/pdtk_canvas.tcl:306
@@ -724,15 +724,15 @@ msgstr "Feld"
 
 #: ../tcl/pd_menus.tcl:219 ../tcl/pd_menus.tcl:252 ../tcl/pd_menus.tcl:253
 msgid "Find..."
-msgstr "Finde..."
+msgstr "Suche..."
 
 #: ../tcl/pd_menus.tcl:221 ../tcl/pd_menus.tcl:254 ../tcl/pd_menus.tcl:255
 msgid "Find Again"
-msgstr "Finde nochmal"
+msgstr "Erneut suchen"
 
 #: ../tcl/pd_menus.tcl:223 ../tcl/pd_menus.tcl:256 ../tcl/pd_menus.tcl:257
 msgid "Find Last Error"
-msgstr "Letzten Fehler finden"
+msgstr "Letzten Fehler suchen"
 
 #: ../tcl/pd_menus.tcl:229 ../tcl/pd_menus.tcl:262 ../tcl/pd_menus.tcl:263
 msgid "DSP On"
@@ -937,7 +937,7 @@ msgstr "-----------Ausgangs-Spannbreite:-----------"
 
 #: iemgui_dynamic_strings.tcl:16
 msgid "------selectable_dimensions(pix):------"
-msgstr "------Auswählbare_Dimensionen(pix):------"
+msgstr "------Größe_des_Auswahlfeldes(pix):------"
 
 #: iemgui_dynamic_strings.tcl:17
 msgid "------visible_rectangle(pix)(pix):------"
@@ -957,7 +957,7 @@ msgstr ""
 
 #: iemgui_dynamic_strings.tcl:23
 msgid "intrrpt:"
-msgstr "interrupt:"
+msgstr "intrrpt:"
 
 #: iemgui_dynamic_strings.tcl:24
 msgid "left:"

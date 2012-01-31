@@ -65,6 +65,7 @@ void conf_init(void)
     e_midi_setup();
     import_setup();
     path_setup();
+    print_setup();
     loadbang_setup();
     initbang_setup();
     closebang_setup();

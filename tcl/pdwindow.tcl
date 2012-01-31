@@ -109,7 +109,6 @@ proc ::pdwindow::filter_complete {num} {
 
 # this has 'args' to satisfy trace, but its not used
 proc ::pdwindow::filter_buffer_to_text {args} {
-    variable logbuffer
     variable maxloglevel
     variable filtering
     variable currentcursor
@@ -496,8 +495,8 @@ proc ::pdwindow::create_window {} {
         }
     }
     
-    # print whatever is in the queue
-    filter_buffer_to_text
+    # print whatever is in the queue after the event loop finishes
+    after idle [list after 0 ::pdwindow::filter_buffer_to_text]
 
     set ::loaded(.pdwindow) 1
 

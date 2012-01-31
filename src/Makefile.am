@@ -32,7 +32,7 @@ pd_SOURCES = g_canvas.c g_graph.c g_text.c g_rtext.c g_array.c g_template.c \
     x_acoustics.c d_soundfile.c \
     e_fft.c e_gfxstub.c e_dac.c e_midi.c \
     g_magicglass.c \
-    import.c path.c closebang.c initbang.c loadbang.c
+    import.c path.c print.c closebang.c initbang.c loadbang.c
 
 pd_includedir = ${includedir}/pdextended
 pd_include_HEADERS = m_pd.h m_imp.h g_canvas.h s_stuff.h g_all_guis.h e_fft.h e_sqrt.h
