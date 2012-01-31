@@ -17,11 +17,7 @@ of Pd Manual;
 #X text 35 307 Much more documentation and other resources can be found
 at:;
 #X obj 35 327 pddp/pddplink http://www.puredata.info;
-#X obj 35 377 pddp/pddplink http://iem.kug.ac.at/mailinglists/pd-list/
-;
-#X text 35 357 The Pd mailing list archive can be found at:;
-#X text 35 397 Many more useful links are listed in the HTML documentation
-\, section 1.2.;
+#X obj 122 376 pddp/pddplink http://puredata.info/community/lists;
 #N canvas 495 39 531 400 (subpatch) 0;
 #X obj 340 153 hcs/version;
 #X obj 313 101 loadbang;
@@ -254,13 +250,14 @@ Harry_Castle Christian_Feldbauer Kerry_Hagan Trevor_Johnson Gerda_Strobl
 John_Harrison Paloma_Oliveira Alexandre_Castonguay Alexandre_Porres
 Andrew_Brouse Marc_Fournel Darsha_Hewitt Kyd_Campbell Yvan_Volochine
 Max_Neupert Katja_Vetter Pavel_Piatruk Rostislav_Raykov Max_Neupert
-V_L Γεώργιος_Κερατζάκης Ricardo_Cedeño_Montaña Peter_Brinkmann Roman_Haefeli
-Olsen_Wolf Ricardo_Fabbri Björn_Lindig Patrice_Colet Daniel_Heckenberg
-Izaskun_Etxebarria lemonzi42 Nico_Auvieux dwan Jean_Sapristi András_Murányi
-Lorenzo_Sutton sad@flxer.net Sei_Matsumura Prim_Smik Johannes_Burström
-crazylion Liwei_Chou Pei-Wen_Liu 鴻旗_鄭 Dieter_Kovačič Claude_Heiland-Allen
-Christian_Klippel Jarno_Seppänen Ville_Pulkki Christoph_Kummerer
-Mark_Williamson Iain_Mott Fred_Jan_Kraan Oswald_Berthold;
+V_L Γεώργιος_Κερατζάκης Ricardo_Cedeño_Montaña
+Peter_Brinkmann Roman_Haefeli Olsen_Wolf Ricardo_Fabbri Björn_Lindig
+Patrice_Colet Daniel_Heckenberg Izaskun_Etxebarria lemonzi42 Nico_Auvieux
+dwan Jean_Sapristi András_Murányi Lorenzo_Sutton sad@flxer.net Sei_Matsumura
+Prim_Smik Johannes_Burström crazylion Liwei_Chou Pei-Wen_Liu 鴻旗_鄭
+Dieter_Kovačič Claude_Heiland-Allen Christian_Klippel Jarno_Seppänen
+Ville_Pulkki Christoph_Kummerer Mark_Williamson Iain_Mott Fred_Jan_Kraan
+Oswald_Berthold;
 #X obj 11 411 + 20;
 #X obj 11 328 line;
 #X obj 91 7 r \$0-credits-bng;
@@ -445,6 +442,15 @@ Mark_Williamson Iain_Mott Fred_Jan_Kraan Oswald_Berthold;
 #X text 36 165 Pd is copyrighted but is free for you to use for any
 reasonable purpose under the GNU GPL version 3 . Follow the link for
 more details about the license:;
-#X msg 115 130 0.43.1-extended-20120129;
-#X connect 2 0 12 0;
-#X connect 12 1 19 0;
+#X msg 115 130 0.43.1;
+#X text 34 351 You can ask questions and get help in a variety of forums:
+;
+#X text 36 376 mailing lists:;
+#X text 36 416 IRC chatroom:;
+#X obj 122 416 pddp/pddplink irc://irc.freenode.net/dataflow;
+#X text 36 389 web forums:;
+#X obj 122 389 pddp/pddplink http://puredata.hurleur.com/;
+#X obj 122 403 pddp/pddplink http://noisepages.com/groups/pd-everywhere/
+;
+#X connect 2 0 10 0;
+#X connect 10 1 17 0;
