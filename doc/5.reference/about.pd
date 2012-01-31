@@ -258,7 +258,9 @@ V_L Γεώργιος_Κερατζάκης Ricardo_Cedeño_Montaña Peter_Brinkma
 Olsen_Wolf Ricardo_Fabbri Björn_Lindig Patrice_Colet Daniel_Heckenberg
 Izaskun_Etxebarria lemonzi42 Nico_Auvieux dwan Jean_Sapristi András_Murányi
 Lorenzo_Sutton sad@flxer.net Sei_Matsumura Prim_Smik Johannes_Burström
-crazylion Liwei_Chou Pei-Wen_Liu 鴻旗_鄭 Dieter_Kovačič;
+crazylion Liwei_Chou Pei-Wen_Liu 鴻旗_鄭 Dieter_Kovačič Claude_Heiland-Allen
+Christian_Klippel Jarno_Seppänen Ville_Pulkki Christoph_Kummerer
+Mark_Williamson Iain_Mott Fred_Jan_Kraan Oswald_Berthold;
 #X obj 11 411 + 20;
 #X obj 11 328 line;
 #X obj 91 7 r \$0-credits-bng;
