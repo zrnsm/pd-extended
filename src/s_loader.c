@@ -100,7 +100,7 @@ static int sys_do_load_lib(t_canvas *canvas, char *objectname)
     else classname = objectname;
     if (sys_onloadlist(objectname))
     {
-        post("%s: already loaded", objectname);
+        logpost(NULL, 3, "%s: already loaded", objectname);
         return (1);
     }
     for (i = 0, nameptr = classname; i < MAXPDSTRING-7 && *nameptr; nameptr++)
@@ -172,11 +172,39 @@ gotone:
     strncat(filename, nameptr, MAXPDSTRING-strlen(filename));
     filename[MAXPDSTRING-1] = 0;
 
-#ifdef HAVE_LIBDL
+#ifdef _WIN32
+    sys_bashfilename(filename, filename);
+    /* set the dirname as DllDirectory, meaning in the path for
+       loading other DLLs so that dependent libraries can be included
+       in the same folder as the external. SetDllDirectory() needs a
+       minimum supported version of Windows XP SP1 for
+       SetDllDirectory, so WINVER must be 0x0502 */
+    char dirname[MAXPDSTRING];
+    strncpy(dirname, filename, MAXPDSTRING);
+    char* s = strrchr(dirname, '\\');
+    char* basename = s;
+    if (s && *s)
+      *s = '\0';
+    if (!SetDllDirectory(dirname))
+	error("Could not set '%s' as DllDirectory(), '%s' might not load.",
+	      dirname, basename);
+    /* now load the DLL for the external */
+    ntdll = LoadLibrary(filename);
+    if (!ntdll)
+    {
+        error("%s: couldn't load", filename);
+        class_set_extern_dir(&s_);
+        return (0);
+    }
+    makeout = (t_xxx)GetProcAddress(ntdll, symname);  
+    if(!makeout)
+        makeout = (t_xxx)GetProcAddress(ntdll, "setup");
+    SetDllDirectory(NULL); /* reset DLL dir to nothing */
+#elif defined HAVE_LIBDL
     dlobj = dlopen(filename, RTLD_NOW | RTLD_GLOBAL);
     if (!dlobj)
     {
-        post("%s: %s", filename, dlerror());
+        error("%s: %s", filename, dlerror());
         class_set_extern_dir(&s_);
         return (0);
     }
@@ -184,25 +212,13 @@ gotone:
     if(!makeout)
         makeout = (t_xxx)dlsym(dlobj,  "setup");
     /* fprintf(stderr, "symbol %s\n", symname); */
-#elif defined(_WIN32)
-    sys_bashfilename(filename, filename);
-    ntdll = LoadLibrary(filename);
-    if (!ntdll)
-    {
-        post("%s: couldn't load", filename);
-        class_set_extern_dir(&s_);
-        return (0);
-    }
-    makeout = (t_xxx)GetProcAddress(ntdll, symname);  
-    if(!makeout)
-        makeout = (t_xxx)GetProcAddress(ntdll, "setup");
 #else
 # warning "No dynamic loading mechanism specified, libdl or WIN32 required for loading externals!"
 #endif
 
     if (!makeout)
     {
-        post("load_object: Symbol \"%s\" not found", symname);
+        error("load_object: Symbol \"%s\" not found", symname);
         class_set_extern_dir(&s_);
         return 0;
     }
@@ -266,14 +282,13 @@ int sys_run_scheduler(const char *externalschedlibname,
         HINSTANCE ntdll = LoadLibrary(filename);
         if (!ntdll)
         {
-            post("%s: couldn't load external scheduler lib ", filename);
+            error("%s: couldn't load external scheduler lib ", filename);
             return (1);
         }
         externalmainfunc =
             (t_externalschedlibmain)GetProcAddress(ntdll, "main");
     }
-#else
-#ifdef HAVE_LIBDL
+#elif defined HAVE_LIBDL
     {
         void *dlobj;
         struct stat statbuf;
@@ -287,7 +302,7 @@ int sys_run_scheduler(const char *externalschedlibname,
         dlobj = dlopen(filename, RTLD_NOW | RTLD_GLOBAL);
         if (!dlobj)
         {
-            post("%s: %s", filename, dlerror());
+            error("%s: %s", filename, dlerror());
             fprintf(stderr, "dlopen failed for %s: %s\n", filename, dlerror());
             return (1);
         }
@@ -296,7 +311,6 @@ int sys_run_scheduler(const char *externalschedlibname,
     }
 #else
     return (0);
-#endif
 #endif
     return((*externalmainfunc)(sys_extraflagsstring));
 }

@@ -127,12 +127,7 @@ proc ::pd_menucommands::menu_send {window message} {
         } elseif {$message eq "selectall"} {
             .pdwindow.text tag add sel 1.0 end
         } elseif {$message eq "menusaveas"} {
-            set contents [.pdwindow.text get -displaychars -- 1.0 end]
-            set filename [tk_getSaveFile -initialfile "pdwindow.txt" -defaultextension .txt]
-            if {$filename eq ""} return; # they clicked cancel
-            set f [open $filename w]
-            puts $f $contents
-            close $f
+            ::pdwindow::save_logbuffer_to_file
         }
     }
 }
