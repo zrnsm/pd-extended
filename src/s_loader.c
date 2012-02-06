@@ -100,7 +100,7 @@ static int sys_do_load_lib(t_canvas *canvas, char *objectname)
     else classname = objectname;
     if (sys_onloadlist(objectname))
     {
-        post("%s: already loaded", objectname);
+        logpost(NULL, 3, "%s: already loaded", objectname);
         return (1);
     }
     for (i = 0, nameptr = classname; i < MAXPDSTRING-7 && *nameptr; nameptr++)
@@ -192,7 +192,7 @@ gotone:
     ntdll = LoadLibrary(filename);
     if (!ntdll)
     {
-        post("%s: couldn't load", filename);
+        error("%s: couldn't load", filename);
         class_set_extern_dir(&s_);
         return (0);
     }
@@ -204,7 +204,7 @@ gotone:
     dlobj = dlopen(filename, RTLD_NOW | RTLD_GLOBAL);
     if (!dlobj)
     {
-        post("%s: %s", filename, dlerror());
+        error("%s: %s", filename, dlerror());
         class_set_extern_dir(&s_);
         return (0);
     }
@@ -218,7 +218,7 @@ gotone:
 
     if (!makeout)
     {
-        post("load_object: Symbol \"%s\" not found", symname);
+        error("load_object: Symbol \"%s\" not found", symname);
         class_set_extern_dir(&s_);
         return 0;
     }
@@ -282,7 +282,7 @@ int sys_run_scheduler(const char *externalschedlibname,
         HINSTANCE ntdll = LoadLibrary(filename);
         if (!ntdll)
         {
-            post("%s: couldn't load external scheduler lib ", filename);
+            error("%s: couldn't load external scheduler lib ", filename);
             return (1);
         }
         externalmainfunc =
@@ -302,7 +302,7 @@ int sys_run_scheduler(const char *externalschedlibname,
         dlobj = dlopen(filename, RTLD_NOW | RTLD_GLOBAL);
         if (!dlobj)
         {
-            post("%s: %s", filename, dlerror());
+            error("%s: %s", filename, dlerror());
             fprintf(stderr, "dlopen failed for %s: %s\n", filename, dlerror());
             return (1);
         }
