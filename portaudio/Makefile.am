@@ -1,7 +1,7 @@
 # this is built as a "libtool convenience library"
 # http://sources.redhat.com/automake/automake.html#Libtool-Convenience-Libraries
 AUTOMAKE_OPTIONS = foreign
-AM_CFLAGS = 
+AM_CPPFLAGS = 
 INCLUDES = -Iinclude -Isrc/common
 
 noinst_LTLIBRARIES = libportaudio.la
@@ -20,19 +20,21 @@ libportaudio_la_SOURCES = src/common/pa_allocation.c  \
 
 
 if ALSA
-AM_CFLAGS += -DPA_USE_ALSA
+AM_CPPFLAGS += -DPA_USE_ALSA
 libportaudio_la_SOURCES += src/hostapi/alsa/pa_linux_alsa.c
 endif
 
 if ASIO
-AM_CFLAGS += -DPA_USE_ASIO
+# Some old code in asio/ASIOSDK2/common/combase.h needs to be ignored,
+# we do this by setting the WINVER macro to min Windows XP aka 5.1.
+AM_CPPFLAGS += -DPA_USE_ASIO -DWINVER=0x0501
 libportaudio_la_SOURCES += src/hostapi/asio/pa_asio.cpp \
 	src/hostapi/asio/iasiothiscallresolver.cpp
 INCLUDES += -I../asio/ASIOSDK2/host -I../asio/ASIOSDK2/host/pc -I../asio/ASIOSDK2/common
 endif
 
 if COREAUDIO
-AM_CFLAGS += -DPA_USE_COREAUDIO
+AM_CPPFLAGS += -DPA_USE_COREAUDIO
 INCLUDES += -Isrc/os/mac_osx
 libportaudio_la_SOURCES += src/os/unix/pa_unix_util.c     \
         src/os/unix/pa_unix_hostapis.c   \
@@ -45,7 +47,7 @@ endif
 # handle a single MIDI API
 if OSS
 if !WINDOWS
-AM_CFLAGS += -DPA_USE_OSS
+AM_CPPFLAGS += -DPA_USE_OSS
 libportaudio_la_SOURCES += src/hostapi/oss/pa_unix_oss.c
 endif
 endif
@@ -57,7 +59,7 @@ libportaudio_la_SOURCES += src/os/unix/pa_unix_hostapis.c \
 endif
 
 if WINDOWS
-AM_CFLAGS += -DPA_USE_WMME
+AM_CPPFLAGS += -DPA_USE_WMME
 INCLUDES += -Isrc/os/win
 libportaudio_la_SOURCES += src/os/win/pa_win_hostapis.c \
         src/os/win/pa_win_util.c \

@@ -13,7 +13,9 @@
 # http://sources.redhat.com/automake/automake.html#Libtool-Convenience-Libraries
 
 AUTOMAKE_OPTIONS = foreign
-AM_CFLAGS = 
+# Some old code in asio/ASIOSDK2/common/combase.h needs to be ignored,
+# we do this by setting the WINVER macro to min Windows XP aka 5.1.
+AM_CXXFLAGS = -DWINVER=0x0501
 INCLUDES = -I./ASIOSDK2/host -I./ASIOSDK2/host/pc -I./ASIOSDK2/common
 
 noinst_LTLIBRARIES = libasio.la
