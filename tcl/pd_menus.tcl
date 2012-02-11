@@ -328,7 +328,7 @@ proc ::pd_menus::build_help_menu {mymenu} {
     $mymenu add command -label [_ "Pd Help Browser..."] \
         -command {menu_helpbrowser} -accelerator "$accelerator+B"
     $mymenu add command -label [_ "Start Here!"] \
-        -command {menu_openfile {http://puredata.info/docs/}} 
+        -command {menu_openfile {http://puredata.info/docs/StartHere}}
     $mymenu add  separator
     $mymenu add command -label [_ "Report a bug"] -command {menu_openfile \
         {http://sourceforge.net/tracker/?func=add&group_id=55736&atid=478070}} 
