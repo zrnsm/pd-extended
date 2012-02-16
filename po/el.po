@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Pure Data\n"
 "Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=55736&atid=478070\n"
 "POT-Creation-Date: 2012-01-17 18:37-0500\n"
-"PO-Revision-Date: 2012-01-19 14:31+0000\n"
+"PO-Revision-Date: 2012-02-14 11:16+0000\n"
 "Last-Translator: Hans-Christoph Steiner <hans@eds.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -184,9 +184,7 @@ msgstr "Χρήση πολλαπλών συσκευών"
 
 #: ../tcl/dialog_canvas.tcl:121
 msgid "WARNING: unknown graphme flags received in pdtk_canvas_dialog"
-msgstr ""
-"ΠΡΟΕΙΔΟΠΟΙΗΣΗ: άγνωστες στοιχεία  graphme έχουν ληφθεί στο "
-"pdtk_canvas_dialog"
+msgstr "ΠΡΟΕΙΔΟΠΟΙΗΣΗ: άγνωστες στοιχεία  graphme έχουν ληφθεί στο pdtk_canvas_dialog"
 
 #: ../tcl/dialog_canvas.tcl:141
 msgid "Canvas Properties"
@@ -462,9 +460,7 @@ msgstr "Θύρες Εξόδου:"
 
 #: ../tcl/dialog_path.tcl:32
 msgid "Pd search path for objects, help, fonts, and other files"
-msgstr ""
-"Pd διαδρομή αναζήτησης για τα κώδικα, βοήθεια, γραμματοσειρές και άλλα "
-"αρχεία"
+msgstr "Pd διαδρομή αναζήτησης για τα κώδικα, βοήθεια, γραμματοσειρές και άλλα αρχεία"
 
 #: ../tcl/dialog_path.tcl:37
 msgid "Use standard extensions"
@@ -1124,5 +1120,3 @@ msgstr "Ακύρωση αναίρεσης επικόλλησης"
 #: pd_dynamic_strings.tcl:39
 msgid "Redo typing"
 msgstr "Ακύρωση αναίρεσης εγγραφής"
-
-
