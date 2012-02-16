@@ -1075,7 +1075,7 @@ int sys_startgui(const char *libdir)
 #else /* __APPLE__ */
             sprintf(cmdbuf,
   "TCL_LIBRARY=\"%s/lib/tcl/library\" TK_LIBRARY=\"%s/lib/tk/library\" \
-  wish \"%s/" PDGUIDIR "/pd-gui.tcl\" %d\n",
+  wish8.5 \"%s/" PDGUIDIR "/pd-gui.tcl\" %d\n",
                  libdir, libdir, libdir, portno);
 #endif /* __APPLE__ */
             sys_guicmd = cmdbuf;
