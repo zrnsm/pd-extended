@@ -1297,8 +1297,11 @@ void sys_bail(int n)
     else _exit(1);
 }
 
+void glob_closeall(void *dummy, t_floatarg fforce);
+
 void glob_quit(void *dummy)
 {
+  glob_closeall(0, 1);
     sys_vgui("exit\n");
     if (!sys_nogui)
     {
