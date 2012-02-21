@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Pure Data\n"
 "Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=55736&atid=478070\n"
 "POT-Creation-Date: 2012-01-17 18:37-0500\n"
-"PO-Revision-Date: 2012-01-20 16:40+0000\n"
+"PO-Revision-Date: 2012-02-18 15:04+0000\n"
 "Last-Translator: Jean Sapristi <tom.javel@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -600,7 +600,7 @@ msgstr "Autopatch"
 #: ../tcl/pd_menus.tcl:190 ../tcl/pd_menus.tcl:199 ../tcl/pdtk_canvas.tcl:306
 #: ../tcl/pdtk_canvas.tcl:308
 msgid "Magic Glass"
-msgstr "Loupe"
+msgstr "Lunettes magiques"
 
 #: ../tcl/pd_menus.tcl:128 ../tcl/pd_menus.tcl:145 ../tcl/pd_menus.tcl:482
 #: ../tcl/pd_menus.tcl:511 ../tcl/pd_menus.tcl:513 ../tcl/pd_menus.tcl:528
@@ -1120,5 +1120,3 @@ msgstr "Rétablir Coller"
 #: pd_dynamic_strings.tcl:39
 msgid "Redo typing"
 msgstr "Rétablir Frappe"
-
-
