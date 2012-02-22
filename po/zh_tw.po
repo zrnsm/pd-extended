@@ -5,14 +5,15 @@
 # crazylion  <>, 2012.
 # Liwei Chou <>, 2012.
 # Pei-Wen Liu <vul3jp6p@gmail.com>, 2012.
+# 丼 / Don / डॉन <>, 2012.
 # 鴻旗 鄭 <>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: Pure Data\n"
 "Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=55736&atid=478070\n"
 "POT-Creation-Date: 2012-01-17 18:37-0500\n"
-"PO-Revision-Date: 2012-01-30 07:27+0000\n"
-"Last-Translator: crazylion <>\n"
+"PO-Revision-Date: 2012-02-24 18:31+0000\n"
+"Last-Translator: 鴻旗 鄭 <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -47,7 +48,7 @@ msgstr "儲存"
 
 #: ../tcl/dialog_array.tcl:287
 msgid "Draw as:"
-msgstr ""
+msgstr "測試鎖定"
 
 #: ../tcl/dialog_array.tcl:290
 msgid "Points"
@@ -194,7 +195,7 @@ msgstr "畫布內容"
 
 #: ../tcl/dialog_canvas.tcl:149
 msgid "Scale"
-msgstr ""
+msgstr "縮放"
 
 #: ../tcl/dialog_canvas.tcl:153
 msgid "X units per pixel:"
@@ -246,12 +247,12 @@ msgstr "傳送(Ctrl s)"
 
 #: ../tcl/dialog_data.tcl:39
 msgid "OK (Ctrl t)"
-msgstr ""
+msgstr "確認 (Ctrl t)"
 
 #: ../tcl/dialog_find.tcl:108
 #, tcl-format
 msgid "Couldn't find '%s' in %s"
-msgstr ""
+msgstr "無法在%s搜尋到「%s」"
 
 #: ../tcl/dialog_find.tcl:126 ../tcl/dialog_find.tcl:167
 #: pd_dynamic_strings.tcl:13
@@ -260,7 +261,7 @@ msgstr "尋找"
 
 #: ../tcl/dialog_find.tcl:145
 msgid "Search in"
-msgstr ""
+msgstr "搜尋於"
 
 #: ../tcl/dialog_find.tcl:146 ../tcl/pd_menus.tcl:283 ../tcl/pd_menus.tcl:316
 #: ../tcl/pd_menus.tcl:317
@@ -295,19 +296,19 @@ msgstr "字體大小:"
 
 #: ../tcl/dialog_font.tcl:119
 msgid "Stretch"
-msgstr ""
+msgstr "伸縮"
 
 #: ../tcl/dialog_font.tcl:126
 msgid "X and Y"
-msgstr ""
+msgstr "X和Y"
 
 #: ../tcl/dialog_font.tcl:128
 msgid "X only"
-msgstr ""
+msgstr "只有X"
 
 #: ../tcl/dialog_font.tcl:130
 msgid "Y only"
-msgstr ""
+msgstr "只有Y"
 
 #: ../tcl/dialog_gatom.tcl:93
 msgid "Atom Box Properties"
@@ -372,7 +373,7 @@ msgstr "前景顏色"
 
 #: ../tcl/dialog_iemgui.tcl:211
 msgid "Label color"
-msgstr ""
+msgstr "標籤顏色"
 
 #: ../tcl/dialog_iemgui.tcl:272
 msgid "Init"
@@ -406,7 +407,7 @@ msgstr "儲存"
 
 #: ../tcl/dialog_iemgui.tcl:618
 msgid "X offset"
-msgstr "X軸位移"
+msgstr "X 軸位移"
 
 #: ../tcl/dialog_iemgui.tcl:621
 msgid "Y offset"
@@ -434,7 +435,7 @@ msgstr ""
 
 #: ../tcl/dialog_message.tcl:61
 msgid "Send a Pd message"
-msgstr ""
+msgstr "送出Pd 訊息"
 
 #: ../tcl/dialog_message.tcl:80
 msgid "(use arrow keys for history)"
@@ -672,7 +673,7 @@ msgstr ""
 
 #: ../tcl/pd_menus.tcl:194 ../tcl/pd_menus.tcl:227 ../tcl/pd_menus.tcl:228
 msgid "Bang"
-msgstr "撞"
+msgstr "Bang"
 
 #: ../tcl/pd_menus.tcl:196
 msgid "Autotips"
@@ -684,7 +685,7 @@ msgstr ""
 
 #: ../tcl/pd_menus.tcl:198 ../tcl/pd_menus.tcl:231 ../tcl/pd_menus.tcl:232
 msgid "Number2"
-msgstr ""
+msgstr "參數 2"
 
 #: ../tcl/pd_menus.tcl:200 ../tcl/pd_menus.tcl:233 ../tcl/pd_menus.tcl:234
 msgid "Vslider"
@@ -762,7 +763,7 @@ msgstr "放大"
 
 #: ../tcl/pd_menus.tcl:272 ../tcl/pd_menus.tcl:305 ../tcl/pd_menus.tcl:306
 msgid "Bring All to Front"
-msgstr ""
+msgstr "全部上置"
 
 #: ../tcl/pd_menus.tcl:275 ../tcl/pd_menus.tcl:308 ../tcl/pd_menus.tcl:309
 msgid "Next Window"
@@ -778,7 +779,7 @@ msgstr "隔代視窗"
 
 #: ../tcl/pd_menus.tcl:291 ../tcl/pd_menus.tcl:457 ../tcl/pd_menus.tcl:503
 msgid "Audio Settings..."
-msgstr "聲音設定..."
+msgstr "音效設定..."
 
 #: ../tcl/pd_menus.tcl:293 ../tcl/pd_menus.tcl:459 ../tcl/pd_menus.tcl:505
 msgid "MIDI Settings..."
@@ -874,7 +875,7 @@ msgstr "DSP"
 
 #: ../tcl/pdwindow.tcl:322 ../tcl/pdwindow.tcl:333 ../tcl/pdwindow.tcl:435
 msgid "audio I/O error"
-msgstr ""
+msgstr "音訊 I/O 錯誤"
 
 #: ../tcl/pdwindow.tcl:328 ../tcl/pdwindow.tcl:339 ../tcl/pdwindow.tcl:462
 msgid "Log:"
@@ -894,11 +895,11 @@ msgstr ""
 
 #: ../tcl/pdwindow.tcl:336 ../tcl/pdwindow.tcl:347 ../tcl/pdwindow.tcl:449
 msgid "debug"
-msgstr ""
+msgstr "除錯"
 
 #: ../tcl/pdwindow.tcl:337 ../tcl/pdwindow.tcl:348 ../tcl/pdwindow.tcl:450
 msgid "all"
-msgstr ""
+msgstr "全部"
 
 #: ../tcl/pdwindow.tcl:396 ../tcl/pdwindow.tcl:397
 msgid "Pd-extended"
@@ -947,11 +948,11 @@ msgstr ""
 
 #: iemgui_dynamic_strings.tcl:20
 msgid "bottom:"
-msgstr ""
+msgstr "下："
 
 #: iemgui_dynamic_strings.tcl:21
 msgid "height:"
-msgstr "高"
+msgstr "高："
 
 #: iemgui_dynamic_strings.tcl:22
 msgid "hold:"
@@ -963,7 +964,7 @@ msgstr ""
 
 #: iemgui_dynamic_strings.tcl:24
 msgid "left:"
-msgstr ""
+msgstr "左："
 
 #: iemgui_dynamic_strings.tcl:25
 msgid "lin"
@@ -979,7 +980,7 @@ msgstr ""
 
 #: iemgui_dynamic_strings.tcl:28
 msgid "max:"
-msgstr "最大:"
+msgstr "最大："
 
 #: iemgui_dynamic_strings.tcl:29
 msgid "min:"
@@ -987,11 +988,11 @@ msgstr "最小："
 
 #: iemgui_dynamic_strings.tcl:30
 msgid "right:"
-msgstr "右:"
+msgstr "右："
 
 #: iemgui_dynamic_strings.tcl:31
 msgid "size:"
-msgstr "尺寸:"
+msgstr "尺寸："
 
 #: iemgui_dynamic_strings.tcl:32
 msgid "top:"
@@ -999,16 +1000,16 @@ msgstr "上："
 
 #: iemgui_dynamic_strings.tcl:33
 msgid "value:"
-msgstr "數值:"
+msgstr "數值："
 
 #: iemgui_dynamic_strings.tcl:34
 msgid "width:"
-msgstr "寬度:"
+msgstr "寬度："
 
 #: pd_dynamic_strings.tcl:10 pd_dynamic_strings.tcl:18
 #, tcl-format
 msgid "Do you want to save the changes you made in '%s'?"
-msgstr ""
+msgstr "要儲存已修改過的「%s」嗎？"
 
 #: pd_dynamic_strings.tcl:10
 msgid "File"
@@ -1106,7 +1107,7 @@ msgstr "重做斷線"
 #: pd_dynamic_strings.tcl:26 pd_dynamic_strings.tcl:28
 #: pd_dynamic_strings.tcl:36
 msgid "Redo duplicate"
-msgstr ""
+msgstr "重做複製"
 
 #: pd_dynamic_strings.tcl:27 pd_dynamic_strings.tcl:29
 #: pd_dynamic_strings.tcl:37
@@ -1116,11 +1117,9 @@ msgstr ""
 #: pd_dynamic_strings.tcl:28 pd_dynamic_strings.tcl:30
 #: pd_dynamic_strings.tcl:38
 msgid "Redo paste"
-msgstr ""
+msgstr "重作貼上"
 
 #: pd_dynamic_strings.tcl:29 pd_dynamic_strings.tcl:31
 #: pd_dynamic_strings.tcl:39
 msgid "Redo typing"
 msgstr ""
-
-
