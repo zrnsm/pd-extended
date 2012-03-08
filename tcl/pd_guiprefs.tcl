@@ -150,7 +150,7 @@ proc ::pd_guiprefs::get_config_x11 {adomain {akey} {arr false}} {
         }
         close $fl
     } else {
-		::pdwindow::error [_ "Cannot read GUI prefs file: "]"$filename"
+		::pdwindow::debug [_ "Cannot read GUI prefs file: "]"$filename"
 	}
     return $conf
 }

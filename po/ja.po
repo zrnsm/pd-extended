@@ -3,13 +3,14 @@
 # 
 # Translators:
 # Sei Matsumura <serv@low-tech-ism.com>, 2012.
+# TransReformer  <>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: Pure Data\n"
 "Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=55736&atid=478070\n"
 "POT-Creation-Date: 2012-01-17 18:37-0500\n"
-"PO-Revision-Date: 2012-01-19 14:32+0000\n"
-"Last-Translator: Hans-Christoph Steiner <hans@eds.org>\n"
+"PO-Revision-Date: 2012-02-28 11:56+0000\n"
+"Last-Translator: Sei Matsumura <serv@low-tech-ism.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,24 +28,24 @@ msgstr "ペースト"
 
 #: ../tcl/dialog_array.tcl:263
 msgid "Array Properties"
-msgstr "Arrayのプロパティ"
+msgstr "アレイ プロパティ"
 
 #: ../tcl/dialog_array.tcl:273
 msgid "Name:"
-msgstr "名前"
+msgstr "名前:"
 
 #: ../tcl/dialog_array.tcl:279 ../tcl/dialog_canvas.tcl:181
 #: ../tcl/dialog_canvas.tcl:196 ../tcl/dialog_iemgui.tcl:630
 msgid "Size:"
-msgstr "サイズ"
+msgstr "サイズ:"
 
 #: ../tcl/dialog_array.tcl:283
 msgid "Save contents"
-msgstr ""
+msgstr "内容を保存"
 
 #: ../tcl/dialog_array.tcl:287
 msgid "Draw as:"
-msgstr ""
+msgstr "描画方法:"
 
 #: ../tcl/dialog_array.tcl:290
 msgid "Points"
@@ -60,15 +61,15 @@ msgstr "ベジェ曲線"
 
 #: ../tcl/dialog_array.tcl:300
 msgid "Put array into:"
-msgstr ""
+msgstr "Arrayの格納先:"
 
 #: ../tcl/dialog_array.tcl:303
 msgid "New graph"
-msgstr ""
+msgstr "新しいグラフ"
 
 #: ../tcl/dialog_array.tcl:305
 msgid "Last graph"
-msgstr ""
+msgstr "前のグラフ"
 
 #: ../tcl/dialog_array.tcl:309
 msgid "Delete array"
@@ -76,7 +77,7 @@ msgstr "Arrayを削除"
 
 #: ../tcl/dialog_array.tcl:315
 msgid "Open List View..."
-msgstr ""
+msgstr "リストビューを開く"
 
 #: ../tcl/dialog_array.tcl:322 ../tcl/dialog_audio.tcl:146
 #: ../tcl/dialog_canvas.tcl:208 ../tcl/dialog_find.tcl:163
@@ -84,14 +85,14 @@ msgstr ""
 #: ../tcl/dialog_midi.tcl:98 ../tcl/dialog_midi.tcl:233
 #: ../tcl/scrollboxwindow.tcl:82
 msgid "Cancel"
-msgstr "Cancel"
+msgstr "キャンセル"
 
 #: ../tcl/dialog_array.tcl:326 ../tcl/dialog_audio.tcl:149
 #: ../tcl/dialog_canvas.tcl:212 ../tcl/dialog_gatom.tcl:161
 #: ../tcl/dialog_iemgui.tcl:755 ../tcl/dialog_midi.tcl:100
 #: ../tcl/dialog_midi.tcl:235 ../tcl/scrollboxwindow.tcl:84
 msgid "Apply"
-msgstr "実行"
+msgstr "適用"
 
 #: ../tcl/dialog_array.tcl:330 ../tcl/dialog_audio.tcl:152
 #: ../tcl/dialog_canvas.tcl:216 ../tcl/dialog_font.tcl:103
@@ -112,70 +113,70 @@ msgstr "すべての設定を保存"
 
 #: ../tcl/dialog_audio.tcl:164
 msgid "Sample rate:"
-msgstr "サンプリングレート"
+msgstr "サンプリングレート:"
 
 #: ../tcl/dialog_audio.tcl:166
 msgid "Delay (msec):"
-msgstr "ディレイ(ミリ秒)"
+msgstr "ディレイ(ミリ秒):"
 
 #: ../tcl/dialog_audio.tcl:169
 msgid "Block size:"
-msgstr "ブロックサイズ"
+msgstr "ブロックサイズ:"
 
 #: ../tcl/dialog_audio.tcl:176
 msgid "Use callbacks"
-msgstr ""
+msgstr "コールバックを使用"
 
 #: ../tcl/dialog_audio.tcl:184 ../tcl/dialog_midi.tcl:112
 #: ../tcl/dialog_midi.tcl:248
 msgid "Input device 1:"
-msgstr "インプットデバイス 1:"
+msgstr "入力デバイス 1:"
 
 #: ../tcl/dialog_audio.tcl:187 ../tcl/dialog_audio.tcl:202
 #: ../tcl/dialog_audio.tcl:218 ../tcl/dialog_audio.tcl:233
 #: ../tcl/dialog_audio.tcl:253 ../tcl/dialog_audio.tcl:272
 #: ../tcl/dialog_audio.tcl:288 ../tcl/dialog_audio.tcl:304
 msgid "Channels:"
-msgstr "チャンネル"
+msgstr "チャンネル:"
 
 #: ../tcl/dialog_audio.tcl:198 ../tcl/dialog_midi.tcl:122
 #: ../tcl/dialog_midi.tcl:258
 msgid "Input device 2:"
-msgstr "インプットデバイス 2:"
+msgstr "入力デバイス 2:"
 
 #: ../tcl/dialog_audio.tcl:214 ../tcl/dialog_midi.tcl:134
 #: ../tcl/dialog_midi.tcl:270
 msgid "Input device 3:"
-msgstr "インプットデバイス 3:"
+msgstr "入力デバイス 3:"
 
 #: ../tcl/dialog_audio.tcl:229 ../tcl/dialog_midi.tcl:146
 #: ../tcl/dialog_midi.tcl:282
 msgid "Input device 4:"
-msgstr "インプットデバイス 4:"
+msgstr "入力デバイス 4:"
 
 #: ../tcl/dialog_audio.tcl:244 ../tcl/dialog_midi.tcl:157
 #: ../tcl/dialog_midi.tcl:293
 msgid "Output device 1:"
-msgstr "出力機器 1:"
+msgstr "出力デバイス 1:"
 
 #: ../tcl/dialog_audio.tcl:247
 msgid "(same as input device) ..............      "
-msgstr ""
+msgstr "(入力デバイスと同じ)............"
 
 #: ../tcl/dialog_audio.tcl:268 ../tcl/dialog_midi.tcl:167
 #: ../tcl/dialog_midi.tcl:303
 msgid "Output device 2:"
-msgstr "出力機器 2:"
+msgstr "出力デバイス 2:"
 
 #: ../tcl/dialog_audio.tcl:284 ../tcl/dialog_midi.tcl:178
 #: ../tcl/dialog_midi.tcl:314
 msgid "Output device 3:"
-msgstr "出力機器 3:"
+msgstr "出力デバイス 3:"
 
 #: ../tcl/dialog_audio.tcl:300 ../tcl/dialog_midi.tcl:189
 #: ../tcl/dialog_midi.tcl:325
 msgid "Output device 4:"
-msgstr "出力機器 4:"
+msgstr "出力デバイス 4:"
 
 #: ../tcl/dialog_audio.tcl:316 ../tcl/dialog_midi.tcl:202
 msgid "Use multiple devices"
@@ -183,11 +184,11 @@ msgstr "複数のデバイスを使用"
 
 #: ../tcl/dialog_canvas.tcl:121
 msgid "WARNING: unknown graphme flags received in pdtk_canvas_dialog"
-msgstr ""
+msgstr "警告: pdtk_canvas_dialogで不明のgraphme flagsが入力されました"
 
 #: ../tcl/dialog_canvas.tcl:141
 msgid "Canvas Properties"
-msgstr "Canvasのプロバティ"
+msgstr "キャンバスのプロバティ"
 
 #: ../tcl/dialog_canvas.tcl:149
 msgid "Scale"
@@ -195,35 +196,35 @@ msgstr "スケール"
 
 #: ../tcl/dialog_canvas.tcl:153
 msgid "X units per pixel:"
-msgstr ""
+msgstr "表示領域のX値（ピクセル）:"
 
 #: ../tcl/dialog_canvas.tcl:158
 msgid "Y units per pixel:"
-msgstr ""
+msgstr "表示領域のY値（ピクセル）:"
 
 #: ../tcl/dialog_canvas.tcl:162
 msgid "Appearance on parent patch"
-msgstr ""
+msgstr "親パッチでの表示"
 
 #: ../tcl/dialog_canvas.tcl:164
 msgid "Graph-On-Parent"
-msgstr "親パッチに表示"
+msgstr "親パッチに表示する"
 
 #: ../tcl/dialog_canvas.tcl:168
 msgid "Hide object name and arguments"
-msgstr ""
+msgstr "オブジェクト名とアーギュメントの非表示"
 
 #: ../tcl/dialog_canvas.tcl:173
 msgid "Range and size"
-msgstr ""
+msgstr "範囲とサイズ"
 
 #: ../tcl/dialog_canvas.tcl:177
 msgid "X range, from"
-msgstr ""
+msgstr "X値の範囲, 始点"
 
 #: ../tcl/dialog_canvas.tcl:179 ../tcl/dialog_canvas.tcl:194
 msgid "to"
-msgstr ""
+msgstr "終点"
 
 #: ../tcl/dialog_canvas.tcl:183 ../tcl/dialog_canvas.tcl:198
 msgid "Margin:"
@@ -231,46 +232,46 @@ msgstr "マージン:"
 
 #: ../tcl/dialog_canvas.tcl:192
 msgid "Y range, from"
-msgstr ""
+msgstr "Y値の範囲, 始点"
 
 #: ../tcl/dialog_data.tcl:29
 msgid "Data Properties"
-msgstr "データのプロパティ"
+msgstr "データ プロパティ"
 
 #: ../tcl/dialog_data.tcl:37
 msgid "Send (Ctrl s)"
-msgstr ""
+msgstr "送る(Ctrl s)"
 
 #: ../tcl/dialog_data.tcl:39
 msgid "OK (Ctrl t)"
-msgstr ""
+msgstr "OK(Ctrl t)"
 
 #: ../tcl/dialog_find.tcl:108
 #, tcl-format
 msgid "Couldn't find '%s' in %s"
-msgstr ""
+msgstr "%sの中で'%s'が見つかりません"
 
 #: ../tcl/dialog_find.tcl:126 ../tcl/dialog_find.tcl:167
 #: pd_dynamic_strings.tcl:13
 msgid "Find"
-msgstr ""
+msgstr "検索"
 
 #: ../tcl/dialog_find.tcl:145
 msgid "Search in"
-msgstr ""
+msgstr "検索範囲"
 
 #: ../tcl/dialog_find.tcl:146 ../tcl/pd_menus.tcl:283 ../tcl/pd_menus.tcl:316
 #: ../tcl/pd_menus.tcl:317
 msgid "Pd window"
-msgstr ""
+msgstr "Pdウィンドウ"
 
 #: ../tcl/dialog_find.tcl:147
 msgid "for:"
-msgstr ""
+msgstr "検索語:"
 
 #: ../tcl/dialog_find.tcl:157
 msgid "Match whole word only"
-msgstr ""
+msgstr "全文適合検索"
 
 #: ../tcl/dialog_find.tcl:171 ../tcl/pd_menus.tcl:58 ../tcl/pd_menus.tcl:63
 #: ../tcl/pd_menus.tcl:80 ../tcl/pd_menus.tcl:89 ../tcl/pd_menus.tcl:106
@@ -279,118 +280,118 @@ msgstr ""
 #: ../tcl/pd_menus.tcl:534 ../tcl/pd_menus.tcl:558 ../tcl/pd_menus.tcl:572
 #: ../tcl/pd_menus.tcl:603 ../tcl/pd_menus.tcl:619
 msgid "Close"
-msgstr ""
+msgstr "閉じる"
 
 #: ../tcl/dialog_font.tcl:49
 #, tcl-format
 msgid "%s Font"
-msgstr ""
+msgstr "%s フォント"
 
 #: ../tcl/dialog_font.tcl:107
 msgid "Font Size"
-msgstr ""
+msgstr "フォントサイズ"
 
 #: ../tcl/dialog_font.tcl:119
 msgid "Stretch"
-msgstr ""
+msgstr "拡張"
 
 #: ../tcl/dialog_font.tcl:126
 msgid "X and Y"
-msgstr ""
+msgstr "X値とY値"
 
 #: ../tcl/dialog_font.tcl:128
 msgid "X only"
-msgstr ""
+msgstr "X値のみ"
 
 #: ../tcl/dialog_font.tcl:130
 msgid "Y only"
-msgstr ""
+msgstr "Y値のみ"
 
 #: ../tcl/dialog_gatom.tcl:93
 msgid "Atom Box Properties"
-msgstr ""
+msgstr "ナンバーボックス プロパティ"
 
 #: ../tcl/dialog_gatom.tcl:103
 msgid "Width:"
-msgstr ""
+msgstr "幅:"
 
 #: ../tcl/dialog_gatom.tcl:107
 msgid "Limits"
-msgstr ""
+msgstr "出力範囲"
 
 #: ../tcl/dialog_gatom.tcl:111
 msgid "Lower:"
-msgstr ""
+msgstr "最小値:"
 
 #: ../tcl/dialog_gatom.tcl:116
 msgid "Upper:"
-msgstr ""
+msgstr "最大値:"
 
 #: ../tcl/dialog_gatom.tcl:120 ../tcl/dialog_iemgui.tcl:610
 #: ../tcl/dialog_iemgui.tcl:663
 msgid "Label"
-msgstr ""
+msgstr "ラベル"
 
 #: ../tcl/dialog_gatom.tcl:128
 msgid "Left   "
-msgstr ""
+msgstr "左"
 
 #: ../tcl/dialog_gatom.tcl:130
 msgid "Right"
-msgstr ""
+msgstr "右"
 
 #: ../tcl/dialog_gatom.tcl:132
 msgid "Top"
-msgstr ""
+msgstr "上"
 
 #: ../tcl/dialog_gatom.tcl:134
 msgid "Bottom"
-msgstr ""
+msgstr "下"
 
 #: ../tcl/dialog_gatom.tcl:141 ../tcl/dialog_iemgui.tcl:580
 msgid "Messages"
-msgstr ""
+msgstr "メッセージ"
 
 #: ../tcl/dialog_gatom.tcl:145 ../tcl/dialog_iemgui.tcl:584
 msgid "Send symbol:"
-msgstr ""
+msgstr "Sendシンボル"
 
 #: ../tcl/dialog_gatom.tcl:151 ../tcl/dialog_iemgui.tcl:593
 msgid "Receive symbol:"
-msgstr ""
+msgstr "Receiveシンボル"
 
 #: ../tcl/dialog_iemgui.tcl:197
 msgid "Background color"
-msgstr ""
+msgstr "背景色"
 
 #: ../tcl/dialog_iemgui.tcl:204
 msgid "Foreground color"
-msgstr ""
+msgstr "前景色"
 
 #: ../tcl/dialog_iemgui.tcl:211
 msgid "Label color"
-msgstr ""
+msgstr "ラベル色"
 
 #: ../tcl/dialog_iemgui.tcl:272
 msgid "Init"
-msgstr ""
+msgstr "初期値あり"
 
 #: ../tcl/dialog_iemgui.tcl:275 ../tcl/dialog_iemgui.tcl:554
 msgid "No init"
-msgstr ""
+msgstr "初期値なし"
 
 #: ../tcl/dialog_iemgui.tcl:287 ../tcl/dialog_iemgui.tcl:564
 msgid "Jump on click"
-msgstr ""
+msgstr "クリックで移動"
 
 #: ../tcl/dialog_iemgui.tcl:290 ../tcl/dialog_iemgui.tcl:567
 msgid "Steady on click"
-msgstr ""
+msgstr "クリックで移動しない"
 
 #: ../tcl/dialog_iemgui.tcl:502
 #, tcl-format
 msgid "%s Properties"
-msgstr ""
+msgstr "%s プロパティ"
 
 #: ../tcl/dialog_iemgui.tcl:557 ../tcl/pd_menus.tcl:55 ../tcl/pd_menus.tcl:60
 #: ../tcl/pd_menus.tcl:77 ../tcl/pd_menus.tcl:86 ../tcl/pd_menus.tcl:102
@@ -399,143 +400,143 @@ msgstr ""
 #: ../tcl/pd_menus.tcl:535 ../tcl/pd_menus.tcl:549 ../tcl/pd_menus.tcl:561
 #: ../tcl/pd_menus.tcl:563 ../tcl/pd_menus.tcl:594 ../tcl/pd_menus.tcl:608
 msgid "Save"
-msgstr ""
+msgstr "保存"
 
 #: ../tcl/dialog_iemgui.tcl:618
 msgid "X offset"
-msgstr ""
+msgstr "X値オフセット"
 
 #: ../tcl/dialog_iemgui.tcl:621
 msgid "Y offset"
-msgstr ""
+msgstr "Y値オフセット"
 
 #: ../tcl/dialog_iemgui.tcl:653
 msgid "Colors"
-msgstr ""
+msgstr "色"
 
 #: ../tcl/dialog_iemgui.tcl:659
 msgid "Background"
-msgstr ""
+msgstr "背景"
 
 #: ../tcl/dialog_iemgui.tcl:661
 msgid "Front"
-msgstr ""
+msgstr "前景"
 
 #: ../tcl/dialog_iemgui.tcl:673
 msgid "Compose color"
-msgstr ""
+msgstr "色の作成"
 
 #: ../tcl/dialog_iemgui.tcl:692
 msgid "Test label"
-msgstr ""
+msgstr "テストラベル"
 
 #: ../tcl/dialog_message.tcl:61
 msgid "Send a Pd message"
-msgstr ""
+msgstr "Pdメッセージを送る"
 
 #: ../tcl/dialog_message.tcl:80
 msgid "(use arrow keys for history)"
-msgstr ""
+msgstr "(履歴に矢印キーを使用)"
 
 #: ../tcl/dialog_midi.tcl:86
 msgid "MIDI Settings"
-msgstr ""
+msgstr "MIDI設定"
 
 #: ../tcl/dialog_midi.tcl:227
 msgid "ALSA MIDI Settings"
-msgstr ""
+msgstr "ALSA MIDI設定"
 
 #: ../tcl/dialog_midi.tcl:338
 msgid "Use multiple ALSA devices"
-msgstr ""
+msgstr "複数のALSAデバイスを使用"
 
 #: ../tcl/dialog_midi.tcl:344
 msgid "In Ports:"
-msgstr ""
+msgstr "データ プロパティ"
 
 #: ../tcl/dialog_midi.tcl:347
 msgid "Out Ports:"
-msgstr ""
+msgstr "出力ポート:"
 
 #: ../tcl/dialog_path.tcl:32
 msgid "Pd search path for objects, help, fonts, and other files"
-msgstr ""
+msgstr "オブジェクト、ヘルプ、フォント等のためのPdの検索範囲"
 
 #: ../tcl/dialog_path.tcl:37
 msgid "Use standard extensions"
-msgstr ""
+msgstr "標準的な拡張子を使用"
 
 #: ../tcl/dialog_path.tcl:39
 msgid "Verbose"
-msgstr ""
+msgstr "詳細な表示"
 
 #: ../tcl/dialog_startup.tcl:49
 msgid "Add new library"
-msgstr ""
+msgstr "新しいライブラリを追加"
 
 #: ../tcl/dialog_startup.tcl:53
 msgid "Edit library"
-msgstr ""
+msgstr "ライブラリの編集"
 
 #: ../tcl/dialog_startup.tcl:79
 msgid "Pd libraries to load on startup"
-msgstr ""
+msgstr "開始時のPdライブラリの読み込み"
 
 #: ../tcl/dialog_startup.tcl:82
 msgid "Startup flags:"
-msgstr ""
+msgstr "スタートアップフラッグ:"
 
 #: ../tcl/dialog_startup.tcl:91
 msgid "Defeat real-time scheduling"
-msgstr ""
+msgstr "リアルタイムスケジューリングの無効化"
 
 #: ../tcl/helpbrowser.tcl:27
 msgid "Help Browser"
-msgstr ""
+msgstr "ヘルプブラウザ"
 
 #: ../tcl/pd_connect.tcl:74 ../tcl/pd_connect.tcl:82 ../tcl/pdwindow.tcl:221
 #: ../tcl/pdwindow.tcl:232 ../tcl/pdwindow.tcl:316
 msgid "(Tcl) INVALID COMMAND NAME: "
-msgstr ""
+msgstr "(Tcl) 不適切なコマンド名:"
 
 #: ../tcl/pd_connect.tcl:76 ../tcl/pd_connect.tcl:84 ../tcl/pdwindow.tcl:223
 #: ../tcl/pdwindow.tcl:234 ../tcl/pdwindow.tcl:318
 msgid "(Tcl) UNHANDLED ERROR: "
-msgstr ""
+msgstr "(Tcl) 操作不能エラー:"
 
 #: ../tcl/pd_guiprefs.tcl:153
 msgid "Cannot read GUI prefs file: "
-msgstr ""
+msgstr "GUI設定ファイルを読み込めません:"
 
 #: ../tcl/pd_menucommands.tcl:201 ../tcl/pd_menucommands.tcl:233
 #: ../tcl/pd_menus.tcl:292 ../tcl/pd_menus.tcl:326 ../tcl/pd_menus.tcl:327
 #: ../tcl/pd_menus.tcl:470 ../tcl/pd_menus.tcl:502 ../tcl/pd_menus.tcl:516
 msgid "About Pd"
-msgstr ""
+msgstr "Pdについて"
 
 #: ../tcl/pd_menucommands.tcl:298
 msgid "Select name for app to build...\n"
-msgstr ""
+msgstr "アプリケーションのための名前を選択...\n"
 
 #: ../tcl/pd_menucommands.tcl:301
 msgid "Save application to..."
-msgstr ""
+msgstr "アプリケーションとして保存..."
 
 #: ../tcl/pd_menucommands.tcl:310
 msgid "Configuring Info.plist..."
-msgstr ""
+msgstr "Info.plistを定義..."
 
 #: ../tcl/pd_menucommands.tcl:312
 msgid "Setting patch name..."
-msgstr ""
+msgstr "パッチ名を設定..."
 
 #: ../tcl/pd_menucommands.tcl:314
 msgid "Copying current patch..."
-msgstr ""
+msgstr "現在のパッチをコピー..."
 
 #: ../tcl/pd_menucommands.tcl:316
 msgid "Setting embedded preferences..."
-msgstr ""
+msgstr "初期設定の埋め込み..."
 
 #: ../tcl/pd_menus.tcl:56 ../tcl/pd_menus.tcl:61 ../tcl/pd_menus.tcl:78
 #: ../tcl/pd_menus.tcl:87 ../tcl/pd_menus.tcl:103 ../tcl/pd_menus.tcl:116
@@ -544,7 +545,7 @@ msgstr ""
 #: ../tcl/pd_menus.tcl:550 ../tcl/pd_menus.tcl:562 ../tcl/pd_menus.tcl:564
 #: ../tcl/pd_menus.tcl:595 ../tcl/pd_menus.tcl:609
 msgid "Save As..."
-msgstr ""
+msgstr "別名で保存..."
 
 #: ../tcl/pd_menus.tcl:57 ../tcl/pd_menus.tcl:62 ../tcl/pd_menus.tcl:79
 #: ../tcl/pd_menus.tcl:88 ../tcl/pd_menus.tcl:104 ../tcl/pd_menus.tcl:117
@@ -553,19 +554,19 @@ msgstr ""
 #: ../tcl/pd_menus.tcl:554 ../tcl/pd_menus.tcl:568 ../tcl/pd_menus.tcl:599
 #: ../tcl/pd_menus.tcl:615
 msgid "Print..."
-msgstr ""
+msgstr "印刷..."
 
 #: ../tcl/pd_menus.tcl:60 ../tcl/pd_menus.tcl:65 ../tcl/pd_menus.tcl:82
 #: ../tcl/pd_menus.tcl:91 ../tcl/pd_menus.tcl:108 ../tcl/pd_menus.tcl:121
 #: ../tcl/pd_menus.tcl:151 ../tcl/pd_menus.tcl:172
 msgid "Duplicate"
-msgstr ""
+msgstr "複製"
 
 #: ../tcl/pd_menus.tcl:61 ../tcl/pd_menus.tcl:66 ../tcl/pd_menus.tcl:83
 #: ../tcl/pd_menus.tcl:92 ../tcl/pd_menus.tcl:109 ../tcl/pd_menus.tcl:122
 #: ../tcl/pd_menus.tcl:167 ../tcl/pd_menus.tcl:179 ../tcl/pd_menus.tcl:188
 msgid "Tidy Up"
-msgstr ""
+msgstr "整列"
 
 #: ../tcl/pd_menus.tcl:62 ../tcl/pd_menus.tcl:69 ../tcl/pd_menus.tcl:84
 #: ../tcl/pd_menus.tcl:95 ../tcl/pd_menus.tcl:110 ../tcl/pd_menus.tcl:125
@@ -575,38 +576,38 @@ msgstr ""
 #: ../tcl/pdtk_canvas.tcl:272 ../tcl/pdtk_canvas.tcl:276
 #: ../tcl/pdtk_canvas.tcl:278
 msgid "Edit Mode"
-msgstr ""
+msgstr "編集モード"
 
 #: ../tcl/pd_menus.tcl:65 ../tcl/pd_menus.tcl:74 ../tcl/pd_menus.tcl:113
 #: ../tcl/pd_menus.tcl:130 ../tcl/pd_menus.tcl:140 ../tcl/pd_menus.tcl:161
 #: ../tcl/pd_menus.tcl:318 ../tcl/pd_menus.tcl:346 ../tcl/pd_menus.tcl:347
 msgid "Undo"
-msgstr ""
+msgstr "取り消す"
 
 #: ../tcl/pd_menus.tcl:66 ../tcl/pd_menus.tcl:75 ../tcl/pd_menus.tcl:114
 #: ../tcl/pd_menus.tcl:131 ../tcl/pd_menus.tcl:142 ../tcl/pd_menus.tcl:163
 #: ../tcl/pd_menus.tcl:324 ../tcl/pd_menus.tcl:352 ../tcl/pd_menus.tcl:353
 msgid "Redo"
-msgstr ""
+msgstr "やり直し"
 
 #: ../tcl/pd_menus.tcl:67 ../tcl/pd_menus.tcl:93 ../tcl/pd_menus.tcl:123
 #: ../tcl/pd_menus.tcl:184 ../tcl/pd_menus.tcl:193 ../tcl/pdtk_canvas.tcl:292
 #: ../tcl/pdtk_canvas.tcl:294
 msgid "Autopatch"
-msgstr ""
+msgstr "オートパッチ"
 
 #: ../tcl/pd_menus.tcl:68 ../tcl/pd_menus.tcl:94 ../tcl/pd_menus.tcl:124
 #: ../tcl/pd_menus.tcl:190 ../tcl/pd_menus.tcl:199 ../tcl/pdtk_canvas.tcl:306
 #: ../tcl/pdtk_canvas.tcl:308
 msgid "Magic Glass"
-msgstr ""
+msgstr "マジックグラス"
 
 #: ../tcl/pd_menus.tcl:128 ../tcl/pd_menus.tcl:145 ../tcl/pd_menus.tcl:482
 #: ../tcl/pd_menus.tcl:511 ../tcl/pd_menus.tcl:513 ../tcl/pd_menus.tcl:528
 #: ../tcl/pd_menus.tcl:546 ../tcl/pd_menus.tcl:558 ../tcl/pd_menus.tcl:560
 #: ../tcl/pd_menus.tcl:591 ../tcl/pd_menus.tcl:605
 msgid "New"
-msgstr ""
+msgstr "新規"
 
 #: ../tcl/pd_menus.tcl:129 ../tcl/pd_menus.tcl:146 ../tcl/pd_menus.tcl:483
 #: ../tcl/pd_menus.tcl:512 ../tcl/pd_menus.tcl:514 ../tcl/pd_menus.tcl:529
@@ -617,218 +618,218 @@ msgstr ""
 #: ../tcl/pdtk_canvas.tcl:228 ../tcl/pdtk_canvas.tcl:391
 #: ../tcl/pdtk_canvas.tcl:411 ../tcl/pdtk_canvas.tcl:413
 msgid "Open"
-msgstr ""
+msgstr "開く"
 
 #: ../tcl/pd_menus.tcl:134 ../tcl/pd_menus.tcl:151 ../tcl/pd_menus.tcl:493
 #: ../tcl/pd_menus.tcl:520 ../tcl/pd_menus.tcl:526 ../tcl/pd_menus.tcl:540
 #: ../tcl/pd_menus.tcl:553 ../tcl/pd_menus.tcl:565 ../tcl/pd_menus.tcl:567
 #: ../tcl/pd_menus.tcl:598 ../tcl/pd_menus.tcl:612
 msgid "Message..."
-msgstr ""
+msgstr "メッセージ..."
 
 #: ../tcl/pd_menus.tcl:145 ../tcl/pd_menus.tcl:166
 msgid "Cut"
-msgstr ""
+msgstr "カット"
 
 #: ../tcl/pd_menus.tcl:153 ../tcl/pd_menus.tcl:174
 msgid "Select All"
-msgstr ""
+msgstr "すべて選択"
 
 #: ../tcl/pd_menus.tcl:159 ../tcl/pd_menus.tcl:164 ../tcl/pd_menus.tcl:177
 #: ../tcl/pd_menus.tcl:180 ../tcl/pd_menus.tcl:185
 msgid "Font"
-msgstr ""
+msgstr "フォント"
 
 #: ../tcl/pd_menus.tcl:169 ../tcl/pd_menus.tcl:181 ../tcl/pd_menus.tcl:190
 msgid "Clear Console"
-msgstr ""
+msgstr "コンソールをクリア"
 
 #: ../tcl/pd_menus.tcl:183 ../tcl/pd_menus.tcl:216 ../tcl/pd_menus.tcl:217
 msgid "Object"
-msgstr ""
+msgstr "オブジェクトボックス"
 
 #: ../tcl/pd_menus.tcl:185 ../tcl/pd_menus.tcl:218 ../tcl/pd_menus.tcl:219
 msgid "Message"
-msgstr ""
+msgstr "メッセージボックス"
 
 #: ../tcl/pd_menus.tcl:187 ../tcl/pd_menus.tcl:220 ../tcl/pd_menus.tcl:221
 msgid "Number"
-msgstr ""
+msgstr "ナンバーボックス"
 
 #: ../tcl/pd_menus.tcl:189 ../tcl/pd_menus.tcl:222 ../tcl/pd_menus.tcl:223
 msgid "Symbol"
-msgstr ""
+msgstr "シンボルボックス"
 
 #: ../tcl/pd_menus.tcl:191 ../tcl/pd_menus.tcl:224 ../tcl/pd_menus.tcl:225
 msgid "Comment"
-msgstr ""
+msgstr "コメントボックス"
 
 #: ../tcl/pd_menus.tcl:193 ../tcl/pd_menus.tcl:202
 msgid "Perf Mode"
-msgstr ""
+msgstr "パフォーマンスモード"
 
 #: ../tcl/pd_menus.tcl:194 ../tcl/pd_menus.tcl:227 ../tcl/pd_menus.tcl:228
 msgid "Bang"
-msgstr ""
+msgstr "Bangボタン"
 
 #: ../tcl/pd_menus.tcl:196
 msgid "Autotips"
-msgstr ""
+msgstr "自動ヒント"
 
 #: ../tcl/pd_menus.tcl:196 ../tcl/pd_menus.tcl:229 ../tcl/pd_menus.tcl:230
 msgid "Toggle"
-msgstr ""
+msgstr "Toggleボタン"
 
 #: ../tcl/pd_menus.tcl:198 ../tcl/pd_menus.tcl:231 ../tcl/pd_menus.tcl:232
 msgid "Number2"
-msgstr ""
+msgstr "ナンバーボックス2"
 
 #: ../tcl/pd_menus.tcl:200 ../tcl/pd_menus.tcl:233 ../tcl/pd_menus.tcl:234
 msgid "Vslider"
-msgstr ""
+msgstr "垂直スライダー"
 
 #: ../tcl/pd_menus.tcl:201 ../tcl/pd_menus.tcl:260 ../tcl/pd_menus.tcl:294
 #: ../tcl/pd_menus.tcl:473 ../tcl/pd_menus.tcl:519 ../tcl/pd_menus.tcl:567
 #: ../tcl/pd_menus.tcl:614
 msgid "Preferences"
-msgstr ""
+msgstr "環境設定"
 
 #: ../tcl/pd_menus.tcl:202 ../tcl/pd_menus.tcl:235 ../tcl/pd_menus.tcl:236
 msgid "Hslider"
-msgstr ""
+msgstr "水平スライダー"
 
 #: ../tcl/pd_menus.tcl:204 ../tcl/pd_menus.tcl:237 ../tcl/pd_menus.tcl:238
 msgid "Vradio"
-msgstr ""
+msgstr "垂直ラジオボタン"
 
 #: ../tcl/pd_menus.tcl:206 ../tcl/pd_menus.tcl:239 ../tcl/pd_menus.tcl:240
 msgid "Hradio"
-msgstr ""
+msgstr "水平ラジオボタン"
 
 #: ../tcl/pd_menus.tcl:208 ../tcl/pd_menus.tcl:241 ../tcl/pd_menus.tcl:242
 msgid "VU Meter"
-msgstr ""
+msgstr "VUメーター"
 
 #: ../tcl/pd_menus.tcl:210 ../tcl/pd_menus.tcl:243 ../tcl/pd_menus.tcl:244
 msgid "Canvas"
-msgstr ""
+msgstr "キャンバス"
 
 #: ../tcl/pd_menus.tcl:213 ../tcl/pd_menus.tcl:246 ../tcl/pd_menus.tcl:247
 msgid "Graph"
-msgstr ""
+msgstr "グラフ"
 
 #: ../tcl/pd_menus.tcl:214 ../tcl/pd_menus.tcl:247 ../tcl/pd_menus.tcl:248
 msgid "Array"
-msgstr ""
+msgstr "アレイ"
 
 #: ../tcl/pd_menus.tcl:219 ../tcl/pd_menus.tcl:252 ../tcl/pd_menus.tcl:253
 msgid "Find..."
-msgstr ""
+msgstr "検索..."
 
 #: ../tcl/pd_menus.tcl:221 ../tcl/pd_menus.tcl:254 ../tcl/pd_menus.tcl:255
 msgid "Find Again"
-msgstr ""
+msgstr "再検索..."
 
 #: ../tcl/pd_menus.tcl:223 ../tcl/pd_menus.tcl:256 ../tcl/pd_menus.tcl:257
 msgid "Find Last Error"
-msgstr ""
+msgstr "最後のエラーを検索"
 
 #: ../tcl/pd_menus.tcl:229 ../tcl/pd_menus.tcl:262 ../tcl/pd_menus.tcl:263
 msgid "DSP On"
-msgstr ""
+msgstr "DSP オン"
 
 #: ../tcl/pd_menus.tcl:231 ../tcl/pd_menus.tcl:264 ../tcl/pd_menus.tcl:265
 msgid "DSP Off"
-msgstr ""
+msgstr "DSP オフ"
 
 #: ../tcl/pd_menus.tcl:235 ../tcl/pd_menus.tcl:268 ../tcl/pd_menus.tcl:269
 msgid "Test Audio and MIDI..."
-msgstr ""
+msgstr "オーディオとMIDIのテスト"
 
 #: ../tcl/pd_menus.tcl:237 ../tcl/pd_menus.tcl:270 ../tcl/pd_menus.tcl:271
 msgid "Load Meter"
-msgstr ""
+msgstr "CPUロードメーター"
 
 #: ../tcl/pd_menus.tcl:267 ../tcl/pd_menus.tcl:300 ../tcl/pd_menus.tcl:301
 msgid "Minimize"
-msgstr ""
+msgstr "最小化"
 
 #: ../tcl/pd_menus.tcl:269 ../tcl/pd_menus.tcl:302 ../tcl/pd_menus.tcl:303
 msgid "Zoom"
-msgstr ""
+msgstr "全画面表示"
 
 #: ../tcl/pd_menus.tcl:272 ../tcl/pd_menus.tcl:305 ../tcl/pd_menus.tcl:306
 msgid "Bring All to Front"
-msgstr ""
+msgstr "すべてを前面に"
 
 #: ../tcl/pd_menus.tcl:275 ../tcl/pd_menus.tcl:308 ../tcl/pd_menus.tcl:309
 msgid "Next Window"
-msgstr ""
+msgstr "次のウィンドウ"
 
 #: ../tcl/pd_menus.tcl:278 ../tcl/pd_menus.tcl:311 ../tcl/pd_menus.tcl:312
 msgid "Previous Window"
-msgstr ""
+msgstr "前のウィンドウ"
 
 #: ../tcl/pd_menus.tcl:285 ../tcl/pd_menus.tcl:318 ../tcl/pd_menus.tcl:319
 msgid "Parent Window"
-msgstr ""
+msgstr "親パッチのウィンドウ"
 
 #: ../tcl/pd_menus.tcl:291 ../tcl/pd_menus.tcl:457 ../tcl/pd_menus.tcl:503
 msgid "Audio Settings..."
-msgstr ""
+msgstr "オーディオ設定..."
 
 #: ../tcl/pd_menus.tcl:293 ../tcl/pd_menus.tcl:459 ../tcl/pd_menus.tcl:505
 msgid "MIDI Settings..."
-msgstr ""
+msgstr "MIDI設定..."
 
 #: ../tcl/pd_menus.tcl:294
 msgid "HTML Manual..."
-msgstr ""
+msgstr "HTMLマニュアル..."
 
 #: ../tcl/pd_menus.tcl:296
 msgid "Browser..."
-msgstr ""
+msgstr "ブラウザ..."
 
 #: ../tcl/pd_menus.tcl:299
 msgid "puredata.info"
-msgstr ""
+msgstr "puredata.info"
 
 #: ../tcl/pd_menus.tcl:301 ../tcl/pd_menus.tcl:333 ../tcl/pd_menus.tcl:334
 msgid "Report a bug"
-msgstr ""
+msgstr "バグを報告する"
 
 #: ../tcl/pd_menus.tcl:304
 msgid "Tcl prompt"
-msgstr ""
+msgstr "Tclプロンプト"
 
 #: ../tcl/pd_menus.tcl:328 ../tcl/pd_menus.tcl:329
 msgid "Pd Help Browser..."
-msgstr ""
+msgstr "Pdヘルプブラウザ"
 
 #: ../tcl/pd_menus.tcl:330 ../tcl/pd_menus.tcl:331
 msgid "Start Here!"
-msgstr ""
+msgstr "ここからスタート!"
 
 #: ../tcl/pd_menus.tcl:348 ../tcl/pd_menus.tcl:385 ../tcl/pd_menus.tcl:386
 msgid "Clear Menu"
-msgstr ""
+msgstr "メニューをクリア"
 
 #: ../tcl/pd_menus.tcl:453 ../tcl/pd_menus.tcl:499
 msgid "Path..."
-msgstr ""
+msgstr "パス..."
 
 #: ../tcl/pd_menus.tcl:455 ../tcl/pd_menus.tcl:501
 msgid "Startup..."
-msgstr ""
+msgstr "起動時の読み込み..."
 
 #: ../tcl/pd_menus.tcl:485 ../tcl/pd_menus.tcl:515 ../tcl/pd_menus.tcl:532
 msgid "Open Recent"
-msgstr ""
+msgstr "最近開いたパッチ"
 
 #: ../tcl/pd_menus.tcl:526 ../tcl/pd_menus.tcl:559 ../tcl/pd_menus.tcl:573
 #: ../tcl/pd_menus.tcl:604 ../tcl/pd_menus.tcl:620
 msgid "Quit"
-msgstr ""
+msgstr "終了"
 
 #: ../tcl/pdtk_canvas.tcl:198 ../tcl/pdtk_canvas.tcl:204
 #: ../tcl/pdtk_canvas.tcl:215 ../tcl/pdtk_canvas.tcl:217
@@ -836,288 +837,286 @@ msgstr ""
 #: ../tcl/pdtk_canvas.tcl:389 ../tcl/pdtk_canvas.tcl:406
 #: ../tcl/pdtk_canvas.tcl:408
 msgid "Properties"
-msgstr ""
+msgstr "プロパティ"
 
 #: ../tcl/pdtk_canvas.tcl:202 ../tcl/pdtk_canvas.tcl:208
 #: ../tcl/pdtk_canvas.tcl:393 pd_dynamic_strings.tcl:16
 msgid "Help"
-msgstr ""
+msgstr "ヘルプ"
 
 #: ../tcl/pdtk_canvas.tcl:319
 msgid " "
-msgstr ""
+msgstr " "
 
 #: ../tcl/pdwindow.tcl:217 ../tcl/pdwindow.tcl:228 ../tcl/pdwindow.tcl:312
 msgid "(Tcl) MISSING CLOSE-BRACE '}': "
-msgstr ""
+msgstr "(Tcl) 閉じるカッコがありません。'}':"
 
 #: ../tcl/pdwindow.tcl:219 ../tcl/pdwindow.tcl:230 ../tcl/pdwindow.tcl:314
 msgid "(Tcl) MISSING CLOSE-BRACKET ']': "
-msgstr ""
+msgstr "(Tcl) 閉じるカッコがありません。']':"
 
 #: ../tcl/pdwindow.tcl:258 ../tcl/pdwindow.tcl:269 ../tcl/pdwindow.tcl:353
 #: ../tcl/pdwindow.tcl:464
 msgid "Tcl:"
-msgstr ""
+msgstr "Tcl:"
 
 #: ../tcl/pdwindow.tcl:301 ../tcl/pdwindow.tcl:302 ../tcl/pdwindow.tcl:312
 #: ../tcl/pdwindow.tcl:313
 msgid "Pd"
-msgstr ""
+msgstr "Pd"
 
 #: ../tcl/pdwindow.tcl:317 ../tcl/pdwindow.tcl:328 ../tcl/pdwindow.tcl:430
 msgid "DSP"
-msgstr ""
+msgstr "DSP"
 
 #: ../tcl/pdwindow.tcl:322 ../tcl/pdwindow.tcl:333 ../tcl/pdwindow.tcl:435
 msgid "audio I/O error"
-msgstr ""
+msgstr "オーディオ I/O エラー"
 
 #: ../tcl/pdwindow.tcl:328 ../tcl/pdwindow.tcl:339 ../tcl/pdwindow.tcl:462
 msgid "Log:"
-msgstr ""
+msgstr "ログ:"
 
 #: ../tcl/pdwindow.tcl:333 ../tcl/pdwindow.tcl:344 ../tcl/pdwindow.tcl:446
 msgid "fatal"
-msgstr ""
+msgstr "致命的"
 
 #: ../tcl/pdwindow.tcl:334 ../tcl/pdwindow.tcl:345 ../tcl/pdwindow.tcl:447
 msgid "error"
-msgstr ""
+msgstr "エラー"
 
 #: ../tcl/pdwindow.tcl:335 ../tcl/pdwindow.tcl:346 ../tcl/pdwindow.tcl:448
 msgid "normal"
-msgstr ""
+msgstr "ノーマル"
 
 #: ../tcl/pdwindow.tcl:336 ../tcl/pdwindow.tcl:347 ../tcl/pdwindow.tcl:449
 msgid "debug"
-msgstr ""
+msgstr "デバッグ"
 
 #: ../tcl/pdwindow.tcl:337 ../tcl/pdwindow.tcl:348 ../tcl/pdwindow.tcl:450
 msgid "all"
-msgstr ""
+msgstr "すべて"
 
 #: ../tcl/pdwindow.tcl:396 ../tcl/pdwindow.tcl:397
 msgid "Pd-extended"
-msgstr ""
+msgstr "Pd-extended"
 
 #: ../tcl/pdwindow.tcl:425
 msgid "IN"
-msgstr ""
+msgstr "入力"
 
 #: ../tcl/pdwindow.tcl:426
 msgid "OUT"
-msgstr ""
+msgstr "出力"
 
 #: ../tcl/wheredoesthisgo.tcl:18 ../tcl/wheredoesthisgo.tcl:19
 #, tcl-format
 msgid "Ignoring '%s': doesn't look like a Pd-file"
-msgstr ""
+msgstr "'%s'を無視: Pdのファイルではありません"
 
 #: iemgui_dynamic_strings.tcl:11
 msgid "-------dimensions(digits)(pix):-------"
-msgstr ""
+msgstr "I-------表示サイズ(digits)(pix):-------"
 
 #: iemgui_dynamic_strings.tcl:12
 msgid "--------dimensions(pix)(pix):--------"
-msgstr ""
+msgstr "-------表示サイズ(pix)(pix):-------"
 
 #: iemgui_dynamic_strings.tcl:13
 msgid "----------dimensions(pix):-----------"
-msgstr ""
+msgstr "-------表示サイズ(pix):-------"
 
 #: iemgui_dynamic_strings.tcl:14
 msgid "--------flash-time(ms)(ms):---------"
-msgstr ""
+msgstr "--------点滅時間(ms)(ms):---------"
 
 #: iemgui_dynamic_strings.tcl:15
 msgid "-----------output-range:-----------"
-msgstr ""
+msgstr "-----------出力範囲:-----------"
 
 #: iemgui_dynamic_strings.tcl:16
 msgid "------selectable_dimensions(pix):------"
-msgstr ""
+msgstr "------選択可能部分の表示サイズ(pix):------"
 
 #: iemgui_dynamic_strings.tcl:17
 msgid "------visible_rectangle(pix)(pix):------"
-msgstr ""
+msgstr "------四角形の表示(pix)(pix):------"
 
 #: iemgui_dynamic_strings.tcl:20
 msgid "bottom:"
-msgstr ""
+msgstr "下:"
 
 #: iemgui_dynamic_strings.tcl:21
 msgid "height:"
-msgstr ""
+msgstr "高さ:"
 
 #: iemgui_dynamic_strings.tcl:22
 msgid "hold:"
-msgstr ""
+msgstr "点灯時間:"
 
 #: iemgui_dynamic_strings.tcl:23
 msgid "intrrpt:"
-msgstr ""
+msgstr "点滅間隔:"
 
 #: iemgui_dynamic_strings.tcl:24
 msgid "left:"
-msgstr ""
+msgstr "左:"
 
 #: iemgui_dynamic_strings.tcl:25
 msgid "lin"
-msgstr ""
+msgstr "リニア"
 
 #: iemgui_dynamic_strings.tcl:26
 msgid "log"
-msgstr ""
+msgstr "log"
 
 #: iemgui_dynamic_strings.tcl:27
 msgid "log-height:"
-msgstr ""
+msgstr "log-height:"
 
 #: iemgui_dynamic_strings.tcl:28
 msgid "max:"
-msgstr ""
+msgstr "最大値:"
 
 #: iemgui_dynamic_strings.tcl:29
 msgid "min:"
-msgstr ""
+msgstr "最小値:"
 
 #: iemgui_dynamic_strings.tcl:30
 msgid "right:"
-msgstr ""
+msgstr "右:"
 
 #: iemgui_dynamic_strings.tcl:31
 msgid "size:"
-msgstr ""
+msgstr "サイズ:"
 
 #: iemgui_dynamic_strings.tcl:32
 msgid "top:"
-msgstr ""
+msgstr "上:"
 
 #: iemgui_dynamic_strings.tcl:33
 msgid "value:"
-msgstr ""
+msgstr "値:"
 
 #: iemgui_dynamic_strings.tcl:34
 msgid "width:"
-msgstr ""
+msgstr "幅:"
 
 #: pd_dynamic_strings.tcl:10 pd_dynamic_strings.tcl:18
 #, tcl-format
 msgid "Do you want to save the changes you made in '%s'?"
-msgstr ""
+msgstr "'%s'への変更を保存しますか？"
 
 #: pd_dynamic_strings.tcl:10
 msgid "File"
-msgstr ""
+msgstr "ファイル"
 
 #: pd_dynamic_strings.tcl:11 pd_dynamic_strings.tcl:19
 #, tcl-format
 msgid "Discard changes to '%s'?"
-msgstr ""
+msgstr "'%s'への変更を破棄しますか?"
 
 #: pd_dynamic_strings.tcl:11
 msgid "Edit"
-msgstr ""
+msgstr "編集"
 
 #: pd_dynamic_strings.tcl:12 pd_dynamic_strings.tcl:20
 msgid "Close this window?"
-msgstr ""
+msgstr "ウィンドウを閉じますか?"
 
 #: pd_dynamic_strings.tcl:12
 msgid "Put"
-msgstr ""
+msgstr "配置"
 
 #: pd_dynamic_strings.tcl:13 pd_dynamic_strings.tcl:15
 #: pd_dynamic_strings.tcl:23
 msgid "Undo clear"
-msgstr ""
+msgstr "クリアの取り消し"
 
 #: pd_dynamic_strings.tcl:13 pd_dynamic_strings.tcl:21
 msgid "really quit?"
-msgstr ""
+msgstr "本当に終了しますか?"
 
 #: pd_dynamic_strings.tcl:14
 msgid "Media"
-msgstr ""
+msgstr "メディア"
 
 #: pd_dynamic_strings.tcl:14 pd_dynamic_strings.tcl:16
 #: pd_dynamic_strings.tcl:24
 msgid "Undo connect"
-msgstr ""
+msgstr "ライン接続の取り消し"
 
 #: pd_dynamic_strings.tcl:15 pd_dynamic_strings.tcl:17
 #: pd_dynamic_strings.tcl:25
 msgid "Undo cut"
-msgstr ""
+msgstr "カットの取り消し"
 
 #: pd_dynamic_strings.tcl:15
 msgid "Window"
-msgstr ""
+msgstr "ウィンドウ"
 
 #: pd_dynamic_strings.tcl:16 pd_dynamic_strings.tcl:18
 #: pd_dynamic_strings.tcl:26
 msgid "Undo disconnect"
-msgstr ""
+msgstr "ライン解除の取り消し"
 
 #: pd_dynamic_strings.tcl:17 pd_dynamic_strings.tcl:19
 #: pd_dynamic_strings.tcl:27
 msgid "Undo duplicate"
-msgstr ""
+msgstr "複製の取り消し"
 
 #: pd_dynamic_strings.tcl:18 pd_dynamic_strings.tcl:20
 #: pd_dynamic_strings.tcl:28
 msgid "Undo motion"
-msgstr ""
+msgstr "移動の取り消し"
 
 #: pd_dynamic_strings.tcl:19 pd_dynamic_strings.tcl:21
 #: pd_dynamic_strings.tcl:29
 msgid "Undo paste"
-msgstr ""
+msgstr "ペーストの取り消し"
 
 #: pd_dynamic_strings.tcl:20 pd_dynamic_strings.tcl:22
 #: pd_dynamic_strings.tcl:30
 msgid "Undo typing"
-msgstr ""
+msgstr "入力の取り消し"
 
 #: pd_dynamic_strings.tcl:22 pd_dynamic_strings.tcl:24
 #: pd_dynamic_strings.tcl:32
 msgid "Redo clear"
-msgstr ""
+msgstr "クリアのやり直し"
 
 #: pd_dynamic_strings.tcl:23 pd_dynamic_strings.tcl:25
 #: pd_dynamic_strings.tcl:33
 msgid "Redo connect"
-msgstr ""
+msgstr "ライン接続のやり直し"
 
 #: pd_dynamic_strings.tcl:24 pd_dynamic_strings.tcl:26
 #: pd_dynamic_strings.tcl:34
 msgid "Redo cut"
-msgstr ""
+msgstr "カットのやり直し"
 
 #: pd_dynamic_strings.tcl:25 pd_dynamic_strings.tcl:27
 #: pd_dynamic_strings.tcl:35
 msgid "Redo disconnect"
-msgstr ""
+msgstr "ライン解除のやり直し"
 
 #: pd_dynamic_strings.tcl:26 pd_dynamic_strings.tcl:28
 #: pd_dynamic_strings.tcl:36
 msgid "Redo duplicate"
-msgstr ""
+msgstr "複製のやり直し"
 
 #: pd_dynamic_strings.tcl:27 pd_dynamic_strings.tcl:29
 #: pd_dynamic_strings.tcl:37
 msgid "Redo motion"
-msgstr ""
+msgstr "移動のやり直し"
 
 #: pd_dynamic_strings.tcl:28 pd_dynamic_strings.tcl:30
 #: pd_dynamic_strings.tcl:38
 msgid "Redo paste"
-msgstr ""
+msgstr "ペーストのやり直し"
 
 #: pd_dynamic_strings.tcl:29 pd_dynamic_strings.tcl:31
 #: pd_dynamic_strings.tcl:39
 msgid "Redo typing"
-msgstr ""
-
-
+msgstr "入力のやり直し"
