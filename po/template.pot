@@ -485,7 +485,7 @@ msgid "Startup flags:"
 msgstr ""
 
 #: ../tcl/dialog_startup.tcl:91
-msgid "Defeat real-time scheduling"
+msgid "Real-time scheduling"
 msgstr ""
 
 #: ../tcl/helpbrowser.tcl:27

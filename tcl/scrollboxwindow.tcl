@@ -76,6 +76,10 @@ proc ::scrollboxwindow::make {mytoplevel listdata add_method edit_method commit_
     frame $mytoplevel.nb
     pack $mytoplevel.nb -side bottom -fill x -pady 2m
 
+    button $mytoplevel.nb.saveall -text [_ "Save All Settings"]\
+        -command "::scrollboxwindow::apply $mytoplevel $commit_method; pdsend {pd save-preferences}"
+    pack $mytoplevel.nb.saveall -side left -padx 2m
+
     frame $mytoplevel.nb.buttonframe
     pack $mytoplevel.nb.buttonframe -side right -padx 2m
 

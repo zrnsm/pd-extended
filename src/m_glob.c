@@ -31,6 +31,8 @@ void glob_start_path_dialog(t_pd *dummy, t_floatarg flongform);
 void glob_path_dialog(t_pd *dummy, t_symbol *s, int argc, t_atom *argv);
 void glob_start_startup_dialog(t_pd *dummy, t_floatarg flongform);
 void glob_startup_dialog(t_pd *dummy, t_symbol *s, int argc, t_atom *argv);
+void glob_startup_flags(t_pd *dummy, t_symbol *s);
+void glob_realtime(t_pd *dummy, t_floatarg f);
 void glob_ping(t_pd *dummy);
 void glob_watchdog(t_pd *dummy);
 void glob_savepreferences(t_pd *dummy);
@@ -132,6 +134,10 @@ void glob_init(void)
         gensym("start-startup-dialog"), 0);
     class_addmethod(glob_pdobject, (t_method)glob_startup_dialog,
         gensym("startup-dialog"), A_GIMME, 0);
+    class_addmethod(glob_pdobject, (t_method)glob_startup_flags,
+        gensym("startup-flags"), A_SYMBOL, 0);
+    class_addmethod(glob_pdobject, (t_method)glob_realtime,
+        gensym("realtime"), A_FLOAT, 0);
     class_addmethod(glob_pdobject, (t_method)glob_ping, gensym("ping"), 0);
     class_addmethod(glob_pdobject, (t_method)glob_savepreferences,
         gensym("save-preferences"), 0);

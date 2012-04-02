@@ -638,11 +638,23 @@ void sys_set_extrapath( void)
     sys_gui("set ::sys_staticpath $::tmp_path\n");
 }
 
+    /* send the realtime priority preference for the pref GUI */
+void sys_set_realtime(void)
+{
+    sys_vgui("set ::dialog_path::realtime_button %i\n", !sys_defeatrt);
+}
+
+    /* send the startup flags to the pref GUI */
+void sys_set_startup_flags(void)
+{
+    sys_vgui("set ::startup_flags {%s}\n", sys_flags->s_name);
+}
+
     /* start a search path dialog window */
 void glob_start_path_dialog(t_pd *dummy)
 {
-     char buf[MAXPDSTRING];
-
+    char buf[MAXPDSTRING];
+    sys_set_realtime();
     sys_set_searchpath();
     sprintf(buf, "pdtk_path_dialog %%s %d %d\n", sys_usestdpath, sys_verbose);
     gfxstub_new(&glob_pdobject, (void *)glob_start_path_dialog, buf);
@@ -703,4 +715,14 @@ void glob_startup_dialog(t_pd *dummy, t_symbol *s, int argc, t_atom *argv)
     }
 }
 
+    /* startup flags from the preferences window */
+void glob_startup_flags(t_pd *dummy, t_symbol *s)
+{
+    sys_flags = sys_decodedialog(s);
+}
 
+void glob_realtime(t_pd *dummy, t_floatarg f)
+{
+    /* the interface calls this "realtime" but its stored as the inverse */
+    sys_defeatrt = f > 0 ? 0 : 1;
+}
