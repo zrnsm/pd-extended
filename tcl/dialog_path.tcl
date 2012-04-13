@@ -14,10 +14,8 @@ namespace eval ::dialog_path:: {
 
 # set up the panel with the info from pd
 proc ::dialog_path::pdtk_path_dialog {mytoplevel extrapath verbose} {
-    global use_standard_extensions_button
-    global verbose_button
-    set use_standard_extensions_button $extrapath
-    set verbose_button $verbose
+    variable use_standard_extensions_button $extrapath
+    variable verbose_button $verbose
 
     if {[winfo exists $mytoplevel]} {
         wm deiconify $mytoplevel
@@ -48,9 +46,9 @@ proc ::dialog_path::create_dialog {mytoplevel} {
     frame $mytoplevel.extraframe.r
     pack $mytoplevel.extraframe.l $mytoplevel.extraframe.r -side left -padx 2m -pady 2m
     checkbutton $mytoplevel.extraframe.l.extra -text [_ "Use standard extensions"] \
-        -variable use_standard_extensions_button -anchor w 
+        -variable ::dialog_path::use_standard_extensions_button -anchor w
     checkbutton $mytoplevel.extraframe.l.verbose -text [_ "Verbose"] \
-        -variable verbose_button -anchor w
+        -variable ::dialog_path::verbose_button -anchor w
     pack $mytoplevel.extraframe.l.extra $mytoplevel.extraframe.l.verbose \
         -side top -expand 1 -fill x
     if {$::windowingsystem ne "win32"} {
@@ -66,7 +64,6 @@ proc ::dialog_path::create_dialog {mytoplevel} {
     entry $mytoplevel.flagsframe.entry -textvariable ::startup_flags -width 60
     pack $mytoplevel.flagsframe.entryname $mytoplevel.flagsframe.entry -side left
 }
-
 
 
 ############ pdtk_path_dialog -- dialog window for search path #########
@@ -86,8 +83,8 @@ proc ::dialog_path::edit { currentpath } {
 }
 
 proc ::dialog_path::commit { new_path } {
-    global use_standard_extensions_button
-    global verbose_button
+    variable use_standard_extensions_button
+    variable verbose_button
     variable realtime_button
 
     set ::sys_searchpath $new_path
