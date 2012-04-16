@@ -433,8 +433,10 @@ proc ::pdwindow::create_window {} {
     pack .pdwindow.header.vu.out -side top
     frame .pdwindow.header.cliplabel -borderwidth 0
     pack .pdwindow.header.cliplabel -side left
-    label .pdwindow.header.cliplabel.in -text [_ "IN"] -width 4
-    label .pdwindow.header.cliplabel.out -text [_ "OUT"] -width 4
+    label .pdwindow.header.cliplabel.in -text [_ "IN"] \
+        -width [string length [_ "IN"]]
+    label .pdwindow.header.cliplabel.out -text [_ "OUT"] \
+        -width [string length [_ "OUT"]]
     pack .pdwindow.header.cliplabel.in .pdwindow.header.cliplabel.out -side top
     frame .pdwindow.header.frame -borderwidth 0 -padx 5
     pack .pdwindow.header.frame -side right
