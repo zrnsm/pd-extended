@@ -35,6 +35,7 @@ proc ::dialog_midi::cancel {mytoplevel} {
 
 proc ::dialog_midi::ok {mytoplevel} {
     ::dialog_midi::apply $mytoplevel
+    pdsend "pd save-preferences"
     ::dialog_midi::cancel $mytoplevel
 }
 

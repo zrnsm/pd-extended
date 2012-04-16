@@ -48,6 +48,7 @@ proc ::dialog_audio::cancel {mytoplevel} {
 
 proc ::dialog_audio::ok {mytoplevel} {
     ::dialog_audio::apply $mytoplevel
+    pdsend "pd save-preferences"
     ::dialog_audio::cancel $mytoplevel
 }
 
@@ -152,10 +153,6 @@ proc ::dialog_audio::pdtk_audio_dialog {mytoplevel \
     button $mytoplevel.buttonframe.ok -text [_ "OK"] \
         -command "::dialog_audio::ok $mytoplevel"
     pack $mytoplevel.buttonframe.ok -side left -expand 1 -fill x -padx 15
-
-    button $mytoplevel.saveall -text [_ "Save All Settings"]\
-        -command "::dialog_audio::apply $mytoplevel; pdsend {pd save-preferences}"
-    pack $mytoplevel.saveall -side bottom -expand 1 -pady 5
     
         # sample rate and advance
     frame $mytoplevel.srf
