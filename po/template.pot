@@ -77,6 +77,10 @@ msgstr ""
 msgid "Open List View..."
 msgstr ""
 
+#: ../tcl/scrollboxwindow.tcl:108
+msgid "Reset to Defaults"
+msgstr ""
+
 #: ../tcl/dialog_array.tcl:322 ../tcl/dialog_audio.tcl:146
 #: ../tcl/dialog_canvas.tcl:208 ../tcl/dialog_find.tcl:163
 #: ../tcl/dialog_gatom.tcl:157 ../tcl/dialog_iemgui.tcl:751

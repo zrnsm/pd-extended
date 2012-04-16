@@ -472,6 +472,11 @@ void sys_loadpreferences( void)
 #endif
 }
 
+void glob_loadpreferences(t_pd *dummy)
+{
+    sys_loadpreferences();
+}
+
 void glob_savepreferences(t_pd *dummy)
 {
     int naudioindev, audioindev[MAXAUDIOINDEV], chindev[MAXAUDIOINDEV];

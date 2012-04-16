@@ -45,6 +45,35 @@ proc ::scrollboxwindow::ok {mytoplevel commit_method } {
     do_apply $mytoplevel $commit_method $listdata
 }
 
+proc ::scrollboxwindow::reset_to_defaults {mytoplevel} {
+    switch -- $::windowingsystem {
+        "x11" {
+            set preffile "$::env(HOME)/.pdextended"
+            if {[file exists $preffile]} {
+                pdwindow::debug "Deleting preferences file: $preffile\n"
+                file delete -- $preffile
+            }
+        }
+        "aqua" {
+            set preffile "$::env(HOME)/Library/Preferences/org.puredata.pdextended.plist"
+            if {[file exists $preffile]} {
+                pdwindow::debug "Deleting preferences file: $preffile\n"
+                file delete -- $preffile
+            }
+        }
+        "win32" {
+            pdwindow::debug "Deleting preferences in HKEY_CURRENT_USER\\Software\\Pd-extended\n"
+            registry delete "HKEY_CURRENT_USER\\Software\\Pd-extended"
+        }
+    }
+    set ::startup_flags ""
+    pdsend "pd startup-flags [pdtk_encodedialog $::startup_flags]"
+    pdsend "pd path-dialog 1 0"
+    pdsend "pd load-preferences"
+    ::scrollboxwindow::cancel $mytoplevel
+    destroy $mytoplevel
+}
+
 # "Constructor" function for building the window
 # id -- the window id to use
 # listdata -- the data used to populate the scrollbox
@@ -76,8 +105,8 @@ proc ::scrollboxwindow::make {mytoplevel listdata add_method edit_method commit_
     frame $mytoplevel.nb
     pack $mytoplevel.nb -side bottom -fill x -pady 2m
 
-    button $mytoplevel.nb.saveall -text [_ "Save All Settings"]\
-        -command "::scrollboxwindow::apply $mytoplevel $commit_method; pdsend {pd save-preferences}"
+    button $mytoplevel.nb.saveall -text [_ "Reset to Defaults"] \
+        -command "::scrollboxwindow::reset_to_defaults $mytoplevel"
     pack $mytoplevel.nb.saveall -side left -padx 2m
 
     frame $mytoplevel.nb.buttonframe

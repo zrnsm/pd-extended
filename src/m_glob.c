@@ -35,6 +35,7 @@ void glob_startup_flags(t_pd *dummy, t_symbol *s);
 void glob_realtime(t_pd *dummy, t_floatarg f);
 void glob_ping(t_pd *dummy);
 void glob_watchdog(t_pd *dummy);
+void glob_loadpreferences(t_pd *dummy);
 void glob_savepreferences(t_pd *dummy);
 
 void alsa_resync( void);
@@ -139,6 +140,8 @@ void glob_init(void)
     class_addmethod(glob_pdobject, (t_method)glob_realtime,
         gensym("realtime"), A_FLOAT, 0);
     class_addmethod(glob_pdobject, (t_method)glob_ping, gensym("ping"), 0);
+    class_addmethod(glob_pdobject, (t_method)glob_loadpreferences,
+        gensym("load-preferences"), 0);
     class_addmethod(glob_pdobject, (t_method)glob_savepreferences,
         gensym("save-preferences"), 0);
     class_addmethod(glob_pdobject, (t_method)glob_version,
