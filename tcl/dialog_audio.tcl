@@ -141,6 +141,9 @@ proc ::dialog_audio::pdtk_audio_dialog {mytoplevel \
     ::pd_bindings::dialog_bindings $mytoplevel "audio"
     # not all Tcl/Tk versions or platforms support -topmost, so catch the error
     catch {wm attributes $mytoplevel -topmost 1}
+    if {$::windowingsystem eq "aqua" } {
+        ::tk::unsupported::MacWindowStyle style $mytoplevel moveableModal {}
+    }
 
     frame $mytoplevel.buttonframe
     pack $mytoplevel.buttonframe -side bottom -fill x -pady 2m

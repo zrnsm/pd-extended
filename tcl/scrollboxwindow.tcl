@@ -91,6 +91,10 @@ proc ::scrollboxwindow::make {mytoplevel listdata add_method edit_method commit_
     wm transient $mytoplevel .pdwindow
     wm protocol $mytoplevel WM_DELETE_WINDOW "::scrollboxwindow::cancel $mytoplevel"
 
+    if {$::windowingsystem eq "aqua" } {
+        ::tk::unsupported::MacWindowStyle style $mytoplevel moveableModal {}
+    }
+
     # Enforce a minimum size for the window
     wm minsize $mytoplevel $width $height
 
