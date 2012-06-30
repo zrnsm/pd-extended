@@ -160,6 +160,18 @@ static int sys_do_load_lib(t_canvas *canvas, char *objectname)
         dirbuf, &nameptr, MAXPDSTRING, 1)) >= 0)
             goto gotone;
 #endif /* __APPLE__ */
+#ifdef ANDROID
+    /* Android libs always have a 'lib' prefix, '.so' suffix and don't allow ~ */
+    char libname[MAXPDSTRING] = "lib";
+    strncat(libname, objectname, MAXPDSTRING - 4);
+    int len = strlen(libname);
+    if (libname[len-1] == '~' && len < MAXPDSTRING - 6) {
+        strcpy(libname+len-1, "_tilde");
+    }
+    if ((fd = canvas_open(canvas, libname, ".so",
+        dirbuf, &nameptr, MAXPDSTRING, 1)) >= 0)
+            goto gotone;
+#endif
     return (0);
 gotone:
     close(fd);
