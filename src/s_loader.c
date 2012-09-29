@@ -160,7 +160,7 @@ static int sys_do_load_lib(t_canvas *canvas, char *objectname)
         dirbuf, &nameptr, MAXPDSTRING, 1)) >= 0)
             goto gotone;
 #endif /* __APPLE__ */
-#ifdef ANDROID
+#ifdef __ANDROID__
     /* Android libs always have a 'lib' prefix, '.so' suffix and don't allow ~ */
     char libname[MAXPDSTRING] = "lib";
     strncat(libname, objectname, MAXPDSTRING - 4);
