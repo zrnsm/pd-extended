@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: Pure Data\n"
 "Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=55736&atid=478070\n"
 "POT-Creation-Date: 2012-01-17 18:37-0500\n"
-"PO-Revision-Date: 2012-01-25 20:26+0000\n"
+"PO-Revision-Date: 2012-07-01 01:35+0000\n"
 "Last-Translator: Prim Smik <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: nl\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../tcl/dialog_array.tcl:115 ../tcl/pd_menus.tcl:147 ../tcl/pd_menus.tcl:168
 msgid "Copy"
@@ -78,6 +78,10 @@ msgstr "Array deleten"
 msgid "Open List View..."
 msgstr "Lijstweergave openen..."
 
+#: ../tcl/scrollboxwindow.tcl:108
+msgid "Reset to Defaults"
+msgstr ""
+
 #: ../tcl/dialog_array.tcl:322 ../tcl/dialog_audio.tcl:146
 #: ../tcl/dialog_canvas.tcl:208 ../tcl/dialog_find.tcl:163
 #: ../tcl/dialog_gatom.tcl:157 ../tcl/dialog_iemgui.tcl:751
@@ -116,7 +120,7 @@ msgstr ""
 
 #: ../tcl/dialog_audio.tcl:166
 msgid "Delay (msec):"
-msgstr ""
+msgstr "Delay (msec)"
 
 #: ../tcl/dialog_audio.tcl:169
 msgid "Block size:"
@@ -124,12 +128,12 @@ msgstr ""
 
 #: ../tcl/dialog_audio.tcl:176
 msgid "Use callbacks"
-msgstr ""
+msgstr "Callbacks gebruiken"
 
 #: ../tcl/dialog_audio.tcl:184 ../tcl/dialog_midi.tcl:112
 #: ../tcl/dialog_midi.tcl:248
 msgid "Input device 1:"
-msgstr ""
+msgstr "Invoerapparaat 1:"
 
 #: ../tcl/dialog_audio.tcl:187 ../tcl/dialog_audio.tcl:202
 #: ../tcl/dialog_audio.tcl:218 ../tcl/dialog_audio.tcl:233
@@ -141,45 +145,45 @@ msgstr "Kanalen:"
 #: ../tcl/dialog_audio.tcl:198 ../tcl/dialog_midi.tcl:122
 #: ../tcl/dialog_midi.tcl:258
 msgid "Input device 2:"
-msgstr ""
+msgstr "Invoerapparaat 2:"
 
 #: ../tcl/dialog_audio.tcl:214 ../tcl/dialog_midi.tcl:134
 #: ../tcl/dialog_midi.tcl:270
 msgid "Input device 3:"
-msgstr ""
+msgstr "Invoerapparaat 3:"
 
 #: ../tcl/dialog_audio.tcl:229 ../tcl/dialog_midi.tcl:146
 #: ../tcl/dialog_midi.tcl:282
 msgid "Input device 4:"
-msgstr ""
+msgstr "Invoerapparaat 4:"
 
 #: ../tcl/dialog_audio.tcl:244 ../tcl/dialog_midi.tcl:157
 #: ../tcl/dialog_midi.tcl:293
 msgid "Output device 1:"
-msgstr ""
+msgstr "Uitvoerapparaat 1:"
 
 #: ../tcl/dialog_audio.tcl:247
 msgid "(same as input device) ..............      "
-msgstr ""
+msgstr "(zoals het invoerapparaat)..............."
 
 #: ../tcl/dialog_audio.tcl:268 ../tcl/dialog_midi.tcl:167
 #: ../tcl/dialog_midi.tcl:303
 msgid "Output device 2:"
-msgstr ""
+msgstr "Uitvoerapparaat 2:"
 
 #: ../tcl/dialog_audio.tcl:284 ../tcl/dialog_midi.tcl:178
 #: ../tcl/dialog_midi.tcl:314
 msgid "Output device 3:"
-msgstr ""
+msgstr "Uitvoerapparaat 3:"
 
 #: ../tcl/dialog_audio.tcl:300 ../tcl/dialog_midi.tcl:189
 #: ../tcl/dialog_midi.tcl:325
 msgid "Output device 4:"
-msgstr ""
+msgstr "Uitvoerapparaat 4:"
 
 #: ../tcl/dialog_audio.tcl:316 ../tcl/dialog_midi.tcl:202
 msgid "Use multiple devices"
-msgstr ""
+msgstr "Verschillende apparaten gebruiken"
 
 #: ../tcl/dialog_canvas.tcl:121
 msgid "WARNING: unknown graphme flags received in pdtk_canvas_dialog"
@@ -235,7 +239,7 @@ msgstr ""
 
 #: ../tcl/dialog_data.tcl:29
 msgid "Data Properties"
-msgstr ""
+msgstr "Dataeigenschappen"
 
 #: ../tcl/dialog_data.tcl:37
 msgid "Send (Ctrl s)"
@@ -262,7 +266,7 @@ msgstr "Zoeken in"
 #: ../tcl/dialog_find.tcl:146 ../tcl/pd_menus.tcl:283 ../tcl/pd_menus.tcl:316
 #: ../tcl/pd_menus.tcl:317
 msgid "Pd window"
-msgstr ""
+msgstr "Pd-venster"
 
 #: ../tcl/dialog_find.tcl:147
 msgid "for:"
@@ -316,7 +320,7 @@ msgstr "Breedte:"
 
 #: ../tcl/dialog_gatom.tcl:107
 msgid "Limits"
-msgstr ""
+msgstr "Grenzen"
 
 #: ../tcl/dialog_gatom.tcl:111
 msgid "Lower:"
@@ -353,7 +357,7 @@ msgstr "Berichten"
 
 #: ../tcl/dialog_gatom.tcl:145 ../tcl/dialog_iemgui.tcl:584
 msgid "Send symbol:"
-msgstr ""
+msgstr "Send-symbool:"
 
 #: ../tcl/dialog_gatom.tcl:151 ../tcl/dialog_iemgui.tcl:593
 msgid "Receive symbol:"
@@ -361,7 +365,7 @@ msgstr ""
 
 #: ../tcl/dialog_iemgui.tcl:197
 msgid "Background color"
-msgstr ""
+msgstr "Achtergrondkleur"
 
 #: ../tcl/dialog_iemgui.tcl:204
 msgid "Foreground color"
@@ -369,15 +373,15 @@ msgstr ""
 
 #: ../tcl/dialog_iemgui.tcl:211
 msgid "Label color"
-msgstr ""
+msgstr "Kleur van het label"
 
 #: ../tcl/dialog_iemgui.tcl:272
 msgid "Init"
-msgstr ""
+msgstr "Init"
 
 #: ../tcl/dialog_iemgui.tcl:275 ../tcl/dialog_iemgui.tcl:554
 msgid "No init"
-msgstr ""
+msgstr "Geen init"
 
 #: ../tcl/dialog_iemgui.tcl:287 ../tcl/dialog_iemgui.tcl:564
 msgid "Jump on click"
@@ -390,7 +394,7 @@ msgstr ""
 #: ../tcl/dialog_iemgui.tcl:502
 #, tcl-format
 msgid "%s Properties"
-msgstr ""
+msgstr "%s Eigenschappen"
 
 #: ../tcl/dialog_iemgui.tcl:557 ../tcl/pd_menus.tcl:55 ../tcl/pd_menus.tcl:60
 #: ../tcl/pd_menus.tcl:77 ../tcl/pd_menus.tcl:86 ../tcl/pd_menus.tcl:102
@@ -486,8 +490,8 @@ msgid "Startup flags:"
 msgstr "Opstartvlaggen:"
 
 #: ../tcl/dialog_startup.tcl:91
-msgid "Defeat real-time scheduling"
-msgstr "Geen \"real-time scheduling\""
+msgid "Real-time scheduling"
+msgstr ""
 
 #: ../tcl/helpbrowser.tcl:27
 msgid "Help Browser"
@@ -535,7 +539,7 @@ msgstr "Huidige patch kopiëren..."
 
 #: ../tcl/pd_menucommands.tcl:316
 msgid "Setting embedded preferences..."
-msgstr ""
+msgstr "Help"
 
 #: ../tcl/pd_menus.tcl:56 ../tcl/pd_menus.tcl:61 ../tcl/pd_menus.tcl:78
 #: ../tcl/pd_menus.tcl:87 ../tcl/pd_menus.tcl:103 ../tcl/pd_menus.tcl:116
@@ -711,11 +715,11 @@ msgstr ""
 
 #: ../tcl/pd_menus.tcl:210 ../tcl/pd_menus.tcl:243 ../tcl/pd_menus.tcl:244
 msgid "Canvas"
-msgstr ""
+msgstr "Canvas"
 
 #: ../tcl/pd_menus.tcl:213 ../tcl/pd_menus.tcl:246 ../tcl/pd_menus.tcl:247
 msgid "Graph"
-msgstr ""
+msgstr "Grafiek"
 
 #: ../tcl/pd_menus.tcl:214 ../tcl/pd_menus.tcl:247 ../tcl/pd_menus.tcl:248
 msgid "Array"
@@ -727,11 +731,11 @@ msgstr "Zoeken..."
 
 #: ../tcl/pd_menus.tcl:221 ../tcl/pd_menus.tcl:254 ../tcl/pd_menus.tcl:255
 msgid "Find Again"
-msgstr ""
+msgstr "Opnieuw zoeken"
 
 #: ../tcl/pd_menus.tcl:223 ../tcl/pd_menus.tcl:256 ../tcl/pd_menus.tcl:257
 msgid "Find Last Error"
-msgstr ""
+msgstr "De laatste fout zoeken"
 
 #: ../tcl/pd_menus.tcl:229 ../tcl/pd_menus.tcl:262 ../tcl/pd_menus.tcl:263
 msgid "DSP On"
@@ -775,11 +779,11 @@ msgstr ""
 
 #: ../tcl/pd_menus.tcl:291 ../tcl/pd_menus.tcl:457 ../tcl/pd_menus.tcl:503
 msgid "Audio Settings..."
-msgstr ""
+msgstr "Audio-instellingen..."
 
 #: ../tcl/pd_menus.tcl:293 ../tcl/pd_menus.tcl:459 ../tcl/pd_menus.tcl:505
 msgid "MIDI Settings..."
-msgstr ""
+msgstr "MIDI-instellingen..."
 
 #: ../tcl/pd_menus.tcl:294
 msgid "HTML Manual..."
@@ -811,11 +815,11 @@ msgstr "Hier beginnen!"
 
 #: ../tcl/pd_menus.tcl:348 ../tcl/pd_menus.tcl:385 ../tcl/pd_menus.tcl:386
 msgid "Clear Menu"
-msgstr ""
+msgstr "Wis menu"
 
 #: ../tcl/pd_menus.tcl:453 ../tcl/pd_menus.tcl:499
 msgid "Path..."
-msgstr ""
+msgstr "Pad..."
 
 #: ../tcl/pd_menus.tcl:455 ../tcl/pd_menus.tcl:501
 msgid "Startup..."
@@ -828,7 +832,7 @@ msgstr ""
 #: ../tcl/pd_menus.tcl:526 ../tcl/pd_menus.tcl:559 ../tcl/pd_menus.tcl:573
 #: ../tcl/pd_menus.tcl:604 ../tcl/pd_menus.tcl:620
 msgid "Quit"
-msgstr ""
+msgstr "Stop"
 
 #: ../tcl/pdtk_canvas.tcl:198 ../tcl/pdtk_canvas.tcl:204
 #: ../tcl/pdtk_canvas.tcl:215 ../tcl/pdtk_canvas.tcl:217
@@ -836,16 +840,16 @@ msgstr ""
 #: ../tcl/pdtk_canvas.tcl:389 ../tcl/pdtk_canvas.tcl:406
 #: ../tcl/pdtk_canvas.tcl:408
 msgid "Properties"
-msgstr ""
+msgstr "Eigenschappen"
 
 #: ../tcl/pdtk_canvas.tcl:202 ../tcl/pdtk_canvas.tcl:208
 #: ../tcl/pdtk_canvas.tcl:393 pd_dynamic_strings.tcl:16
 msgid "Help"
-msgstr ""
+msgstr "Help"
 
 #: ../tcl/pdtk_canvas.tcl:319
 msgid " "
-msgstr ""
+msgstr "|"
 
 #: ../tcl/pdwindow.tcl:217 ../tcl/pdwindow.tcl:228 ../tcl/pdwindow.tcl:312
 msgid "(Tcl) MISSING CLOSE-BRACE '}': "
@@ -883,7 +887,7 @@ msgstr ""
 
 #: ../tcl/pdwindow.tcl:334 ../tcl/pdwindow.tcl:345 ../tcl/pdwindow.tcl:447
 msgid "error"
-msgstr ""
+msgstr "fout"
 
 #: ../tcl/pdwindow.tcl:335 ../tcl/pdwindow.tcl:346 ../tcl/pdwindow.tcl:448
 msgid "normal"
@@ -996,7 +1000,7 @@ msgstr ""
 
 #: iemgui_dynamic_strings.tcl:33
 msgid "value:"
-msgstr ""
+msgstr "waarde:"
 
 #: iemgui_dynamic_strings.tcl:34
 msgid "width:"
@@ -1014,7 +1018,7 @@ msgstr ""
 #: pd_dynamic_strings.tcl:11 pd_dynamic_strings.tcl:19
 #, tcl-format
 msgid "Discard changes to '%s'?"
-msgstr ""
+msgstr "Veranderingen aan '%s' ongedaan maken?"
 
 #: pd_dynamic_strings.tcl:11
 msgid "Edit"
@@ -1035,7 +1039,7 @@ msgstr ""
 
 #: pd_dynamic_strings.tcl:13 pd_dynamic_strings.tcl:21
 msgid "really quit?"
-msgstr ""
+msgstr "echt stoppen?"
 
 #: pd_dynamic_strings.tcl:14
 msgid "Media"
@@ -1063,7 +1067,7 @@ msgstr ""
 #: pd_dynamic_strings.tcl:17 pd_dynamic_strings.tcl:19
 #: pd_dynamic_strings.tcl:27
 msgid "Undo duplicate"
-msgstr ""
+msgstr "Dupliceren ongedaan maken"
 
 #: pd_dynamic_strings.tcl:18 pd_dynamic_strings.tcl:20
 #: pd_dynamic_strings.tcl:28
@@ -1073,7 +1077,7 @@ msgstr ""
 #: pd_dynamic_strings.tcl:19 pd_dynamic_strings.tcl:21
 #: pd_dynamic_strings.tcl:29
 msgid "Undo paste"
-msgstr ""
+msgstr "Plakken ongedaan maken"
 
 #: pd_dynamic_strings.tcl:20 pd_dynamic_strings.tcl:22
 #: pd_dynamic_strings.tcl:30
@@ -1088,12 +1092,12 @@ msgstr ""
 #: pd_dynamic_strings.tcl:23 pd_dynamic_strings.tcl:25
 #: pd_dynamic_strings.tcl:33
 msgid "Redo connect"
-msgstr ""
+msgstr "Opnieuw verbinden"
 
 #: pd_dynamic_strings.tcl:24 pd_dynamic_strings.tcl:26
 #: pd_dynamic_strings.tcl:34
 msgid "Redo cut"
-msgstr ""
+msgstr "Opnieuw knippen"
 
 #: pd_dynamic_strings.tcl:25 pd_dynamic_strings.tcl:27
 #: pd_dynamic_strings.tcl:35
@@ -1103,7 +1107,7 @@ msgstr ""
 #: pd_dynamic_strings.tcl:26 pd_dynamic_strings.tcl:28
 #: pd_dynamic_strings.tcl:36
 msgid "Redo duplicate"
-msgstr ""
+msgstr "Opnieuw dupliceren"
 
 #: pd_dynamic_strings.tcl:27 pd_dynamic_strings.tcl:29
 #: pd_dynamic_strings.tcl:37
@@ -1113,11 +1117,9 @@ msgstr ""
 #: pd_dynamic_strings.tcl:28 pd_dynamic_strings.tcl:30
 #: pd_dynamic_strings.tcl:38
 msgid "Redo paste"
-msgstr ""
+msgstr "Opnieuw plakken"
 
 #: pd_dynamic_strings.tcl:29 pd_dynamic_strings.tcl:31
 #: pd_dynamic_strings.tcl:39
 msgid "Redo typing"
 msgstr ""
-
-
