@@ -2,85 +2,86 @@
 # This file is put in the public domain.
 # 
 # Translators:
-# Ricardo Palmieri <>, 2012.
+#   <appukonrad@gmail.com>, 2012.
+#   <kishikaisei.sarab@gmail.com>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: Pure Data\n"
 "Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=55736&atid=478070\n"
 "POT-Creation-Date: 2012-01-17 18:37-0500\n"
-"PO-Revision-Date: 2012-04-16 08:42+0000\n"
-"Last-Translator: Ricardo Palmieri <>\n"
+"PO-Revision-Date: 2012-08-28 06:03+0000\n"
+"Last-Translator: jui <appukonrad@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: pt_BR\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language: cs\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: ../tcl/dialog_array.tcl:115 ../tcl/pd_menus.tcl:147 ../tcl/pd_menus.tcl:168
 msgid "Copy"
-msgstr "Copiar"
+msgstr "kopírovat"
 
 #: ../tcl/dialog_array.tcl:118 ../tcl/pd_menus.tcl:149 ../tcl/pd_menus.tcl:170
 msgid "Paste"
-msgstr "Colar"
+msgstr "vložit"
 
 #: ../tcl/dialog_array.tcl:263
 msgid "Array Properties"
-msgstr "Propriedades do Vetor"
+msgstr ""
 
 #: ../tcl/dialog_array.tcl:273
 msgid "Name:"
-msgstr "Nome:"
+msgstr "Jmeno"
 
 #: ../tcl/dialog_array.tcl:279 ../tcl/dialog_canvas.tcl:181
 #: ../tcl/dialog_canvas.tcl:196 ../tcl/dialog_iemgui.tcl:630
 msgid "Size:"
-msgstr "Tamanho:"
+msgstr "Velikost:"
 
 #: ../tcl/dialog_array.tcl:283
 msgid "Save contents"
-msgstr "Salvar conteúdo"
+msgstr "Uložit obsah"
 
 #: ../tcl/dialog_array.tcl:287
 msgid "Draw as:"
-msgstr "Desenhar como:"
+msgstr "Kreslit jako:"
 
 #: ../tcl/dialog_array.tcl:290
 msgid "Points"
-msgstr "Pontos"
+msgstr "Body"
 
 #: ../tcl/dialog_array.tcl:292
 msgid "Polygon"
-msgstr "Polígono"
+msgstr "Polygon"
 
 #: ../tcl/dialog_array.tcl:294
 msgid "Bezier curve"
-msgstr "Curva de Bezier"
+msgstr "Bézierovu křivku"
 
 #: ../tcl/dialog_array.tcl:300
 msgid "Put array into:"
-msgstr "Inserir vetor em:"
+msgstr "Vložit pole do:"
 
 #: ../tcl/dialog_array.tcl:303
 msgid "New graph"
-msgstr "Novo gráfico"
+msgstr "Nového grafu"
 
 #: ../tcl/dialog_array.tcl:305
 msgid "Last graph"
-msgstr "Último gráfico"
+msgstr "Posledního grafu"
 
 #: ../tcl/dialog_array.tcl:309
 msgid "Delete array"
-msgstr "Excluir vetor"
+msgstr "Smazat pole"
 
 #: ../tcl/dialog_array.tcl:315
 msgid "Open List View..."
-msgstr "Abrir Visualização em Lista..."
+msgstr ""
 
 #: ../tcl/scrollboxwindow.tcl:108
 msgid "Reset to Defaults"
-msgstr ""
+msgstr "Obnovit výchozí nastavení"
 
 #: ../tcl/dialog_array.tcl:322 ../tcl/dialog_audio.tcl:146
 #: ../tcl/dialog_canvas.tcl:208 ../tcl/dialog_find.tcl:163
@@ -88,14 +89,14 @@ msgstr ""
 #: ../tcl/dialog_midi.tcl:98 ../tcl/dialog_midi.tcl:233
 #: ../tcl/scrollboxwindow.tcl:82
 msgid "Cancel"
-msgstr "Cancelar"
+msgstr "Zrušit"
 
 #: ../tcl/dialog_array.tcl:326 ../tcl/dialog_audio.tcl:149
 #: ../tcl/dialog_canvas.tcl:212 ../tcl/dialog_gatom.tcl:161
 #: ../tcl/dialog_iemgui.tcl:755 ../tcl/dialog_midi.tcl:100
 #: ../tcl/dialog_midi.tcl:235 ../tcl/scrollboxwindow.tcl:84
 msgid "Apply"
-msgstr "Aplicar"
+msgstr "Použít"
 
 #: ../tcl/dialog_array.tcl:330 ../tcl/dialog_audio.tcl:152
 #: ../tcl/dialog_canvas.tcl:216 ../tcl/dialog_font.tcl:103
@@ -108,142 +109,142 @@ msgstr "OK"
 
 #: ../tcl/dialog_audio.tcl:134
 msgid "Audio Settings"
-msgstr "Configurações de Áudio"
+msgstr "Nastavení zvuku"
 
 #: ../tcl/dialog_audio.tcl:156
 msgid "Save All Settings"
-msgstr "salvar todas as preferencias"
+msgstr "Uložit všechna nastavení"
 
 #: ../tcl/dialog_audio.tcl:164
 msgid "Sample rate:"
-msgstr "Taxa de amostragem:"
+msgstr "Vzorkovací frekvence:"
 
 #: ../tcl/dialog_audio.tcl:166
 msgid "Delay (msec):"
-msgstr "Delay (ms):"
+msgstr "Zpoždění (ms):"
 
 #: ../tcl/dialog_audio.tcl:169
 msgid "Block size:"
-msgstr "tamanho do bloco"
+msgstr "Velikost bloku:"
 
 #: ../tcl/dialog_audio.tcl:176
 msgid "Use callbacks"
-msgstr "Usar callbacks"
+msgstr "Použití zpětná volání"
 
 #: ../tcl/dialog_audio.tcl:184 ../tcl/dialog_midi.tcl:112
 #: ../tcl/dialog_midi.tcl:248
 msgid "Input device 1:"
-msgstr "Dispositivo de entrada 1:"
+msgstr "Vstupní zařízení 1:"
 
 #: ../tcl/dialog_audio.tcl:187 ../tcl/dialog_audio.tcl:202
 #: ../tcl/dialog_audio.tcl:218 ../tcl/dialog_audio.tcl:233
 #: ../tcl/dialog_audio.tcl:253 ../tcl/dialog_audio.tcl:272
 #: ../tcl/dialog_audio.tcl:288 ../tcl/dialog_audio.tcl:304
 msgid "Channels:"
-msgstr "Canais:"
+msgstr "Kanály:"
 
 #: ../tcl/dialog_audio.tcl:198 ../tcl/dialog_midi.tcl:122
 #: ../tcl/dialog_midi.tcl:258
 msgid "Input device 2:"
-msgstr "Dispositivo de entrada 2:"
+msgstr "Vstupní zařízení 2:"
 
 #: ../tcl/dialog_audio.tcl:214 ../tcl/dialog_midi.tcl:134
 #: ../tcl/dialog_midi.tcl:270
 msgid "Input device 3:"
-msgstr "Dispositivo de entrada 3:"
+msgstr "Vstupní zařízení 3:"
 
 #: ../tcl/dialog_audio.tcl:229 ../tcl/dialog_midi.tcl:146
 #: ../tcl/dialog_midi.tcl:282
 msgid "Input device 4:"
-msgstr "Dispositivo de entrada 4:"
+msgstr "Vstupní zařízení 4:"
 
 #: ../tcl/dialog_audio.tcl:244 ../tcl/dialog_midi.tcl:157
 #: ../tcl/dialog_midi.tcl:293
 msgid "Output device 1:"
-msgstr "Dispositivo de saída 1:"
+msgstr "Výstupní zařízení 1:"
 
 #: ../tcl/dialog_audio.tcl:247
 msgid "(same as input device) ..............      "
-msgstr "(mesmo que o dispositivo de entrada) ..............      "
+msgstr "(stejné jako vstupní zařízení) .............."
 
 #: ../tcl/dialog_audio.tcl:268 ../tcl/dialog_midi.tcl:167
 #: ../tcl/dialog_midi.tcl:303
 msgid "Output device 2:"
-msgstr "Dispositivo de saída 2:"
+msgstr "Výstupní zařízení 2:"
 
 #: ../tcl/dialog_audio.tcl:284 ../tcl/dialog_midi.tcl:178
 #: ../tcl/dialog_midi.tcl:314
 msgid "Output device 3:"
-msgstr "Dispositivo de saída 3:"
+msgstr "Výstupní zařízení 3:"
 
 #: ../tcl/dialog_audio.tcl:300 ../tcl/dialog_midi.tcl:189
 #: ../tcl/dialog_midi.tcl:325
 msgid "Output device 4:"
-msgstr "Dispositivo de saída 4:"
+msgstr "Výstupní zařízení 4:"
 
 #: ../tcl/dialog_audio.tcl:316 ../tcl/dialog_midi.tcl:202
 msgid "Use multiple devices"
-msgstr "Usar múltiplos dispositivos"
+msgstr "Použít více zařízení"
 
 #: ../tcl/dialog_canvas.tcl:121
 msgid "WARNING: unknown graphme flags received in pdtk_canvas_dialog"
-msgstr "AVISO: flags graphme desconhecidas recebidas em pdtk_canvas_dialog"
+msgstr ""
 
 #: ../tcl/dialog_canvas.tcl:141
 msgid "Canvas Properties"
-msgstr "Propriedades da Tela"
+msgstr "Vlastnosti plátna"
 
 #: ../tcl/dialog_canvas.tcl:149
 msgid "Scale"
-msgstr "Escala"
+msgstr "Měřítko"
 
 #: ../tcl/dialog_canvas.tcl:153
 msgid "X units per pixel:"
-msgstr "Unidades X por pixel:"
+msgstr "X jednotek na pixel:"
 
 #: ../tcl/dialog_canvas.tcl:158
 msgid "Y units per pixel:"
-msgstr "Unidades Y por pixel:"
+msgstr "Y jednotek na pixel:"
 
 #: ../tcl/dialog_canvas.tcl:162
 msgid "Appearance on parent patch"
-msgstr "Aparência no patch pai"
+msgstr ""
 
 #: ../tcl/dialog_canvas.tcl:164
 msgid "Graph-On-Parent"
-msgstr "Desenhar-No-Pai"
+msgstr ""
 
 #: ../tcl/dialog_canvas.tcl:168
 msgid "Hide object name and arguments"
-msgstr "Esconder nome e argumentos do objeto"
+msgstr "Skrýt název objektu a argumenty"
 
 #: ../tcl/dialog_canvas.tcl:173
 msgid "Range and size"
-msgstr "Registro de valores e tamanho"
+msgstr "Rozmezí a velikost"
 
 #: ../tcl/dialog_canvas.tcl:177
 msgid "X range, from"
-msgstr "Registro de X, de"
+msgstr "X rozsah, od"
 
 #: ../tcl/dialog_canvas.tcl:179 ../tcl/dialog_canvas.tcl:194
 msgid "to"
-msgstr "a"
+msgstr "do"
 
 #: ../tcl/dialog_canvas.tcl:183 ../tcl/dialog_canvas.tcl:198
 msgid "Margin:"
-msgstr "Margem:"
+msgstr "Okraj:"
 
 #: ../tcl/dialog_canvas.tcl:192
 msgid "Y range, from"
-msgstr "Registro de Y, de"
+msgstr "Y rozsah, od"
 
 #: ../tcl/dialog_data.tcl:29
 msgid "Data Properties"
-msgstr "Propriedades dos Dados"
+msgstr ""
 
 #: ../tcl/dialog_data.tcl:37
 msgid "Send (Ctrl s)"
-msgstr "Enviar (Ctrl s)"
+msgstr "Odeslat (Ctrl s)"
 
 #: ../tcl/dialog_data.tcl:39
 msgid "OK (Ctrl t)"
@@ -252,29 +253,29 @@ msgstr "OK (Ctrl t)"
 #: ../tcl/dialog_find.tcl:108
 #, tcl-format
 msgid "Couldn't find '%s' in %s"
-msgstr "Não foi possível encontrar '%s' em %s"
+msgstr "Nemohu najít '%s' v %s"
 
 #: ../tcl/dialog_find.tcl:126 ../tcl/dialog_find.tcl:167
 #: pd_dynamic_strings.tcl:13
 msgid "Find"
-msgstr "Procurar"
+msgstr "Najít"
 
 #: ../tcl/dialog_find.tcl:145
 msgid "Search in"
-msgstr "Procurar em"
+msgstr "Najít v"
 
 #: ../tcl/dialog_find.tcl:146 ../tcl/pd_menus.tcl:283 ../tcl/pd_menus.tcl:316
 #: ../tcl/pd_menus.tcl:317
 msgid "Pd window"
-msgstr "Janela do PD"
+msgstr "Pd okno"
 
 #: ../tcl/dialog_find.tcl:147
 msgid "for:"
-msgstr "por:"
+msgstr "pro:"
 
 #: ../tcl/dialog_find.tcl:157
 msgid "Match whole word only"
-msgstr "Casar somente palavra inteira"
+msgstr "Pouze celá slova"
 
 #: ../tcl/dialog_find.tcl:171 ../tcl/pd_menus.tcl:58 ../tcl/pd_menus.tcl:63
 #: ../tcl/pd_menus.tcl:80 ../tcl/pd_menus.tcl:89 ../tcl/pd_menus.tcl:106
@@ -283,118 +284,118 @@ msgstr "Casar somente palavra inteira"
 #: ../tcl/pd_menus.tcl:534 ../tcl/pd_menus.tcl:558 ../tcl/pd_menus.tcl:572
 #: ../tcl/pd_menus.tcl:603 ../tcl/pd_menus.tcl:619
 msgid "Close"
-msgstr "Fechar"
+msgstr "Zavřít"
 
 #: ../tcl/dialog_font.tcl:49
 #, tcl-format
 msgid "%s Font"
-msgstr "Fonte %s"
+msgstr "%s Font"
 
 #: ../tcl/dialog_font.tcl:107
 msgid "Font Size"
-msgstr "Tamanho da Fonte"
+msgstr "Velikost fontu"
 
 #: ../tcl/dialog_font.tcl:119
 msgid "Stretch"
-msgstr "Esticar"
+msgstr "Roztažení"
 
 #: ../tcl/dialog_font.tcl:126
 msgid "X and Y"
-msgstr "X e Y"
+msgstr "X a Y"
 
 #: ../tcl/dialog_font.tcl:128
 msgid "X only"
-msgstr "Somente X"
+msgstr "Jen X"
 
 #: ../tcl/dialog_font.tcl:130
 msgid "Y only"
-msgstr "Somente Y"
+msgstr "Jen Y"
 
 #: ../tcl/dialog_gatom.tcl:93
 msgid "Atom Box Properties"
-msgstr "Propriedades de Caixa de Átomos"
+msgstr ""
 
 #: ../tcl/dialog_gatom.tcl:103
 msgid "Width:"
-msgstr "Largura:"
+msgstr "Šířka:"
 
 #: ../tcl/dialog_gatom.tcl:107
 msgid "Limits"
-msgstr "Limites"
+msgstr "Limity"
 
 #: ../tcl/dialog_gatom.tcl:111
 msgid "Lower:"
-msgstr "Menor:"
+msgstr "Dolní:"
 
 #: ../tcl/dialog_gatom.tcl:116
 msgid "Upper:"
-msgstr "Maior:"
+msgstr "Horní:"
 
 #: ../tcl/dialog_gatom.tcl:120 ../tcl/dialog_iemgui.tcl:610
 #: ../tcl/dialog_iemgui.tcl:663
 msgid "Label"
-msgstr "Etiqueta"
+msgstr "Štítek"
 
 #: ../tcl/dialog_gatom.tcl:128
 msgid "Left   "
-msgstr "Esquerda   "
+msgstr ""
 
 #: ../tcl/dialog_gatom.tcl:130
 msgid "Right"
-msgstr "Direita"
+msgstr "Levý"
 
 #: ../tcl/dialog_gatom.tcl:132
 msgid "Top"
-msgstr "Topo"
+msgstr "Vrchní"
 
 #: ../tcl/dialog_gatom.tcl:134
 msgid "Bottom"
-msgstr "Fundo"
+msgstr "Spodní"
 
 #: ../tcl/dialog_gatom.tcl:141 ../tcl/dialog_iemgui.tcl:580
 msgid "Messages"
-msgstr "Mensagens"
+msgstr "Zprávy"
 
 #: ../tcl/dialog_gatom.tcl:145 ../tcl/dialog_iemgui.tcl:584
 msgid "Send symbol:"
-msgstr "Símbolo de 'send':"
+msgstr "Poslat symbol:"
 
 #: ../tcl/dialog_gatom.tcl:151 ../tcl/dialog_iemgui.tcl:593
 msgid "Receive symbol:"
-msgstr "Símbolo de 'receive':"
+msgstr "Přijmout symbol:"
 
 #: ../tcl/dialog_iemgui.tcl:197
 msgid "Background color"
-msgstr "Cor de plano de fundo"
+msgstr "Barva pozadí"
 
 #: ../tcl/dialog_iemgui.tcl:204
 msgid "Foreground color"
-msgstr "Cor de plano de frente"
+msgstr "Barva popředí"
 
 #: ../tcl/dialog_iemgui.tcl:211
 msgid "Label color"
-msgstr "Cor da etiqueta"
+msgstr "Barva štítku"
 
 #: ../tcl/dialog_iemgui.tcl:272
 msgid "Init"
-msgstr "Inicialização"
+msgstr "Inicializace"
 
 #: ../tcl/dialog_iemgui.tcl:275 ../tcl/dialog_iemgui.tcl:554
 msgid "No init"
-msgstr "Sem inicialização"
+msgstr "Bez inicializace"
 
 #: ../tcl/dialog_iemgui.tcl:287 ../tcl/dialog_iemgui.tcl:564
 msgid "Jump on click"
-msgstr "Pular ao clicar"
+msgstr ""
 
 #: ../tcl/dialog_iemgui.tcl:290 ../tcl/dialog_iemgui.tcl:567
 msgid "Steady on click"
-msgstr "Fixo ao clicar"
+msgstr ""
 
 #: ../tcl/dialog_iemgui.tcl:502
 #, tcl-format
 msgid "%s Properties"
-msgstr "Propriedades de %s"
+msgstr ""
 
 #: ../tcl/dialog_iemgui.tcl:557 ../tcl/pd_menus.tcl:55 ../tcl/pd_menus.tcl:60
 #: ../tcl/pd_menus.tcl:77 ../tcl/pd_menus.tcl:86 ../tcl/pd_menus.tcl:102
@@ -403,143 +404,143 @@ msgstr "Propriedades de %s"
 #: ../tcl/pd_menus.tcl:535 ../tcl/pd_menus.tcl:549 ../tcl/pd_menus.tcl:561
 #: ../tcl/pd_menus.tcl:563 ../tcl/pd_menus.tcl:594 ../tcl/pd_menus.tcl:608
 msgid "Save"
-msgstr "Salvar"
+msgstr "Uložit"
 
 #: ../tcl/dialog_iemgui.tcl:618
 msgid "X offset"
-msgstr "Deslocamento X"
+msgstr "X offset"
 
 #: ../tcl/dialog_iemgui.tcl:621
 msgid "Y offset"
-msgstr "Deslocamento Y"
+msgstr "Y offset"
 
 #: ../tcl/dialog_iemgui.tcl:653
 msgid "Colors"
-msgstr "Cores"
+msgstr "Barvy"
 
 #: ../tcl/dialog_iemgui.tcl:659
 msgid "Background"
-msgstr "Plano de fundo"
+msgstr "Pozadí"
 
 #: ../tcl/dialog_iemgui.tcl:661
 msgid "Front"
-msgstr "Frente"
+msgstr "Přední"
 
 #: ../tcl/dialog_iemgui.tcl:673
 msgid "Compose color"
-msgstr "Compor cor"
+msgstr "Skložit barvu"
 
 #: ../tcl/dialog_iemgui.tcl:692
 msgid "Test label"
-msgstr "Etiqueta de teste"
+msgstr ""
 
 #: ../tcl/dialog_message.tcl:61
 msgid "Send a Pd message"
-msgstr "Enviar uma mensagem PD"
+msgstr "Odeslat zprávu Pd"
 
 #: ../tcl/dialog_message.tcl:80
 msgid "(use arrow keys for history)"
-msgstr "(use as setas do teclado para histórico)"
+msgstr "(použijte klávesy se šipkami pro historii)"
 
 #: ../tcl/dialog_midi.tcl:86
 msgid "MIDI Settings"
-msgstr "Configurações de MIDI"
+msgstr "Nastavení MIDI"
 
 #: ../tcl/dialog_midi.tcl:227
 msgid "ALSA MIDI Settings"
-msgstr "Configurações de ALSA MIDI"
+msgstr "Nstavení ALSA MIDI"
 
 #: ../tcl/dialog_midi.tcl:338
 msgid "Use multiple ALSA devices"
-msgstr "Usar múltiplos dispositivos ALSA"
+msgstr ""
 
 #: ../tcl/dialog_midi.tcl:344
 msgid "In Ports:"
-msgstr "Portas de Entrada:"
+msgstr "Vstupní porty:"
 
 #: ../tcl/dialog_midi.tcl:347
 msgid "Out Ports:"
-msgstr "Portas de Saída:"
+msgstr "Výstupní porty:"
 
 #: ../tcl/dialog_path.tcl:32
 msgid "Pd search path for objects, help, fonts, and other files"
-msgstr "Caminho de busca do PD para objetos, arquivos de ajuda, fontes e outros"
+msgstr ""
 
 #: ../tcl/dialog_path.tcl:37
 msgid "Use standard extensions"
-msgstr "Usar extensões padrões"
+msgstr "Použít standardní rozšíření"
 
 #: ../tcl/dialog_path.tcl:39
 msgid "Verbose"
-msgstr "Informativo"
+msgstr "Upovídaný"
 
 #: ../tcl/dialog_startup.tcl:49
 msgid "Add new library"
-msgstr "Adicionar nova biblioteca"
+msgstr "Přidat novou knihovnu"
 
 #: ../tcl/dialog_startup.tcl:53
 msgid "Edit library"
-msgstr "Editar biblioteca"
+msgstr "Upravit knihovnu"
 
 #: ../tcl/dialog_startup.tcl:79
 msgid "Pd libraries to load on startup"
-msgstr "Bibliotecas PD para carregar na inicialização"
+msgstr "Načíst při startu Pd knihovny "
 
 #: ../tcl/dialog_startup.tcl:82
 msgid "Startup flags:"
-msgstr "Flags de inicialização:"
+msgstr ""
 
 #: ../tcl/dialog_startup.tcl:91
 msgid "Real-time scheduling"
-msgstr "Trabalhando em tempo real"
+msgstr "Plánování v reálném čase"
 
 #: ../tcl/helpbrowser.tcl:27
 msgid "Help Browser"
-msgstr "Navegador da Ajuda"
+msgstr ""
 
 #: ../tcl/pd_connect.tcl:74 ../tcl/pd_connect.tcl:82 ../tcl/pdwindow.tcl:221
 #: ../tcl/pdwindow.tcl:232 ../tcl/pdwindow.tcl:316
 msgid "(Tcl) INVALID COMMAND NAME: "
-msgstr "(Tcl) NOME DE COMANDO INVÁLIDO: "
+msgstr "(Tcl) NEPLATNÉ JMÉNO PŘÍKAZU:"
 
 #: ../tcl/pd_connect.tcl:76 ../tcl/pd_connect.tcl:84 ../tcl/pdwindow.tcl:223
 #: ../tcl/pdwindow.tcl:234 ../tcl/pdwindow.tcl:318
 msgid "(Tcl) UNHANDLED ERROR: "
-msgstr "(Tcl) ERRO NÃO TRATADO:"
+msgstr "(Tcl) NEOŠETŘENÁ CHYBA:"
 
 #: ../tcl/pd_guiprefs.tcl:153
 msgid "Cannot read GUI prefs file: "
-msgstr "Não foi possível ler o arquivo (GUI prefs):"
+msgstr ""
 
 #: ../tcl/pd_menucommands.tcl:201 ../tcl/pd_menucommands.tcl:233
 #: ../tcl/pd_menus.tcl:292 ../tcl/pd_menus.tcl:326 ../tcl/pd_menus.tcl:327
 #: ../tcl/pd_menus.tcl:470 ../tcl/pd_menus.tcl:502 ../tcl/pd_menus.tcl:516
 msgid "About Pd"
-msgstr "Sobre PD"
+msgstr "O PD"
 
 #: ../tcl/pd_menucommands.tcl:298
 msgid "Select name for app to build...\n"
-msgstr "Selecione o nome do aplicativo a construir...\n"
+msgstr ""
 
 #: ../tcl/pd_menucommands.tcl:301
 msgid "Save application to..."
-msgstr "Savar aplicação em..."
+msgstr "Uložit aplikaci do..."
 
 #: ../tcl/pd_menucommands.tcl:310
 msgid "Configuring Info.plist..."
-msgstr "Configurando Info.plist..."
+msgstr ""
 
 #: ../tcl/pd_menucommands.tcl:312
 msgid "Setting patch name..."
-msgstr "Selecionando nome do patch..."
+msgstr "Nastavení názvu opravy ..."
 
 #: ../tcl/pd_menucommands.tcl:314
 msgid "Copying current patch..."
-msgstr "Copiando patch atual..."
+msgstr "Kopírování aktuální opravy ..."
 
 #: ../tcl/pd_menucommands.tcl:316
 msgid "Setting embedded preferences..."
-msgstr "Selecionando preferências de \"embedded\""
+msgstr "Nastavení vložených předvoleb ..."
 
 #: ../tcl/pd_menus.tcl:56 ../tcl/pd_menus.tcl:61 ../tcl/pd_menus.tcl:78
 #: ../tcl/pd_menus.tcl:87 ../tcl/pd_menus.tcl:103 ../tcl/pd_menus.tcl:116
@@ -548,7 +549,7 @@ msgstr "Selecionando preferências de \"embedded\""
 #: ../tcl/pd_menus.tcl:550 ../tcl/pd_menus.tcl:562 ../tcl/pd_menus.tcl:564
 #: ../tcl/pd_menus.tcl:595 ../tcl/pd_menus.tcl:609
 msgid "Save As..."
-msgstr "Salvar Como..."
+msgstr "Uložit jako..."
 
 #: ../tcl/pd_menus.tcl:57 ../tcl/pd_menus.tcl:62 ../tcl/pd_menus.tcl:79
 #: ../tcl/pd_menus.tcl:88 ../tcl/pd_menus.tcl:104 ../tcl/pd_menus.tcl:117
@@ -557,19 +558,19 @@ msgstr "Salvar Como..."
 #: ../tcl/pd_menus.tcl:554 ../tcl/pd_menus.tcl:568 ../tcl/pd_menus.tcl:599
 #: ../tcl/pd_menus.tcl:615
 msgid "Print..."
-msgstr "Imprimir..."
+msgstr "Tisk..."
 
 #: ../tcl/pd_menus.tcl:60 ../tcl/pd_menus.tcl:65 ../tcl/pd_menus.tcl:82
 #: ../tcl/pd_menus.tcl:91 ../tcl/pd_menus.tcl:108 ../tcl/pd_menus.tcl:121
 #: ../tcl/pd_menus.tcl:151 ../tcl/pd_menus.tcl:172
 msgid "Duplicate"
-msgstr "Duplicar"
+msgstr "Duplikovat"
 
 #: ../tcl/pd_menus.tcl:61 ../tcl/pd_menus.tcl:66 ../tcl/pd_menus.tcl:83
 #: ../tcl/pd_menus.tcl:92 ../tcl/pd_menus.tcl:109 ../tcl/pd_menus.tcl:122
 #: ../tcl/pd_menus.tcl:167 ../tcl/pd_menus.tcl:179 ../tcl/pd_menus.tcl:188
 msgid "Tidy Up"
-msgstr "Organizar"
+msgstr ""
 
 #: ../tcl/pd_menus.tcl:62 ../tcl/pd_menus.tcl:69 ../tcl/pd_menus.tcl:84
 #: ../tcl/pd_menus.tcl:95 ../tcl/pd_menus.tcl:110 ../tcl/pd_menus.tcl:125
@@ -579,38 +580,38 @@ msgstr "Organizar"
 #: ../tcl/pdtk_canvas.tcl:272 ../tcl/pdtk_canvas.tcl:276
 #: ../tcl/pdtk_canvas.tcl:278
 msgid "Edit Mode"
-msgstr "Modo de Edição"
+msgstr ""
 
 #: ../tcl/pd_menus.tcl:65 ../tcl/pd_menus.tcl:74 ../tcl/pd_menus.tcl:113
 #: ../tcl/pd_menus.tcl:130 ../tcl/pd_menus.tcl:140 ../tcl/pd_menus.tcl:161
 #: ../tcl/pd_menus.tcl:318 ../tcl/pd_menus.tcl:346 ../tcl/pd_menus.tcl:347
 msgid "Undo"
-msgstr "Desfazer"
+msgstr "Zpět"
 
 #: ../tcl/pd_menus.tcl:66 ../tcl/pd_menus.tcl:75 ../tcl/pd_menus.tcl:114
 #: ../tcl/pd_menus.tcl:131 ../tcl/pd_menus.tcl:142 ../tcl/pd_menus.tcl:163
 #: ../tcl/pd_menus.tcl:324 ../tcl/pd_menus.tcl:352 ../tcl/pd_menus.tcl:353
 msgid "Redo"
-msgstr "Refazer"
+msgstr "Znovu"
 
 #: ../tcl/pd_menus.tcl:67 ../tcl/pd_menus.tcl:93 ../tcl/pd_menus.tcl:123
 #: ../tcl/pd_menus.tcl:184 ../tcl/pd_menus.tcl:193 ../tcl/pdtk_canvas.tcl:292
 #: ../tcl/pdtk_canvas.tcl:294
 msgid "Autopatch"
-msgstr "Autopatch"
+msgstr ""
 
 #: ../tcl/pd_menus.tcl:68 ../tcl/pd_menus.tcl:94 ../tcl/pd_menus.tcl:124
 #: ../tcl/pd_menus.tcl:190 ../tcl/pd_menus.tcl:199 ../tcl/pdtk_canvas.tcl:306
 #: ../tcl/pdtk_canvas.tcl:308
 msgid "Magic Glass"
-msgstr "vidro mágico"
+msgstr ""
 
 #: ../tcl/pd_menus.tcl:128 ../tcl/pd_menus.tcl:145 ../tcl/pd_menus.tcl:482
 #: ../tcl/pd_menus.tcl:511 ../tcl/pd_menus.tcl:513 ../tcl/pd_menus.tcl:528
 #: ../tcl/pd_menus.tcl:546 ../tcl/pd_menus.tcl:558 ../tcl/pd_menus.tcl:560
 #: ../tcl/pd_menus.tcl:591 ../tcl/pd_menus.tcl:605
 msgid "New"
-msgstr "Novo"
+msgstr "Nový"
 
 #: ../tcl/pd_menus.tcl:129 ../tcl/pd_menus.tcl:146 ../tcl/pd_menus.tcl:483
 #: ../tcl/pd_menus.tcl:512 ../tcl/pd_menus.tcl:514 ../tcl/pd_menus.tcl:529
@@ -621,177 +622,177 @@ msgstr "Novo"
 #: ../tcl/pdtk_canvas.tcl:228 ../tcl/pdtk_canvas.tcl:391
 #: ../tcl/pdtk_canvas.tcl:411 ../tcl/pdtk_canvas.tcl:413
 msgid "Open"
-msgstr "Abrir"
+msgstr "Otevřít"
 
 #: ../tcl/pd_menus.tcl:134 ../tcl/pd_menus.tcl:151 ../tcl/pd_menus.tcl:493
 #: ../tcl/pd_menus.tcl:520 ../tcl/pd_menus.tcl:526 ../tcl/pd_menus.tcl:540
 #: ../tcl/pd_menus.tcl:553 ../tcl/pd_menus.tcl:565 ../tcl/pd_menus.tcl:567
 #: ../tcl/pd_menus.tcl:598 ../tcl/pd_menus.tcl:612
 msgid "Message..."
-msgstr "Mensagem..."
+msgstr "Zpráva ..."
 
 #: ../tcl/pd_menus.tcl:145 ../tcl/pd_menus.tcl:166
 msgid "Cut"
-msgstr "Cortar"
+msgstr "Vyjmout"
 
 #: ../tcl/pd_menus.tcl:153 ../tcl/pd_menus.tcl:174
 msgid "Select All"
-msgstr "Selecionar Tudo"
+msgstr "Vybrat vše"
 
 #: ../tcl/pd_menus.tcl:159 ../tcl/pd_menus.tcl:164 ../tcl/pd_menus.tcl:177
 #: ../tcl/pd_menus.tcl:180 ../tcl/pd_menus.tcl:185
 msgid "Font"
-msgstr "Fonte"
+msgstr "Font"
 
 #: ../tcl/pd_menus.tcl:169 ../tcl/pd_menus.tcl:181 ../tcl/pd_menus.tcl:190
 msgid "Clear Console"
-msgstr "Limpar Console"
+msgstr "Vyčistit konzoly"
 
 #: ../tcl/pd_menus.tcl:183 ../tcl/pd_menus.tcl:216 ../tcl/pd_menus.tcl:217
 msgid "Object"
-msgstr "Objeto"
+msgstr "Objekt"
 
 #: ../tcl/pd_menus.tcl:185 ../tcl/pd_menus.tcl:218 ../tcl/pd_menus.tcl:219
 msgid "Message"
-msgstr "Mensagem"
+msgstr "Zpráva"
 
 #: ../tcl/pd_menus.tcl:187 ../tcl/pd_menus.tcl:220 ../tcl/pd_menus.tcl:221
 msgid "Number"
-msgstr "Número"
+msgstr "Číslo"
 
 #: ../tcl/pd_menus.tcl:189 ../tcl/pd_menus.tcl:222 ../tcl/pd_menus.tcl:223
 msgid "Symbol"
-msgstr "Símbolo"
+msgstr "Symbol"
 
 #: ../tcl/pd_menus.tcl:191 ../tcl/pd_menus.tcl:224 ../tcl/pd_menus.tcl:225
 msgid "Comment"
-msgstr "Comentário"
+msgstr "Komentář"
 
 #: ../tcl/pd_menus.tcl:193 ../tcl/pd_menus.tcl:202
 msgid "Perf Mode"
-msgstr "modo do perfil"
+msgstr ""
 
 #: ../tcl/pd_menus.tcl:194 ../tcl/pd_menus.tcl:227 ../tcl/pd_menus.tcl:228
 msgid "Bang"
-msgstr "Bang"
+msgstr ""
 
 #: ../tcl/pd_menus.tcl:196
 msgid "Autotips"
-msgstr "AutoDicas"
+msgstr "Automatické Tipy"
 
 #: ../tcl/pd_menus.tcl:196 ../tcl/pd_menus.tcl:229 ../tcl/pd_menus.tcl:230
 msgid "Toggle"
-msgstr "Toggle"
+msgstr ""
 
 #: ../tcl/pd_menus.tcl:198 ../tcl/pd_menus.tcl:231 ../tcl/pd_menus.tcl:232
 msgid "Number2"
-msgstr "Número2"
+msgstr ""
 
 #: ../tcl/pd_menus.tcl:200 ../tcl/pd_menus.tcl:233 ../tcl/pd_menus.tcl:234
 msgid "Vslider"
-msgstr "Slider Vertical"
+msgstr ""
 
 #: ../tcl/pd_menus.tcl:201 ../tcl/pd_menus.tcl:260 ../tcl/pd_menus.tcl:294
 #: ../tcl/pd_menus.tcl:473 ../tcl/pd_menus.tcl:519 ../tcl/pd_menus.tcl:567
 #: ../tcl/pd_menus.tcl:614
 msgid "Preferences"
-msgstr "Preferências"
+msgstr "Předvolby"
 
 #: ../tcl/pd_menus.tcl:202 ../tcl/pd_menus.tcl:235 ../tcl/pd_menus.tcl:236
 msgid "Hslider"
-msgstr "Slider Horizontal"
+msgstr ""
 
 #: ../tcl/pd_menus.tcl:204 ../tcl/pd_menus.tcl:237 ../tcl/pd_menus.tcl:238
 msgid "Vradio"
-msgstr "Seleção Vertical"
+msgstr ""
 
 #: ../tcl/pd_menus.tcl:206 ../tcl/pd_menus.tcl:239 ../tcl/pd_menus.tcl:240
 msgid "Hradio"
-msgstr "Seleção Horizontal"
+msgstr ""
 
 #: ../tcl/pd_menus.tcl:208 ../tcl/pd_menus.tcl:241 ../tcl/pd_menus.tcl:242
 msgid "VU Meter"
-msgstr "Medidor de VU"
+msgstr ""
 
 #: ../tcl/pd_menus.tcl:210 ../tcl/pd_menus.tcl:243 ../tcl/pd_menus.tcl:244
 msgid "Canvas"
-msgstr "Tela"
+msgstr ""
 
 #: ../tcl/pd_menus.tcl:213 ../tcl/pd_menus.tcl:246 ../tcl/pd_menus.tcl:247
 msgid "Graph"
-msgstr "Gráfico"
+msgstr ""
 
 #: ../tcl/pd_menus.tcl:214 ../tcl/pd_menus.tcl:247 ../tcl/pd_menus.tcl:248
 msgid "Array"
-msgstr "Vetor"
+msgstr "Pole"
 
 #: ../tcl/pd_menus.tcl:219 ../tcl/pd_menus.tcl:252 ../tcl/pd_menus.tcl:253
 msgid "Find..."
-msgstr "Procurar..."
+msgstr "Najít..."
 
 #: ../tcl/pd_menus.tcl:221 ../tcl/pd_menus.tcl:254 ../tcl/pd_menus.tcl:255
 msgid "Find Again"
-msgstr "Procurar Novamente"
+msgstr "Najít další"
 
 #: ../tcl/pd_menus.tcl:223 ../tcl/pd_menus.tcl:256 ../tcl/pd_menus.tcl:257
 msgid "Find Last Error"
-msgstr "Procurar Último Erro"
+msgstr "Najít poslední chybu"
 
 #: ../tcl/pd_menus.tcl:229 ../tcl/pd_menus.tcl:262 ../tcl/pd_menus.tcl:263
 msgid "DSP On"
-msgstr "DSP Ligado"
+msgstr "DSP On"
 
 #: ../tcl/pd_menus.tcl:231 ../tcl/pd_menus.tcl:264 ../tcl/pd_menus.tcl:265
 msgid "DSP Off"
-msgstr "DSP Desligado"
+msgstr "DSP Off"
 
 #: ../tcl/pd_menus.tcl:235 ../tcl/pd_menus.tcl:268 ../tcl/pd_menus.tcl:269
 msgid "Test Audio and MIDI..."
-msgstr "Testar Áudio e MIDI..."
+msgstr ""
 
 #: ../tcl/pd_menus.tcl:237 ../tcl/pd_menus.tcl:270 ../tcl/pd_menus.tcl:271
 msgid "Load Meter"
-msgstr "Medidor de Carga de CPU"
+msgstr ""
 
 #: ../tcl/pd_menus.tcl:267 ../tcl/pd_menus.tcl:300 ../tcl/pd_menus.tcl:301
 msgid "Minimize"
-msgstr "Minimizar"
+msgstr ""
 
 #: ../tcl/pd_menus.tcl:269 ../tcl/pd_menus.tcl:302 ../tcl/pd_menus.tcl:303
 msgid "Zoom"
-msgstr "Ampliar"
+msgstr ""
 
 #: ../tcl/pd_menus.tcl:272 ../tcl/pd_menus.tcl:305 ../tcl/pd_menus.tcl:306
 msgid "Bring All to Front"
-msgstr "Trazer Tudo para Frente"
+msgstr ""
 
 #: ../tcl/pd_menus.tcl:275 ../tcl/pd_menus.tcl:308 ../tcl/pd_menus.tcl:309
 msgid "Next Window"
-msgstr "Próxima Janela"
+msgstr "Další okno"
 
 #: ../tcl/pd_menus.tcl:278 ../tcl/pd_menus.tcl:311 ../tcl/pd_menus.tcl:312
 msgid "Previous Window"
-msgstr "Janela Anterior"
+msgstr "Předešlé okno"
 
 #: ../tcl/pd_menus.tcl:285 ../tcl/pd_menus.tcl:318 ../tcl/pd_menus.tcl:319
 msgid "Parent Window"
-msgstr "Janela Mãe"
+msgstr "Mateřské okno"
 
 #: ../tcl/pd_menus.tcl:291 ../tcl/pd_menus.tcl:457 ../tcl/pd_menus.tcl:503
 msgid "Audio Settings..."
-msgstr "Configurações de Áudio..."
+msgstr "Nastavení zvuku..."
 
 #: ../tcl/pd_menus.tcl:293 ../tcl/pd_menus.tcl:459 ../tcl/pd_menus.tcl:505
 msgid "MIDI Settings..."
-msgstr "preferencias MIDI"
+msgstr "Nastavení MIDI..."
 
 #: ../tcl/pd_menus.tcl:294
 msgid "HTML Manual..."
-msgstr "Manual HTML..."
+msgstr "HTML příručka ..."
 
 #: ../tcl/pd_menus.tcl:296
 msgid "Browser..."
-msgstr "Navegador..."
+msgstr "Prohlížeč ..."
 
 #: ../tcl/pd_menus.tcl:299
 msgid "puredata.info"
@@ -799,40 +800,40 @@ msgstr "puredata.info"
 
 #: ../tcl/pd_menus.tcl:301 ../tcl/pd_menus.tcl:333 ../tcl/pd_menus.tcl:334
 msgid "Report a bug"
-msgstr "Reportar um bug"
+msgstr "Nahlásit chybu"
 
 #: ../tcl/pd_menus.tcl:304
 msgid "Tcl prompt"
-msgstr "prompt do TCL"
+msgstr "Tcl řádek"
 
 #: ../tcl/pd_menus.tcl:328 ../tcl/pd_menus.tcl:329
 msgid "Pd Help Browser..."
-msgstr "navegador de ajuda"
+msgstr ""
 
 #: ../tcl/pd_menus.tcl:330 ../tcl/pd_menus.tcl:331
 msgid "Start Here!"
-msgstr "comece aqui!"
+msgstr "Začněte zde!"
 
 #: ../tcl/pd_menus.tcl:348 ../tcl/pd_menus.tcl:385 ../tcl/pd_menus.tcl:386
 msgid "Clear Menu"
-msgstr "Limpar Menu"
+msgstr ""
 
 #: ../tcl/pd_menus.tcl:453 ../tcl/pd_menus.tcl:499
 msgid "Path..."
-msgstr "Caminho..."
+msgstr "Cesta..."
 
 #: ../tcl/pd_menus.tcl:455 ../tcl/pd_menus.tcl:501
 msgid "Startup..."
-msgstr "Inicialização..."
+msgstr ""
 
 #: ../tcl/pd_menus.tcl:485 ../tcl/pd_menus.tcl:515 ../tcl/pd_menus.tcl:532
 msgid "Open Recent"
-msgstr "Abrir Recente"
+msgstr "Nedávno otevřené"
 
 #: ../tcl/pd_menus.tcl:526 ../tcl/pd_menus.tcl:559 ../tcl/pd_menus.tcl:573
 #: ../tcl/pd_menus.tcl:604 ../tcl/pd_menus.tcl:620
 msgid "Quit"
-msgstr "Sair"
+msgstr "Odejít"
 
 #: ../tcl/pdtk_canvas.tcl:198 ../tcl/pdtk_canvas.tcl:204
 #: ../tcl/pdtk_canvas.tcl:215 ../tcl/pdtk_canvas.tcl:217
@@ -840,24 +841,24 @@ msgstr "Sair"
 #: ../tcl/pdtk_canvas.tcl:389 ../tcl/pdtk_canvas.tcl:406
 #: ../tcl/pdtk_canvas.tcl:408
 msgid "Properties"
-msgstr "Propriedades"
+msgstr "Vlastnosti"
 
 #: ../tcl/pdtk_canvas.tcl:202 ../tcl/pdtk_canvas.tcl:208
 #: ../tcl/pdtk_canvas.tcl:393 pd_dynamic_strings.tcl:16
 msgid "Help"
-msgstr "Ajuda"
+msgstr "Nápověda"
 
 #: ../tcl/pdtk_canvas.tcl:319
 msgid " "
-msgstr "  "
+msgstr " "
 
 #: ../tcl/pdwindow.tcl:217 ../tcl/pdwindow.tcl:228 ../tcl/pdwindow.tcl:312
 msgid "(Tcl) MISSING CLOSE-BRACE '}': "
-msgstr "(Tcl) FALTANDO FECHA CHAVES '}': "
+msgstr ""
 
 #: ../tcl/pdwindow.tcl:219 ../tcl/pdwindow.tcl:230 ../tcl/pdwindow.tcl:314
 msgid "(Tcl) MISSING CLOSE-BRACKET ']': "
-msgstr "(Tcl) FALTANDO FECHA COLCHETES ']': "
+msgstr ""
 
 #: ../tcl/pdwindow.tcl:258 ../tcl/pdwindow.tcl:269 ../tcl/pdwindow.tcl:353
 #: ../tcl/pdwindow.tcl:464
@@ -875,7 +876,7 @@ msgstr "DSP"
 
 #: ../tcl/pdwindow.tcl:322 ../tcl/pdwindow.tcl:333 ../tcl/pdwindow.tcl:435
 msgid "audio I/O error"
-msgstr "erro de E/S de áudio"
+msgstr "chyba zvukového I/O "
 
 #: ../tcl/pdwindow.tcl:328 ../tcl/pdwindow.tcl:339 ../tcl/pdwindow.tcl:462
 msgid "Log:"
@@ -883,92 +884,92 @@ msgstr "Log:"
 
 #: ../tcl/pdwindow.tcl:333 ../tcl/pdwindow.tcl:344 ../tcl/pdwindow.tcl:446
 msgid "fatal"
-msgstr "fatal"
+msgstr ""
 
 #: ../tcl/pdwindow.tcl:334 ../tcl/pdwindow.tcl:345 ../tcl/pdwindow.tcl:447
 msgid "error"
-msgstr "erro"
+msgstr "chyba"
 
 #: ../tcl/pdwindow.tcl:335 ../tcl/pdwindow.tcl:346 ../tcl/pdwindow.tcl:448
 msgid "normal"
-msgstr "normal"
+msgstr ""
 
 #: ../tcl/pdwindow.tcl:336 ../tcl/pdwindow.tcl:347 ../tcl/pdwindow.tcl:449
 msgid "debug"
-msgstr "debug"
+msgstr "ladit"
 
 #: ../tcl/pdwindow.tcl:337 ../tcl/pdwindow.tcl:348 ../tcl/pdwindow.tcl:450
 msgid "all"
-msgstr "todos / todas"
+msgstr "vše"
 
 #: ../tcl/pdwindow.tcl:396 ../tcl/pdwindow.tcl:397
 msgid "Pd-extended"
-msgstr "Pd-extended"
+msgstr "Rozšířené-PD"
 
 #: ../tcl/pdwindow.tcl:425
 msgid "IN"
-msgstr "Entrada"
+msgstr "IN"
 
 #: ../tcl/pdwindow.tcl:426
 msgid "OUT"
-msgstr "Saída"
+msgstr "OUT"
 
 #: ../tcl/wheredoesthisgo.tcl:18 ../tcl/wheredoesthisgo.tcl:19
 #, tcl-format
 msgid "Ignoring '%s': doesn't look like a Pd-file"
-msgstr "Ignorando '%s': não parece ser um arquivo PD válido"
+msgstr ""
 
 #: iemgui_dynamic_strings.tcl:11
 msgid "-------dimensions(digits)(pix):-------"
-msgstr "------dimensões(dígitos)(pix):-------"
+msgstr ""
 
 #: iemgui_dynamic_strings.tcl:12
 msgid "--------dimensions(pix)(pix):--------"
-msgstr "--------dimensões(pix)(pix):--------"
+msgstr ""
 
 #: iemgui_dynamic_strings.tcl:13
 msgid "----------dimensions(pix):-----------"
-msgstr "----------dimensões(pix):-----------"
+msgstr ""
 
 #: iemgui_dynamic_strings.tcl:14
 msgid "--------flash-time(ms)(ms):---------"
-msgstr "-----tempo-de-flash(ms)(ms):-------"
+msgstr ""
 
 #: iemgui_dynamic_strings.tcl:15
 msgid "-----------output-range:-----------"
-msgstr "---------registro-de-saída:---------"
+msgstr ""
 
 #: iemgui_dynamic_strings.tcl:16
 msgid "------selectable_dimensions(pix):------"
-msgstr "----dimensões_selecionáveis(pix):-----"
+msgstr ""
 
 #: iemgui_dynamic_strings.tcl:17
 msgid "------visible_rectangle(pix)(pix):------"
-msgstr "-----retângulo_visível(pix)(pix):------"
+msgstr ""
 
 #: iemgui_dynamic_strings.tcl:20
 msgid "bottom:"
-msgstr "fundo:"
+msgstr "dole:"
 
 #: iemgui_dynamic_strings.tcl:21
 msgid "height:"
-msgstr "altura:"
+msgstr "výška:"
 
 #: iemgui_dynamic_strings.tcl:22
 msgid "hold:"
-msgstr "segurar:"
+msgstr "přidržet:"
 
 #: iemgui_dynamic_strings.tcl:23
 msgid "intrrpt:"
-msgstr "interromper:"
+msgstr "přerušit:"
 
 #: iemgui_dynamic_strings.tcl:24
 msgid "left:"
-msgstr "esquerda:"
+msgstr "vlevo:"
 
 #: iemgui_dynamic_strings.tcl:25
 msgid "lin"
-msgstr "lin"
+msgstr "lineárně"
 
 #: iemgui_dynamic_strings.tcl:26
 msgid "log"
@@ -976,11 +977,11 @@ msgstr "log"
 
 #: iemgui_dynamic_strings.tcl:27
 msgid "log-height:"
-msgstr "altura-do-log:"
+msgstr ""
 
 #: iemgui_dynamic_strings.tcl:28
 msgid "max:"
-msgstr "máx:"
+msgstr "max:"
 
 #: iemgui_dynamic_strings.tcl:29
 msgid "min:"
@@ -988,138 +989,138 @@ msgstr "min:"
 
 #: iemgui_dynamic_strings.tcl:30
 msgid "right:"
-msgstr "direita:"
+msgstr "vpravo"
 
 #: iemgui_dynamic_strings.tcl:31
 msgid "size:"
-msgstr "tamanho:"
+msgstr "velikost:"
 
 #: iemgui_dynamic_strings.tcl:32
 msgid "top:"
-msgstr "topo:"
+msgstr "nahoře:"
 
 #: iemgui_dynamic_strings.tcl:33
 msgid "value:"
-msgstr "valor:"
+msgstr "hodnota:"
 
 #: iemgui_dynamic_strings.tcl:34
 msgid "width:"
-msgstr "largura:"
+msgstr "šířka:"
 
 #: pd_dynamic_strings.tcl:10 pd_dynamic_strings.tcl:18
 #, tcl-format
 msgid "Do you want to save the changes you made in '%s'?"
-msgstr "Você deseja salvar as alterações feitas em '%s'?"
+msgstr "Chcete uložit změny provedené v '%s'?"
 
 #: pd_dynamic_strings.tcl:10
 msgid "File"
-msgstr "Arquivo"
+msgstr "Soubor"
 
 #: pd_dynamic_strings.tcl:11 pd_dynamic_strings.tcl:19
 #, tcl-format
 msgid "Discard changes to '%s'?"
-msgstr "Descartar as mudanças em '%s'?"
+msgstr "Zahodit změny '%s'?"
 
 #: pd_dynamic_strings.tcl:11
 msgid "Edit"
-msgstr "Editar"
+msgstr "Upravit"
 
 #: pd_dynamic_strings.tcl:12 pd_dynamic_strings.tcl:20
 msgid "Close this window?"
-msgstr "Deseja fechar a janela?"
+msgstr "Zavřít toto okno?"
 
 #: pd_dynamic_strings.tcl:12
 msgid "Put"
-msgstr "Inserir"
+msgstr "Vložit"
 
 #: pd_dynamic_strings.tcl:13 pd_dynamic_strings.tcl:15
 #: pd_dynamic_strings.tcl:23
 msgid "Undo clear"
-msgstr "Desfazer limpar"
+msgstr "Vrátit smazání"
 
 #: pd_dynamic_strings.tcl:13 pd_dynamic_strings.tcl:21
 msgid "really quit?"
-msgstr "deseja realmente sair?"
+msgstr "Opravdu ukončit?"
 
 #: pd_dynamic_strings.tcl:14
 msgid "Media"
-msgstr "Mídia"
+msgstr ""
 
 #: pd_dynamic_strings.tcl:14 pd_dynamic_strings.tcl:16
 #: pd_dynamic_strings.tcl:24
 msgid "Undo connect"
-msgstr "Desfazer conectar"
+msgstr "Vrátit připojení"
 
 #: pd_dynamic_strings.tcl:15 pd_dynamic_strings.tcl:17
 #: pd_dynamic_strings.tcl:25
 msgid "Undo cut"
-msgstr "Desfazer cortar"
+msgstr "Vrátit vystřižení"
 
 #: pd_dynamic_strings.tcl:15
 msgid "Window"
-msgstr "Janela"
+msgstr "Okno"
 
 #: pd_dynamic_strings.tcl:16 pd_dynamic_strings.tcl:18
 #: pd_dynamic_strings.tcl:26
 msgid "Undo disconnect"
-msgstr "Desfazer desconectar"
+msgstr "Vrátit odpojení"
 
 #: pd_dynamic_strings.tcl:17 pd_dynamic_strings.tcl:19
 #: pd_dynamic_strings.tcl:27
 msgid "Undo duplicate"
-msgstr "Desfazer duplicar"
+msgstr "Vrátit duplikaci"
 
 #: pd_dynamic_strings.tcl:18 pd_dynamic_strings.tcl:20
 #: pd_dynamic_strings.tcl:28
 msgid "Undo motion"
-msgstr "Desfazer movimentar"
+msgstr ""
 
 #: pd_dynamic_strings.tcl:19 pd_dynamic_strings.tcl:21
 #: pd_dynamic_strings.tcl:29
 msgid "Undo paste"
-msgstr "Desfazer colar"
+msgstr "Vrátit vložení"
 
 #: pd_dynamic_strings.tcl:20 pd_dynamic_strings.tcl:22
 #: pd_dynamic_strings.tcl:30
 msgid "Undo typing"
-msgstr "Desfazer digitação"
+msgstr ""
 
 #: pd_dynamic_strings.tcl:22 pd_dynamic_strings.tcl:24
 #: pd_dynamic_strings.tcl:32
 msgid "Redo clear"
-msgstr "Refazer limpar"
+msgstr ""
 
 #: pd_dynamic_strings.tcl:23 pd_dynamic_strings.tcl:25
 #: pd_dynamic_strings.tcl:33
 msgid "Redo connect"
-msgstr "Refazer conectar"
+msgstr ""
 
 #: pd_dynamic_strings.tcl:24 pd_dynamic_strings.tcl:26
 #: pd_dynamic_strings.tcl:34
 msgid "Redo cut"
-msgstr "Refazer cortar"
+msgstr ""
 
 #: pd_dynamic_strings.tcl:25 pd_dynamic_strings.tcl:27
 #: pd_dynamic_strings.tcl:35
 msgid "Redo disconnect"
-msgstr "Refazer desconectar"
+msgstr ""
 
 #: pd_dynamic_strings.tcl:26 pd_dynamic_strings.tcl:28
 #: pd_dynamic_strings.tcl:36
 msgid "Redo duplicate"
-msgstr "Refazer duplicar"
+msgstr ""
 
 #: pd_dynamic_strings.tcl:27 pd_dynamic_strings.tcl:29
 #: pd_dynamic_strings.tcl:37
 msgid "Redo motion"
-msgstr "Refazer movimentar"
+msgstr ""
 
 #: pd_dynamic_strings.tcl:28 pd_dynamic_strings.tcl:30
 #: pd_dynamic_strings.tcl:38
 msgid "Redo paste"
-msgstr "Refazer colar"
+msgstr ""
 
 #: pd_dynamic_strings.tcl:29 pd_dynamic_strings.tcl:31
 #: pd_dynamic_strings.tcl:39
 msgid "Redo typing"
-msgstr "Refazer digitação"
+msgstr ""

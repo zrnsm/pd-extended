@@ -2,81 +2,82 @@
 # This file is put in the public domain.
 # 
 # Translators:
-# Ricardo Palmieri <>, 2012.
+# Ronald MacDonald <ronald@rmacd.com>, 2012.
+#   <ronaldonaldinio@gmail.com>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: Pure Data\n"
 "Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=55736&atid=478070\n"
 "POT-Creation-Date: 2012-01-17 18:37-0500\n"
 "PO-Revision-Date: 2012-04-16 08:42+0000\n"
-"Last-Translator: Ricardo Palmieri <>\n"
+"Last-Translator: Ronald MacDonald <ronald@rmacd.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: pt_BR\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language: gd\n"
+"Plural-Forms: nplurals=3; plural=n < 2 ? 0 : n == 2 ? 1 : 2;\n"
 
 #: ../tcl/dialog_array.tcl:115 ../tcl/pd_menus.tcl:147 ../tcl/pd_menus.tcl:168
 msgid "Copy"
-msgstr "Copiar"
+msgstr "Dèan lethbhreac"
 
 #: ../tcl/dialog_array.tcl:118 ../tcl/pd_menus.tcl:149 ../tcl/pd_menus.tcl:170
 msgid "Paste"
-msgstr "Colar"
+msgstr "Cuir ann"
 
 #: ../tcl/dialog_array.tcl:263
 msgid "Array Properties"
-msgstr "Propriedades do Vetor"
+msgstr ""
 
 #: ../tcl/dialog_array.tcl:273
 msgid "Name:"
-msgstr "Nome:"
+msgstr "Ainm:"
 
 #: ../tcl/dialog_array.tcl:279 ../tcl/dialog_canvas.tcl:181
 #: ../tcl/dialog_canvas.tcl:196 ../tcl/dialog_iemgui.tcl:630
 msgid "Size:"
-msgstr "Tamanho:"
+msgstr "Mheudachd:"
 
 #: ../tcl/dialog_array.tcl:283
 msgid "Save contents"
-msgstr "Salvar conteúdo"
+msgstr "Sàbhail seo"
 
 #: ../tcl/dialog_array.tcl:287
 msgid "Draw as:"
-msgstr "Desenhar como:"
+msgstr "Sgrìobh mar:"
 
 #: ../tcl/dialog_array.tcl:290
 msgid "Points"
-msgstr "Pontos"
+msgstr "Puingean"
 
 #: ../tcl/dialog_array.tcl:292
 msgid "Polygon"
-msgstr "Polígono"
+msgstr "Ioma-cheàrnag"
 
 #: ../tcl/dialog_array.tcl:294
 msgid "Bezier curve"
-msgstr "Curva de Bezier"
+msgstr "Lùb Bedhsier"
 
 #: ../tcl/dialog_array.tcl:300
 msgid "Put array into:"
-msgstr "Inserir vetor em:"
+msgstr ""
 
 #: ../tcl/dialog_array.tcl:303
 msgid "New graph"
-msgstr "Novo gráfico"
+msgstr "Graf ùr"
 
 #: ../tcl/dialog_array.tcl:305
 msgid "Last graph"
-msgstr "Último gráfico"
+msgstr "Graf mu dheireadh"
 
 #: ../tcl/dialog_array.tcl:309
 msgid "Delete array"
-msgstr "Excluir vetor"
+msgstr "Cuir às dhen rian"
 
 #: ../tcl/dialog_array.tcl:315
 msgid "Open List View..."
-msgstr "Abrir Visualização em Lista..."
+msgstr ""
 
 #: ../tcl/scrollboxwindow.tcl:108
 msgid "Reset to Defaults"
@@ -88,14 +89,14 @@ msgstr ""
 #: ../tcl/dialog_midi.tcl:98 ../tcl/dialog_midi.tcl:233
 #: ../tcl/scrollboxwindow.tcl:82
 msgid "Cancel"
-msgstr "Cancelar"
+msgstr "Sguir dheth"
 
 #: ../tcl/dialog_array.tcl:326 ../tcl/dialog_audio.tcl:149
 #: ../tcl/dialog_canvas.tcl:212 ../tcl/dialog_gatom.tcl:161
 #: ../tcl/dialog_iemgui.tcl:755 ../tcl/dialog_midi.tcl:100
 #: ../tcl/dialog_midi.tcl:235 ../tcl/scrollboxwindow.tcl:84
 msgid "Apply"
-msgstr "Aplicar"
+msgstr "Cuir an sàs na h-ùraichean"
 
 #: ../tcl/dialog_array.tcl:330 ../tcl/dialog_audio.tcl:152
 #: ../tcl/dialog_canvas.tcl:216 ../tcl/dialog_font.tcl:103
@@ -104,177 +105,177 @@ msgstr "Aplicar"
 #: ../tcl/dialog_startup.tcl:29 ../tcl/dialog_startup.tcl:30
 #: ../tcl/scrollboxwindow.tcl:86
 msgid "OK"
-msgstr "OK"
+msgstr "Glè mhath"
 
 #: ../tcl/dialog_audio.tcl:134
 msgid "Audio Settings"
-msgstr "Configurações de Áudio"
+msgstr "Roghainnean Fuaim"
 
 #: ../tcl/dialog_audio.tcl:156
 msgid "Save All Settings"
-msgstr "salvar todas as preferencias"
+msgstr "Sàbhail na Roghainnean"
 
 #: ../tcl/dialog_audio.tcl:164
 msgid "Sample rate:"
-msgstr "Taxa de amostragem:"
+msgstr ""
 
 #: ../tcl/dialog_audio.tcl:166
 msgid "Delay (msec):"
-msgstr "Delay (ms):"
+msgstr "Màirne (msec):"
 
 #: ../tcl/dialog_audio.tcl:169
 msgid "Block size:"
-msgstr "tamanho do bloco"
+msgstr "Meud bloc:"
 
 #: ../tcl/dialog_audio.tcl:176
 msgid "Use callbacks"
-msgstr "Usar callbacks"
+msgstr "Cleachd gairmean"
 
 #: ../tcl/dialog_audio.tcl:184 ../tcl/dialog_midi.tcl:112
 #: ../tcl/dialog_midi.tcl:248
 msgid "Input device 1:"
-msgstr "Dispositivo de entrada 1:"
+msgstr ""
 
 #: ../tcl/dialog_audio.tcl:187 ../tcl/dialog_audio.tcl:202
 #: ../tcl/dialog_audio.tcl:218 ../tcl/dialog_audio.tcl:233
 #: ../tcl/dialog_audio.tcl:253 ../tcl/dialog_audio.tcl:272
 #: ../tcl/dialog_audio.tcl:288 ../tcl/dialog_audio.tcl:304
 msgid "Channels:"
-msgstr "Canais:"
+msgstr "Innleachdan-amair:"
 
 #: ../tcl/dialog_audio.tcl:198 ../tcl/dialog_midi.tcl:122
 #: ../tcl/dialog_midi.tcl:258
 msgid "Input device 2:"
-msgstr "Dispositivo de entrada 2:"
+msgstr ""
 
 #: ../tcl/dialog_audio.tcl:214 ../tcl/dialog_midi.tcl:134
 #: ../tcl/dialog_midi.tcl:270
 msgid "Input device 3:"
-msgstr "Dispositivo de entrada 3:"
+msgstr ""
 
 #: ../tcl/dialog_audio.tcl:229 ../tcl/dialog_midi.tcl:146
 #: ../tcl/dialog_midi.tcl:282
 msgid "Input device 4:"
-msgstr "Dispositivo de entrada 4:"
+msgstr ""
 
 #: ../tcl/dialog_audio.tcl:244 ../tcl/dialog_midi.tcl:157
 #: ../tcl/dialog_midi.tcl:293
 msgid "Output device 1:"
-msgstr "Dispositivo de saída 1:"
+msgstr "Innleachd toradh 1:"
 
 #: ../tcl/dialog_audio.tcl:247
 msgid "(same as input device) ..............      "
-msgstr "(mesmo que o dispositivo de entrada) ..............      "
+msgstr ""
 
 #: ../tcl/dialog_audio.tcl:268 ../tcl/dialog_midi.tcl:167
 #: ../tcl/dialog_midi.tcl:303
 msgid "Output device 2:"
-msgstr "Dispositivo de saída 2:"
+msgstr "Innleachd toradh 2:"
 
 #: ../tcl/dialog_audio.tcl:284 ../tcl/dialog_midi.tcl:178
 #: ../tcl/dialog_midi.tcl:314
 msgid "Output device 3:"
-msgstr "Dispositivo de saída 3:"
+msgstr "Innleachd toradh 3:"
 
 #: ../tcl/dialog_audio.tcl:300 ../tcl/dialog_midi.tcl:189
 #: ../tcl/dialog_midi.tcl:325
 msgid "Output device 4:"
-msgstr "Dispositivo de saída 4:"
+msgstr "Innleachd toradh 4:"
 
 #: ../tcl/dialog_audio.tcl:316 ../tcl/dialog_midi.tcl:202
 msgid "Use multiple devices"
-msgstr "Usar múltiplos dispositivos"
+msgstr "Cleachd còrr as aòn inneal"
 
 #: ../tcl/dialog_canvas.tcl:121
 msgid "WARNING: unknown graphme flags received in pdtk_canvas_dialog"
-msgstr "AVISO: flags graphme desconhecidas recebidas em pdtk_canvas_dialog"
+msgstr ""
 
 #: ../tcl/dialog_canvas.tcl:141
 msgid "Canvas Properties"
-msgstr "Propriedades da Tela"
+msgstr ""
 
 #: ../tcl/dialog_canvas.tcl:149
 msgid "Scale"
-msgstr "Escala"
+msgstr "Sgèile"
 
 #: ../tcl/dialog_canvas.tcl:153
 msgid "X units per pixel:"
-msgstr "Unidades X por pixel:"
+msgstr "Aonadan X gach pixel"
 
 #: ../tcl/dialog_canvas.tcl:158
 msgid "Y units per pixel:"
-msgstr "Unidades Y por pixel:"
+msgstr "Aonadan Y gach pixel"
 
 #: ../tcl/dialog_canvas.tcl:162
 msgid "Appearance on parent patch"
-msgstr "Aparência no patch pai"
+msgstr ""
 
 #: ../tcl/dialog_canvas.tcl:164
 msgid "Graph-On-Parent"
-msgstr "Desenhar-No-Pai"
+msgstr ""
 
 #: ../tcl/dialog_canvas.tcl:168
 msgid "Hide object name and arguments"
-msgstr "Esconder nome e argumentos do objeto"
+msgstr ""
 
 #: ../tcl/dialog_canvas.tcl:173
 msgid "Range and size"
-msgstr "Registro de valores e tamanho"
+msgstr "Meud agus farsanachd"
 
 #: ../tcl/dialog_canvas.tcl:177
 msgid "X range, from"
-msgstr "Registro de X, de"
+msgstr "Farsanachd X, bho"
 
 #: ../tcl/dialog_canvas.tcl:179 ../tcl/dialog_canvas.tcl:194
 msgid "to"
-msgstr "a"
+msgstr "gu"
 
 #: ../tcl/dialog_canvas.tcl:183 ../tcl/dialog_canvas.tcl:198
 msgid "Margin:"
-msgstr "Margem:"
+msgstr "Iomall:"
 
 #: ../tcl/dialog_canvas.tcl:192
 msgid "Y range, from"
-msgstr "Registro de Y, de"
+msgstr "Farsanachd Y, bho"
 
 #: ../tcl/dialog_data.tcl:29
 msgid "Data Properties"
-msgstr "Propriedades dos Dados"
+msgstr ""
 
 #: ../tcl/dialog_data.tcl:37
 msgid "Send (Ctrl s)"
-msgstr "Enviar (Ctrl s)"
+msgstr ""
 
 #: ../tcl/dialog_data.tcl:39
 msgid "OK (Ctrl t)"
-msgstr "OK (Ctrl t)"
+msgstr "OK (CTRL+T)"
 
 #: ../tcl/dialog_find.tcl:108
 #, tcl-format
 msgid "Couldn't find '%s' in %s"
-msgstr "Não foi possível encontrar '%s' em %s"
+msgstr "Cha b' urrain '%s' fhaighinn ann an %s"
 
 #: ../tcl/dialog_find.tcl:126 ../tcl/dialog_find.tcl:167
 #: pd_dynamic_strings.tcl:13
 msgid "Find"
-msgstr "Procurar"
+msgstr "Lorg"
 
 #: ../tcl/dialog_find.tcl:145
 msgid "Search in"
-msgstr "Procurar em"
+msgstr "Lorg ann an"
 
 #: ../tcl/dialog_find.tcl:146 ../tcl/pd_menus.tcl:283 ../tcl/pd_menus.tcl:316
 #: ../tcl/pd_menus.tcl:317
 msgid "Pd window"
-msgstr "Janela do PD"
+msgstr "Uinneag Pd"
 
 #: ../tcl/dialog_find.tcl:147
 msgid "for:"
-msgstr "por:"
+msgstr "airson:"
 
 #: ../tcl/dialog_find.tcl:157
 msgid "Match whole word only"
-msgstr "Casar somente palavra inteira"
+msgstr ""
 
 #: ../tcl/dialog_find.tcl:171 ../tcl/pd_menus.tcl:58 ../tcl/pd_menus.tcl:63
 #: ../tcl/pd_menus.tcl:80 ../tcl/pd_menus.tcl:89 ../tcl/pd_menus.tcl:106
@@ -283,118 +284,118 @@ msgstr "Casar somente palavra inteira"
 #: ../tcl/pd_menus.tcl:534 ../tcl/pd_menus.tcl:558 ../tcl/pd_menus.tcl:572
 #: ../tcl/pd_menus.tcl:603 ../tcl/pd_menus.tcl:619
 msgid "Close"
-msgstr "Fechar"
+msgstr "Dùin"
 
 #: ../tcl/dialog_font.tcl:49
 #, tcl-format
 msgid "%s Font"
-msgstr "Fonte %s"
+msgstr "Cruth-Clò %s"
 
 #: ../tcl/dialog_font.tcl:107
 msgid "Font Size"
-msgstr "Tamanho da Fonte"
+msgstr "Meud Cruth-clò"
 
 #: ../tcl/dialog_font.tcl:119
 msgid "Stretch"
-msgstr "Esticar"
+msgstr "Leudaich"
 
 #: ../tcl/dialog_font.tcl:126
 msgid "X and Y"
-msgstr "X e Y"
+msgstr "X agus Y"
 
 #: ../tcl/dialog_font.tcl:128
 msgid "X only"
-msgstr "Somente X"
+msgstr "Dìreach X"
 
 #: ../tcl/dialog_font.tcl:130
 msgid "Y only"
-msgstr "Somente Y"
+msgstr "Dìreach Y"
 
 #: ../tcl/dialog_gatom.tcl:93
 msgid "Atom Box Properties"
-msgstr "Propriedades de Caixa de Átomos"
+msgstr ""
 
 #: ../tcl/dialog_gatom.tcl:103
 msgid "Width:"
-msgstr "Largura:"
+msgstr "Leud:"
 
 #: ../tcl/dialog_gatom.tcl:107
 msgid "Limits"
-msgstr "Limites"
+msgstr "Àrainn"
 
 #: ../tcl/dialog_gatom.tcl:111
 msgid "Lower:"
-msgstr "Menor:"
+msgstr "As ìsle:"
 
 #: ../tcl/dialog_gatom.tcl:116
 msgid "Upper:"
-msgstr "Maior:"
+msgstr "As àirde:"
 
 #: ../tcl/dialog_gatom.tcl:120 ../tcl/dialog_iemgui.tcl:610
 #: ../tcl/dialog_iemgui.tcl:663
 msgid "Label"
-msgstr "Etiqueta"
+msgstr "Ainm:"
 
 #: ../tcl/dialog_gatom.tcl:128
 msgid "Left   "
-msgstr "Esquerda   "
+msgstr "Clì"
 
 #: ../tcl/dialog_gatom.tcl:130
 msgid "Right"
-msgstr "Direita"
+msgstr "Deas"
 
 #: ../tcl/dialog_gatom.tcl:132
 msgid "Top"
-msgstr "Topo"
+msgstr "Mulach"
 
 #: ../tcl/dialog_gatom.tcl:134
 msgid "Bottom"
-msgstr "Fundo"
+msgstr "Bonn"
 
 #: ../tcl/dialog_gatom.tcl:141 ../tcl/dialog_iemgui.tcl:580
 msgid "Messages"
-msgstr "Mensagens"
+msgstr "Teachdaireachdean"
 
 #: ../tcl/dialog_gatom.tcl:145 ../tcl/dialog_iemgui.tcl:584
 msgid "Send symbol:"
-msgstr "Símbolo de 'send':"
+msgstr ""
 
 #: ../tcl/dialog_gatom.tcl:151 ../tcl/dialog_iemgui.tcl:593
 msgid "Receive symbol:"
-msgstr "Símbolo de 'receive':"
+msgstr ""
 
 #: ../tcl/dialog_iemgui.tcl:197
 msgid "Background color"
-msgstr "Cor de plano de fundo"
+msgstr ""
 
 #: ../tcl/dialog_iemgui.tcl:204
 msgid "Foreground color"
-msgstr "Cor de plano de frente"
+msgstr ""
 
 #: ../tcl/dialog_iemgui.tcl:211
 msgid "Label color"
-msgstr "Cor da etiqueta"
+msgstr "Dath a mhìneichaidh"
 
 #: ../tcl/dialog_iemgui.tcl:272
 msgid "Init"
-msgstr "Inicialização"
+msgstr "Ath-shuidhich"
 
 #: ../tcl/dialog_iemgui.tcl:275 ../tcl/dialog_iemgui.tcl:554
 msgid "No init"
-msgstr "Sem inicialização"
+msgstr "Gun ath-shuidheachadh"
 
 #: ../tcl/dialog_iemgui.tcl:287 ../tcl/dialog_iemgui.tcl:564
 msgid "Jump on click"
-msgstr "Pular ao clicar"
+msgstr "Lèum air cliog"
 
 #: ../tcl/dialog_iemgui.tcl:290 ../tcl/dialog_iemgui.tcl:567
 msgid "Steady on click"
-msgstr "Fixo ao clicar"
+msgstr ""
 
 #: ../tcl/dialog_iemgui.tcl:502
 #, tcl-format
 msgid "%s Properties"
-msgstr "Propriedades de %s"
+msgstr "Buaidhean %s"
 
 #: ../tcl/dialog_iemgui.tcl:557 ../tcl/pd_menus.tcl:55 ../tcl/pd_menus.tcl:60
 #: ../tcl/pd_menus.tcl:77 ../tcl/pd_menus.tcl:86 ../tcl/pd_menus.tcl:102
@@ -403,143 +404,143 @@ msgstr "Propriedades de %s"
 #: ../tcl/pd_menus.tcl:535 ../tcl/pd_menus.tcl:549 ../tcl/pd_menus.tcl:561
 #: ../tcl/pd_menus.tcl:563 ../tcl/pd_menus.tcl:594 ../tcl/pd_menus.tcl:608
 msgid "Save"
-msgstr "Salvar"
+msgstr "Sàbhail"
 
 #: ../tcl/dialog_iemgui.tcl:618
 msgid "X offset"
-msgstr "Deslocamento X"
+msgstr "Cuir an aghaidh X"
 
 #: ../tcl/dialog_iemgui.tcl:621
 msgid "Y offset"
-msgstr "Deslocamento Y"
+msgstr "Cuir an aghaidh Y"
 
 #: ../tcl/dialog_iemgui.tcl:653
 msgid "Colors"
-msgstr "Cores"
+msgstr "Dathan"
 
 #: ../tcl/dialog_iemgui.tcl:659
 msgid "Background"
-msgstr "Plano de fundo"
+msgstr ""
 
 #: ../tcl/dialog_iemgui.tcl:661
 msgid "Front"
-msgstr "Frente"
+msgstr "Aghaidh"
 
 #: ../tcl/dialog_iemgui.tcl:673
 msgid "Compose color"
-msgstr "Compor cor"
+msgstr "Dath"
 
 #: ../tcl/dialog_iemgui.tcl:692
 msgid "Test label"
-msgstr "Etiqueta de teste"
+msgstr ""
 
 #: ../tcl/dialog_message.tcl:61
 msgid "Send a Pd message"
-msgstr "Enviar uma mensagem PD"
+msgstr "Cuir teachdaireachd gu Pd"
 
 #: ../tcl/dialog_message.tcl:80
 msgid "(use arrow keys for history)"
-msgstr "(use as setas do teclado para histórico)"
+msgstr ""
 
 #: ../tcl/dialog_midi.tcl:86
 msgid "MIDI Settings"
-msgstr "Configurações de MIDI"
+msgstr "Roghainnean MIDI"
 
 #: ../tcl/dialog_midi.tcl:227
 msgid "ALSA MIDI Settings"
-msgstr "Configurações de ALSA MIDI"
+msgstr "Roghainnean ALSA MIDI"
 
 #: ../tcl/dialog_midi.tcl:338
 msgid "Use multiple ALSA devices"
-msgstr "Usar múltiplos dispositivos ALSA"
+msgstr "Cleachd còrr as aòn inneal ALSA"
 
 #: ../tcl/dialog_midi.tcl:344
 msgid "In Ports:"
-msgstr "Portas de Entrada:"
+msgstr ""
 
 #: ../tcl/dialog_midi.tcl:347
 msgid "Out Ports:"
-msgstr "Portas de Saída:"
+msgstr ""
 
 #: ../tcl/dialog_path.tcl:32
 msgid "Pd search path for objects, help, fonts, and other files"
-msgstr "Caminho de busca do PD para objetos, arquivos de ajuda, fontes e outros"
+msgstr ""
 
 #: ../tcl/dialog_path.tcl:37
 msgid "Use standard extensions"
-msgstr "Usar extensões padrões"
+msgstr ""
 
 #: ../tcl/dialog_path.tcl:39
 msgid "Verbose"
-msgstr "Informativo"
+msgstr ""
 
 #: ../tcl/dialog_startup.tcl:49
 msgid "Add new library"
-msgstr "Adicionar nova biblioteca"
+msgstr ""
 
 #: ../tcl/dialog_startup.tcl:53
 msgid "Edit library"
-msgstr "Editar biblioteca"
+msgstr "Deasaich leabharlann"
 
 #: ../tcl/dialog_startup.tcl:79
 msgid "Pd libraries to load on startup"
-msgstr "Bibliotecas PD para carregar na inicialização"
+msgstr "Fosgail na leabharlainn a tha seo nuair a dh' fhosglair Pd"
 
 #: ../tcl/dialog_startup.tcl:82
 msgid "Startup flags:"
-msgstr "Flags de inicialização:"
+msgstr ""
 
 #: ../tcl/dialog_startup.tcl:91
 msgid "Real-time scheduling"
-msgstr "Trabalhando em tempo real"
+msgstr ""
 
 #: ../tcl/helpbrowser.tcl:27
 msgid "Help Browser"
-msgstr "Navegador da Ajuda"
+msgstr ""
 
 #: ../tcl/pd_connect.tcl:74 ../tcl/pd_connect.tcl:82 ../tcl/pdwindow.tcl:221
 #: ../tcl/pdwindow.tcl:232 ../tcl/pdwindow.tcl:316
 msgid "(Tcl) INVALID COMMAND NAME: "
-msgstr "(Tcl) NOME DE COMANDO INVÁLIDO: "
+msgstr ""
 
 #: ../tcl/pd_connect.tcl:76 ../tcl/pd_connect.tcl:84 ../tcl/pdwindow.tcl:223
 #: ../tcl/pdwindow.tcl:234 ../tcl/pdwindow.tcl:318
 msgid "(Tcl) UNHANDLED ERROR: "
-msgstr "(Tcl) ERRO NÃO TRATADO:"
+msgstr ""
 
 #: ../tcl/pd_guiprefs.tcl:153
 msgid "Cannot read GUI prefs file: "
-msgstr "Não foi possível ler o arquivo (GUI prefs):"
+msgstr "Cha b' urr"
 
 #: ../tcl/pd_menucommands.tcl:201 ../tcl/pd_menucommands.tcl:233
 #: ../tcl/pd_menus.tcl:292 ../tcl/pd_menus.tcl:326 ../tcl/pd_menus.tcl:327
 #: ../tcl/pd_menus.tcl:470 ../tcl/pd_menus.tcl:502 ../tcl/pd_menus.tcl:516
 msgid "About Pd"
-msgstr "Sobre PD"
+msgstr "Mu dhèidhinn Pd"
 
 #: ../tcl/pd_menucommands.tcl:298
 msgid "Select name for app to build...\n"
-msgstr "Selecione o nome do aplicativo a construir...\n"
+msgstr ""
 
 #: ../tcl/pd_menucommands.tcl:301
 msgid "Save application to..."
-msgstr "Savar aplicação em..."
+msgstr ""
 
 #: ../tcl/pd_menucommands.tcl:310
 msgid "Configuring Info.plist..."
-msgstr "Configurando Info.plist..."
+msgstr ""
 
 #: ../tcl/pd_menucommands.tcl:312
 msgid "Setting patch name..."
-msgstr "Selecionando nome do patch..."
+msgstr ""
 
 #: ../tcl/pd_menucommands.tcl:314
 msgid "Copying current patch..."
-msgstr "Copiando patch atual..."
+msgstr ""
 
 #: ../tcl/pd_menucommands.tcl:316
 msgid "Setting embedded preferences..."
-msgstr "Selecionando preferências de \"embedded\""
+msgstr ""
 
 #: ../tcl/pd_menus.tcl:56 ../tcl/pd_menus.tcl:61 ../tcl/pd_menus.tcl:78
 #: ../tcl/pd_menus.tcl:87 ../tcl/pd_menus.tcl:103 ../tcl/pd_menus.tcl:116
@@ -548,7 +549,7 @@ msgstr "Selecionando preferências de \"embedded\""
 #: ../tcl/pd_menus.tcl:550 ../tcl/pd_menus.tcl:562 ../tcl/pd_menus.tcl:564
 #: ../tcl/pd_menus.tcl:595 ../tcl/pd_menus.tcl:609
 msgid "Save As..."
-msgstr "Salvar Como..."
+msgstr "Sàbhail mar..."
 
 #: ../tcl/pd_menus.tcl:57 ../tcl/pd_menus.tcl:62 ../tcl/pd_menus.tcl:79
 #: ../tcl/pd_menus.tcl:88 ../tcl/pd_menus.tcl:104 ../tcl/pd_menus.tcl:117
@@ -557,19 +558,19 @@ msgstr "Salvar Como..."
 #: ../tcl/pd_menus.tcl:554 ../tcl/pd_menus.tcl:568 ../tcl/pd_menus.tcl:599
 #: ../tcl/pd_menus.tcl:615
 msgid "Print..."
-msgstr "Imprimir..."
+msgstr "Clò-bhuail..."
 
 #: ../tcl/pd_menus.tcl:60 ../tcl/pd_menus.tcl:65 ../tcl/pd_menus.tcl:82
 #: ../tcl/pd_menus.tcl:91 ../tcl/pd_menus.tcl:108 ../tcl/pd_menus.tcl:121
 #: ../tcl/pd_menus.tcl:151 ../tcl/pd_menus.tcl:172
 msgid "Duplicate"
-msgstr "Duplicar"
+msgstr ""
 
 #: ../tcl/pd_menus.tcl:61 ../tcl/pd_menus.tcl:66 ../tcl/pd_menus.tcl:83
 #: ../tcl/pd_menus.tcl:92 ../tcl/pd_menus.tcl:109 ../tcl/pd_menus.tcl:122
 #: ../tcl/pd_menus.tcl:167 ../tcl/pd_menus.tcl:179 ../tcl/pd_menus.tcl:188
 msgid "Tidy Up"
-msgstr "Organizar"
+msgstr "Sgioblaich"
 
 #: ../tcl/pd_menus.tcl:62 ../tcl/pd_menus.tcl:69 ../tcl/pd_menus.tcl:84
 #: ../tcl/pd_menus.tcl:95 ../tcl/pd_menus.tcl:110 ../tcl/pd_menus.tcl:125
@@ -579,38 +580,38 @@ msgstr "Organizar"
 #: ../tcl/pdtk_canvas.tcl:272 ../tcl/pdtk_canvas.tcl:276
 #: ../tcl/pdtk_canvas.tcl:278
 msgid "Edit Mode"
-msgstr "Modo de Edição"
+msgstr ""
 
 #: ../tcl/pd_menus.tcl:65 ../tcl/pd_menus.tcl:74 ../tcl/pd_menus.tcl:113
 #: ../tcl/pd_menus.tcl:130 ../tcl/pd_menus.tcl:140 ../tcl/pd_menus.tcl:161
 #: ../tcl/pd_menus.tcl:318 ../tcl/pd_menus.tcl:346 ../tcl/pd_menus.tcl:347
 msgid "Undo"
-msgstr "Desfazer"
+msgstr "Neo-dhèan"
 
 #: ../tcl/pd_menus.tcl:66 ../tcl/pd_menus.tcl:75 ../tcl/pd_menus.tcl:114
 #: ../tcl/pd_menus.tcl:131 ../tcl/pd_menus.tcl:142 ../tcl/pd_menus.tcl:163
 #: ../tcl/pd_menus.tcl:324 ../tcl/pd_menus.tcl:352 ../tcl/pd_menus.tcl:353
 msgid "Redo"
-msgstr "Refazer"
+msgstr "Ath-dhèan"
 
 #: ../tcl/pd_menus.tcl:67 ../tcl/pd_menus.tcl:93 ../tcl/pd_menus.tcl:123
 #: ../tcl/pd_menus.tcl:184 ../tcl/pd_menus.tcl:193 ../tcl/pdtk_canvas.tcl:292
 #: ../tcl/pdtk_canvas.tcl:294
 msgid "Autopatch"
-msgstr "Autopatch"
+msgstr ""
 
 #: ../tcl/pd_menus.tcl:68 ../tcl/pd_menus.tcl:94 ../tcl/pd_menus.tcl:124
 #: ../tcl/pd_menus.tcl:190 ../tcl/pd_menus.tcl:199 ../tcl/pdtk_canvas.tcl:306
 #: ../tcl/pdtk_canvas.tcl:308
 msgid "Magic Glass"
-msgstr "vidro mágico"
+msgstr ""
 
 #: ../tcl/pd_menus.tcl:128 ../tcl/pd_menus.tcl:145 ../tcl/pd_menus.tcl:482
 #: ../tcl/pd_menus.tcl:511 ../tcl/pd_menus.tcl:513 ../tcl/pd_menus.tcl:528
 #: ../tcl/pd_menus.tcl:546 ../tcl/pd_menus.tcl:558 ../tcl/pd_menus.tcl:560
 #: ../tcl/pd_menus.tcl:591 ../tcl/pd_menus.tcl:605
 msgid "New"
-msgstr "Novo"
+msgstr "Ùr"
 
 #: ../tcl/pd_menus.tcl:129 ../tcl/pd_menus.tcl:146 ../tcl/pd_menus.tcl:483
 #: ../tcl/pd_menus.tcl:512 ../tcl/pd_menus.tcl:514 ../tcl/pd_menus.tcl:529
@@ -621,177 +622,177 @@ msgstr "Novo"
 #: ../tcl/pdtk_canvas.tcl:228 ../tcl/pdtk_canvas.tcl:391
 #: ../tcl/pdtk_canvas.tcl:411 ../tcl/pdtk_canvas.tcl:413
 msgid "Open"
-msgstr "Abrir"
+msgstr "Fosgail"
 
 #: ../tcl/pd_menus.tcl:134 ../tcl/pd_menus.tcl:151 ../tcl/pd_menus.tcl:493
 #: ../tcl/pd_menus.tcl:520 ../tcl/pd_menus.tcl:526 ../tcl/pd_menus.tcl:540
 #: ../tcl/pd_menus.tcl:553 ../tcl/pd_menus.tcl:565 ../tcl/pd_menus.tcl:567
 #: ../tcl/pd_menus.tcl:598 ../tcl/pd_menus.tcl:612
 msgid "Message..."
-msgstr "Mensagem..."
+msgstr "Teachdaireachd..."
 
 #: ../tcl/pd_menus.tcl:145 ../tcl/pd_menus.tcl:166
 msgid "Cut"
-msgstr "Cortar"
+msgstr "Gearr às"
 
 #: ../tcl/pd_menus.tcl:153 ../tcl/pd_menus.tcl:174
 msgid "Select All"
-msgstr "Selecionar Tudo"
+msgstr "Tagh a h-uile sìan"
 
 #: ../tcl/pd_menus.tcl:159 ../tcl/pd_menus.tcl:164 ../tcl/pd_menus.tcl:177
 #: ../tcl/pd_menus.tcl:180 ../tcl/pd_menus.tcl:185
 msgid "Font"
-msgstr "Fonte"
+msgstr "Cruth-clò"
 
 #: ../tcl/pd_menus.tcl:169 ../tcl/pd_menus.tcl:181 ../tcl/pd_menus.tcl:190
 msgid "Clear Console"
-msgstr "Limpar Console"
+msgstr "Falamhaich an consol"
 
 #: ../tcl/pd_menus.tcl:183 ../tcl/pd_menus.tcl:216 ../tcl/pd_menus.tcl:217
 msgid "Object"
-msgstr "Objeto"
+msgstr ""
 
 #: ../tcl/pd_menus.tcl:185 ../tcl/pd_menus.tcl:218 ../tcl/pd_menus.tcl:219
 msgid "Message"
-msgstr "Mensagem"
+msgstr "Teachdaireachd"
 
 #: ../tcl/pd_menus.tcl:187 ../tcl/pd_menus.tcl:220 ../tcl/pd_menus.tcl:221
 msgid "Number"
-msgstr "Número"
+msgstr "Àireamh"
 
 #: ../tcl/pd_menus.tcl:189 ../tcl/pd_menus.tcl:222 ../tcl/pd_menus.tcl:223
 msgid "Symbol"
-msgstr "Símbolo"
+msgstr "Samhladh"
 
 #: ../tcl/pd_menus.tcl:191 ../tcl/pd_menus.tcl:224 ../tcl/pd_menus.tcl:225
 msgid "Comment"
-msgstr "Comentário"
+msgstr "Mìneachadh"
 
 #: ../tcl/pd_menus.tcl:193 ../tcl/pd_menus.tcl:202
 msgid "Perf Mode"
-msgstr "modo do perfil"
+msgstr ""
 
 #: ../tcl/pd_menus.tcl:194 ../tcl/pd_menus.tcl:227 ../tcl/pd_menus.tcl:228
 msgid "Bang"
-msgstr "Bang"
+msgstr "Brag"
 
 #: ../tcl/pd_menus.tcl:196
 msgid "Autotips"
-msgstr "AutoDicas"
+msgstr ""
 
 #: ../tcl/pd_menus.tcl:196 ../tcl/pd_menus.tcl:229 ../tcl/pd_menus.tcl:230
 msgid "Toggle"
-msgstr "Toggle"
+msgstr ""
 
 #: ../tcl/pd_menus.tcl:198 ../tcl/pd_menus.tcl:231 ../tcl/pd_menus.tcl:232
 msgid "Number2"
-msgstr "Número2"
+msgstr "Àireamh2"
 
 #: ../tcl/pd_menus.tcl:200 ../tcl/pd_menus.tcl:233 ../tcl/pd_menus.tcl:234
 msgid "Vslider"
-msgstr "Slider Vertical"
+msgstr ""
 
 #: ../tcl/pd_menus.tcl:201 ../tcl/pd_menus.tcl:260 ../tcl/pd_menus.tcl:294
 #: ../tcl/pd_menus.tcl:473 ../tcl/pd_menus.tcl:519 ../tcl/pd_menus.tcl:567
 #: ../tcl/pd_menus.tcl:614
 msgid "Preferences"
-msgstr "Preferências"
+msgstr "Roghainnean"
 
 #: ../tcl/pd_menus.tcl:202 ../tcl/pd_menus.tcl:235 ../tcl/pd_menus.tcl:236
 msgid "Hslider"
-msgstr "Slider Horizontal"
+msgstr ""
 
 #: ../tcl/pd_menus.tcl:204 ../tcl/pd_menus.tcl:237 ../tcl/pd_menus.tcl:238
 msgid "Vradio"
-msgstr "Seleção Vertical"
+msgstr ""
 
 #: ../tcl/pd_menus.tcl:206 ../tcl/pd_menus.tcl:239 ../tcl/pd_menus.tcl:240
 msgid "Hradio"
-msgstr "Seleção Horizontal"
+msgstr ""
 
 #: ../tcl/pd_menus.tcl:208 ../tcl/pd_menus.tcl:241 ../tcl/pd_menus.tcl:242
 msgid "VU Meter"
-msgstr "Medidor de VU"
+msgstr ""
 
 #: ../tcl/pd_menus.tcl:210 ../tcl/pd_menus.tcl:243 ../tcl/pd_menus.tcl:244
 msgid "Canvas"
-msgstr "Tela"
+msgstr ""
 
 #: ../tcl/pd_menus.tcl:213 ../tcl/pd_menus.tcl:246 ../tcl/pd_menus.tcl:247
 msgid "Graph"
-msgstr "Gráfico"
+msgstr "Graf"
 
 #: ../tcl/pd_menus.tcl:214 ../tcl/pd_menus.tcl:247 ../tcl/pd_menus.tcl:248
 msgid "Array"
-msgstr "Vetor"
+msgstr "Rian"
 
 #: ../tcl/pd_menus.tcl:219 ../tcl/pd_menus.tcl:252 ../tcl/pd_menus.tcl:253
 msgid "Find..."
-msgstr "Procurar..."
+msgstr "Lorg..."
 
 #: ../tcl/pd_menus.tcl:221 ../tcl/pd_menus.tcl:254 ../tcl/pd_menus.tcl:255
 msgid "Find Again"
-msgstr "Procurar Novamente"
+msgstr "Lorg a-rithisd"
 
 #: ../tcl/pd_menus.tcl:223 ../tcl/pd_menus.tcl:256 ../tcl/pd_menus.tcl:257
 msgid "Find Last Error"
-msgstr "Procurar Último Erro"
+msgstr "Lorg Mearachd mu Dheireadh"
 
 #: ../tcl/pd_menus.tcl:229 ../tcl/pd_menus.tcl:262 ../tcl/pd_menus.tcl:263
 msgid "DSP On"
-msgstr "DSP Ligado"
+msgstr "DSP air"
 
 #: ../tcl/pd_menus.tcl:231 ../tcl/pd_menus.tcl:264 ../tcl/pd_menus.tcl:265
 msgid "DSP Off"
-msgstr "DSP Desligado"
+msgstr "DSP Dheth"
 
 #: ../tcl/pd_menus.tcl:235 ../tcl/pd_menus.tcl:268 ../tcl/pd_menus.tcl:269
 msgid "Test Audio and MIDI..."
-msgstr "Testar Áudio e MIDI..."
+msgstr ""
 
 #: ../tcl/pd_menus.tcl:237 ../tcl/pd_menus.tcl:270 ../tcl/pd_menus.tcl:271
 msgid "Load Meter"
-msgstr "Medidor de Carga de CPU"
+msgstr ""
 
 #: ../tcl/pd_menus.tcl:267 ../tcl/pd_menus.tcl:300 ../tcl/pd_menus.tcl:301
 msgid "Minimize"
-msgstr "Minimizar"
+msgstr "Lughdaich"
 
 #: ../tcl/pd_menus.tcl:269 ../tcl/pd_menus.tcl:302 ../tcl/pd_menus.tcl:303
 msgid "Zoom"
-msgstr "Ampliar"
+msgstr "Sùm"
 
 #: ../tcl/pd_menus.tcl:272 ../tcl/pd_menus.tcl:305 ../tcl/pd_menus.tcl:306
 msgid "Bring All to Front"
-msgstr "Trazer Tudo para Frente"
+msgstr "Tarraing a h-uile uinneag chon an aghaidh"
 
 #: ../tcl/pd_menus.tcl:275 ../tcl/pd_menus.tcl:308 ../tcl/pd_menus.tcl:309
 msgid "Next Window"
-msgstr "Próxima Janela"
+msgstr "An-ath uinneag"
 
 #: ../tcl/pd_menus.tcl:278 ../tcl/pd_menus.tcl:311 ../tcl/pd_menus.tcl:312
 msgid "Previous Window"
-msgstr "Janela Anterior"
+msgstr ""
 
 #: ../tcl/pd_menus.tcl:285 ../tcl/pd_menus.tcl:318 ../tcl/pd_menus.tcl:319
 msgid "Parent Window"
-msgstr "Janela Mãe"
+msgstr ""
 
 #: ../tcl/pd_menus.tcl:291 ../tcl/pd_menus.tcl:457 ../tcl/pd_menus.tcl:503
 msgid "Audio Settings..."
-msgstr "Configurações de Áudio..."
+msgstr "Roghainnean Fuaim..."
 
 #: ../tcl/pd_menus.tcl:293 ../tcl/pd_menus.tcl:459 ../tcl/pd_menus.tcl:505
 msgid "MIDI Settings..."
-msgstr "preferencias MIDI"
+msgstr "Roghainnean MIDI..."
 
 #: ../tcl/pd_menus.tcl:294
 msgid "HTML Manual..."
-msgstr "Manual HTML..."
+msgstr ""
 
 #: ../tcl/pd_menus.tcl:296
 msgid "Browser..."
-msgstr "Navegador..."
+msgstr "Brabhsair..."
 
 #: ../tcl/pd_menus.tcl:299
 msgid "puredata.info"
@@ -799,40 +800,40 @@ msgstr "puredata.info"
 
 #: ../tcl/pd_menus.tcl:301 ../tcl/pd_menus.tcl:333 ../tcl/pd_menus.tcl:334
 msgid "Report a bug"
-msgstr "Reportar um bug"
+msgstr ""
 
 #: ../tcl/pd_menus.tcl:304
 msgid "Tcl prompt"
-msgstr "prompt do TCL"
+msgstr ""
 
 #: ../tcl/pd_menus.tcl:328 ../tcl/pd_menus.tcl:329
 msgid "Pd Help Browser..."
-msgstr "navegador de ajuda"
+msgstr ""
 
 #: ../tcl/pd_menus.tcl:330 ../tcl/pd_menus.tcl:331
 msgid "Start Here!"
-msgstr "comece aqui!"
+msgstr "Tòisich an-seo!"
 
 #: ../tcl/pd_menus.tcl:348 ../tcl/pd_menus.tcl:385 ../tcl/pd_menus.tcl:386
 msgid "Clear Menu"
-msgstr "Limpar Menu"
+msgstr ""
 
 #: ../tcl/pd_menus.tcl:453 ../tcl/pd_menus.tcl:499
 msgid "Path..."
-msgstr "Caminho..."
+msgstr "Slighe..."
 
 #: ../tcl/pd_menus.tcl:455 ../tcl/pd_menus.tcl:501
 msgid "Startup..."
-msgstr "Inicialização..."
+msgstr ""
 
 #: ../tcl/pd_menus.tcl:485 ../tcl/pd_menus.tcl:515 ../tcl/pd_menus.tcl:532
 msgid "Open Recent"
-msgstr "Abrir Recente"
+msgstr ""
 
 #: ../tcl/pd_menus.tcl:526 ../tcl/pd_menus.tcl:559 ../tcl/pd_menus.tcl:573
 #: ../tcl/pd_menus.tcl:604 ../tcl/pd_menus.tcl:620
 msgid "Quit"
-msgstr "Sair"
+msgstr "Fàg an-seo"
 
 #: ../tcl/pdtk_canvas.tcl:198 ../tcl/pdtk_canvas.tcl:204
 #: ../tcl/pdtk_canvas.tcl:215 ../tcl/pdtk_canvas.tcl:217
@@ -840,24 +841,24 @@ msgstr "Sair"
 #: ../tcl/pdtk_canvas.tcl:389 ../tcl/pdtk_canvas.tcl:406
 #: ../tcl/pdtk_canvas.tcl:408
 msgid "Properties"
-msgstr "Propriedades"
+msgstr ""
 
 #: ../tcl/pdtk_canvas.tcl:202 ../tcl/pdtk_canvas.tcl:208
 #: ../tcl/pdtk_canvas.tcl:393 pd_dynamic_strings.tcl:16
 msgid "Help"
-msgstr "Ajuda"
+msgstr "Cobhair"
 
 #: ../tcl/pdtk_canvas.tcl:319
 msgid " "
-msgstr "  "
+msgstr ""
 
 #: ../tcl/pdwindow.tcl:217 ../tcl/pdwindow.tcl:228 ../tcl/pdwindow.tcl:312
 msgid "(Tcl) MISSING CLOSE-BRACE '}': "
-msgstr "(Tcl) FALTANDO FECHA CHAVES '}': "
+msgstr "(Tcl) '}' A DHÌTH:"
 
 #: ../tcl/pdwindow.tcl:219 ../tcl/pdwindow.tcl:230 ../tcl/pdwindow.tcl:314
 msgid "(Tcl) MISSING CLOSE-BRACKET ']': "
-msgstr "(Tcl) FALTANDO FECHA COLCHETES ']': "
+msgstr "(Tcl) ']' A DHÌTH:"
 
 #: ../tcl/pdwindow.tcl:258 ../tcl/pdwindow.tcl:269 ../tcl/pdwindow.tcl:353
 #: ../tcl/pdwindow.tcl:464
@@ -875,7 +876,7 @@ msgstr "DSP"
 
 #: ../tcl/pdwindow.tcl:322 ../tcl/pdwindow.tcl:333 ../tcl/pdwindow.tcl:435
 msgid "audio I/O error"
-msgstr "erro de E/S de áudio"
+msgstr "mearachd I/O fuaim"
 
 #: ../tcl/pdwindow.tcl:328 ../tcl/pdwindow.tcl:339 ../tcl/pdwindow.tcl:462
 msgid "Log:"
@@ -883,15 +884,15 @@ msgstr "Log:"
 
 #: ../tcl/pdwindow.tcl:333 ../tcl/pdwindow.tcl:344 ../tcl/pdwindow.tcl:446
 msgid "fatal"
-msgstr "fatal"
+msgstr "tubaisteach"
 
 #: ../tcl/pdwindow.tcl:334 ../tcl/pdwindow.tcl:345 ../tcl/pdwindow.tcl:447
 msgid "error"
-msgstr "erro"
+msgstr "mearachd"
 
 #: ../tcl/pdwindow.tcl:335 ../tcl/pdwindow.tcl:346 ../tcl/pdwindow.tcl:448
 msgid "normal"
-msgstr "normal"
+msgstr "àbhaisteach"
 
 #: ../tcl/pdwindow.tcl:336 ../tcl/pdwindow.tcl:347 ../tcl/pdwindow.tcl:449
 msgid "debug"
@@ -899,7 +900,7 @@ msgstr "debug"
 
 #: ../tcl/pdwindow.tcl:337 ../tcl/pdwindow.tcl:348 ../tcl/pdwindow.tcl:450
 msgid "all"
-msgstr "todos / todas"
+msgstr "a h-uile"
 
 #: ../tcl/pdwindow.tcl:396 ../tcl/pdwindow.tcl:397
 msgid "Pd-extended"
@@ -907,64 +908,64 @@ msgstr "Pd-extended"
 
 #: ../tcl/pdwindow.tcl:425
 msgid "IN"
-msgstr "Entrada"
+msgstr "AN-STAIGH"
 
 #: ../tcl/pdwindow.tcl:426
 msgid "OUT"
-msgstr "Saída"
+msgstr "A-MACH"
 
 #: ../tcl/wheredoesthisgo.tcl:18 ../tcl/wheredoesthisgo.tcl:19
 #, tcl-format
 msgid "Ignoring '%s': doesn't look like a Pd-file"
-msgstr "Ignorando '%s': não parece ser um arquivo PD válido"
+msgstr "Tha sìnn coma mu dhèidhinn '%s': ar-rèir choltas, chan è faidhle Pd a th' ann"
 
 #: iemgui_dynamic_strings.tcl:11
 msgid "-------dimensions(digits)(pix):-------"
-msgstr "------dimensões(dígitos)(pix):-------"
+msgstr "-------tomhasan(digits)(px)--------"
 
 #: iemgui_dynamic_strings.tcl:12
 msgid "--------dimensions(pix)(pix):--------"
-msgstr "--------dimensões(pix)(pix):--------"
+msgstr "-------tomhasan(px)(px)--------"
 
 #: iemgui_dynamic_strings.tcl:13
 msgid "----------dimensions(pix):-----------"
-msgstr "----------dimensões(pix):-----------"
+msgstr "-----------meudachdan(pix):-----------"
 
 #: iemgui_dynamic_strings.tcl:14
 msgid "--------flash-time(ms)(ms):---------"
-msgstr "-----tempo-de-flash(ms)(ms):-------"
+msgstr ""
 
 #: iemgui_dynamic_strings.tcl:15
 msgid "-----------output-range:-----------"
-msgstr "---------registro-de-saída:---------"
+msgstr ""
 
 #: iemgui_dynamic_strings.tcl:16
 msgid "------selectable_dimensions(pix):------"
-msgstr "----dimensões_selecionáveis(pix):-----"
+msgstr ""
 
 #: iemgui_dynamic_strings.tcl:17
 msgid "------visible_rectangle(pix)(pix):------"
-msgstr "-----retângulo_visível(pix)(pix):------"
+msgstr ""
 
 #: iemgui_dynamic_strings.tcl:20
 msgid "bottom:"
-msgstr "fundo:"
+msgstr "bonn:"
 
 #: iemgui_dynamic_strings.tcl:21
 msgid "height:"
-msgstr "altura:"
+msgstr "àirde:"
 
 #: iemgui_dynamic_strings.tcl:22
 msgid "hold:"
-msgstr "segurar:"
+msgstr "cùm:"
 
 #: iemgui_dynamic_strings.tcl:23
 msgid "intrrpt:"
-msgstr "interromper:"
+msgstr ""
 
 #: iemgui_dynamic_strings.tcl:24
 msgid "left:"
-msgstr "esquerda:"
+msgstr "clì:"
 
 #: iemgui_dynamic_strings.tcl:25
 msgid "lin"
@@ -976,150 +977,150 @@ msgstr "log"
 
 #: iemgui_dynamic_strings.tcl:27
 msgid "log-height:"
-msgstr "altura-do-log:"
+msgstr ""
 
 #: iemgui_dynamic_strings.tcl:28
 msgid "max:"
-msgstr "máx:"
+msgstr ""
 
 #: iemgui_dynamic_strings.tcl:29
 msgid "min:"
-msgstr "min:"
+msgstr "As lugha:"
 
 #: iemgui_dynamic_strings.tcl:30
 msgid "right:"
-msgstr "direita:"
+msgstr "deas:"
 
 #: iemgui_dynamic_strings.tcl:31
 msgid "size:"
-msgstr "tamanho:"
+msgstr "meud:"
 
 #: iemgui_dynamic_strings.tcl:32
 msgid "top:"
-msgstr "topo:"
+msgstr "Mullach:"
 
 #: iemgui_dynamic_strings.tcl:33
 msgid "value:"
-msgstr "valor:"
+msgstr ""
 
 #: iemgui_dynamic_strings.tcl:34
 msgid "width:"
-msgstr "largura:"
+msgstr "leud:"
 
 #: pd_dynamic_strings.tcl:10 pd_dynamic_strings.tcl:18
 #, tcl-format
 msgid "Do you want to save the changes you made in '%s'?"
-msgstr "Você deseja salvar as alterações feitas em '%s'?"
+msgstr "A' bheil thu airson na h-athairreachean agad ann an %s a sàbhaladh?"
 
 #: pd_dynamic_strings.tcl:10
 msgid "File"
-msgstr "Arquivo"
+msgstr "Faidhle"
 
 #: pd_dynamic_strings.tcl:11 pd_dynamic_strings.tcl:19
 #, tcl-format
 msgid "Discard changes to '%s'?"
-msgstr "Descartar as mudanças em '%s'?"
+msgstr ""
 
 #: pd_dynamic_strings.tcl:11
 msgid "Edit"
-msgstr "Editar"
+msgstr "Deasaich"
 
 #: pd_dynamic_strings.tcl:12 pd_dynamic_strings.tcl:20
 msgid "Close this window?"
-msgstr "Deseja fechar a janela?"
+msgstr "Duin an uinneag seo?"
 
 #: pd_dynamic_strings.tcl:12
 msgid "Put"
-msgstr "Inserir"
+msgstr "Cuir"
 
 #: pd_dynamic_strings.tcl:13 pd_dynamic_strings.tcl:15
 #: pd_dynamic_strings.tcl:23
 msgid "Undo clear"
-msgstr "Desfazer limpar"
+msgstr ""
 
 #: pd_dynamic_strings.tcl:13 pd_dynamic_strings.tcl:21
 msgid "really quit?"
-msgstr "deseja realmente sair?"
+msgstr "A bheil thu cìnnteach?"
 
 #: pd_dynamic_strings.tcl:14
 msgid "Media"
-msgstr "Mídia"
+msgstr ""
 
 #: pd_dynamic_strings.tcl:14 pd_dynamic_strings.tcl:16
 #: pd_dynamic_strings.tcl:24
 msgid "Undo connect"
-msgstr "Desfazer conectar"
+msgstr ""
 
 #: pd_dynamic_strings.tcl:15 pd_dynamic_strings.tcl:17
 #: pd_dynamic_strings.tcl:25
 msgid "Undo cut"
-msgstr "Desfazer cortar"
+msgstr ""
 
 #: pd_dynamic_strings.tcl:15
 msgid "Window"
-msgstr "Janela"
+msgstr "Uinneag"
 
 #: pd_dynamic_strings.tcl:16 pd_dynamic_strings.tcl:18
 #: pd_dynamic_strings.tcl:26
 msgid "Undo disconnect"
-msgstr "Desfazer desconectar"
+msgstr ""
 
 #: pd_dynamic_strings.tcl:17 pd_dynamic_strings.tcl:19
 #: pd_dynamic_strings.tcl:27
 msgid "Undo duplicate"
-msgstr "Desfazer duplicar"
+msgstr ""
 
 #: pd_dynamic_strings.tcl:18 pd_dynamic_strings.tcl:20
 #: pd_dynamic_strings.tcl:28
 msgid "Undo motion"
-msgstr "Desfazer movimentar"
+msgstr ""
 
 #: pd_dynamic_strings.tcl:19 pd_dynamic_strings.tcl:21
 #: pd_dynamic_strings.tcl:29
 msgid "Undo paste"
-msgstr "Desfazer colar"
+msgstr "Neo-dhèan na chuir thu ann"
 
 #: pd_dynamic_strings.tcl:20 pd_dynamic_strings.tcl:22
 #: pd_dynamic_strings.tcl:30
 msgid "Undo typing"
-msgstr "Desfazer digitação"
+msgstr "Neo-dhèan na sgrìobh thu"
 
 #: pd_dynamic_strings.tcl:22 pd_dynamic_strings.tcl:24
 #: pd_dynamic_strings.tcl:32
 msgid "Redo clear"
-msgstr "Refazer limpar"
+msgstr "Ath-dhèan an fhalachadh"
 
 #: pd_dynamic_strings.tcl:23 pd_dynamic_strings.tcl:25
 #: pd_dynamic_strings.tcl:33
 msgid "Redo connect"
-msgstr "Refazer conectar"
+msgstr ""
 
 #: pd_dynamic_strings.tcl:24 pd_dynamic_strings.tcl:26
 #: pd_dynamic_strings.tcl:34
 msgid "Redo cut"
-msgstr "Refazer cortar"
+msgstr ""
 
 #: pd_dynamic_strings.tcl:25 pd_dynamic_strings.tcl:27
 #: pd_dynamic_strings.tcl:35
 msgid "Redo disconnect"
-msgstr "Refazer desconectar"
+msgstr ""
 
 #: pd_dynamic_strings.tcl:26 pd_dynamic_strings.tcl:28
 #: pd_dynamic_strings.tcl:36
 msgid "Redo duplicate"
-msgstr "Refazer duplicar"
+msgstr ""
 
 #: pd_dynamic_strings.tcl:27 pd_dynamic_strings.tcl:29
 #: pd_dynamic_strings.tcl:37
 msgid "Redo motion"
-msgstr "Refazer movimentar"
+msgstr ""
 
 #: pd_dynamic_strings.tcl:28 pd_dynamic_strings.tcl:30
 #: pd_dynamic_strings.tcl:38
 msgid "Redo paste"
-msgstr "Refazer colar"
+msgstr ""
 
 #: pd_dynamic_strings.tcl:29 pd_dynamic_strings.tcl:31
 #: pd_dynamic_strings.tcl:39
 msgid "Redo typing"
-msgstr "Refazer digitação"
+msgstr ""
