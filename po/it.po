@@ -2,6 +2,7 @@
 # This file is put in the public domain.
 # 
 # Translators:
+# Lorenzo  <lorenzofsutton@gmail.com>, 2012.
 # Lorenzo Sutton (lorenzosu) <lsutton@libero.it>, 2009.
 #   <sad@flxer.net>, 2012.
 msgid ""
@@ -9,14 +10,14 @@ msgstr ""
 "Project-Id-Version: Pure Data\n"
 "Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=55736&atid=478070\n"
 "POT-Creation-Date: 2012-01-17 18:37-0500\n"
-"PO-Revision-Date: 2012-01-19 14:32+0000\n"
-"Last-Translator: Hans-Christoph Steiner <hans@eds.org>\n"
+"PO-Revision-Date: 2012-04-16 16:10+0000\n"
+"Last-Translator: Lorenzo <lorenzofsutton@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: it\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../tcl/dialog_array.tcl:115 ../tcl/pd_menus.tcl:147 ../tcl/pd_menus.tcl:168
 msgid "Copy"
@@ -78,6 +79,10 @@ msgstr "Cancella array"
 #: ../tcl/dialog_array.tcl:315
 msgid "Open List View..."
 msgstr "Apri visualizzazione lista..."
+
+#: ../tcl/scrollboxwindow.tcl:108
+msgid "Reset to Defaults"
+msgstr "Resetta predefiniti"
 
 #: ../tcl/dialog_array.tcl:322 ../tcl/dialog_audio.tcl:146
 #: ../tcl/dialog_canvas.tcl:208 ../tcl/dialog_find.tcl:163
@@ -184,8 +189,7 @@ msgstr "Usa dispositivi multipli"
 
 #: ../tcl/dialog_canvas.tcl:121
 msgid "WARNING: unknown graphme flags received in pdtk_canvas_dialog"
-msgstr ""
-"ATTENZIONE: ricevuto un flag graphme sconosciuto in pdtk_canvas_dialog"
+msgstr "ATTENZIONE: ricevuto un flag graphme sconosciuto in pdtk_canvas_dialog"
 
 #: ../tcl/dialog_canvas.tcl:141
 msgid "Canvas Properties"
@@ -488,8 +492,8 @@ msgid "Startup flags:"
 msgstr "Flag di avvio"
 
 #: ../tcl/dialog_startup.tcl:91
-msgid "Defeat real-time scheduling"
-msgstr "Forza a non utilizzare il real-time scheduling"
+msgid "Real-time scheduling"
+msgstr "Scheduling in tempo reale"
 
 #: ../tcl/helpbrowser.tcl:27
 msgid "Help Browser"
@@ -507,7 +511,7 @@ msgstr "(Tcl) UNHANDLED ERROR: "
 
 #: ../tcl/pd_guiprefs.tcl:153
 msgid "Cannot read GUI prefs file: "
-msgstr ""
+msgstr "Impossibile leggere file preferenze GUI:"
 
 #: ../tcl/pd_menucommands.tcl:201 ../tcl/pd_menucommands.tcl:233
 #: ../tcl/pd_menus.tcl:292 ../tcl/pd_menus.tcl:326 ../tcl/pd_menus.tcl:327
@@ -517,27 +521,27 @@ msgstr "Informazioni su Pd..."
 
 #: ../tcl/pd_menucommands.tcl:298
 msgid "Select name for app to build...\n"
-msgstr ""
+msgstr "Seleziona un nome per la app da costruire...\n"
 
 #: ../tcl/pd_menucommands.tcl:301
 msgid "Save application to..."
-msgstr ""
+msgstr "Salva applicazione con nome.."
 
 #: ../tcl/pd_menucommands.tcl:310
 msgid "Configuring Info.plist..."
-msgstr ""
+msgstr "Configurazione di Info.plist..."
 
 #: ../tcl/pd_menucommands.tcl:312
 msgid "Setting patch name..."
-msgstr ""
+msgstr "Settaggio nome della patch..."
 
 #: ../tcl/pd_menucommands.tcl:314
 msgid "Copying current patch..."
-msgstr ""
+msgstr "Copio la patch corrente..."
 
 #: ../tcl/pd_menucommands.tcl:316
 msgid "Setting embedded preferences..."
-msgstr ""
+msgstr "Settaggio preferenze embedded..."
 
 #: ../tcl/pd_menus.tcl:56 ../tcl/pd_menus.tcl:61 ../tcl/pd_menus.tcl:78
 #: ../tcl/pd_menus.tcl:87 ../tcl/pd_menus.tcl:103 ../tcl/pd_menus.tcl:116
@@ -675,7 +679,7 @@ msgstr "Bang"
 
 #: ../tcl/pd_menus.tcl:196
 msgid "Autotips"
-msgstr ""
+msgstr "Suggerimenti automatici"
 
 #: ../tcl/pd_menus.tcl:196 ../tcl/pd_menus.tcl:229 ../tcl/pd_menus.tcl:230
 msgid "Toggle"
@@ -847,7 +851,7 @@ msgstr "Aiuto"
 
 #: ../tcl/pdtk_canvas.tcl:319
 msgid " "
-msgstr ""
+msgstr " "
 
 #: ../tcl/pdwindow.tcl:217 ../tcl/pdwindow.tcl:228 ../tcl/pdwindow.tcl:312
 msgid "(Tcl) MISSING CLOSE-BRACE '}': "
@@ -901,15 +905,15 @@ msgstr "tutto"
 
 #: ../tcl/pdwindow.tcl:396 ../tcl/pdwindow.tcl:397
 msgid "Pd-extended"
-msgstr ""
+msgstr "Pd-extended"
 
 #: ../tcl/pdwindow.tcl:425
 msgid "IN"
-msgstr ""
+msgstr "IN"
 
 #: ../tcl/pdwindow.tcl:426
 msgid "OUT"
-msgstr ""
+msgstr "OUT"
 
 #: ../tcl/wheredoesthisgo.tcl:18 ../tcl/wheredoesthisgo.tcl:19
 #, tcl-format
@@ -1121,5 +1125,3 @@ msgstr "Incolla di nuovo"
 #: pd_dynamic_strings.tcl:39
 msgid "Redo typing"
 msgstr "Scrivi di nuovo"
-
-
