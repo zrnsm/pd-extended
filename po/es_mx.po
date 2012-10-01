@@ -10,14 +10,14 @@ msgstr ""
 "Project-Id-Version: Pure Data\n"
 "Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=55736&atid=478070\n"
 "POT-Creation-Date: 2012-01-17 18:37-0500\n"
-"PO-Revision-Date: 2012-02-14 11:16+0000\n"
+"PO-Revision-Date: 2012-04-16 08:42+0000\n"
 "Last-Translator: Aerolus <nicoauvieux@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: es_MX\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../tcl/dialog_array.tcl:115 ../tcl/pd_menus.tcl:147 ../tcl/pd_menus.tcl:168
 msgid "Copy"
@@ -79,6 +79,10 @@ msgstr "Eliminar arreglo"
 #: ../tcl/dialog_array.tcl:315
 msgid "Open List View..."
 msgstr "Abrir vista de lista..."
+
+#: ../tcl/scrollboxwindow.tcl:108
+msgid "Reset to Defaults"
+msgstr "resetado por defecto"
 
 #: ../tcl/dialog_array.tcl:322 ../tcl/dialog_audio.tcl:146
 #: ../tcl/dialog_canvas.tcl:208 ../tcl/dialog_find.tcl:163
@@ -488,8 +492,8 @@ msgid "Startup flags:"
 msgstr "Banderas de inicio:"
 
 #: ../tcl/dialog_startup.tcl:91
-msgid "Defeat real-time scheduling"
-msgstr "Anular programación en tiempo real"
+msgid "Real-time scheduling"
+msgstr "programación en tiempo real"
 
 #: ../tcl/helpbrowser.tcl:27
 msgid "Help Browser"
@@ -847,7 +851,7 @@ msgstr "Ayuda"
 
 #: ../tcl/pdtk_canvas.tcl:319
 msgid " "
-msgstr ""
+msgstr " "
 
 #: ../tcl/pdwindow.tcl:217 ../tcl/pdwindow.tcl:228 ../tcl/pdwindow.tcl:312
 msgid "(Tcl) MISSING CLOSE-BRACE '}': "
