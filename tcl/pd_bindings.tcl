@@ -105,6 +105,10 @@ proc ::pd_bindings::global_bindings {} {
     bind all <KeyRelease>       {::pd_bindings::sendkey %W 0 %K %A 0}
     bind all <Shift-KeyPress>   {::pd_bindings::sendkey %W 1 %K %A 1}
     bind all <Shift-KeyRelease> {::pd_bindings::sendkey %W 0 %K %A 1}
+
+    # "bind all <KeyPress>" does not get Tab KeyPress, only KeyRelease
+    bind all <Key-Tab>          {+::pd_bindings::sendkey %W 1 %K %A 0}
+    bind all <Shift-Key-Tab>    {+::pd_bindings::sendkey %W 1 %K %A 1}
 }
 
 # this is for the dialogs: find, font, sendmessage, gatom properties, array
