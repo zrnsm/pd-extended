@@ -37,11 +37,10 @@ namespace eval ::pdtk_canvas:: {
 #winfo rooty . returns contentsTop
 #winfo rootx . returns contentsLeftEdge
 
-
-#------------------------------------------------------------------------------#
-# canvas new/saveas
-
-proc pdtk_canvas_new {mytoplevel width height geometry editable} {
+# this proc is split out on its own to make it easy to override. This makes it
+# easy for people to customize these calculations based on their Window
+# Manager, desires, etc.
+proc pdtk_canvas_place_window {width height geometry} {
     set screenwidth [winfo screenwidth .]
     set screenheight [winfo screenheight .]
 
@@ -58,7 +57,18 @@ proc pdtk_canvas_new {mytoplevel width height geometry editable} {
         set height [expr $screenheight - $::menubarsize - 30] ;# 30 for window framing
         set y $::menubarsize
     }
-    set geometry ${width}x$height+$x+$y
+    return [list $width $height ${width}x$height+$x+$y]
+}
+
+
+#------------------------------------------------------------------------------#
+# canvas new/saveas
+
+proc pdtk_canvas_new {mytoplevel width height geometry editable} {
+    set l [pdtk_canvas_place_window $width $height $geometry]
+    set width [lindex $l 0]
+    set height [lindex $l 1]
+    set geometry [lindex $l 2]
 
     # release the window grab here so that the new window will
     # properly get the Map and FocusIn events when its created
