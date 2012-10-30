@@ -2976,8 +2976,9 @@ void canvas_editmode(t_canvas *x, t_floatarg state)
             // end jsarlo
         }
     }
-    sys_vgui("pdtk_canvas_editmode .x%lx %d\n",
-        glist_getcanvas(x), x->gl_edit);
+    if (glist_isvisible(x))
+      sys_vgui("pdtk_canvas_editmode .x%lx %d\n",
+          glist_getcanvas(x), x->gl_edit);
 }
 
 // jsarlo
