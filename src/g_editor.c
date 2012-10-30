@@ -2950,6 +2950,7 @@ void canvas_editmode(t_canvas *x, t_floatarg state)
         glist_noselect(x);
         if (glist_isvisible(x) && glist_istoplevel(x))
         {
+            canvas_setcursor(x, CURSOR_RUNMODE_NOTHING);
             // jsarlo
             if (canvas_cnct_inlet_tag[0] != 0)
             {
@@ -2974,7 +2975,6 @@ void canvas_editmode(t_canvas *x, t_floatarg state)
             }
             // end jsarlo
         }
-        canvas_setcursor(x, CURSOR_RUNMODE_NOTHING);
     }
     sys_vgui("pdtk_canvas_editmode .x%lx %d\n",
         glist_getcanvas(x), x->gl_edit);
