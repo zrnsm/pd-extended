@@ -1551,7 +1551,7 @@ void canvas_doclick(t_canvas *x, int xpos, int ypos, int which,
             {
                 sys_vgui(".x%lx.c itemconfigure %s -outline %s -fill %s -width 1\n",
                          x, canvas_cnct_inlet_tag,
-                         (last_inlet_filter ? "black" : (outlet_issignal ? "$signal_cord" : "$msg_cord")),
+                         (last_inlet_filter ? "black" : (inlet_issignal ? "$signal_cord" : "$msg_cord")),
                          (inlet_issignal ? "$signal_nlet" : "$msg_nlet"));
                 canvas_cnct_inlet_tag[0] = 0;
             }
