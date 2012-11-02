@@ -323,7 +323,7 @@ jack_open_audio(int inchans, int outchans, int rate, t_audiocallback callback)
     /* if no JACK server exists, start a default one (jack_client_open() does that for us... */
     if (!jack_client) {
         do {
-          sprintf(client_name,"pure_data_%d",client_iterator);
+          sprintf(client_name,"pd_extended_%d",client_iterator);
           client_iterator++;
           jack_client = jack_client_open (client_name, JackNullOption, &status, NULL);
           if (status & JackServerFailed) {
