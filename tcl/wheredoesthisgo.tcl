@@ -109,3 +109,53 @@ proc pdtk_watchdog {} {
 proc pdtk_ping {} {
     pdsend "pd ping"
 }
+
+# ------------------------------------------------------------------------------
+# crazy kludges to work around stdout being redirected to tclpd on Mac OS X
+
+# On Mac OS X, when you try to use jack as the audio device, and the
+# jack server is not started, then you'll get the cmd line help dump
+# from the 'jackdmp' program.  Since stdout is being redirectly into
+# tclpd for execution, it tries to execute the jackdmp help message.
+# The first part of that message is "jackdmp 1.9.9", so we just make a
+# proc called "jackdmp", which tclpd will execute in this condition.
+
+proc jackdmp {args} {
+    if {[file exists "/usr/local/bin/jackdmp"]} {
+        if {[file exists "/Applications/Jack/JackPilot.app"]} {
+            set a [tk_messageBox \
+                       -title [_ "Jack not running!"] \
+                       -detail [_ "Jack does not seem to be running, so Pd-extended cannot connect to it."] \
+                       -message [_ "Would you like to open JackPilot to start Jack?"] \
+                       -icon question -type yesno -parent .pdwindow]
+            if {$a eq "yes"} {
+                ::pd_menucommands::menu_openfile "/Applications/Jack/JackPilot.app"
+            }
+        } else {
+            set a [tk_messageBox \
+                       -title [_ "Jack not running!"] \
+                       -detail [_ "Jack does not seem to be running, so Pd-extended cannot connect to it."] \
+                       -message [_ "Quit Pd-extended, start Jack, then try again."] \
+                       -icon question -type ok -parent .pdwindow]
+        }
+    } else {
+        set a [tk_messageBox \
+                   -title [_ "Jack not installed!"] \
+                   -detail [_ "JackOSX is not fully installed, Pd-extended cannot use Jack without it."] \
+                   -message [_ "Would you like to open JackOSX.com to download Jack?"] \
+                   -icon question -type yesno -parent .pdwindow]
+        if {$a eq "yes"} {
+            yes {::pd_menucommands::menu_openfile "http://jackosx.com/"}
+        }
+    }
+}
+
+# some random things also pop up here and there, catch them
+
+proc tclpd_stdout_override {args} {
+    ::pdwindow::logpost {} 9 "tclpd_stdout_override: $args\n"
+}
+
+proc StartNotification {args} {
+    tclpd_stdout_override "StartNotification $args"
+}
