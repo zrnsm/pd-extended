@@ -149,6 +149,8 @@ set sys_searchpath {}
 set sys_staticpath {}
 # the path to the folder where the current plugin is being loaded from
 set current_plugin_loadpath {}
+# a list of plugins that were loaded
+set loaded_plugins {}
 # list of command line flags set at startup
 set startup_flags {}
 # list of libraries loaded on startup
@@ -316,7 +318,6 @@ proc init_for_platform {} {
             # frame's upper left corner. http://wiki.tcl.tk/11502
             set ::windowframex 3
             set ::windowframey 53
-			# TODO add wm iconphoto/iconbitmap here if it makes sense
             # mouse cursors for all the different modes
             set ::cursor_runmode_nothing "left_ptr"
             set ::cursor_runmode_clickme "arrow"
@@ -386,8 +387,6 @@ proc init_for_platform {} {
             # TODO this probably needs a script layer: http://wiki.tcl.tk/11291
             set ::windowframex 0
             set ::windowframey 0
-            # TODO use 'winico' package for full, hicolor icon support
-            wm iconbitmap . -default [file join $::sys_guidir ".." bin pd.ico]
             # mouse cursors for all the different modes
             set ::cursor_runmode_nothing "right_ptr"
             set ::cursor_runmode_clickme "arrow"
@@ -398,6 +397,15 @@ proc init_for_platform {} {
             set ::cursor_editmode_disconnect "X_cursor"
         }
     }
+}
+
+proc add_app_icon {} {
+    # add an icon for all windows, mostly viewable in Alt-Tab.  As of writing
+    # this code, "wm iconphoto" is ignored by Mac OS X, and the icon is
+    # instead handled in the standard Mac OS X app wrapper in Info.plist
+    if {$::windowingsystem eq "aqua"} return
+	set im [image create photo -file [file join $::sys_guidir ".." tcl pd.gif]]
+	wm iconphoto . -default $im
 }
 
 # ------------------------------------------------------------------------------
@@ -659,15 +667,23 @@ proc check_for_running_instances {argc argv} {
 proc load_plugin_script {filename} {
     global errorInfo
 
-    ::pdwindow::debug "Loading plugin: $filename\n"
+    set basename [file tail $filename]
+    if {[lsearch $::loaded_plugins $basename] > -1} {
+        ::pdwindow::post [_ "'$basename' already loaded, ignoring: '$filename'\n"]
+        return
+    }
+
+    ::pdwindow::debug [_ "Loading plugin: $filename\n"]
     set tclfile [open $filename]
     set tclcode [read $tclfile]
     close $tclfile
     if {[catch {uplevel #0 $tclcode} errorname]} {
         ::pdwindow::error "-----------\n"
-        ::pdwindow::error "UNHANDLED ERROR: $errorInfo\n"
-        ::pdwindow::error "FAILED TO LOAD $filename\n"
+        ::pdwindow::error [_ "UNHANDLED ERROR: $errorInfo\n"]
+        ::pdwindow::error [_ "FAILED TO LOAD $filename\n"]
         ::pdwindow::error "-----------\n"
+    } else {
+        lappend ::loaded_plugins $basename
     }
 }
 
@@ -694,6 +710,7 @@ proc main {argc argv} {
     check_for_running_instances $argc $argv
     set_pd_paths
     init_for_platform
+    add_app_icon
 
     # ::host and ::port are parsed from argv by parse_args
     if { $::port > 0 && $::host ne "" } {

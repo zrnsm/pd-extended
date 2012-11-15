@@ -90,9 +90,10 @@ proc ::pd_bindings::global_bindings {} {
 
     # OS-specific bindings
     if {$::windowingsystem eq "aqua"} {
-        # Cmd-m = Minimize and Cmd-t = Font on Mac OS X for all apps
+        # Cmd-m = Minimize and Cmd-, = Preferences on Mac OS X for all apps
         bind all <$::modifier-Key-m>       {menu_minimize %W}
         bind all <$::modifier-quoteleft>   {menu_raisenextwindow}
+        bind all <$::modifier-Key-comma>   {pdsend "pd start-path-dialog"}
         bind all <$::modifier-Shift-Key-M> {menu_message_dialog}
     } else {
         bind all <$::modifier-Key-m>       {menu_message_dialog}
