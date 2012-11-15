@@ -316,7 +316,6 @@ proc init_for_platform {} {
             # frame's upper left corner. http://wiki.tcl.tk/11502
             set ::windowframex 3
             set ::windowframey 53
-			# TODO add wm iconphoto/iconbitmap here if it makes sense
             # mouse cursors for all the different modes
             set ::cursor_runmode_nothing "left_ptr"
             set ::cursor_runmode_clickme "arrow"
@@ -386,8 +385,6 @@ proc init_for_platform {} {
             # TODO this probably needs a script layer: http://wiki.tcl.tk/11291
             set ::windowframex 0
             set ::windowframey 0
-            # TODO use 'winico' package for full, hicolor icon support
-            wm iconbitmap . -default [file join $::sys_guidir ".." bin pd.ico]
             # mouse cursors for all the different modes
             set ::cursor_runmode_nothing "right_ptr"
             set ::cursor_runmode_clickme "arrow"
@@ -398,6 +395,15 @@ proc init_for_platform {} {
             set ::cursor_editmode_disconnect "X_cursor"
         }
     }
+}
+
+proc add_app_icon {} {
+    # add an icon for all windows, mostly viewable in Alt-Tab.  As of writing
+    # this code, "wm iconphoto" is ignored by Mac OS X, and the icon is
+    # instead handled in the standard Mac OS X app wrapper in Info.plist
+    if {$::windowingsystem eq "aqua"} return
+	set im [image create photo -file [file join $::sys_guidir ".." tcl pd.gif]]
+	wm iconphoto . -default $im
 }
 
 # ------------------------------------------------------------------------------
@@ -694,6 +700,7 @@ proc main {argc argv} {
     check_for_running_instances $argc $argv
     set_pd_paths
     init_for_platform
+    add_app_icon
 
     # ::host and ::port are parsed from argv by parse_args
     if { $::port > 0 && $::host ne "" } {
