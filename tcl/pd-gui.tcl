@@ -684,6 +684,12 @@ proc load_plugin_script {filename} {
         ::pdwindow::error "-----------\n"
     } else {
         lappend ::loaded_plugins $basename
+        # if the plugin folder includes translations, load them
+        set podir "[file dirname $filename]/po"
+        if {[file exists $podir] && [file isdir $podir]} {
+            ::pdwindow::debug [_ "Loading translations for $basename\n"]
+            ::msgcat::mcload $podir
+        }
     }
 }
 
