@@ -219,6 +219,7 @@ install:  all
 # the real install
 	install -d $(DESTDIR)$(bindir)/../tcl/
 	install -p ../tcl/*.tcl $(DESTDIR)$(bindir)/../tcl/
+	install -p pd.gif $(DESTDIR)$(bindir)/../tcl/
 	install -p $(PDEXEC) $(DESTDIR)$(bindir)/$(PDEXEC)
 	$(STRIP) $(DESTDIR)$(bindir)/$(PDEXEC)
 	install -p pd.com $(DESTDIR)$(bindir)/pd.com
