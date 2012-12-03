@@ -82,7 +82,7 @@ proc ::pd_connect::pd_readsocket {} {
             "missing close-brace" {
                 # we don't have a complete block, report and try again next call
                 ::pdwindow::error \
-                    [concat [_ "(Tcl) MISSING CLOSE BRACE: "] $errorInfo "\n"]
+                    [concat [_ "(Tcl) MISSING CLOSE-BRACE '\}': "] $errorInfo "\n"]
             } "^invalid command name" {
                 set cmds_from_pd ""
                 ::pdwindow::fatal \
