@@ -63,7 +63,7 @@ proc ::pd_bindings::global_bindings {} {
     bind all <$::modifier-Key-period> {pdsend "pd dsp 0"}
     bind all <$::modifier-greater>    {menu_raisenextwindow}
     bind all <$::modifier-less>       {menu_raisepreviouswindow}
-    bind all <$::modifier-Key-Return> {pdsend "$::focused_window reselect"}
+    bind all <$::modifier-Key-Return> {menu_reselect}
 
     # annoying, but Tk's bind needs uppercase letter to get the Shift
     bind all <$::modifier-Shift-Key-B> {menu_send %W bng}

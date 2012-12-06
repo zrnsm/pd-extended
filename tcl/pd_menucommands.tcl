@@ -113,6 +113,12 @@ proc ::pd_menucommands::menu_toggle_autotips {} {
     menu_autotips [expr {! $::autotips_button}]
 }
 
+proc ::pd_menucommands::menu_reselect {} {
+    if {[winfo class $::focused_window] eq "PatchWindow"} {
+        pdsend "$::focused_window reselect"
+    }
+}
+
 # ------------------------------------------------------------------------------
 # generic procs for sending menu events
 
