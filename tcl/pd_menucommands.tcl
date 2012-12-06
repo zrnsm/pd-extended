@@ -235,11 +235,12 @@ proc menu_clear_console {} {
 
 # this gets the dir from the path of a window's title
 proc ::pd_menucommands::set_filenewdir {mytoplevel} {
-    # TODO add Aqua specifics once g_canvas.c has [wm attributes -titlepath]
     if {$mytoplevel eq ".pdwindow"} {
         set ::filenewdir $::fileopendir
+    } elseif {$::windowingsystem eq "aqua"} {
+        set ::filenewdir [file dirname [wm attributes $mytoplevel -titlepath]]
     } else {
-        regexp -- ".+ - (.+)" [wm title $mytoplevel] ignored ::filenewdir
+        regexp -- {[^/]+ - (.+)} [wm title $mytoplevel] ignored ::filenewdir
     }
 }
 
