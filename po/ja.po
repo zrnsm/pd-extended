@@ -2,6 +2,7 @@
 # This file is put in the public domain.
 # 
 # Translators:
+#   <gyokimae@hotmail.com>, 2012.
 # Sei Matsumura <serv@low-tech-ism.com>, 2012.
 # TransReformer  <>, 2012.
 msgid ""
@@ -9,8 +10,8 @@ msgstr ""
 "Project-Id-Version: Pure Data\n"
 "Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=55736&atid=478070\n"
 "POT-Creation-Date: 2012-01-17 18:37-0500\n"
-"PO-Revision-Date: 2012-04-16 08:42+0000\n"
-"Last-Translator: Sei Matsumura <serv@low-tech-ism.com>\n"
+"PO-Revision-Date: 2012-12-04 01:46+0000\n"
+"Last-Translator: gyokimae <gyokimae@hotmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -81,7 +82,7 @@ msgstr "リストビューを開く"
 
 #: ../tcl/scrollboxwindow.tcl:108
 msgid "Reset to Defaults"
-msgstr ""
+msgstr "デフォルトに初期化"
 
 #: ../tcl/dialog_array.tcl:322 ../tcl/dialog_audio.tcl:146
 #: ../tcl/dialog_canvas.tcl:208 ../tcl/dialog_find.tcl:163
@@ -492,7 +493,7 @@ msgstr "スタートアップフラッグ:"
 
 #: ../tcl/dialog_startup.tcl:91
 msgid "Real-time scheduling"
-msgstr ""
+msgstr "リアルタイム・スケジューリング"
 
 #: ../tcl/helpbrowser.tcl:27
 msgid "Help Browser"
