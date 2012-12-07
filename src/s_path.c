@@ -21,8 +21,6 @@
 #ifdef _WIN32
 #include <io.h>
 #include <windows.h>
-#endif
-#ifdef _WIN32
 #include <malloc.h>
 #endif
 
@@ -254,12 +252,6 @@ void sys_setextrapath(const char *p)
     sys_staticpath = namelist_append(sys_staticpath, p, 0);
 }
 
-#ifdef _WIN32
-#define MSWOPENFLAG(bin) (bin ? _O_BINARY : _O_TEXT)
-#else
-#define MSWOPENFLAG(bin) 0
-#endif
-
     /* try to open a file in the directory "dir", named "name""ext",
     for reading.  "Name" may have slashes.  The directory is copied to
     "dirresult" which must be at least "size" bytes.  "nameresult" is set
@@ -280,11 +272,17 @@ int sys_trytoopenone(const char *dir, const char *name, const char* ext,
         strcat(dirresult, "/");
     strcat(dirresult, name);
     strcat(dirresult, ext);
-    sys_bashfilename(dirresult, dirresult);
 
     DEBUG(post("looking for %s",dirresult));
         /* see if we can open the file for reading */
-    if ((fd=open(dirresult,O_RDONLY | MSWOPENFLAG(bin))) >= 0)
+#ifdef _WIN32
+    wchar_t ucs2_dirresult[MAXPDSTRING];
+    sys_bashfilename(dirresult, dirresult);
+    u8_toucs(ucs2_dirresult, MAXPDSTRING, dirresult, MAXPDSTRING-1);
+    if ((fd=_wopen(ucs2_dirresult, O_RDONLY | _O_BINARY | _O_SEQUENTIAL)) >= 0)
+#else
+    if ((fd=open(dirresult, O_RDONLY)) >= 0)
+#endif
     {
             /* in unix, further check that it's not a directory */
 #ifdef HAVE_UNISTD_H

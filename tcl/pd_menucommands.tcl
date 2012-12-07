@@ -12,7 +12,9 @@ namespace eval ::pd_menucommands:: {
 
 proc ::pd_menucommands::menu_new {} {
     variable untitled_number
-    if { ! [file isdirectory $::filenewdir]} {set ::filenewdir $::env(HOME)}
+    if { ! [file isdirectory $::filenewdir]} {
+        set ::filenewdir [file normalize $::env(HOME)]
+    }
     # to localize "Untitled" there will need to be changes in g_canvas.c and
     # g_readwrite.c, where it tests for the string "Untitled"
     set untitled_name "Untitled"
@@ -23,7 +25,9 @@ proc ::pd_menucommands::menu_new {} {
 }
 
 proc ::pd_menucommands::menu_open {} {
-    if { ! [file isdirectory $::fileopendir]} {set ::fileopendir $::env(HOME)}
+    if { ! [file isdirectory $::filenewdir]} {
+        set ::filenewdir [file normalize $::env(HOME)]
+    }
     set files [tk_getOpenFile -defaultextension .pd \
                        -multiple true \
                        -filetypes $::filetypes \
@@ -111,6 +115,12 @@ proc ::pd_menucommands::menu_autotips {state} {
 
 proc ::pd_menucommands::menu_toggle_autotips {} {
     menu_autotips [expr {! $::autotips_button}]
+}
+
+proc ::pd_menucommands::menu_reselect {} {
+    if {[winfo class $::focused_window] eq "PatchWindow"} {
+        pdsend "$::focused_window reselect"
+    }
 }
 
 # ------------------------------------------------------------------------------
@@ -229,11 +239,12 @@ proc menu_clear_console {} {
 
 # this gets the dir from the path of a window's title
 proc ::pd_menucommands::set_filenewdir {mytoplevel} {
-    # TODO add Aqua specifics once g_canvas.c has [wm attributes -titlepath]
     if {$mytoplevel eq ".pdwindow"} {
         set ::filenewdir $::fileopendir
+    } elseif {$::windowingsystem eq "aqua"} {
+        set ::filenewdir [file dirname [wm attributes $mytoplevel -titlepath]]
     } else {
-        regexp -- ".+ - (.+)" [wm title $mytoplevel] ignored ::filenewdir
+        regexp -- {[^/]+ - (.+)} [wm title $mytoplevel] ignored ::filenewdir
     }
 }
 

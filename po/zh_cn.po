@@ -3,13 +3,20 @@
 # 
 # Translators:
 #   <253316733@qq.com>, 2012.
+# crazylion  <>, 2012.
+#   <davidchi0623@gmail.com>, 2012.
+# Liwei Chou <>, 2012.
+# Pei-Wen Liu <vul3jp6p@gmail.com>, 2012.
+# 丼 / Don / डॉन <>, 2012.
+# 鴻旗 鄭 <>, 2012.
+# 鴻旗 鄭 <honkiaa@gmail.com>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: Pure Data\n"
 "Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=55736&atid=478070\n"
 "POT-Creation-Date: 2012-01-17 18:37-0500\n"
-"PO-Revision-Date: 2012-11-15 16:24+0000\n"
-"Last-Translator: lllheoo <253316733@qq.com>\n"
+"PO-Revision-Date: 2012-12-03 18:33+0000\n"
+"Last-Translator: 鴻旗 鄭 <honkiaa@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,7 +26,7 @@ msgstr ""
 
 #: ../tcl/dialog_array.tcl:115 ../tcl/pd_menus.tcl:147 ../tcl/pd_menus.tcl:168
 msgid "Copy"
-msgstr "复制"
+msgstr "複製"
 
 #: ../tcl/dialog_array.tcl:118 ../tcl/pd_menus.tcl:149 ../tcl/pd_menus.tcl:170
 msgid "Paste"
@@ -27,7 +34,7 @@ msgstr "貼上"
 
 #: ../tcl/dialog_array.tcl:263
 msgid "Array Properties"
-msgstr "陣列內容"
+msgstr "Array 內容"
 
 #: ../tcl/dialog_array.tcl:273
 msgid "Name:"
@@ -44,7 +51,7 @@ msgstr "儲存"
 
 #: ../tcl/dialog_array.tcl:287
 msgid "Draw as:"
-msgstr "測試鎖定"
+msgstr "描繪成"
 
 #: ../tcl/dialog_array.tcl:290
 msgid "Points"
@@ -56,31 +63,31 @@ msgstr "多邊形"
 
 #: ../tcl/dialog_array.tcl:294
 msgid "Bezier curve"
-msgstr "贝塞尔曲线"
+msgstr "貝茲曲線"
 
 #: ../tcl/dialog_array.tcl:300
 msgid "Put array into:"
-msgstr "置入陣列"
+msgstr "置入 Array"
 
 #: ../tcl/dialog_array.tcl:303
 msgid "New graph"
-msgstr "新圖樣"
+msgstr "新 graph"
 
 #: ../tcl/dialog_array.tcl:305
 msgid "Last graph"
-msgstr "最後圖樣"
+msgstr "上一個 graph"
 
 #: ../tcl/dialog_array.tcl:309
 msgid "Delete array"
-msgstr "刪除陣列"
+msgstr "刪除 Array"
 
 #: ../tcl/dialog_array.tcl:315
 msgid "Open List View..."
-msgstr "打開列表檢視"
+msgstr "檢視陣列資料表"
 
 #: ../tcl/scrollboxwindow.tcl:108
 msgid "Reset to Defaults"
-msgstr ""
+msgstr "回復設定"
 
 #: ../tcl/dialog_array.tcl:322 ../tcl/dialog_audio.tcl:146
 #: ../tcl/dialog_canvas.tcl:208 ../tcl/dialog_find.tcl:163
@@ -95,7 +102,7 @@ msgstr "取消"
 #: ../tcl/dialog_iemgui.tcl:755 ../tcl/dialog_midi.tcl:100
 #: ../tcl/dialog_midi.tcl:235 ../tcl/scrollboxwindow.tcl:84
 msgid "Apply"
-msgstr "應用"
+msgstr "套用"
 
 #: ../tcl/dialog_array.tcl:330 ../tcl/dialog_audio.tcl:152
 #: ../tcl/dialog_canvas.tcl:216 ../tcl/dialog_font.tcl:103
@@ -104,7 +111,7 @@ msgstr "應用"
 #: ../tcl/dialog_startup.tcl:29 ../tcl/dialog_startup.tcl:30
 #: ../tcl/scrollboxwindow.tcl:86
 msgid "OK"
-msgstr "OK"
+msgstr "確定"
 
 #: ../tcl/dialog_audio.tcl:134
 msgid "Audio Settings"
@@ -116,7 +123,7 @@ msgstr "儲存所有設定"
 
 #: ../tcl/dialog_audio.tcl:164
 msgid "Sample rate:"
-msgstr "採樣率"
+msgstr "取樣率"
 
 #: ../tcl/dialog_audio.tcl:166
 msgid "Delay (msec):"
@@ -124,11 +131,11 @@ msgstr "延遲(微秒)"
 
 #: ../tcl/dialog_audio.tcl:169
 msgid "Block size:"
-msgstr "块大小"
+msgstr "區塊大小"
 
 #: ../tcl/dialog_audio.tcl:176
 msgid "Use callbacks"
-msgstr "使用回调"
+msgstr "使用 callbacks"
 
 #: ../tcl/dialog_audio.tcl:184 ../tcl/dialog_midi.tcl:112
 #: ../tcl/dialog_midi.tcl:248
@@ -187,11 +194,11 @@ msgstr "使用多組設備"
 
 #: ../tcl/dialog_canvas.tcl:121
 msgid "WARNING: unknown graphme flags received in pdtk_canvas_dialog"
-msgstr "警告："
+msgstr "警告：unknown graphme flags received in pdtk_canvas_dialog"
 
 #: ../tcl/dialog_canvas.tcl:141
 msgid "Canvas Properties"
-msgstr "画布属性"
+msgstr "Canvas 內容"
 
 #: ../tcl/dialog_canvas.tcl:149
 msgid "Scale"
@@ -199,23 +206,23 @@ msgstr "縮放"
 
 #: ../tcl/dialog_canvas.tcl:153
 msgid "X units per pixel:"
-msgstr "單一畫素的X單位: "
+msgstr "單一像素的 X 單位: "
 
 #: ../tcl/dialog_canvas.tcl:158
 msgid "Y units per pixel:"
-msgstr "單一畫素的Y單位: "
+msgstr "單一像素的 Y 單位: "
 
 #: ../tcl/dialog_canvas.tcl:162
 msgid "Appearance on parent patch"
-msgstr ""
+msgstr "上層 patch 的顯示選項"
 
 #: ../tcl/dialog_canvas.tcl:164
 msgid "Graph-On-Parent"
-msgstr "親子圖示"
+msgstr "在上層顯示介面"
 
 #: ../tcl/dialog_canvas.tcl:168
 msgid "Hide object name and arguments"
-msgstr "隱藏物件名稱與參數"
+msgstr "隱藏 object 名稱與參數"
 
 #: ../tcl/dialog_canvas.tcl:173
 msgid "Range and size"
@@ -239,11 +246,11 @@ msgstr "Y範圍, 自"
 
 #: ../tcl/dialog_data.tcl:29
 msgid "Data Properties"
-msgstr "數據內容"
+msgstr "資料內容"
 
 #: ../tcl/dialog_data.tcl:37
 msgid "Send (Ctrl s)"
-msgstr "傳送(Ctrl s)"
+msgstr "傳送（Ctrl s）"
 
 #: ../tcl/dialog_data.tcl:39
 msgid "OK (Ctrl t)"
@@ -252,16 +259,16 @@ msgstr "確認 (Ctrl t)"
 #: ../tcl/dialog_find.tcl:108
 #, tcl-format
 msgid "Couldn't find '%s' in %s"
-msgstr "無法在%s搜尋到「%s」"
+msgstr "「%s」無法在%s被搜尋到"
 
 #: ../tcl/dialog_find.tcl:126 ../tcl/dialog_find.tcl:167
 #: pd_dynamic_strings.tcl:13
 msgid "Find"
-msgstr "尋找"
+msgstr "搜尋"
 
 #: ../tcl/dialog_find.tcl:145
 msgid "Search in"
-msgstr "搜尋於"
+msgstr "於"
 
 #: ../tcl/dialog_find.tcl:146 ../tcl/pd_menus.tcl:283 ../tcl/pd_menus.tcl:316
 #: ../tcl/pd_menus.tcl:317
@@ -270,11 +277,11 @@ msgstr "Pd 主視窗"
 
 #: ../tcl/dialog_find.tcl:147
 msgid "for:"
-msgstr "用于"
+msgstr "搜尋"
 
 #: ../tcl/dialog_find.tcl:157
 msgid "Match whole word only"
-msgstr "全字符匹配"
+msgstr "完全吻合"
 
 #: ../tcl/dialog_find.tcl:171 ../tcl/pd_menus.tcl:58 ../tcl/pd_menus.tcl:63
 #: ../tcl/pd_menus.tcl:80 ../tcl/pd_menus.tcl:89 ../tcl/pd_menus.tcl:106
@@ -296,23 +303,23 @@ msgstr "字體大小:"
 
 #: ../tcl/dialog_font.tcl:119
 msgid "Stretch"
-msgstr "伸縮"
+msgstr "延展"
 
 #: ../tcl/dialog_font.tcl:126
 msgid "X and Y"
-msgstr "X和Y"
+msgstr "X 和 Y"
 
 #: ../tcl/dialog_font.tcl:128
 msgid "X only"
-msgstr "只有X"
+msgstr "只有 X"
 
 #: ../tcl/dialog_font.tcl:130
 msgid "Y only"
-msgstr "只有Y"
+msgstr "只有 Y"
 
 #: ../tcl/dialog_gatom.tcl:93
 msgid "Atom Box Properties"
-msgstr "原子框属性"
+msgstr "Atom Box 內容"
 
 #: ../tcl/dialog_gatom.tcl:103
 msgid "Width:"
@@ -320,15 +327,15 @@ msgstr "寬度:"
 
 #: ../tcl/dialog_gatom.tcl:107
 msgid "Limits"
-msgstr "限制"
+msgstr "範圍"
 
 #: ../tcl/dialog_gatom.tcl:111
 msgid "Lower:"
-msgstr "降低"
+msgstr "最小值："
 
 #: ../tcl/dialog_gatom.tcl:116
 msgid "Upper:"
-msgstr ""
+msgstr "最大值："
 
 #: ../tcl/dialog_gatom.tcl:120 ../tcl/dialog_iemgui.tcl:610
 #: ../tcl/dialog_iemgui.tcl:663
@@ -353,15 +360,15 @@ msgstr "下"
 
 #: ../tcl/dialog_gatom.tcl:141 ../tcl/dialog_iemgui.tcl:580
 msgid "Messages"
-msgstr "訊息"
+msgstr "Messages"
 
 #: ../tcl/dialog_gatom.tcl:145 ../tcl/dialog_iemgui.tcl:584
 msgid "Send symbol:"
-msgstr "傳送標記:"
+msgstr "傳送 symbol："
 
 #: ../tcl/dialog_gatom.tcl:151 ../tcl/dialog_iemgui.tcl:593
 msgid "Receive symbol:"
-msgstr "接收標記:"
+msgstr "接收 symbol："
 
 #: ../tcl/dialog_iemgui.tcl:197
 msgid "Background color"
@@ -377,24 +384,24 @@ msgstr "標籤顏色"
 
 #: ../tcl/dialog_iemgui.tcl:272
 msgid "Init"
-msgstr "初始值"
+msgstr "Init"
 
 #: ../tcl/dialog_iemgui.tcl:275 ../tcl/dialog_iemgui.tcl:554
 msgid "No init"
-msgstr ""
+msgstr "No init"
 
 #: ../tcl/dialog_iemgui.tcl:287 ../tcl/dialog_iemgui.tcl:564
 msgid "Jump on click"
-msgstr "点击跳转"
+msgstr "Jump on click"
 
 #: ../tcl/dialog_iemgui.tcl:290 ../tcl/dialog_iemgui.tcl:567
 msgid "Steady on click"
-msgstr "点击静止"
+msgstr "Steady on click"
 
 #: ../tcl/dialog_iemgui.tcl:502
 #, tcl-format
 msgid "%s Properties"
-msgstr "%s 屬性"
+msgstr "%s 內容"
 
 #: ../tcl/dialog_iemgui.tcl:557 ../tcl/pd_menus.tcl:55 ../tcl/pd_menus.tcl:60
 #: ../tcl/pd_menus.tcl:77 ../tcl/pd_menus.tcl:86 ../tcl/pd_menus.tcl:102
@@ -427,19 +434,19 @@ msgstr "字型"
 
 #: ../tcl/dialog_iemgui.tcl:673
 msgid "Compose color"
-msgstr "构成颜色"
+msgstr "制定顏色"
 
 #: ../tcl/dialog_iemgui.tcl:692
 msgid "Test label"
-msgstr "测试标签"
+msgstr "Test label"
 
 #: ../tcl/dialog_message.tcl:61
 msgid "Send a Pd message"
-msgstr "送出Pd 訊息"
+msgstr "送出 Pd message"
 
 #: ../tcl/dialog_message.tcl:80
 msgid "(use arrow keys for history)"
-msgstr ""
+msgstr "（使用方向鍵查看歷史訊息）"
 
 #: ../tcl/dialog_midi.tcl:86
 msgid "MIDI Settings"
@@ -451,27 +458,27 @@ msgstr "ALSA MIDI 設定"
 
 #: ../tcl/dialog_midi.tcl:338
 msgid "Use multiple ALSA devices"
-msgstr "使用多個 ALSA 裝置"
+msgstr "使用多個 ALSA 設備"
 
 #: ../tcl/dialog_midi.tcl:344
 msgid "In Ports:"
-msgstr "輸入埠:"
+msgstr "輸入埠："
 
 #: ../tcl/dialog_midi.tcl:347
 msgid "Out Ports:"
-msgstr "輸出埠:"
+msgstr "輸出埠："
 
 #: ../tcl/dialog_path.tcl:32
 msgid "Pd search path for objects, help, fonts, and other files"
-msgstr "Pd搜索对象,帮助、字体和其他文件的路径"
+msgstr "objects, help, 字型及其他檔案之搜尋路徑"
 
 #: ../tcl/dialog_path.tcl:37
 msgid "Use standard extensions"
-msgstr "使用标准扩展"
+msgstr "使用預設擴充套件"
 
 #: ../tcl/dialog_path.tcl:39
 msgid "Verbose"
-msgstr "詳細"
+msgstr "額外套件"
 
 #: ../tcl/dialog_startup.tcl:49
 msgid "Add new library"
@@ -483,33 +490,33 @@ msgstr "編輯函式庫"
 
 #: ../tcl/dialog_startup.tcl:79
 msgid "Pd libraries to load on startup"
-msgstr "开启时载入pd资源库"
+msgstr "啟動時載入函式庫"
 
 #: ../tcl/dialog_startup.tcl:82
 msgid "Startup flags:"
-msgstr "启动标志"
+msgstr "啟始參數"
 
 #: ../tcl/dialog_startup.tcl:91
 msgid "Real-time scheduling"
-msgstr ""
+msgstr "Real-time scheduling"
 
 #: ../tcl/helpbrowser.tcl:27
 msgid "Help Browser"
-msgstr "帮助菜单"
+msgstr "Help Browser"
 
 #: ../tcl/pd_connect.tcl:74 ../tcl/pd_connect.tcl:82 ../tcl/pdwindow.tcl:221
 #: ../tcl/pdwindow.tcl:232 ../tcl/pdwindow.tcl:316
 msgid "(Tcl) INVALID COMMAND NAME: "
-msgstr "(Tcl)无效的命令名"
+msgstr "(Tcl) INVALID COMMAND NAME: "
 
 #: ../tcl/pd_connect.tcl:76 ../tcl/pd_connect.tcl:84 ../tcl/pdwindow.tcl:223
 #: ../tcl/pdwindow.tcl:234 ../tcl/pdwindow.tcl:318
 msgid "(Tcl) UNHANDLED ERROR: "
-msgstr "(Tcl)无法处理的错误"
+msgstr "(Tcl) UNHANDLED ERROR: "
 
 #: ../tcl/pd_guiprefs.tcl:153
 msgid "Cannot read GUI prefs file: "
-msgstr ""
+msgstr "Cannot read GUI prefs file: "
 
 #: ../tcl/pd_menucommands.tcl:201 ../tcl/pd_menucommands.tcl:233
 #: ../tcl/pd_menus.tcl:292 ../tcl/pd_menus.tcl:326 ../tcl/pd_menus.tcl:327
@@ -519,15 +526,15 @@ msgstr "關於 Pd"
 
 #: ../tcl/pd_menucommands.tcl:298
 msgid "Select name for app to build...\n"
-msgstr ""
+msgstr "為 app 命名並建立...\n"
 
 #: ../tcl/pd_menucommands.tcl:301
 msgid "Save application to..."
-msgstr ""
+msgstr "儲存 app 到..."
 
 #: ../tcl/pd_menucommands.tcl:310
 msgid "Configuring Info.plist..."
-msgstr ""
+msgstr "設定 Info.plist..."
 
 #: ../tcl/pd_menucommands.tcl:312
 msgid "Setting patch name..."
@@ -539,7 +546,7 @@ msgstr "複製現在的 patch..."
 
 #: ../tcl/pd_menucommands.tcl:316
 msgid "Setting embedded preferences..."
-msgstr ""
+msgstr "Setting embedded preferences..."
 
 #: ../tcl/pd_menus.tcl:56 ../tcl/pd_menus.tcl:61 ../tcl/pd_menus.tcl:78
 #: ../tcl/pd_menus.tcl:87 ../tcl/pd_menus.tcl:103 ../tcl/pd_menus.tcl:116
@@ -569,7 +576,7 @@ msgstr "重複"
 #: ../tcl/pd_menus.tcl:92 ../tcl/pd_menus.tcl:109 ../tcl/pd_menus.tcl:122
 #: ../tcl/pd_menus.tcl:167 ../tcl/pd_menus.tcl:179 ../tcl/pd_menus.tcl:188
 msgid "Tidy Up"
-msgstr "大掃除"
+msgstr "整理"
 
 #: ../tcl/pd_menus.tcl:62 ../tcl/pd_menus.tcl:69 ../tcl/pd_menus.tcl:84
 #: ../tcl/pd_menus.tcl:95 ../tcl/pd_menus.tcl:110 ../tcl/pd_menus.tcl:125
@@ -597,20 +604,20 @@ msgstr "重做"
 #: ../tcl/pd_menus.tcl:184 ../tcl/pd_menus.tcl:193 ../tcl/pdtk_canvas.tcl:292
 #: ../tcl/pdtk_canvas.tcl:294
 msgid "Autopatch"
-msgstr "自动联接"
+msgstr "自動連線"
 
 #: ../tcl/pd_menus.tcl:68 ../tcl/pd_menus.tcl:94 ../tcl/pd_menus.tcl:124
 #: ../tcl/pd_menus.tcl:190 ../tcl/pd_menus.tcl:199 ../tcl/pdtk_canvas.tcl:306
 #: ../tcl/pdtk_canvas.tcl:308
 msgid "Magic Glass"
-msgstr "放大镜"
+msgstr "Magic Glass"
 
 #: ../tcl/pd_menus.tcl:128 ../tcl/pd_menus.tcl:145 ../tcl/pd_menus.tcl:482
 #: ../tcl/pd_menus.tcl:511 ../tcl/pd_menus.tcl:513 ../tcl/pd_menus.tcl:528
 #: ../tcl/pd_menus.tcl:546 ../tcl/pd_menus.tcl:558 ../tcl/pd_menus.tcl:560
 #: ../tcl/pd_menus.tcl:591 ../tcl/pd_menus.tcl:605
 msgid "New"
-msgstr "新檔案"
+msgstr "新增"
 
 #: ../tcl/pd_menus.tcl:129 ../tcl/pd_menus.tcl:146 ../tcl/pd_menus.tcl:483
 #: ../tcl/pd_menus.tcl:512 ../tcl/pd_menus.tcl:514 ../tcl/pd_menus.tcl:529
@@ -621,14 +628,14 @@ msgstr "新檔案"
 #: ../tcl/pdtk_canvas.tcl:228 ../tcl/pdtk_canvas.tcl:391
 #: ../tcl/pdtk_canvas.tcl:411 ../tcl/pdtk_canvas.tcl:413
 msgid "Open"
-msgstr "開啟檔案"
+msgstr "開啟"
 
 #: ../tcl/pd_menus.tcl:134 ../tcl/pd_menus.tcl:151 ../tcl/pd_menus.tcl:493
 #: ../tcl/pd_menus.tcl:520 ../tcl/pd_menus.tcl:526 ../tcl/pd_menus.tcl:540
 #: ../tcl/pd_menus.tcl:553 ../tcl/pd_menus.tcl:565 ../tcl/pd_menus.tcl:567
 #: ../tcl/pd_menus.tcl:598 ../tcl/pd_menus.tcl:612
 msgid "Message..."
-msgstr "訊息"
+msgstr "Message..."
 
 #: ../tcl/pd_menus.tcl:145 ../tcl/pd_menus.tcl:166
 msgid "Cut"
@@ -649,27 +656,27 @@ msgstr "清除控制台"
 
 #: ../tcl/pd_menus.tcl:183 ../tcl/pd_menus.tcl:216 ../tcl/pd_menus.tcl:217
 msgid "Object"
-msgstr "物件"
+msgstr "Object"
 
 #: ../tcl/pd_menus.tcl:185 ../tcl/pd_menus.tcl:218 ../tcl/pd_menus.tcl:219
 msgid "Message"
-msgstr "訊息"
+msgstr "Message"
 
 #: ../tcl/pd_menus.tcl:187 ../tcl/pd_menus.tcl:220 ../tcl/pd_menus.tcl:221
 msgid "Number"
-msgstr "數字"
+msgstr "Number"
 
 #: ../tcl/pd_menus.tcl:189 ../tcl/pd_menus.tcl:222 ../tcl/pd_menus.tcl:223
 msgid "Symbol"
-msgstr "標記"
+msgstr "Symbol"
 
 #: ../tcl/pd_menus.tcl:191 ../tcl/pd_menus.tcl:224 ../tcl/pd_menus.tcl:225
 msgid "Comment"
-msgstr "註解"
+msgstr "Comment"
 
 #: ../tcl/pd_menus.tcl:193 ../tcl/pd_menus.tcl:202
 msgid "Perf Mode"
-msgstr ""
+msgstr "Perf Mode"
 
 #: ../tcl/pd_menus.tcl:194 ../tcl/pd_menus.tcl:227 ../tcl/pd_menus.tcl:228
 msgid "Bang"
@@ -677,19 +684,19 @@ msgstr "Bang"
 
 #: ../tcl/pd_menus.tcl:196
 msgid "Autotips"
-msgstr ""
+msgstr "自動提示"
 
 #: ../tcl/pd_menus.tcl:196 ../tcl/pd_menus.tcl:229 ../tcl/pd_menus.tcl:230
 msgid "Toggle"
-msgstr "开关"
+msgstr "Toggle"
 
 #: ../tcl/pd_menus.tcl:198 ../tcl/pd_menus.tcl:231 ../tcl/pd_menus.tcl:232
 msgid "Number2"
-msgstr "參數 2"
+msgstr "Number2"
 
 #: ../tcl/pd_menus.tcl:200 ../tcl/pd_menus.tcl:233 ../tcl/pd_menus.tcl:234
 msgid "Vslider"
-msgstr "直式滑桿"
+msgstr "Vslider"
 
 #: ../tcl/pd_menus.tcl:201 ../tcl/pd_menus.tcl:260 ../tcl/pd_menus.tcl:294
 #: ../tcl/pd_menus.tcl:473 ../tcl/pd_menus.tcl:519 ../tcl/pd_menus.tcl:567
@@ -699,31 +706,31 @@ msgstr "偏好設定"
 
 #: ../tcl/pd_menus.tcl:202 ../tcl/pd_menus.tcl:235 ../tcl/pd_menus.tcl:236
 msgid "Hslider"
-msgstr "橫式滑桿"
+msgstr "Hslider"
 
 #: ../tcl/pd_menus.tcl:204 ../tcl/pd_menus.tcl:237 ../tcl/pd_menus.tcl:238
 msgid "Vradio"
-msgstr ""
+msgstr "Vradio"
 
 #: ../tcl/pd_menus.tcl:206 ../tcl/pd_menus.tcl:239 ../tcl/pd_menus.tcl:240
 msgid "Hradio"
-msgstr ""
+msgstr "Hradio"
 
 #: ../tcl/pd_menus.tcl:208 ../tcl/pd_menus.tcl:241 ../tcl/pd_menus.tcl:242
 msgid "VU Meter"
-msgstr "音量单位表"
+msgstr "VU Meter"
 
 #: ../tcl/pd_menus.tcl:210 ../tcl/pd_menus.tcl:243 ../tcl/pd_menus.tcl:244
 msgid "Canvas"
-msgstr "畫布"
+msgstr "Canvas"
 
 #: ../tcl/pd_menus.tcl:213 ../tcl/pd_menus.tcl:246 ../tcl/pd_menus.tcl:247
 msgid "Graph"
-msgstr "圖形"
+msgstr "Graph"
 
 #: ../tcl/pd_menus.tcl:214 ../tcl/pd_menus.tcl:247 ../tcl/pd_menus.tcl:248
 msgid "Array"
-msgstr "矩陣"
+msgstr "Array"
 
 #: ../tcl/pd_menus.tcl:219 ../tcl/pd_menus.tcl:252 ../tcl/pd_menus.tcl:253
 msgid "Find..."
@@ -751,7 +758,7 @@ msgstr "聲音和 MIDI 測試..."
 
 #: ../tcl/pd_menus.tcl:237 ../tcl/pd_menus.tcl:270 ../tcl/pd_menus.tcl:271
 msgid "Load Meter"
-msgstr "载荷测定仪"
+msgstr "Load Meter"
 
 #: ../tcl/pd_menus.tcl:267 ../tcl/pd_menus.tcl:300 ../tcl/pd_menus.tcl:301
 msgid "Minimize"
@@ -763,11 +770,11 @@ msgstr "放大"
 
 #: ../tcl/pd_menus.tcl:272 ../tcl/pd_menus.tcl:305 ../tcl/pd_menus.tcl:306
 msgid "Bring All to Front"
-msgstr "全部上置"
+msgstr "將此程式所有視窗移至最前"
 
 #: ../tcl/pd_menus.tcl:275 ../tcl/pd_menus.tcl:308 ../tcl/pd_menus.tcl:309
 msgid "Next Window"
-msgstr "開啟新的視窗"
+msgstr "下一個視窗"
 
 #: ../tcl/pd_menus.tcl:278 ../tcl/pd_menus.tcl:311 ../tcl/pd_menus.tcl:312
 msgid "Previous Window"
@@ -775,7 +782,7 @@ msgstr "前一個視窗"
 
 #: ../tcl/pd_menus.tcl:285 ../tcl/pd_menus.tcl:318 ../tcl/pd_menus.tcl:319
 msgid "Parent Window"
-msgstr "隔代視窗"
+msgstr "上層視窗"
 
 #: ../tcl/pd_menus.tcl:291 ../tcl/pd_menus.tcl:457 ../tcl/pd_menus.tcl:503
 msgid "Audio Settings..."
@@ -791,7 +798,7 @@ msgstr "網頁式說明書..."
 
 #: ../tcl/pd_menus.tcl:296
 msgid "Browser..."
-msgstr "瀏覽..."
+msgstr "Browser..."
 
 #: ../tcl/pd_menus.tcl:299
 msgid "puredata.info"
@@ -803,11 +810,11 @@ msgstr "回報錯誤"
 
 #: ../tcl/pd_menus.tcl:304
 msgid "Tcl prompt"
-msgstr "Tcl 彈出"
+msgstr "Tcl prompt"
 
 #: ../tcl/pd_menus.tcl:328 ../tcl/pd_menus.tcl:329
 msgid "Pd Help Browser..."
-msgstr "Pd 說明瀏覽器"
+msgstr "Pd Help Browser..."
 
 #: ../tcl/pd_menus.tcl:330 ../tcl/pd_menus.tcl:331
 msgid "Start Here!"
@@ -823,7 +830,7 @@ msgstr "路徑..."
 
 #: ../tcl/pd_menus.tcl:455 ../tcl/pd_menus.tcl:501
 msgid "Startup..."
-msgstr "原始狀態..."
+msgstr "初始設定..."
 
 #: ../tcl/pd_menus.tcl:485 ../tcl/pd_menus.tcl:515 ../tcl/pd_menus.tcl:532
 msgid "Open Recent"
@@ -840,24 +847,24 @@ msgstr "離開"
 #: ../tcl/pdtk_canvas.tcl:389 ../tcl/pdtk_canvas.tcl:406
 #: ../tcl/pdtk_canvas.tcl:408
 msgid "Properties"
-msgstr "屬性"
+msgstr "內容"
 
 #: ../tcl/pdtk_canvas.tcl:202 ../tcl/pdtk_canvas.tcl:208
 #: ../tcl/pdtk_canvas.tcl:393 pd_dynamic_strings.tcl:16
 msgid "Help"
-msgstr "幫助"
+msgstr "Help"
 
 #: ../tcl/pdtk_canvas.tcl:319
 msgid " "
-msgstr ""
+msgstr " "
 
 #: ../tcl/pdwindow.tcl:217 ../tcl/pdwindow.tcl:228 ../tcl/pdwindow.tcl:312
 msgid "(Tcl) MISSING CLOSE-BRACE '}': "
-msgstr "(Tcl) 缺失右大括号 '}':"
+msgstr "(Tcl) MISSING CLOSE-BRACE '}': "
 
 #: ../tcl/pdwindow.tcl:219 ../tcl/pdwindow.tcl:230 ../tcl/pdwindow.tcl:314
 msgid "(Tcl) MISSING CLOSE-BRACKET ']': "
-msgstr "(Tcl) 缺失右方括号 ']':"
+msgstr "(Tcl) MISSING CLOSE-BRACKET ']': "
 
 #: ../tcl/pdwindow.tcl:258 ../tcl/pdwindow.tcl:269 ../tcl/pdwindow.tcl:353
 #: ../tcl/pdwindow.tcl:464
@@ -879,11 +886,11 @@ msgstr "音訊 I/O 錯誤"
 
 #: ../tcl/pdwindow.tcl:328 ../tcl/pdwindow.tcl:339 ../tcl/pdwindow.tcl:462
 msgid "Log:"
-msgstr "记录"
+msgstr "Log:"
 
 #: ../tcl/pdwindow.tcl:333 ../tcl/pdwindow.tcl:344 ../tcl/pdwindow.tcl:446
 msgid "fatal"
-msgstr "致命的"
+msgstr "致命"
 
 #: ../tcl/pdwindow.tcl:334 ../tcl/pdwindow.tcl:345 ../tcl/pdwindow.tcl:447
 msgid "error"
@@ -903,48 +910,48 @@ msgstr "全部"
 
 #: ../tcl/pdwindow.tcl:396 ../tcl/pdwindow.tcl:397
 msgid "Pd-extended"
-msgstr ""
+msgstr "Pd-extended"
 
 #: ../tcl/pdwindow.tcl:425
 msgid "IN"
-msgstr ""
+msgstr "IN"
 
 #: ../tcl/pdwindow.tcl:426
 msgid "OUT"
-msgstr ""
+msgstr "OUT"
 
 #: ../tcl/wheredoesthisgo.tcl:18 ../tcl/wheredoesthisgo.tcl:19
 #, tcl-format
 msgid "Ignoring '%s': doesn't look like a Pd-file"
-msgstr "忽略'%s':不像一个pd文件"
+msgstr "忽略 「%s」: 這不像是Pd檔案"
 
 #: iemgui_dynamic_strings.tcl:11
 msgid "-------dimensions(digits)(pix):-------"
-msgstr "-------尺寸(数)(像素):-------"
+msgstr "-------dimensions(digits)(pix):-------"
 
 #: iemgui_dynamic_strings.tcl:12
 msgid "--------dimensions(pix)(pix):--------"
-msgstr "--------尺寸(像素)(像素):--------"
+msgstr "--------dimensions(pix)(pix):--------"
 
 #: iemgui_dynamic_strings.tcl:13
 msgid "----------dimensions(pix):-----------"
-msgstr "-------尺寸(像素):-------"
+msgstr "----------dimensions(pix):-----------"
 
 #: iemgui_dynamic_strings.tcl:14
 msgid "--------flash-time(ms)(ms):---------"
-msgstr ""
+msgstr "--------flash-time(ms)(ms):---------"
 
 #: iemgui_dynamic_strings.tcl:15
 msgid "-----------output-range:-----------"
-msgstr ""
+msgstr "-----------輸出範圍-----------"
 
 #: iemgui_dynamic_strings.tcl:16
 msgid "------selectable_dimensions(pix):------"
-msgstr ""
+msgstr "------selectable_dimensions(pix):------"
 
 #: iemgui_dynamic_strings.tcl:17
 msgid "------visible_rectangle(pix)(pix):------"
-msgstr ""
+msgstr "------可見的矩形(pix)(pix):------"
 
 #: iemgui_dynamic_strings.tcl:20
 msgid "bottom:"
@@ -956,11 +963,11 @@ msgstr "高："
 
 #: iemgui_dynamic_strings.tcl:22
 msgid "hold:"
-msgstr ""
+msgstr "暫停："
 
 #: iemgui_dynamic_strings.tcl:23
 msgid "intrrpt:"
-msgstr ""
+msgstr "中斷："
 
 #: iemgui_dynamic_strings.tcl:24
 msgid "left:"
@@ -968,15 +975,15 @@ msgstr "左："
 
 #: iemgui_dynamic_strings.tcl:25
 msgid "lin"
-msgstr ""
+msgstr "lin"
 
 #: iemgui_dynamic_strings.tcl:26
 msgid "log"
-msgstr ""
+msgstr "log"
 
 #: iemgui_dynamic_strings.tcl:27
 msgid "log-height:"
-msgstr ""
+msgstr "log-height:"
 
 #: iemgui_dynamic_strings.tcl:28
 msgid "max:"
@@ -1018,7 +1025,7 @@ msgstr "檔案"
 #: pd_dynamic_strings.tcl:11 pd_dynamic_strings.tcl:19
 #, tcl-format
 msgid "Discard changes to '%s'?"
-msgstr ""
+msgstr "忽略「%s」的更改"
 
 #: pd_dynamic_strings.tcl:11
 msgid "Edit"
@@ -1112,14 +1119,14 @@ msgstr "重做複製"
 #: pd_dynamic_strings.tcl:27 pd_dynamic_strings.tcl:29
 #: pd_dynamic_strings.tcl:37
 msgid "Redo motion"
-msgstr ""
+msgstr "重做動態"
 
 #: pd_dynamic_strings.tcl:28 pd_dynamic_strings.tcl:30
 #: pd_dynamic_strings.tcl:38
 msgid "Redo paste"
-msgstr "重作貼上"
+msgstr "重做貼上"
 
 #: pd_dynamic_strings.tcl:29 pd_dynamic_strings.tcl:31
 #: pd_dynamic_strings.tcl:39
 msgid "Redo typing"
-msgstr ""
+msgstr "重做輸入"
