@@ -2,20 +2,21 @@
 # This file is put in the public domain.
 # 
 # Translators:
+# Björn Eriksson <miulew@gmail.com>, 2012.
 # Johannes Burström <johannes@ljud.org>, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: Pure Data\n"
 "Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=55736&atid=478070\n"
 "POT-Creation-Date: 2012-01-17 18:37-0500\n"
-"PO-Revision-Date: 2012-01-19 14:32+0000\n"
-"Last-Translator: Hans-Christoph Steiner <hans@eds.org>\n"
+"PO-Revision-Date: 2012-12-04 19:24+0000\n"
+"Last-Translator: Björn Eriksson <miulew@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: sv\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../tcl/dialog_array.tcl:115 ../tcl/pd_menus.tcl:147 ../tcl/pd_menus.tcl:168
 msgid "Copy"
@@ -78,6 +79,10 @@ msgstr ""
 msgid "Open List View..."
 msgstr "Öppna listvy..."
 
+#: ../tcl/scrollboxwindow.tcl:108
+msgid "Reset to Defaults"
+msgstr ""
+
 #: ../tcl/dialog_array.tcl:322 ../tcl/dialog_audio.tcl:146
 #: ../tcl/dialog_canvas.tcl:208 ../tcl/dialog_find.tcl:163
 #: ../tcl/dialog_gatom.tcl:157 ../tcl/dialog_iemgui.tcl:751
@@ -104,19 +109,19 @@ msgstr "Ok"
 
 #: ../tcl/dialog_audio.tcl:134
 msgid "Audio Settings"
-msgstr ""
+msgstr "Ljudinställningar"
 
 #: ../tcl/dialog_audio.tcl:156
 msgid "Save All Settings"
-msgstr ""
+msgstr "Spara alla inställningar"
 
 #: ../tcl/dialog_audio.tcl:164
 msgid "Sample rate:"
-msgstr ""
+msgstr "Samplings-frekvens"
 
 #: ../tcl/dialog_audio.tcl:166
 msgid "Delay (msec):"
-msgstr ""
+msgstr "Fördröjning (msek)"
 
 #: ../tcl/dialog_audio.tcl:169
 msgid "Block size:"
@@ -136,7 +141,7 @@ msgstr ""
 #: ../tcl/dialog_audio.tcl:253 ../tcl/dialog_audio.tcl:272
 #: ../tcl/dialog_audio.tcl:288 ../tcl/dialog_audio.tcl:304
 msgid "Channels:"
-msgstr ""
+msgstr "Kanaler:"
 
 #: ../tcl/dialog_audio.tcl:198 ../tcl/dialog_midi.tcl:122
 #: ../tcl/dialog_midi.tcl:258
@@ -195,11 +200,11 @@ msgstr "Skala"
 
 #: ../tcl/dialog_canvas.tcl:153
 msgid "X units per pixel:"
-msgstr ""
+msgstr "X enheter per pixel:"
 
 #: ../tcl/dialog_canvas.tcl:158
 msgid "Y units per pixel:"
-msgstr ""
+msgstr "Y enheter per pixel:"
 
 #: ../tcl/dialog_canvas.tcl:162
 msgid "Appearance on parent patch"
@@ -235,7 +240,7 @@ msgstr "Omfång (y), från:"
 
 #: ../tcl/dialog_data.tcl:29
 msgid "Data Properties"
-msgstr ""
+msgstr "Data egenskaper"
 
 #: ../tcl/dialog_data.tcl:37
 msgid "Send (Ctrl s)"
@@ -243,7 +248,7 @@ msgstr ""
 
 #: ../tcl/dialog_data.tcl:39
 msgid "OK (Ctrl t)"
-msgstr ""
+msgstr "OK (Ctrl t)"
 
 #: ../tcl/dialog_find.tcl:108
 #, tcl-format
@@ -288,7 +293,7 @@ msgstr ""
 
 #: ../tcl/dialog_font.tcl:107
 msgid "Font Size"
-msgstr ""
+msgstr "Font storlek"
 
 #: ../tcl/dialog_font.tcl:119
 msgid "Stretch"
@@ -439,11 +444,11 @@ msgstr ""
 
 #: ../tcl/dialog_midi.tcl:86
 msgid "MIDI Settings"
-msgstr ""
+msgstr "MIDI inställningar"
 
 #: ../tcl/dialog_midi.tcl:227
 msgid "ALSA MIDI Settings"
-msgstr ""
+msgstr "ALSA MIDI inställningar"
 
 #: ../tcl/dialog_midi.tcl:338
 msgid "Use multiple ALSA devices"
@@ -451,19 +456,19 @@ msgstr ""
 
 #: ../tcl/dialog_midi.tcl:344
 msgid "In Ports:"
-msgstr ""
+msgstr "In-portar:"
 
 #: ../tcl/dialog_midi.tcl:347
 msgid "Out Ports:"
-msgstr ""
+msgstr "Ut-portar:"
 
 #: ../tcl/dialog_path.tcl:32
 msgid "Pd search path for objects, help, fonts, and other files"
-msgstr ""
+msgstr "Pd sökväg för objekt, hjälp, fonter och andra filer"
 
 #: ../tcl/dialog_path.tcl:37
 msgid "Use standard extensions"
-msgstr ""
+msgstr "Använd standard-ändelser"
 
 #: ../tcl/dialog_path.tcl:39
 msgid "Verbose"
@@ -471,11 +476,11 @@ msgstr ""
 
 #: ../tcl/dialog_startup.tcl:49
 msgid "Add new library"
-msgstr ""
+msgstr "Lägg till bibliotek"
 
 #: ../tcl/dialog_startup.tcl:53
 msgid "Edit library"
-msgstr ""
+msgstr "Redigera bibliotek"
 
 #: ../tcl/dialog_startup.tcl:79
 msgid "Pd libraries to load on startup"
@@ -486,7 +491,7 @@ msgid "Startup flags:"
 msgstr ""
 
 #: ../tcl/dialog_startup.tcl:91
-msgid "Defeat real-time scheduling"
+msgid "Real-time scheduling"
 msgstr ""
 
 #: ../tcl/helpbrowser.tcl:27
@@ -779,7 +784,7 @@ msgstr ""
 
 #: ../tcl/pd_menus.tcl:293 ../tcl/pd_menus.tcl:459 ../tcl/pd_menus.tcl:505
 msgid "MIDI Settings..."
-msgstr ""
+msgstr "MIDI inställningar..."
 
 #: ../tcl/pd_menus.tcl:294
 msgid "HTML Manual..."
@@ -807,7 +812,7 @@ msgstr ""
 
 #: ../tcl/pd_menus.tcl:330 ../tcl/pd_menus.tcl:331
 msgid "Start Here!"
-msgstr ""
+msgstr "Börja här!"
 
 #: ../tcl/pd_menus.tcl:348 ../tcl/pd_menus.tcl:385 ../tcl/pd_menus.tcl:386
 msgid "Clear Menu"
@@ -863,7 +868,7 @@ msgstr ""
 #: ../tcl/pdwindow.tcl:301 ../tcl/pdwindow.tcl:302 ../tcl/pdwindow.tcl:312
 #: ../tcl/pdwindow.tcl:313
 msgid "Pd"
-msgstr ""
+msgstr "Pd"
 
 #: ../tcl/pdwindow.tcl:317 ../tcl/pdwindow.tcl:328 ../tcl/pdwindow.tcl:430
 msgid "DSP"
@@ -887,7 +892,7 @@ msgstr ""
 
 #: ../tcl/pdwindow.tcl:335 ../tcl/pdwindow.tcl:346 ../tcl/pdwindow.tcl:448
 msgid "normal"
-msgstr ""
+msgstr "normal"
 
 #: ../tcl/pdwindow.tcl:336 ../tcl/pdwindow.tcl:347 ../tcl/pdwindow.tcl:449
 msgid "debug"
@@ -895,19 +900,19 @@ msgstr ""
 
 #: ../tcl/pdwindow.tcl:337 ../tcl/pdwindow.tcl:348 ../tcl/pdwindow.tcl:450
 msgid "all"
-msgstr ""
+msgstr "alla"
 
 #: ../tcl/pdwindow.tcl:396 ../tcl/pdwindow.tcl:397
 msgid "Pd-extended"
-msgstr ""
+msgstr "Pd-extended"
 
 #: ../tcl/pdwindow.tcl:425
 msgid "IN"
-msgstr ""
+msgstr "IN"
 
 #: ../tcl/pdwindow.tcl:426
 msgid "OUT"
-msgstr ""
+msgstr "UT"
 
 #: ../tcl/wheredoesthisgo.tcl:18 ../tcl/wheredoesthisgo.tcl:19
 #, tcl-format
@@ -964,11 +969,11 @@ msgstr ""
 
 #: iemgui_dynamic_strings.tcl:25
 msgid "lin"
-msgstr ""
+msgstr "lin"
 
 #: iemgui_dynamic_strings.tcl:26
 msgid "log"
-msgstr ""
+msgstr "log"
 
 #: iemgui_dynamic_strings.tcl:27
 msgid "log-height:"
@@ -976,19 +981,19 @@ msgstr ""
 
 #: iemgui_dynamic_strings.tcl:28
 msgid "max:"
-msgstr ""
+msgstr "max:"
 
 #: iemgui_dynamic_strings.tcl:29
 msgid "min:"
-msgstr ""
+msgstr "min:"
 
 #: iemgui_dynamic_strings.tcl:30
 msgid "right:"
-msgstr ""
+msgstr "höger:"
 
 #: iemgui_dynamic_strings.tcl:31
 msgid "size:"
-msgstr ""
+msgstr "storlek:"
 
 #: iemgui_dynamic_strings.tcl:32
 msgid "top:"
@@ -996,11 +1001,11 @@ msgstr ""
 
 #: iemgui_dynamic_strings.tcl:33
 msgid "value:"
-msgstr ""
+msgstr "värde:"
 
 #: iemgui_dynamic_strings.tcl:34
 msgid "width:"
-msgstr ""
+msgstr "bredd:"
 
 #: pd_dynamic_strings.tcl:10 pd_dynamic_strings.tcl:18
 #, tcl-format
@@ -1022,7 +1027,7 @@ msgstr "Redigera"
 
 #: pd_dynamic_strings.tcl:12 pd_dynamic_strings.tcl:20
 msgid "Close this window?"
-msgstr ""
+msgstr "Stäng det här fönstret?"
 
 #: pd_dynamic_strings.tcl:12
 msgid "Put"
@@ -1119,5 +1124,3 @@ msgstr ""
 #: pd_dynamic_strings.tcl:39
 msgid "Redo typing"
 msgstr ""
-
-
