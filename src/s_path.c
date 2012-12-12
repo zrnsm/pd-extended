@@ -431,7 +431,7 @@ FILE *sys_fopen(const char *filename, const char *mode)
    across dll-boundaries */
 int sys_close(int fd)
 {
-    return close(fd);
+    return _close(fd);
 }
 
 int sys_fclose(FILE *stream)
