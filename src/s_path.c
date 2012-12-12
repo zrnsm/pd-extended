@@ -404,13 +404,12 @@ int sys_open(const char *path, int oflag, ...)
     wchar_t ucs2path[MAXPDSTRING];
     sys_bashfilename(path, pathbuf);
     u8_utf8toucs2(ucs2path, MAXPDSTRING, pathbuf, MAXPDSTRING-1);
-    /* use _O_BINARY so we don't have to think about WIN32's Unicode
-     * modes. For the create mode, we always use 0666 on UNIX, so we
-     * just hard-code the Windows equivalent here. */
+    /* For the create mode, Win32 does not have the same possibilities,
+     * so we ignore the argument and just hard-code read/write. */
     if (oflag & O_CREAT)
-        fd = _wopen(ucs2path, oflag | _O_BINARY, _S_IREAD | _S_IWRITE);
+        fd = _wopen(ucs2path, oflag, _S_IREAD | _S_IWRITE);
     else
-        fd = _wopen(ucs2path, oflag | _O_BINARY);
+        fd = _wopen(ucs2path, oflag);
     return fd;
 }
 
@@ -431,7 +430,7 @@ FILE *sys_fopen(const char *filename, const char *mode)
    across dll-boundaries */
 int sys_close(int fd)
 {
-    return close(fd);
+    return _close(fd);
 }
 
 int sys_fclose(FILE *stream)
