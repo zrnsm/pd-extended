@@ -709,7 +709,10 @@ proc load_plugin_script {filename} {
 proc load_startup_plugins {} {
     foreach pathdir [concat $::sys_searchpath $::sys_staticpath] {
         set dir [file normalize $pathdir]
-        if { ! [file isdirectory $dir]} {continue}
+        if { ! [file readable $dir] || ! [file isdirectory $dir]} {
+            ::pdwindow::debug "Cannot read plugins folder: '$dir'\n"
+            continue
+        }
         foreach filename [glob -directory $dir -nocomplain -types {f} -- \
                               *-plugin/*-plugin.tcl *-plugin.tcl] {
             set ::current_plugin_loadpath [file dirname $filename]
