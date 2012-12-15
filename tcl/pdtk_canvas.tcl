@@ -41,8 +41,8 @@ namespace eval ::pdtk_canvas:: {
 # easy for people to customize these calculations based on their Window
 # Manager, desires, etc.
 proc pdtk_canvas_place_window {width height geometry} {
-    set screenwidth [winfo screenwidth .]
-    set screenheight [winfo screenheight .]
+    set screenwidth [lindex [wm maxsize .] 0]
+    set screenheight [lindex [wm maxsize .] 1]
 
     # read back the current geometry +posx+posy into variables
     scan $geometry {%[+]%d%[+]%d} - x - y
