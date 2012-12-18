@@ -2,86 +2,85 @@
 # This file is put in the public domain.
 # 
 # Translators:
-#   <gnoownow10@gmail.com>, 2012.
-#   <maxneupert@gmail.com>, 2012.
+#   <mathiasbredholt@gmail.com>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: Pure Data\n"
 "Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=55736&atid=478070\n"
 "POT-Creation-Date: 2012-01-17 18:37-0500\n"
-"PO-Revision-Date: 2012-12-17 09:59+0000\n"
-"Last-Translator: gnoownow10 <gnoownow10@gmail.com>\n"
+"PO-Revision-Date: 2012-12-14 20:00+0000\n"
+"Last-Translator: mathiasbredholt <mathiasbredholt@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ko\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: da\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../tcl/dialog_array.tcl:115 ../tcl/pd_menus.tcl:147 ../tcl/pd_menus.tcl:168
 msgid "Copy"
-msgstr "복사"
+msgstr "Kopiér"
 
 #: ../tcl/dialog_array.tcl:118 ../tcl/pd_menus.tcl:149 ../tcl/pd_menus.tcl:170
 msgid "Paste"
-msgstr "붙여넣기"
+msgstr "Indsæt"
 
 #: ../tcl/dialog_array.tcl:263
 msgid "Array Properties"
-msgstr "배열 속성"
+msgstr "Indstillinger for Array"
 
 #: ../tcl/dialog_array.tcl:273
 msgid "Name:"
-msgstr "이름:"
+msgstr "Navn:"
 
 #: ../tcl/dialog_array.tcl:279 ../tcl/dialog_canvas.tcl:181
 #: ../tcl/dialog_canvas.tcl:196 ../tcl/dialog_iemgui.tcl:630
 msgid "Size:"
-msgstr "크기:"
+msgstr "Størrelse:"
 
 #: ../tcl/dialog_array.tcl:283
 msgid "Save contents"
-msgstr "내용 저장하기"
+msgstr "Gem indhold"
 
 #: ../tcl/dialog_array.tcl:287
 msgid "Draw as:"
-msgstr "그래프 모양"
+msgstr "Tegn som:"
 
 #: ../tcl/dialog_array.tcl:290
 msgid "Points"
-msgstr "점으로 찍기"
+msgstr "Punkter"
 
 #: ../tcl/dialog_array.tcl:292
 msgid "Polygon"
-msgstr "직선으로 잇기"
+msgstr "Polygon"
 
 #: ../tcl/dialog_array.tcl:294
 msgid "Bezier curve"
-msgstr "베지어 곡선으로 잇기"
+msgstr "Kurve"
 
 #: ../tcl/dialog_array.tcl:300
 msgid "Put array into:"
-msgstr "배열을 넣을 곳"
+msgstr "Sæt array ind i:"
 
 #: ../tcl/dialog_array.tcl:303
 msgid "New graph"
-msgstr "새 그래프"
+msgstr "Ny graf"
 
 #: ../tcl/dialog_array.tcl:305
 msgid "Last graph"
-msgstr "최근 그래프"
+msgstr "Sidste graf"
 
 #: ../tcl/dialog_array.tcl:309
 msgid "Delete array"
-msgstr "배열 지우기"
+msgstr "Slet array"
 
 #: ../tcl/dialog_array.tcl:315
 msgid "Open List View..."
-msgstr "값 목록 ..."
+msgstr "Åben Listeoversigt"
 
 #: ../tcl/scrollboxwindow.tcl:108
 msgid "Reset to Defaults"
-msgstr "기본값으로 되돌리기"
+msgstr "Nulstil til standardinstillinger"
 
 #: ../tcl/dialog_array.tcl:322 ../tcl/dialog_audio.tcl:146
 #: ../tcl/dialog_canvas.tcl:208 ../tcl/dialog_find.tcl:163
@@ -89,14 +88,14 @@ msgstr "기본값으로 되돌리기"
 #: ../tcl/dialog_midi.tcl:98 ../tcl/dialog_midi.tcl:233
 #: ../tcl/scrollboxwindow.tcl:82
 msgid "Cancel"
-msgstr "취소"
+msgstr "Fortryd"
 
 #: ../tcl/dialog_array.tcl:326 ../tcl/dialog_audio.tcl:149
 #: ../tcl/dialog_canvas.tcl:212 ../tcl/dialog_gatom.tcl:161
 #: ../tcl/dialog_iemgui.tcl:755 ../tcl/dialog_midi.tcl:100
 #: ../tcl/dialog_midi.tcl:235 ../tcl/scrollboxwindow.tcl:84
 msgid "Apply"
-msgstr "적용"
+msgstr "Anvend"
 
 #: ../tcl/dialog_array.tcl:330 ../tcl/dialog_audio.tcl:152
 #: ../tcl/dialog_canvas.tcl:216 ../tcl/dialog_font.tcl:103
@@ -105,177 +104,177 @@ msgstr "적용"
 #: ../tcl/dialog_startup.tcl:29 ../tcl/dialog_startup.tcl:30
 #: ../tcl/scrollboxwindow.tcl:86
 msgid "OK"
-msgstr "확인"
+msgstr "OK"
 
 #: ../tcl/dialog_audio.tcl:134
 msgid "Audio Settings"
-msgstr "오디오 설정"
+msgstr "Lydindstillinger"
 
 #: ../tcl/dialog_audio.tcl:156
 msgid "Save All Settings"
-msgstr "모든 설정 저장"
+msgstr "Gem Alle Indstillinger"
 
 #: ../tcl/dialog_audio.tcl:164
 msgid "Sample rate:"
-msgstr "샘플링 속도"
+msgstr "Samplingfrekvens:"
 
 #: ../tcl/dialog_audio.tcl:166
 msgid "Delay (msec):"
-msgstr "지연시간(msec)"
+msgstr "Forsinkelse (mili sek.):"
 
 #: ../tcl/dialog_audio.tcl:169
 msgid "Block size:"
-msgstr "블록 크기"
+msgstr "Blokstørrelse:"
 
 #: ../tcl/dialog_audio.tcl:176
 msgid "Use callbacks"
-msgstr "콜백(callback) 사용하기"
+msgstr "Brug callbacks"
 
 #: ../tcl/dialog_audio.tcl:184 ../tcl/dialog_midi.tcl:112
 #: ../tcl/dialog_midi.tcl:248
 msgid "Input device 1:"
-msgstr "입력 장치 1:"
+msgstr "Indgangs enhed 1:"
 
 #: ../tcl/dialog_audio.tcl:187 ../tcl/dialog_audio.tcl:202
 #: ../tcl/dialog_audio.tcl:218 ../tcl/dialog_audio.tcl:233
 #: ../tcl/dialog_audio.tcl:253 ../tcl/dialog_audio.tcl:272
 #: ../tcl/dialog_audio.tcl:288 ../tcl/dialog_audio.tcl:304
 msgid "Channels:"
-msgstr "채널:"
+msgstr "Kanaler:"
 
 #: ../tcl/dialog_audio.tcl:198 ../tcl/dialog_midi.tcl:122
 #: ../tcl/dialog_midi.tcl:258
 msgid "Input device 2:"
-msgstr "입력 장치2:"
+msgstr "Indgangs enhed 2:"
 
 #: ../tcl/dialog_audio.tcl:214 ../tcl/dialog_midi.tcl:134
 #: ../tcl/dialog_midi.tcl:270
 msgid "Input device 3:"
-msgstr "입력 장치 3:"
+msgstr "Indgangs enhed 3:"
 
 #: ../tcl/dialog_audio.tcl:229 ../tcl/dialog_midi.tcl:146
 #: ../tcl/dialog_midi.tcl:282
 msgid "Input device 4:"
-msgstr "입력 장치 4:"
+msgstr "Indgangs enhed 4:"
 
 #: ../tcl/dialog_audio.tcl:244 ../tcl/dialog_midi.tcl:157
 #: ../tcl/dialog_midi.tcl:293
 msgid "Output device 1:"
-msgstr "출력 장치 1:"
+msgstr "Udgangs enhed 1:"
 
 #: ../tcl/dialog_audio.tcl:247
 msgid "(same as input device) ..............      "
-msgstr "(입력 장치와 같음 ... )"
+msgstr "(det samme som indgangs enhed) .............."
 
 #: ../tcl/dialog_audio.tcl:268 ../tcl/dialog_midi.tcl:167
 #: ../tcl/dialog_midi.tcl:303
 msgid "Output device 2:"
-msgstr "출력 장치 2:"
+msgstr " Udgangs enhed 2:"
 
 #: ../tcl/dialog_audio.tcl:284 ../tcl/dialog_midi.tcl:178
 #: ../tcl/dialog_midi.tcl:314
 msgid "Output device 3:"
-msgstr "출력 장치 3:"
+msgstr "Udgangs enhed 3:"
 
 #: ../tcl/dialog_audio.tcl:300 ../tcl/dialog_midi.tcl:189
 #: ../tcl/dialog_midi.tcl:325
 msgid "Output device 4:"
-msgstr "출력 장치 4:"
+msgstr "Udgangs enhed 4:"
 
 #: ../tcl/dialog_audio.tcl:316 ../tcl/dialog_midi.tcl:202
 msgid "Use multiple devices"
-msgstr "여러 장치 쓰기:"
+msgstr "Brug flere enheder"
 
 #: ../tcl/dialog_canvas.tcl:121
 msgid "WARNING: unknown graphme flags received in pdtk_canvas_dialog"
-msgstr "경고: pdtk_canvas_dialog에서 알 수 없는 graphme 플래그를 받았습니다"
+msgstr "ADVARSEL: ukendte  graphme flag modtaget i pdtk_canvas_dialog"
 
 #: ../tcl/dialog_canvas.tcl:141
 msgid "Canvas Properties"
-msgstr "캔버스 속성"
+msgstr "Egenskaber for canvas"
 
 #: ../tcl/dialog_canvas.tcl:149
 msgid "Scale"
-msgstr "축적"
+msgstr "Skaler"
 
 #: ../tcl/dialog_canvas.tcl:153
 msgid "X units per pixel:"
-msgstr "픽셀 당 X 단위 수"
+msgstr "X punkter pr. pixel"
 
 #: ../tcl/dialog_canvas.tcl:158
 msgid "Y units per pixel:"
-msgstr "픽셀 당 Y 단위 수"
+msgstr "Y punkter pr. pixel"
 
 #: ../tcl/dialog_canvas.tcl:162
 msgid "Appearance on parent patch"
-msgstr "부모에게 보이기"
+msgstr "Udseende på det overliggende patch"
 
 #: ../tcl/dialog_canvas.tcl:164
 msgid "Graph-On-Parent"
-msgstr "그래프로 엎히기"
+msgstr "Graf-På-Parent"
 
 #: ../tcl/dialog_canvas.tcl:168
 msgid "Hide object name and arguments"
-msgstr "객체 이름과 인수를 숨기기"
+msgstr "Skjul objektnavn og argumenter"
 
 #: ../tcl/dialog_canvas.tcl:173
 msgid "Range and size"
-msgstr "범위와 크기"
+msgstr "Område og størrelse"
 
 #: ../tcl/dialog_canvas.tcl:177
 msgid "X range, from"
-msgstr "X의 범위, 여기부터:"
+msgstr "X område, fra"
 
 #: ../tcl/dialog_canvas.tcl:179 ../tcl/dialog_canvas.tcl:194
 msgid "to"
-msgstr "여기까지:"
+msgstr "til"
 
 #: ../tcl/dialog_canvas.tcl:183 ../tcl/dialog_canvas.tcl:198
 msgid "Margin:"
-msgstr "여백: "
+msgstr "Margen:"
 
 #: ../tcl/dialog_canvas.tcl:192
 msgid "Y range, from"
-msgstr "Y의 범위, 여기부터:"
+msgstr "Y område, fra"
 
 #: ../tcl/dialog_data.tcl:29
 msgid "Data Properties"
-msgstr "자료 속성"
+msgstr "Egenskaber for data"
 
 #: ../tcl/dialog_data.tcl:37
 msgid "Send (Ctrl s)"
-msgstr "보내기(Ctrl + s)"
+msgstr "Send (Ctrl s)"
 
 #: ../tcl/dialog_data.tcl:39
 msgid "OK (Ctrl t)"
-msgstr "확인(Ctrl + t)"
+msgstr "OK (Ctrl t)"
 
 #: ../tcl/dialog_find.tcl:108
 #, tcl-format
 msgid "Couldn't find '%s' in %s"
-msgstr "%s를 '%s'에서 찾을 수 없습니다"
+msgstr "Kun ikke finde '%s' i %s"
 
 #: ../tcl/dialog_find.tcl:126 ../tcl/dialog_find.tcl:167
 #: pd_dynamic_strings.tcl:13
 msgid "Find"
-msgstr "찾기"
+msgstr "Find"
 
 #: ../tcl/dialog_find.tcl:145
 msgid "Search in"
-msgstr "찾을 곳: "
+msgstr "Søg i"
 
 #: ../tcl/dialog_find.tcl:146 ../tcl/pd_menus.tcl:283 ../tcl/pd_menus.tcl:316
 #: ../tcl/pd_menus.tcl:317
 msgid "Pd window"
-msgstr "Pd 창"
+msgstr "Pd vindue"
 
 #: ../tcl/dialog_find.tcl:147
 msgid "for:"
-msgstr "검색어: "
+msgstr "for:"
 
 #: ../tcl/dialog_find.tcl:157
 msgid "Match whole word only"
-msgstr "단어 전체가 일치하는 경우만 찾기"
+msgstr "Søg kun efter hele ord"
 
 #: ../tcl/dialog_find.tcl:171 ../tcl/pd_menus.tcl:58 ../tcl/pd_menus.tcl:63
 #: ../tcl/pd_menus.tcl:80 ../tcl/pd_menus.tcl:89 ../tcl/pd_menus.tcl:106
@@ -284,118 +283,118 @@ msgstr "단어 전체가 일치하는 경우만 찾기"
 #: ../tcl/pd_menus.tcl:534 ../tcl/pd_menus.tcl:558 ../tcl/pd_menus.tcl:572
 #: ../tcl/pd_menus.tcl:603 ../tcl/pd_menus.tcl:619
 msgid "Close"
-msgstr "닫기"
+msgstr "Luk"
 
 #: ../tcl/dialog_font.tcl:49
 #, tcl-format
 msgid "%s Font"
-msgstr "%s 글꼴"
+msgstr "%s Skrifttype"
 
 #: ../tcl/dialog_font.tcl:107
 msgid "Font Size"
-msgstr "글자 크기"
+msgstr "Skriftstørrelse"
 
 #: ../tcl/dialog_font.tcl:119
 msgid "Stretch"
-msgstr "늘이기"
+msgstr "Stræk"
 
 #: ../tcl/dialog_font.tcl:126
 msgid "X and Y"
-msgstr "가로 세로"
+msgstr "X og Y"
 
 #: ../tcl/dialog_font.tcl:128
 msgid "X only"
-msgstr "가로만"
+msgstr "Kun X"
 
 #: ../tcl/dialog_font.tcl:130
 msgid "Y only"
-msgstr "세로만"
+msgstr "Kun Y"
 
 #: ../tcl/dialog_gatom.tcl:93
 msgid "Atom Box Properties"
-msgstr "단위 데이터 박스 속성"
+msgstr "Egenskaber for Atom Box"
 
 #: ../tcl/dialog_gatom.tcl:103
 msgid "Width:"
-msgstr "너비"
+msgstr "Bredde:"
 
 #: ../tcl/dialog_gatom.tcl:107
 msgid "Limits"
-msgstr "한계치"
+msgstr "Grænser"
 
 #: ../tcl/dialog_gatom.tcl:111
 msgid "Lower:"
-msgstr "최소"
+msgstr "Nedre:"
 
 #: ../tcl/dialog_gatom.tcl:116
 msgid "Upper:"
-msgstr "최대"
+msgstr "Øvre:"
 
 #: ../tcl/dialog_gatom.tcl:120 ../tcl/dialog_iemgui.tcl:610
 #: ../tcl/dialog_iemgui.tcl:663
 msgid "Label"
-msgstr "라벨"
+msgstr "Etiket"
 
 #: ../tcl/dialog_gatom.tcl:128
 msgid "Left   "
-msgstr "왼쪽에"
+msgstr "Venstre"
 
 #: ../tcl/dialog_gatom.tcl:130
 msgid "Right"
-msgstr "오른쪽에"
+msgstr "Højre"
 
 #: ../tcl/dialog_gatom.tcl:132
 msgid "Top"
-msgstr "위에"
+msgstr "Top"
 
 #: ../tcl/dialog_gatom.tcl:134
 msgid "Bottom"
-msgstr "아래에"
+msgstr "Bund"
 
 #: ../tcl/dialog_gatom.tcl:141 ../tcl/dialog_iemgui.tcl:580
 msgid "Messages"
-msgstr "수신/발신"
+msgstr "Beskeder"
 
 #: ../tcl/dialog_gatom.tcl:145 ../tcl/dialog_iemgui.tcl:584
 msgid "Send symbol:"
-msgstr "이곳으로 발신"
+msgstr "Send symbol"
 
 #: ../tcl/dialog_gatom.tcl:151 ../tcl/dialog_iemgui.tcl:593
 msgid "Receive symbol:"
-msgstr "여기에서 수신"
+msgstr "Modtag symbol"
 
 #: ../tcl/dialog_iemgui.tcl:197
 msgid "Background color"
-msgstr "배경 색상"
+msgstr "Baggrundsfarve"
 
 #: ../tcl/dialog_iemgui.tcl:204
 msgid "Foreground color"
-msgstr "전경 색상"
+msgstr "Forgrundsfarve"
 
 #: ../tcl/dialog_iemgui.tcl:211
 msgid "Label color"
-msgstr "라벨 색상"
+msgstr "Etiket farve"
 
 #: ../tcl/dialog_iemgui.tcl:272
 msgid "Init"
-msgstr "저장"
+msgstr "Init"
 
 #: ../tcl/dialog_iemgui.tcl:275 ../tcl/dialog_iemgui.tcl:554
 msgid "No init"
-msgstr "저장 안함"
+msgstr "Ingen init"
 
 #: ../tcl/dialog_iemgui.tcl:287 ../tcl/dialog_iemgui.tcl:564
 msgid "Jump on click"
-msgstr "클릭으로 조절 가능"
+msgstr "Hop ved klik"
 
 #: ../tcl/dialog_iemgui.tcl:290 ../tcl/dialog_iemgui.tcl:567
 msgid "Steady on click"
-msgstr "드래그로만 조절 가능"
+msgstr "Passiv ved klik"
 
 #: ../tcl/dialog_iemgui.tcl:502
 #, tcl-format
 msgid "%s Properties"
-msgstr "%s 속성"
+msgstr "Egenskaber for %s"
 
 #: ../tcl/dialog_iemgui.tcl:557 ../tcl/pd_menus.tcl:55 ../tcl/pd_menus.tcl:60
 #: ../tcl/pd_menus.tcl:77 ../tcl/pd_menus.tcl:86 ../tcl/pd_menus.tcl:102
@@ -404,143 +403,143 @@ msgstr "%s 속성"
 #: ../tcl/pd_menus.tcl:535 ../tcl/pd_menus.tcl:549 ../tcl/pd_menus.tcl:561
 #: ../tcl/pd_menus.tcl:563 ../tcl/pd_menus.tcl:594 ../tcl/pd_menus.tcl:608
 msgid "Save"
-msgstr "저장"
+msgstr "Gem"
 
 #: ../tcl/dialog_iemgui.tcl:618
 msgid "X offset"
-msgstr "오른쪽으로 밀기"
+msgstr "X offset"
 
 #: ../tcl/dialog_iemgui.tcl:621
 msgid "Y offset"
-msgstr "세로로 밀기"
+msgstr "Y offset"
 
 #: ../tcl/dialog_iemgui.tcl:653
 msgid "Colors"
-msgstr "색상"
+msgstr "Farver"
 
 #: ../tcl/dialog_iemgui.tcl:659
 msgid "Background"
-msgstr "배경"
+msgstr "Baggrund"
 
 #: ../tcl/dialog_iemgui.tcl:661
 msgid "Front"
-msgstr "전경"
+msgstr "Forrest"
 
 #: ../tcl/dialog_iemgui.tcl:673
 msgid "Compose color"
-msgstr "색상 고르기"
+msgstr "Komponer farve"
 
 #: ../tcl/dialog_iemgui.tcl:692
 msgid "Test label"
-msgstr "라벨 견본"
+msgstr "Test etiket"
 
 #: ../tcl/dialog_message.tcl:61
 msgid "Send a Pd message"
-msgstr "Pd 메시지 보내기"
+msgstr "Send en besked til Pd"
 
 #: ../tcl/dialog_message.tcl:80
 msgid "(use arrow keys for history)"
-msgstr "방향키로 이전 메시지를 불러올 수 있습니다"
+msgstr "(brug piltasterne for historien)"
 
 #: ../tcl/dialog_midi.tcl:86
 msgid "MIDI Settings"
-msgstr "MIDI 설정"
+msgstr "MIDI Indstillinger"
 
 #: ../tcl/dialog_midi.tcl:227
 msgid "ALSA MIDI Settings"
-msgstr "ALSA MIDI 설정"
+msgstr "ALSA MIDI Indstillinger"
 
 #: ../tcl/dialog_midi.tcl:338
 msgid "Use multiple ALSA devices"
-msgstr "여러 ALSA 장치를 쓰기"
+msgstr "Brug flere ALSA enheder"
 
 #: ../tcl/dialog_midi.tcl:344
 msgid "In Ports:"
-msgstr "들어오는 포트"
+msgstr "Indgange:"
 
 #: ../tcl/dialog_midi.tcl:347
 msgid "Out Ports:"
-msgstr "내보내는 포트"
+msgstr "Udgange:"
 
 #: ../tcl/dialog_path.tcl:32
 msgid "Pd search path for objects, help, fonts, and other files"
-msgstr "객체, 도움말, 글꼴, 기타 파일을 찾을 경로"
+msgstr "Pd søg på sti efter objekter, hjælp, skrifttyper og andre filer"
 
 #: ../tcl/dialog_path.tcl:37
 msgid "Use standard extensions"
-msgstr "표준 경로를 사용합니다"
+msgstr "Brug standard endelser"
 
 #: ../tcl/dialog_path.tcl:39
 msgid "Verbose"
-msgstr "자세히"
+msgstr "Detaljeret"
 
 #: ../tcl/dialog_startup.tcl:49
 msgid "Add new library"
-msgstr "라이브러리 추가"
+msgstr "Tilføj nyt bibliotek"
 
 #: ../tcl/dialog_startup.tcl:53
 msgid "Edit library"
-msgstr "라이브러리 편집"
+msgstr "Rediger bibliotek"
 
 #: ../tcl/dialog_startup.tcl:79
 msgid "Pd libraries to load on startup"
-msgstr "처음에 적재할 라이브러리"
+msgstr "Pd biblioteker der skal indlæses ved opstart"
 
 #: ../tcl/dialog_startup.tcl:82
 msgid "Startup flags:"
-msgstr "시작 플래그"
+msgstr "Opstartsflag:"
 
 #: ../tcl/dialog_startup.tcl:91
 msgid "Real-time scheduling"
-msgstr "실시간 스케줄링"
+msgstr "Realtids planlægning"
 
 #: ../tcl/helpbrowser.tcl:27
 msgid "Help Browser"
-msgstr "도움말 탐색기"
+msgstr "Hjælpebrowser"
 
 #: ../tcl/pd_connect.tcl:74 ../tcl/pd_connect.tcl:82 ../tcl/pdwindow.tcl:221
 #: ../tcl/pdwindow.tcl:232 ../tcl/pdwindow.tcl:316
 msgid "(Tcl) INVALID COMMAND NAME: "
-msgstr "(Tcl) 알 수 없는 명령어:"
+msgstr "(Tcl) UGYLDIGT KOMMANDO NAVN"
 
 #: ../tcl/pd_connect.tcl:76 ../tcl/pd_connect.tcl:84 ../tcl/pdwindow.tcl:223
 #: ../tcl/pdwindow.tcl:234 ../tcl/pdwindow.tcl:318
 msgid "(Tcl) UNHANDLED ERROR: "
-msgstr "(Tcl) 미처리 오류:"
+msgstr "(Tcl) UHÅNDTERET FEJL"
 
 #: ../tcl/pd_guiprefs.tcl:153
 msgid "Cannot read GUI prefs file: "
-msgstr "GUI 설정 파일을 읽을 수 없습니다."
+msgstr "Kan ikke læse GUI indstillingsfil:"
 
 #: ../tcl/pd_menucommands.tcl:201 ../tcl/pd_menucommands.tcl:233
 #: ../tcl/pd_menus.tcl:292 ../tcl/pd_menus.tcl:326 ../tcl/pd_menus.tcl:327
 #: ../tcl/pd_menus.tcl:470 ../tcl/pd_menus.tcl:502 ../tcl/pd_menus.tcl:516
 msgid "About Pd"
-msgstr "Pd는?"
+msgstr "Om Pd"
 
 #: ../tcl/pd_menucommands.tcl:298
 msgid "Select name for app to build...\n"
-msgstr "어플리케이션 이름을 선택하세요 ...\n"
+msgstr "Vælg navn til applikation til eksport...\n"
 
 #: ../tcl/pd_menucommands.tcl:301
 msgid "Save application to..."
-msgstr "어플리케이션으로 저장하기 ..."
+msgstr "Gem applikation til..."
 
 #: ../tcl/pd_menucommands.tcl:310
 msgid "Configuring Info.plist..."
-msgstr "Info.plist 설정 중 ..."
+msgstr "Konfigurerer Info.plist"
 
 #: ../tcl/pd_menucommands.tcl:312
 msgid "Setting patch name..."
-msgstr "패치 이름 설정 중 ..."
+msgstr "Sætter patchnavn..."
 
 #: ../tcl/pd_menucommands.tcl:314
 msgid "Copying current patch..."
-msgstr "현재 패치 복사 중 ..."
+msgstr "Kopierer nuværende patch..."
 
 #: ../tcl/pd_menucommands.tcl:316
 msgid "Setting embedded preferences..."
-msgstr "내장된 선택 사항 설정 중 ..."
+msgstr "Sætter vedhæftede indstillinger..."
 
 #: ../tcl/pd_menus.tcl:56 ../tcl/pd_menus.tcl:61 ../tcl/pd_menus.tcl:78
 #: ../tcl/pd_menus.tcl:87 ../tcl/pd_menus.tcl:103 ../tcl/pd_menus.tcl:116
@@ -549,7 +548,7 @@ msgstr "내장된 선택 사항 설정 중 ..."
 #: ../tcl/pd_menus.tcl:550 ../tcl/pd_menus.tcl:562 ../tcl/pd_menus.tcl:564
 #: ../tcl/pd_menus.tcl:595 ../tcl/pd_menus.tcl:609
 msgid "Save As..."
-msgstr "다른 이름으로 저장 ..."
+msgstr "Gem som..."
 
 #: ../tcl/pd_menus.tcl:57 ../tcl/pd_menus.tcl:62 ../tcl/pd_menus.tcl:79
 #: ../tcl/pd_menus.tcl:88 ../tcl/pd_menus.tcl:104 ../tcl/pd_menus.tcl:117
@@ -558,19 +557,19 @@ msgstr "다른 이름으로 저장 ..."
 #: ../tcl/pd_menus.tcl:554 ../tcl/pd_menus.tcl:568 ../tcl/pd_menus.tcl:599
 #: ../tcl/pd_menus.tcl:615
 msgid "Print..."
-msgstr "인쇄 ..."
+msgstr "Udskriv..."
 
 #: ../tcl/pd_menus.tcl:60 ../tcl/pd_menus.tcl:65 ../tcl/pd_menus.tcl:82
 #: ../tcl/pd_menus.tcl:91 ../tcl/pd_menus.tcl:108 ../tcl/pd_menus.tcl:121
 #: ../tcl/pd_menus.tcl:151 ../tcl/pd_menus.tcl:172
 msgid "Duplicate"
-msgstr "복제"
+msgstr "Dupliker"
 
 #: ../tcl/pd_menus.tcl:61 ../tcl/pd_menus.tcl:66 ../tcl/pd_menus.tcl:83
 #: ../tcl/pd_menus.tcl:92 ../tcl/pd_menus.tcl:109 ../tcl/pd_menus.tcl:122
 #: ../tcl/pd_menus.tcl:167 ../tcl/pd_menus.tcl:179 ../tcl/pd_menus.tcl:188
 msgid "Tidy Up"
-msgstr "정돈"
+msgstr "Ryd op"
 
 #: ../tcl/pd_menus.tcl:62 ../tcl/pd_menus.tcl:69 ../tcl/pd_menus.tcl:84
 #: ../tcl/pd_menus.tcl:95 ../tcl/pd_menus.tcl:110 ../tcl/pd_menus.tcl:125
@@ -580,38 +579,38 @@ msgstr "정돈"
 #: ../tcl/pdtk_canvas.tcl:272 ../tcl/pdtk_canvas.tcl:276
 #: ../tcl/pdtk_canvas.tcl:278
 msgid "Edit Mode"
-msgstr "편집 모드"
+msgstr "Redigeringsmodus"
 
 #: ../tcl/pd_menus.tcl:65 ../tcl/pd_menus.tcl:74 ../tcl/pd_menus.tcl:113
 #: ../tcl/pd_menus.tcl:130 ../tcl/pd_menus.tcl:140 ../tcl/pd_menus.tcl:161
 #: ../tcl/pd_menus.tcl:318 ../tcl/pd_menus.tcl:346 ../tcl/pd_menus.tcl:347
 msgid "Undo"
-msgstr "실행취소"
+msgstr "Fortryd"
 
 #: ../tcl/pd_menus.tcl:66 ../tcl/pd_menus.tcl:75 ../tcl/pd_menus.tcl:114
 #: ../tcl/pd_menus.tcl:131 ../tcl/pd_menus.tcl:142 ../tcl/pd_menus.tcl:163
 #: ../tcl/pd_menus.tcl:324 ../tcl/pd_menus.tcl:352 ../tcl/pd_menus.tcl:353
 msgid "Redo"
-msgstr "재실행"
+msgstr "Gentag"
 
 #: ../tcl/pd_menus.tcl:67 ../tcl/pd_menus.tcl:93 ../tcl/pd_menus.tcl:123
 #: ../tcl/pd_menus.tcl:184 ../tcl/pd_menus.tcl:193 ../tcl/pdtk_canvas.tcl:292
 #: ../tcl/pdtk_canvas.tcl:294
 msgid "Autopatch"
-msgstr "자동 연결"
+msgstr "Autopatch"
 
 #: ../tcl/pd_menus.tcl:68 ../tcl/pd_menus.tcl:94 ../tcl/pd_menus.tcl:124
 #: ../tcl/pd_menus.tcl:190 ../tcl/pd_menus.tcl:199 ../tcl/pdtk_canvas.tcl:306
 #: ../tcl/pdtk_canvas.tcl:308
 msgid "Magic Glass"
-msgstr "투시경"
+msgstr "Magiske briller"
 
 #: ../tcl/pd_menus.tcl:128 ../tcl/pd_menus.tcl:145 ../tcl/pd_menus.tcl:482
 #: ../tcl/pd_menus.tcl:511 ../tcl/pd_menus.tcl:513 ../tcl/pd_menus.tcl:528
 #: ../tcl/pd_menus.tcl:546 ../tcl/pd_menus.tcl:558 ../tcl/pd_menus.tcl:560
 #: ../tcl/pd_menus.tcl:591 ../tcl/pd_menus.tcl:605
 msgid "New"
-msgstr "새 파일"
+msgstr "Ny"
 
 #: ../tcl/pd_menus.tcl:129 ../tcl/pd_menus.tcl:146 ../tcl/pd_menus.tcl:483
 #: ../tcl/pd_menus.tcl:512 ../tcl/pd_menus.tcl:514 ../tcl/pd_menus.tcl:529
@@ -622,177 +621,177 @@ msgstr "새 파일"
 #: ../tcl/pdtk_canvas.tcl:228 ../tcl/pdtk_canvas.tcl:391
 #: ../tcl/pdtk_canvas.tcl:411 ../tcl/pdtk_canvas.tcl:413
 msgid "Open"
-msgstr "열기"
+msgstr "Åben"
 
 #: ../tcl/pd_menus.tcl:134 ../tcl/pd_menus.tcl:151 ../tcl/pd_menus.tcl:493
 #: ../tcl/pd_menus.tcl:520 ../tcl/pd_menus.tcl:526 ../tcl/pd_menus.tcl:540
 #: ../tcl/pd_menus.tcl:553 ../tcl/pd_menus.tcl:565 ../tcl/pd_menus.tcl:567
 #: ../tcl/pd_menus.tcl:598 ../tcl/pd_menus.tcl:612
 msgid "Message..."
-msgstr "메시지 보내기"
+msgstr "Besked..."
 
 #: ../tcl/pd_menus.tcl:145 ../tcl/pd_menus.tcl:166
 msgid "Cut"
-msgstr "잘라내기"
+msgstr "Klip"
 
 #: ../tcl/pd_menus.tcl:153 ../tcl/pd_menus.tcl:174
 msgid "Select All"
-msgstr "모두 선택"
+msgstr "Vælg alle"
 
 #: ../tcl/pd_menus.tcl:159 ../tcl/pd_menus.tcl:164 ../tcl/pd_menus.tcl:177
 #: ../tcl/pd_menus.tcl:180 ../tcl/pd_menus.tcl:185
 msgid "Font"
-msgstr "글꼴"
+msgstr "Skrifttype"
 
 #: ../tcl/pd_menus.tcl:169 ../tcl/pd_menus.tcl:181 ../tcl/pd_menus.tcl:190
 msgid "Clear Console"
-msgstr "콘솔 비우기"
+msgstr "Ryd konsol"
 
 #: ../tcl/pd_menus.tcl:183 ../tcl/pd_menus.tcl:216 ../tcl/pd_menus.tcl:217
 msgid "Object"
-msgstr "객체"
+msgstr "Objekt"
 
 #: ../tcl/pd_menus.tcl:185 ../tcl/pd_menus.tcl:218 ../tcl/pd_menus.tcl:219
 msgid "Message"
-msgstr "메시지 상자"
+msgstr "Besked"
 
 #: ../tcl/pd_menus.tcl:187 ../tcl/pd_menus.tcl:220 ../tcl/pd_menus.tcl:221
 msgid "Number"
-msgstr "숫자"
+msgstr "Nummer"
 
 #: ../tcl/pd_menus.tcl:189 ../tcl/pd_menus.tcl:222 ../tcl/pd_menus.tcl:223
 msgid "Symbol"
-msgstr "문자"
+msgstr "Symbol"
 
 #: ../tcl/pd_menus.tcl:191 ../tcl/pd_menus.tcl:224 ../tcl/pd_menus.tcl:225
 msgid "Comment"
-msgstr "주석"
+msgstr "Kommentar"
 
 #: ../tcl/pd_menus.tcl:193 ../tcl/pd_menus.tcl:202
 msgid "Perf Mode"
-msgstr "연주 모드"
+msgstr "Perf modus"
 
 #: ../tcl/pd_menus.tcl:194 ../tcl/pd_menus.tcl:227 ../tcl/pd_menus.tcl:228
 msgid "Bang"
-msgstr "박치기"
+msgstr "Bang"
 
 #: ../tcl/pd_menus.tcl:196
 msgid "Autotips"
-msgstr "팁 보여주기"
+msgstr "Autotips"
 
 #: ../tcl/pd_menus.tcl:196 ../tcl/pd_menus.tcl:229 ../tcl/pd_menus.tcl:230
 msgid "Toggle"
-msgstr "토글"
+msgstr "Checkbox"
 
 #: ../tcl/pd_menus.tcl:198 ../tcl/pd_menus.tcl:231 ../tcl/pd_menus.tcl:232
 msgid "Number2"
-msgstr "화려한 숫자 박스"
+msgstr "Nummer2"
 
 #: ../tcl/pd_menus.tcl:200 ../tcl/pd_menus.tcl:233 ../tcl/pd_menus.tcl:234
 msgid "Vslider"
-msgstr "세로 슬라이더"
+msgstr "Vslider"
 
 #: ../tcl/pd_menus.tcl:201 ../tcl/pd_menus.tcl:260 ../tcl/pd_menus.tcl:294
 #: ../tcl/pd_menus.tcl:473 ../tcl/pd_menus.tcl:519 ../tcl/pd_menus.tcl:567
 #: ../tcl/pd_menus.tcl:614
 msgid "Preferences"
-msgstr "선택사항"
+msgstr "Indstillinger"
 
 #: ../tcl/pd_menus.tcl:202 ../tcl/pd_menus.tcl:235 ../tcl/pd_menus.tcl:236
 msgid "Hslider"
-msgstr "가로 슬라이더"
+msgstr "Hslider"
 
 #: ../tcl/pd_menus.tcl:204 ../tcl/pd_menus.tcl:237 ../tcl/pd_menus.tcl:238
 msgid "Vradio"
-msgstr "세로 라디오 버튼"
+msgstr "Vradio"
 
 #: ../tcl/pd_menus.tcl:206 ../tcl/pd_menus.tcl:239 ../tcl/pd_menus.tcl:240
 msgid "Hradio"
-msgstr "가로 라디오 버튼"
+msgstr "Hradio"
 
 #: ../tcl/pd_menus.tcl:208 ../tcl/pd_menus.tcl:241 ../tcl/pd_menus.tcl:242
 msgid "VU Meter"
-msgstr "음량계"
+msgstr "VU Meter"
 
 #: ../tcl/pd_menus.tcl:210 ../tcl/pd_menus.tcl:243 ../tcl/pd_menus.tcl:244
 msgid "Canvas"
-msgstr "캔버스"
+msgstr "Canvas"
 
 #: ../tcl/pd_menus.tcl:213 ../tcl/pd_menus.tcl:246 ../tcl/pd_menus.tcl:247
 msgid "Graph"
-msgstr "그래프"
+msgstr "Graf"
 
 #: ../tcl/pd_menus.tcl:214 ../tcl/pd_menus.tcl:247 ../tcl/pd_menus.tcl:248
 msgid "Array"
-msgstr "배열"
+msgstr "Array"
 
 #: ../tcl/pd_menus.tcl:219 ../tcl/pd_menus.tcl:252 ../tcl/pd_menus.tcl:253
 msgid "Find..."
-msgstr "찾기..."
+msgstr "Find..."
 
 #: ../tcl/pd_menus.tcl:221 ../tcl/pd_menus.tcl:254 ../tcl/pd_menus.tcl:255
 msgid "Find Again"
-msgstr "또 찾기"
+msgstr "Find Igen"
 
 #: ../tcl/pd_menus.tcl:223 ../tcl/pd_menus.tcl:256 ../tcl/pd_menus.tcl:257
 msgid "Find Last Error"
-msgstr "최근 오류"
+msgstr "Find Sidste Fejl"
 
 #: ../tcl/pd_menus.tcl:229 ../tcl/pd_menus.tcl:262 ../tcl/pd_menus.tcl:263
 msgid "DSP On"
-msgstr "오디오 신호 처리 시작"
+msgstr "DSP Tændt"
 
 #: ../tcl/pd_menus.tcl:231 ../tcl/pd_menus.tcl:264 ../tcl/pd_menus.tcl:265
 msgid "DSP Off"
-msgstr "오디오 신호 처리 중단"
+msgstr "DSP Slukket"
 
 #: ../tcl/pd_menus.tcl:235 ../tcl/pd_menus.tcl:268 ../tcl/pd_menus.tcl:269
 msgid "Test Audio and MIDI..."
-msgstr "오디오 및 MIDI 점검"
+msgstr "Test Lyd og MIDI"
 
 #: ../tcl/pd_menus.tcl:237 ../tcl/pd_menus.tcl:270 ../tcl/pd_menus.tcl:271
 msgid "Load Meter"
-msgstr "CPU 부하량 측정기"
+msgstr "CPU-brug"
 
 #: ../tcl/pd_menus.tcl:267 ../tcl/pd_menus.tcl:300 ../tcl/pd_menus.tcl:301
 msgid "Minimize"
-msgstr "최소화"
+msgstr "Minimer"
 
 #: ../tcl/pd_menus.tcl:269 ../tcl/pd_menus.tcl:302 ../tcl/pd_menus.tcl:303
 msgid "Zoom"
-msgstr "확대/축소"
+msgstr "Zoom"
 
 #: ../tcl/pd_menus.tcl:272 ../tcl/pd_menus.tcl:305 ../tcl/pd_menus.tcl:306
 msgid "Bring All to Front"
-msgstr "모두 앞으로 불러오기"
+msgstr "Bring alt forrest"
 
 #: ../tcl/pd_menus.tcl:275 ../tcl/pd_menus.tcl:308 ../tcl/pd_menus.tcl:309
 msgid "Next Window"
-msgstr "다음 창"
+msgstr "Næste vindue"
 
 #: ../tcl/pd_menus.tcl:278 ../tcl/pd_menus.tcl:311 ../tcl/pd_menus.tcl:312
 msgid "Previous Window"
-msgstr "이전 창"
+msgstr "Forrige vindue"
 
 #: ../tcl/pd_menus.tcl:285 ../tcl/pd_menus.tcl:318 ../tcl/pd_menus.tcl:319
 msgid "Parent Window"
-msgstr "부모 창"
+msgstr "Overliggende vindue"
 
 #: ../tcl/pd_menus.tcl:291 ../tcl/pd_menus.tcl:457 ../tcl/pd_menus.tcl:503
 msgid "Audio Settings..."
-msgstr "오디오 설정 ..."
+msgstr "Lyd Indstillinger..."
 
 #: ../tcl/pd_menus.tcl:293 ../tcl/pd_menus.tcl:459 ../tcl/pd_menus.tcl:505
 msgid "MIDI Settings..."
-msgstr "MIDI 설정 ..."
+msgstr "MIDI Indstillinger..."
 
 #: ../tcl/pd_menus.tcl:294
 msgid "HTML Manual..."
-msgstr "HTML 설명서 ..."
+msgstr "HTML Manual..."
 
 #: ../tcl/pd_menus.tcl:296
 msgid "Browser..."
-msgstr "탐색기 ..."
+msgstr "Browser..."
 
 #: ../tcl/pd_menus.tcl:299
 msgid "puredata.info"
@@ -800,40 +799,40 @@ msgstr "puredata.info"
 
 #: ../tcl/pd_menus.tcl:301 ../tcl/pd_menus.tcl:333 ../tcl/pd_menus.tcl:334
 msgid "Report a bug"
-msgstr "버그 신고"
+msgstr "Rapporter en fejl"
 
 #: ../tcl/pd_menus.tcl:304
 msgid "Tcl prompt"
-msgstr "Tcl 프롬프트"
+msgstr "Tcl forespørgsel"
 
 #: ../tcl/pd_menus.tcl:328 ../tcl/pd_menus.tcl:329
 msgid "Pd Help Browser..."
-msgstr "Pd 도움말 탐색기 ..."
+msgstr "Pd Hjælpebrowser"
 
 #: ../tcl/pd_menus.tcl:330 ../tcl/pd_menus.tcl:331
 msgid "Start Here!"
-msgstr "뭐가 뭔지 모르겠다면 여기로!"
+msgstr "Start her!"
 
 #: ../tcl/pd_menus.tcl:348 ../tcl/pd_menus.tcl:385 ../tcl/pd_menus.tcl:386
 msgid "Clear Menu"
-msgstr "메뉴 비우기"
+msgstr "Ryd menu"
 
 #: ../tcl/pd_menus.tcl:453 ../tcl/pd_menus.tcl:499
 msgid "Path..."
-msgstr "경로..."
+msgstr "Sti..."
 
 #: ../tcl/pd_menus.tcl:455 ../tcl/pd_menus.tcl:501
 msgid "Startup..."
-msgstr "시작 설정 ..."
+msgstr "Opstart..."
 
 #: ../tcl/pd_menus.tcl:485 ../tcl/pd_menus.tcl:515 ../tcl/pd_menus.tcl:532
 msgid "Open Recent"
-msgstr "최근 작업"
+msgstr "Åben seneste"
 
 #: ../tcl/pd_menus.tcl:526 ../tcl/pd_menus.tcl:559 ../tcl/pd_menus.tcl:573
 #: ../tcl/pd_menus.tcl:604 ../tcl/pd_menus.tcl:620
 msgid "Quit"
-msgstr "나가기"
+msgstr "Luk"
 
 #: ../tcl/pdtk_canvas.tcl:198 ../tcl/pdtk_canvas.tcl:204
 #: ../tcl/pdtk_canvas.tcl:215 ../tcl/pdtk_canvas.tcl:217
@@ -841,12 +840,12 @@ msgstr "나가기"
 #: ../tcl/pdtk_canvas.tcl:389 ../tcl/pdtk_canvas.tcl:406
 #: ../tcl/pdtk_canvas.tcl:408
 msgid "Properties"
-msgstr "속성"
+msgstr "Egenskaber"
 
 #: ../tcl/pdtk_canvas.tcl:202 ../tcl/pdtk_canvas.tcl:208
 #: ../tcl/pdtk_canvas.tcl:393 pd_dynamic_strings.tcl:16
 msgid "Help"
-msgstr "도움말"
+msgstr "Hjælp"
 
 #: ../tcl/pdtk_canvas.tcl:319
 msgid " "
@@ -854,11 +853,11 @@ msgstr " "
 
 #: ../tcl/pdwindow.tcl:217 ../tcl/pdwindow.tcl:228 ../tcl/pdwindow.tcl:312
 msgid "(Tcl) MISSING CLOSE-BRACE '}': "
-msgstr "(Tcl) 닫는 괄호 '}'가 없음:"
+msgstr "(Tcl) MANGLER LUKKE-TUBORGKLAMME '}':"
 
 #: ../tcl/pdwindow.tcl:219 ../tcl/pdwindow.tcl:230 ../tcl/pdwindow.tcl:314
 msgid "(Tcl) MISSING CLOSE-BRACKET ']': "
-msgstr "(Tcl) 닫는 괄호 ']'가 없음: "
+msgstr "(Tcl) MANGLER LUKKEKLAMME ']':"
 
 #: ../tcl/pdwindow.tcl:258 ../tcl/pdwindow.tcl:269 ../tcl/pdwindow.tcl:353
 #: ../tcl/pdwindow.tcl:464
@@ -872,255 +871,255 @@ msgstr "Pd"
 
 #: ../tcl/pdwindow.tcl:317 ../tcl/pdwindow.tcl:328 ../tcl/pdwindow.tcl:430
 msgid "DSP"
-msgstr "오디오 신호 처리"
+msgstr "DSP"
 
 #: ../tcl/pdwindow.tcl:322 ../tcl/pdwindow.tcl:333 ../tcl/pdwindow.tcl:435
 msgid "audio I/O error"
-msgstr "오디오 입출력 오류"
+msgstr "lyd I/O fejl"
 
 #: ../tcl/pdwindow.tcl:328 ../tcl/pdwindow.tcl:339 ../tcl/pdwindow.tcl:462
 msgid "Log:"
-msgstr "로그: "
+msgstr "Log:"
 
 #: ../tcl/pdwindow.tcl:333 ../tcl/pdwindow.tcl:344 ../tcl/pdwindow.tcl:446
 msgid "fatal"
-msgstr "치명적 오류"
+msgstr "fatal"
 
 #: ../tcl/pdwindow.tcl:334 ../tcl/pdwindow.tcl:345 ../tcl/pdwindow.tcl:447
 msgid "error"
-msgstr "오류"
+msgstr "fejl"
 
 #: ../tcl/pdwindow.tcl:335 ../tcl/pdwindow.tcl:346 ../tcl/pdwindow.tcl:448
 msgid "normal"
-msgstr "정상"
+msgstr "normal"
 
 #: ../tcl/pdwindow.tcl:336 ../tcl/pdwindow.tcl:347 ../tcl/pdwindow.tcl:449
 msgid "debug"
-msgstr "디버그"
+msgstr "fejlfinding"
 
 #: ../tcl/pdwindow.tcl:337 ../tcl/pdwindow.tcl:348 ../tcl/pdwindow.tcl:450
 msgid "all"
-msgstr "모두"
+msgstr "alle"
 
 #: ../tcl/pdwindow.tcl:396 ../tcl/pdwindow.tcl:397
 msgid "Pd-extended"
-msgstr "확장판 Pd"
+msgstr "Pd-extended"
 
 #: ../tcl/pdwindow.tcl:425
 msgid "IN"
-msgstr "입력"
+msgstr "IND"
 
 #: ../tcl/pdwindow.tcl:426
 msgid "OUT"
-msgstr "출력"
+msgstr "UD"
 
 #: ../tcl/wheredoesthisgo.tcl:18 ../tcl/wheredoesthisgo.tcl:19
 #, tcl-format
 msgid "Ignoring '%s': doesn't look like a Pd-file"
-msgstr "%s를 무시함. Pd 파일이 아닌듯. "
+msgstr "Ignorerer '%s': den ligner ikke en Pd-fil"
 
 #: iemgui_dynamic_strings.tcl:11
 msgid "-------dimensions(digits)(pix):-------"
-msgstr "        크기 (자릿 수) x (픽셀)"
+msgstr "-------dimensioner(tal)(pix):-------"
 
 #: iemgui_dynamic_strings.tcl:12
 msgid "--------dimensions(pix)(pix):--------"
-msgstr "      크기(픽셀) x (픽셀)"
+msgstr "--------dimensioner(pix)(pix):--------"
 
 #: iemgui_dynamic_strings.tcl:13
 msgid "----------dimensions(pix):-----------"
-msgstr "        크기(픽셀)"
+msgstr "----------dimensioner(pix):-----------"
 
 #: iemgui_dynamic_strings.tcl:14
 msgid "--------flash-time(ms)(ms):---------"
-msgstr "        깜빡하는 시간(ms) (ms)"
+msgstr "--------blinke-tid(ms)(ms):---------"
 
 #: iemgui_dynamic_strings.tcl:15
 msgid "-----------output-range:-----------"
-msgstr "        출력 범위"
+msgstr "-----------output-område:-----------"
 
 #: iemgui_dynamic_strings.tcl:16
 msgid "------selectable_dimensions(pix):------"
-msgstr "        잡히는 영역 (픽셀)"
+msgstr "------valgbare_dimensioner(pix):------"
 
 #: iemgui_dynamic_strings.tcl:17
 msgid "------visible_rectangle(pix)(pix):------"
-msgstr "        보이는 영역(픽셀) x (픽셀)"
+msgstr "------synlig_rektangel(pix)(pix):------"
 
 #: iemgui_dynamic_strings.tcl:20
 msgid "bottom:"
-msgstr "하:"
+msgstr "bund:"
 
 #: iemgui_dynamic_strings.tcl:21
 msgid "height:"
-msgstr "높이: "
+msgstr "højde:"
 
 #: iemgui_dynamic_strings.tcl:22
 msgid "hold:"
-msgstr "켜지는 시간"
+msgstr "hold:"
 
 #: iemgui_dynamic_strings.tcl:23
 msgid "intrrpt:"
-msgstr "끼어들 시 꺼지는 시간"
+msgstr "afbr:"
 
 #: iemgui_dynamic_strings.tcl:24
 msgid "left:"
-msgstr "좌:"
+msgstr "venstre:"
 
 #: iemgui_dynamic_strings.tcl:25
 msgid "lin"
-msgstr "선형"
+msgstr "lin"
 
 #: iemgui_dynamic_strings.tcl:26
 msgid "log"
-msgstr "로그"
+msgstr "log"
 
 #: iemgui_dynamic_strings.tcl:27
 msgid "log-height:"
-msgstr "로그 높이"
+msgstr "log-højde:"
 
 #: iemgui_dynamic_strings.tcl:28
 msgid "max:"
-msgstr "최대 값:"
+msgstr "max:"
 
 #: iemgui_dynamic_strings.tcl:29
 msgid "min:"
-msgstr "최소 값:"
+msgstr "min:"
 
 #: iemgui_dynamic_strings.tcl:30
 msgid "right:"
-msgstr "우:"
+msgstr "højre:"
 
 #: iemgui_dynamic_strings.tcl:31
 msgid "size:"
-msgstr "크기:"
+msgstr "størrelse:"
 
 #: iemgui_dynamic_strings.tcl:32
 msgid "top:"
-msgstr "상:"
+msgstr "top:"
 
 #: iemgui_dynamic_strings.tcl:33
 msgid "value:"
-msgstr "깂: "
+msgstr "værdi:"
 
 #: iemgui_dynamic_strings.tcl:34
 msgid "width:"
-msgstr "너비: "
+msgstr "bredde:"
 
 #: pd_dynamic_strings.tcl:10 pd_dynamic_strings.tcl:18
 #, tcl-format
 msgid "Do you want to save the changes you made in '%s'?"
-msgstr "'%s'를 이대로 저장할까요?"
+msgstr "Vil du gemme dine ændringer i '%s'?"
 
 #: pd_dynamic_strings.tcl:10
 msgid "File"
-msgstr "F)파일"
+msgstr "Fil"
 
 #: pd_dynamic_strings.tcl:11 pd_dynamic_strings.tcl:19
 #, tcl-format
 msgid "Discard changes to '%s'?"
-msgstr "'%s'를 이대로 저장하지 말까요?"
+msgstr "Kasser ændringerne i '%s'?"
 
 #: pd_dynamic_strings.tcl:11
 msgid "Edit"
-msgstr "E)편집"
+msgstr "Rediger"
 
 #: pd_dynamic_strings.tcl:12 pd_dynamic_strings.tcl:20
 msgid "Close this window?"
-msgstr "진짜로 닫겠습니까??"
+msgstr "Luk dette vindue?"
 
 #: pd_dynamic_strings.tcl:12
 msgid "Put"
-msgstr "P)넣기"
+msgstr "Sæt"
 
 #: pd_dynamic_strings.tcl:13 pd_dynamic_strings.tcl:15
 #: pd_dynamic_strings.tcl:23
 msgid "Undo clear"
-msgstr "비우기 취소"
+msgstr "Fortryd ryd"
 
 #: pd_dynamic_strings.tcl:13 pd_dynamic_strings.tcl:21
 msgid "really quit?"
-msgstr "진짜로 나가겠습니까?"
+msgstr "vil du virkelig lukke?"
 
 #: pd_dynamic_strings.tcl:14
 msgid "Media"
-msgstr "M)장치"
+msgstr "Medier"
 
 #: pd_dynamic_strings.tcl:14 pd_dynamic_strings.tcl:16
 #: pd_dynamic_strings.tcl:24
 msgid "Undo connect"
-msgstr "연결 취소"
+msgstr "Fortryd forbind"
 
 #: pd_dynamic_strings.tcl:15 pd_dynamic_strings.tcl:17
 #: pd_dynamic_strings.tcl:25
 msgid "Undo cut"
-msgstr "잘라내기 취소"
+msgstr "Fortryd klip"
 
 #: pd_dynamic_strings.tcl:15
 msgid "Window"
-msgstr "W)창"
+msgstr "Vindue"
 
 #: pd_dynamic_strings.tcl:16 pd_dynamic_strings.tcl:18
 #: pd_dynamic_strings.tcl:26
 msgid "Undo disconnect"
-msgstr "끊기 취소"
+msgstr "Fortryd frakobling"
 
 #: pd_dynamic_strings.tcl:17 pd_dynamic_strings.tcl:19
 #: pd_dynamic_strings.tcl:27
 msgid "Undo duplicate"
-msgstr "복제 취소"
+msgstr "Fortryd duplikering"
 
 #: pd_dynamic_strings.tcl:18 pd_dynamic_strings.tcl:20
 #: pd_dynamic_strings.tcl:28
 msgid "Undo motion"
-msgstr "옮기기 취소"
+msgstr "Fortryd bevægelse"
 
 #: pd_dynamic_strings.tcl:19 pd_dynamic_strings.tcl:21
 #: pd_dynamic_strings.tcl:29
 msgid "Undo paste"
-msgstr "붙여넣기 취소"
+msgstr "Fortryd indsæt"
 
 #: pd_dynamic_strings.tcl:20 pd_dynamic_strings.tcl:22
 #: pd_dynamic_strings.tcl:30
 msgid "Undo typing"
-msgstr "입력 취소"
+msgstr "Fortryd indtastning"
 
 #: pd_dynamic_strings.tcl:22 pd_dynamic_strings.tcl:24
 #: pd_dynamic_strings.tcl:32
 msgid "Redo clear"
-msgstr "도로 비우기"
+msgstr "Gentag ryd"
 
 #: pd_dynamic_strings.tcl:23 pd_dynamic_strings.tcl:25
 #: pd_dynamic_strings.tcl:33
 msgid "Redo connect"
-msgstr "도로 연결"
+msgstr "Gentag forbind"
 
 #: pd_dynamic_strings.tcl:24 pd_dynamic_strings.tcl:26
 #: pd_dynamic_strings.tcl:34
 msgid "Redo cut"
-msgstr "도로 잘라내기"
+msgstr "Gentag klip"
 
 #: pd_dynamic_strings.tcl:25 pd_dynamic_strings.tcl:27
 #: pd_dynamic_strings.tcl:35
 msgid "Redo disconnect"
-msgstr "도로 끊기"
+msgstr "Gentag frakobling"
 
 #: pd_dynamic_strings.tcl:26 pd_dynamic_strings.tcl:28
 #: pd_dynamic_strings.tcl:36
 msgid "Redo duplicate"
-msgstr "도로 복제하기"
+msgstr "Gentag duplikering"
 
 #: pd_dynamic_strings.tcl:27 pd_dynamic_strings.tcl:29
 #: pd_dynamic_strings.tcl:37
 msgid "Redo motion"
-msgstr "도로 옮기기"
+msgstr "Gentag bevægelse"
 
 #: pd_dynamic_strings.tcl:28 pd_dynamic_strings.tcl:30
 #: pd_dynamic_strings.tcl:38
 msgid "Redo paste"
-msgstr "도로 붙여넣기"
+msgstr "Gentag indsæt"
 
 #: pd_dynamic_strings.tcl:29 pd_dynamic_strings.tcl:31
 #: pd_dynamic_strings.tcl:39
 msgid "Redo typing"
-msgstr "도로 입력"
+msgstr "Gentag indtastning"
