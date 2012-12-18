@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Pure Data\n"
 "Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=55736&atid=478070\n"
 "POT-Creation-Date: 2012-01-17 18:37-0500\n"
-"PO-Revision-Date: 2012-12-11 02:23+0000\n"
+"PO-Revision-Date: 2012-12-17 09:59+0000\n"
 "Last-Translator: gnoownow10 <gnoownow10@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -20,7 +20,7 @@ msgstr ""
 
 #: ../tcl/dialog_array.tcl:115 ../tcl/pd_menus.tcl:147 ../tcl/pd_menus.tcl:168
 msgid "Copy"
-msgstr "부"
+msgstr "복사"
 
 #: ../tcl/dialog_array.tcl:118 ../tcl/pd_menus.tcl:149 ../tcl/pd_menus.tcl:170
 msgid "Paste"
@@ -45,7 +45,7 @@ msgstr "내용 저장하기"
 
 #: ../tcl/dialog_array.tcl:287
 msgid "Draw as:"
-msgstr "그리는 법"
+msgstr "그래프 모양"
 
 #: ../tcl/dialog_array.tcl:290
 msgid "Points"
@@ -121,7 +121,7 @@ msgstr "샘플링 속도"
 
 #: ../tcl/dialog_audio.tcl:166
 msgid "Delay (msec):"
-msgstr "지연시간(1000분의 1초)"
+msgstr "지연시간(msec)"
 
 #: ../tcl/dialog_audio.tcl:169
 msgid "Block size:"
@@ -192,11 +192,11 @@ msgstr "경고: pdtk_canvas_dialog에서 알 수 없는 graphme 플래그를 받
 
 #: ../tcl/dialog_canvas.tcl:141
 msgid "Canvas Properties"
-msgstr "지면 속성"
+msgstr "캔버스 속성"
 
 #: ../tcl/dialog_canvas.tcl:149
 msgid "Scale"
-msgstr ""
+msgstr "축적"
 
 #: ../tcl/dialog_canvas.tcl:153
 msgid "X units per pixel:"
@@ -208,7 +208,7 @@ msgstr "픽셀 당 Y 단위 수"
 
 #: ../tcl/dialog_canvas.tcl:162
 msgid "Appearance on parent patch"
-msgstr "부모 지면에서 드러낼 모습"
+msgstr "부모에게 보이기"
 
 #: ../tcl/dialog_canvas.tcl:164
 msgid "Graph-On-Parent"
@@ -224,19 +224,19 @@ msgstr "범위와 크기"
 
 #: ../tcl/dialog_canvas.tcl:177
 msgid "X range, from"
-msgstr "X의 범위: 여기부터"
+msgstr "X의 범위, 여기부터:"
 
 #: ../tcl/dialog_canvas.tcl:179 ../tcl/dialog_canvas.tcl:194
 msgid "to"
-msgstr "까지"
+msgstr "여기까지:"
 
 #: ../tcl/dialog_canvas.tcl:183 ../tcl/dialog_canvas.tcl:198
 msgid "Margin:"
-msgstr "여백"
+msgstr "여백: "
 
 #: ../tcl/dialog_canvas.tcl:192
 msgid "Y range, from"
-msgstr "Y의 범위: 여기부터"
+msgstr "Y의 범위, 여기부터:"
 
 #: ../tcl/dialog_data.tcl:29
 msgid "Data Properties"
@@ -253,7 +253,7 @@ msgstr "확인(Ctrl + t)"
 #: ../tcl/dialog_find.tcl:108
 #, tcl-format
 msgid "Couldn't find '%s' in %s"
-msgstr "%s에서 '%s'를 찾을 수 없습니다"
+msgstr "%s를 '%s'에서 찾을 수 없습니다"
 
 #: ../tcl/dialog_find.tcl:126 ../tcl/dialog_find.tcl:167
 #: pd_dynamic_strings.tcl:13
@@ -297,11 +297,11 @@ msgstr "글자 크기"
 
 #: ../tcl/dialog_font.tcl:119
 msgid "Stretch"
-msgstr "늘일 방향"
+msgstr "늘이기"
 
 #: ../tcl/dialog_font.tcl:126
 msgid "X and Y"
-msgstr "가로 세로 둘 다"
+msgstr "가로 세로"
 
 #: ../tcl/dialog_font.tcl:128
 msgid "X only"
@@ -325,16 +325,16 @@ msgstr "한계치"
 
 #: ../tcl/dialog_gatom.tcl:111
 msgid "Lower:"
-msgstr "최소치"
+msgstr "최소"
 
 #: ../tcl/dialog_gatom.tcl:116
 msgid "Upper:"
-msgstr "최대치"
+msgstr "최대"
 
 #: ../tcl/dialog_gatom.tcl:120 ../tcl/dialog_iemgui.tcl:610
 #: ../tcl/dialog_iemgui.tcl:663
 msgid "Label"
-msgstr "라벨 붙이기"
+msgstr "라벨"
 
 #: ../tcl/dialog_gatom.tcl:128
 msgid "Left   "
@@ -408,7 +408,7 @@ msgstr "저장"
 
 #: ../tcl/dialog_iemgui.tcl:618
 msgid "X offset"
-msgstr "가로로 밀기"
+msgstr "오른쪽으로 밀기"
 
 #: ../tcl/dialog_iemgui.tcl:621
 msgid "Y offset"
@@ -460,7 +460,7 @@ msgstr "들어오는 포트"
 
 #: ../tcl/dialog_midi.tcl:347
 msgid "Out Ports:"
-msgstr "출력 포트"
+msgstr "내보내는 포트"
 
 #: ../tcl/dialog_path.tcl:32
 msgid "Pd search path for objects, help, fonts, and other files"
@@ -468,11 +468,11 @@ msgstr "객체, 도움말, 글꼴, 기타 파일을 찾을 경로"
 
 #: ../tcl/dialog_path.tcl:37
 msgid "Use standard extensions"
-msgstr ""
+msgstr "표준 경로를 사용합니다"
 
 #: ../tcl/dialog_path.tcl:39
 msgid "Verbose"
-msgstr ""
+msgstr "자세히"
 
 #: ../tcl/dialog_startup.tcl:49
 msgid "Add new library"
@@ -520,27 +520,27 @@ msgstr "Pd는?"
 
 #: ../tcl/pd_menucommands.tcl:298
 msgid "Select name for app to build...\n"
-msgstr ""
+msgstr "어플리케이션 이름을 선택하세요 ...\n"
 
 #: ../tcl/pd_menucommands.tcl:301
 msgid "Save application to..."
-msgstr ""
+msgstr "어플리케이션으로 저장하기 ..."
 
 #: ../tcl/pd_menucommands.tcl:310
 msgid "Configuring Info.plist..."
-msgstr ""
+msgstr "Info.plist 설정 중 ..."
 
 #: ../tcl/pd_menucommands.tcl:312
 msgid "Setting patch name..."
-msgstr ""
+msgstr "패치 이름 설정 중 ..."
 
 #: ../tcl/pd_menucommands.tcl:314
 msgid "Copying current patch..."
-msgstr ""
+msgstr "현재 패치 복사 중 ..."
 
 #: ../tcl/pd_menucommands.tcl:316
 msgid "Setting embedded preferences..."
-msgstr ""
+msgstr "내장된 선택 사항 설정 중 ..."
 
 #: ../tcl/pd_menus.tcl:56 ../tcl/pd_menus.tcl:61 ../tcl/pd_menus.tcl:78
 #: ../tcl/pd_menus.tcl:87 ../tcl/pd_menus.tcl:103 ../tcl/pd_menus.tcl:116
@@ -570,7 +570,7 @@ msgstr "복제"
 #: ../tcl/pd_menus.tcl:92 ../tcl/pd_menus.tcl:109 ../tcl/pd_menus.tcl:122
 #: ../tcl/pd_menus.tcl:167 ../tcl/pd_menus.tcl:179 ../tcl/pd_menus.tcl:188
 msgid "Tidy Up"
-msgstr "정리하기"
+msgstr "정돈"
 
 #: ../tcl/pd_menus.tcl:62 ../tcl/pd_menus.tcl:69 ../tcl/pd_menus.tcl:84
 #: ../tcl/pd_menus.tcl:95 ../tcl/pd_menus.tcl:110 ../tcl/pd_menus.tcl:125
@@ -678,7 +678,7 @@ msgstr "박치기"
 
 #: ../tcl/pd_menus.tcl:196
 msgid "Autotips"
-msgstr "자동 "
+msgstr "팁 보여주기"
 
 #: ../tcl/pd_menus.tcl:196 ../tcl/pd_menus.tcl:229 ../tcl/pd_menus.tcl:230
 msgid "Toggle"
@@ -732,7 +732,7 @@ msgstr "찾기..."
 
 #: ../tcl/pd_menus.tcl:221 ../tcl/pd_menus.tcl:254 ../tcl/pd_menus.tcl:255
 msgid "Find Again"
-msgstr "다음 일치 찾기"
+msgstr "또 찾기"
 
 #: ../tcl/pd_menus.tcl:223 ../tcl/pd_menus.tcl:256 ../tcl/pd_menus.tcl:257
 msgid "Find Last Error"
@@ -740,11 +740,11 @@ msgstr "최근 오류"
 
 #: ../tcl/pd_menus.tcl:229 ../tcl/pd_menus.tcl:262 ../tcl/pd_menus.tcl:263
 msgid "DSP On"
-msgstr "디지털신호처리 시작"
+msgstr "오디오 신호 처리 시작"
 
 #: ../tcl/pd_menus.tcl:231 ../tcl/pd_menus.tcl:264 ../tcl/pd_menus.tcl:265
 msgid "DSP Off"
-msgstr "디지털신호처리 중단"
+msgstr "오디오 신호 처리 중단"
 
 #: ../tcl/pd_menus.tcl:235 ../tcl/pd_menus.tcl:268 ../tcl/pd_menus.tcl:269
 msgid "Test Audio and MIDI..."
@@ -850,7 +850,7 @@ msgstr "도움말"
 
 #: ../tcl/pdtk_canvas.tcl:319
 msgid " "
-msgstr ""
+msgstr " "
 
 #: ../tcl/pdwindow.tcl:217 ../tcl/pdwindow.tcl:228 ../tcl/pdwindow.tcl:312
 msgid "(Tcl) MISSING CLOSE-BRACE '}': "
@@ -872,7 +872,7 @@ msgstr "Pd"
 
 #: ../tcl/pdwindow.tcl:317 ../tcl/pdwindow.tcl:328 ../tcl/pdwindow.tcl:430
 msgid "DSP"
-msgstr "디지털신호처리"
+msgstr "오디오 신호 처리"
 
 #: ../tcl/pdwindow.tcl:322 ../tcl/pdwindow.tcl:333 ../tcl/pdwindow.tcl:435
 msgid "audio I/O error"
@@ -904,7 +904,7 @@ msgstr "모두"
 
 #: ../tcl/pdwindow.tcl:396 ../tcl/pdwindow.tcl:397
 msgid "Pd-extended"
-msgstr "Pd-확장판"
+msgstr "확장판 Pd"
 
 #: ../tcl/pdwindow.tcl:425
 msgid "IN"
@@ -949,31 +949,31 @@ msgstr "        보이는 영역(픽셀) x (픽셀)"
 
 #: iemgui_dynamic_strings.tcl:20
 msgid "bottom:"
-msgstr ""
+msgstr "하:"
 
 #: iemgui_dynamic_strings.tcl:21
 msgid "height:"
-msgstr ""
+msgstr "높이: "
 
 #: iemgui_dynamic_strings.tcl:22
 msgid "hold:"
-msgstr ""
+msgstr "켜지는 시간"
 
 #: iemgui_dynamic_strings.tcl:23
 msgid "intrrpt:"
-msgstr ""
+msgstr "끼어들 시 꺼지는 시간"
 
 #: iemgui_dynamic_strings.tcl:24
 msgid "left:"
-msgstr ""
+msgstr "좌:"
 
 #: iemgui_dynamic_strings.tcl:25
 msgid "lin"
-msgstr "선형 척도"
+msgstr "선형"
 
 #: iemgui_dynamic_strings.tcl:26
 msgid "log"
-msgstr "로그 척도"
+msgstr "로그"
 
 #: iemgui_dynamic_strings.tcl:27
 msgid "log-height:"
@@ -989,7 +989,7 @@ msgstr "최소 값:"
 
 #: iemgui_dynamic_strings.tcl:30
 msgid "right:"
-msgstr ""
+msgstr "우:"
 
 #: iemgui_dynamic_strings.tcl:31
 msgid "size:"
@@ -997,7 +997,7 @@ msgstr "크기:"
 
 #: iemgui_dynamic_strings.tcl:32
 msgid "top:"
-msgstr ""
+msgstr "상:"
 
 #: iemgui_dynamic_strings.tcl:33
 msgid "value:"
@@ -1014,7 +1014,7 @@ msgstr "'%s'를 이대로 저장할까요?"
 
 #: pd_dynamic_strings.tcl:10
 msgid "File"
-msgstr "파일"
+msgstr "F)파일"
 
 #: pd_dynamic_strings.tcl:11 pd_dynamic_strings.tcl:19
 #, tcl-format
@@ -1023,7 +1023,7 @@ msgstr "'%s'를 이대로 저장하지 말까요?"
 
 #: pd_dynamic_strings.tcl:11
 msgid "Edit"
-msgstr "편집"
+msgstr "E)편집"
 
 #: pd_dynamic_strings.tcl:12 pd_dynamic_strings.tcl:20
 msgid "Close this window?"
@@ -1031,7 +1031,7 @@ msgstr "진짜로 닫겠습니까??"
 
 #: pd_dynamic_strings.tcl:12
 msgid "Put"
-msgstr "넣기"
+msgstr "P)넣기"
 
 #: pd_dynamic_strings.tcl:13 pd_dynamic_strings.tcl:15
 #: pd_dynamic_strings.tcl:23
@@ -1044,12 +1044,12 @@ msgstr "진짜로 나가겠습니까?"
 
 #: pd_dynamic_strings.tcl:14
 msgid "Media"
-msgstr ""
+msgstr "M)장치"
 
 #: pd_dynamic_strings.tcl:14 pd_dynamic_strings.tcl:16
 #: pd_dynamic_strings.tcl:24
 msgid "Undo connect"
-msgstr "잇기 취소"
+msgstr "연결 취소"
 
 #: pd_dynamic_strings.tcl:15 pd_dynamic_strings.tcl:17
 #: pd_dynamic_strings.tcl:25
@@ -1058,7 +1058,7 @@ msgstr "잘라내기 취소"
 
 #: pd_dynamic_strings.tcl:15
 msgid "Window"
-msgstr "창"
+msgstr "W)창"
 
 #: pd_dynamic_strings.tcl:16 pd_dynamic_strings.tcl:18
 #: pd_dynamic_strings.tcl:26
@@ -1093,7 +1093,7 @@ msgstr "도로 비우기"
 #: pd_dynamic_strings.tcl:23 pd_dynamic_strings.tcl:25
 #: pd_dynamic_strings.tcl:33
 msgid "Redo connect"
-msgstr "도로 잇기"
+msgstr "도로 연결"
 
 #: pd_dynamic_strings.tcl:24 pd_dynamic_strings.tcl:26
 #: pd_dynamic_strings.tcl:34
