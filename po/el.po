@@ -2,6 +2,7 @@
 # This file is put in the public domain.
 # 
 # Translators:
+#   <kt@labyrinthos.gr>, 2012.
 # V L <vl_artcode@yahoo.com>, 2012.
 # Γεώργιος Κερατζάκης <geokeratz@gmail.com>, 2009.
 msgid ""
@@ -9,8 +10,8 @@ msgstr ""
 "Project-Id-Version: Pure Data\n"
 "Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=55736&atid=478070\n"
 "POT-Creation-Date: 2012-01-17 18:37-0500\n"
-"PO-Revision-Date: 2012-04-16 08:42+0000\n"
-"Last-Translator: Hans-Christoph Steiner <hans@eds.org>\n"
+"PO-Revision-Date: 2012-12-21 06:18+0000\n"
+"Last-Translator: ktsoukalas <kt@labyrinthos.gr>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -81,7 +82,7 @@ msgstr "Άνοιγμα Προβολής Λίστας..."
 
 #: ../tcl/scrollboxwindow.tcl:108
 msgid "Reset to Defaults"
-msgstr ""
+msgstr "Προκαθ/μένα"
 
 #: ../tcl/dialog_array.tcl:322 ../tcl/dialog_audio.tcl:146
 #: ../tcl/dialog_canvas.tcl:208 ../tcl/dialog_find.tcl:163
@@ -96,7 +97,7 @@ msgstr "Ακύρωση"
 #: ../tcl/dialog_iemgui.tcl:755 ../tcl/dialog_midi.tcl:100
 #: ../tcl/dialog_midi.tcl:235 ../tcl/scrollboxwindow.tcl:84
 msgid "Apply"
-msgstr "Εφαρμογή"
+msgstr "Εφαρ/γή"
 
 #: ../tcl/dialog_array.tcl:330 ../tcl/dialog_audio.tcl:152
 #: ../tcl/dialog_canvas.tcl:216 ../tcl/dialog_font.tcl:103
@@ -117,7 +118,7 @@ msgstr "Αποθήκευση όλων των ρυθμίσεων"
 
 #: ../tcl/dialog_audio.tcl:164
 msgid "Sample rate:"
-msgstr "Sample rate:"
+msgstr "Τιμή δειγματοληψίας:"
 
 #: ../tcl/dialog_audio.tcl:166
 msgid "Delay (msec):"
@@ -125,7 +126,7 @@ msgstr "Καθυστέρηση (msec):"
 
 #: ../tcl/dialog_audio.tcl:169
 msgid "Block size:"
-msgstr "Block size:"
+msgstr "Μέγεθος Μπλοκ:"
 
 #: ../tcl/dialog_audio.tcl:176
 msgid "Use callbacks"
@@ -188,7 +189,7 @@ msgstr "Χρήση πολλαπλών συσκευών"
 
 #: ../tcl/dialog_canvas.tcl:121
 msgid "WARNING: unknown graphme flags received in pdtk_canvas_dialog"
-msgstr "ΠΡΟΕΙΔΟΠΟΙΗΣΗ: άγνωστες στοιχεία  graphme έχουν ληφθεί στο pdtk_canvas_dialog"
+msgstr "ΠΡΟΕΙΔΟΠΟΙΗΣΗ: έχουν ληφθεί άγνωστα στοιχεία τύπου graphme στο pdtk_canvas_dialog"
 
 #: ../tcl/dialog_canvas.tcl:141
 msgid "Canvas Properties"
@@ -200,23 +201,23 @@ msgstr "Κλίμακα"
 
 #: ../tcl/dialog_canvas.tcl:153
 msgid "X units per pixel:"
-msgstr "Χ μονάδες ανά εικονοστοιχείο"
+msgstr "Χ μονάδες ανά εικονοστοιχείο:"
 
 #: ../tcl/dialog_canvas.tcl:158
 msgid "Y units per pixel:"
-msgstr "Υ μονάδες ανά εικονοστοιχείο"
+msgstr "Υ μονάδες ανά εικονοστοιχείο:"
 
 #: ../tcl/dialog_canvas.tcl:162
 msgid "Appearance on parent patch"
-msgstr "Εμφάνιση στο βασικό patch"
+msgstr "Εμφάνιση στο γονικό patch"
 
 #: ../tcl/dialog_canvas.tcl:164
 msgid "Graph-On-Parent"
-msgstr "Γράφημα-Βασικού-Παραθύρου"
+msgstr "Διάγραμμα-Στο-Γονικό"
 
 #: ../tcl/dialog_canvas.tcl:168
 msgid "Hide object name and arguments"
-msgstr "Απόκρυψη ονόματος και ορισμάτων του object"
+msgstr "Απόκρυψη ονόματος και ορισμάτων του αντικειμένου"
 
 #: ../tcl/dialog_canvas.tcl:173
 msgid "Range and size"
@@ -248,12 +249,12 @@ msgstr "Αποστολή (Ctrl s)"
 
 #: ../tcl/dialog_data.tcl:39
 msgid "OK (Ctrl t)"
-msgstr "ΟΚ (Ctrl t)"
+msgstr "ΕΝΤΑΞΕΙ (Ctrl t)"
 
 #: ../tcl/dialog_find.tcl:108
 #, tcl-format
 msgid "Couldn't find '%s' in %s"
-msgstr "Δεν βρέθηκε '%s' στο %s"
+msgstr "Αδυναμία εύρεσης του '%s' στο %s"
 
 #: ../tcl/dialog_find.tcl:126 ../tcl/dialog_find.tcl:167
 #: pd_dynamic_strings.tcl:13
@@ -313,7 +314,7 @@ msgstr "Μόνο Y"
 
 #: ../tcl/dialog_gatom.tcl:93
 msgid "Atom Box Properties"
-msgstr "Ιδιότητες Atom Box"
+msgstr "Ιδιότητες κουτιού Atom"
 
 #: ../tcl/dialog_gatom.tcl:103
 msgid "Width:"
@@ -370,7 +371,7 @@ msgstr "Χρώμα φόντου"
 
 #: ../tcl/dialog_iemgui.tcl:204
 msgid "Foreground color"
-msgstr "Χρώμα πρώτου πλάνου"
+msgstr "Χρώμα προσκηνίου"
 
 #: ../tcl/dialog_iemgui.tcl:211
 msgid "Label color"
@@ -378,19 +379,19 @@ msgstr "Χρώμα ετικέτας"
 
 #: ../tcl/dialog_iemgui.tcl:272
 msgid "Init"
-msgstr "Προετοιμασία"
+msgstr "Αρχικοποίηση"
 
 #: ../tcl/dialog_iemgui.tcl:275 ../tcl/dialog_iemgui.tcl:554
 msgid "No init"
-msgstr "Χωρίς προετοιμασία"
+msgstr "Χωρίς αρχικοποίηση"
 
 #: ../tcl/dialog_iemgui.tcl:287 ../tcl/dialog_iemgui.tcl:564
 msgid "Jump on click"
-msgstr "Αντίδραση κατα την ενεργοποίηση"
+msgstr "Υπερπήδηση μετά από κλικ"
 
 #: ../tcl/dialog_iemgui.tcl:290 ../tcl/dialog_iemgui.tcl:567
 msgid "Steady on click"
-msgstr "Σταθερότητα κατα την ενεργοποίηση"
+msgstr "Αμετακίνητο μετά από κλικ"
 
 #: ../tcl/dialog_iemgui.tcl:502
 #, tcl-format
@@ -408,11 +409,11 @@ msgstr "Αποθήκευση"
 
 #: ../tcl/dialog_iemgui.tcl:618
 msgid "X offset"
-msgstr "Παράθεση Χ"
+msgstr "Μετατόπιση Χ"
 
 #: ../tcl/dialog_iemgui.tcl:621
 msgid "Y offset"
-msgstr "Παράθεση Υ"
+msgstr "Μετατόπιση Υ"
 
 #: ../tcl/dialog_iemgui.tcl:653
 msgid "Colors"
@@ -424,7 +425,7 @@ msgstr "Φόντο"
 
 #: ../tcl/dialog_iemgui.tcl:661
 msgid "Front"
-msgstr "Πρώτο Πλάνο"
+msgstr "Πρόσοψη"
 
 #: ../tcl/dialog_iemgui.tcl:673
 msgid "Compose color"
@@ -432,15 +433,15 @@ msgstr "Σύνθεση χρώματος"
 
 #: ../tcl/dialog_iemgui.tcl:692
 msgid "Test label"
-msgstr "Ετικέττα Δοκιμής"
+msgstr "Ετικέτα δοκιμής"
 
 #: ../tcl/dialog_message.tcl:61
 msgid "Send a Pd message"
-msgstr "Αποστολή μηνύματος Pd "
+msgstr "Αποστολή ενός μηνύματος Pd "
 
 #: ../tcl/dialog_message.tcl:80
 msgid "(use arrow keys for history)"
-msgstr "(ψάξιμο προηγ. κινήσεων με τα βελάκια)"
+msgstr "(χρήση πλήκτρων-βέλη για ιστορικό)"
 
 #: ../tcl/dialog_midi.tcl:86
 msgid "MIDI Settings"
@@ -464,11 +465,11 @@ msgstr "Θύρες Εξόδου:"
 
 #: ../tcl/dialog_path.tcl:32
 msgid "Pd search path for objects, help, fonts, and other files"
-msgstr "Pd διαδρομή αναζήτησης για τα κώδικα, βοήθεια, γραμματοσειρές και άλλα αρχεία"
+msgstr "Διαδρομή αναζήτησης του Pd για αρχεία (αντικείμενα κτλ.)"
 
 #: ../tcl/dialog_path.tcl:37
 msgid "Use standard extensions"
-msgstr "Χρήση κοινών "
+msgstr "Χ/ση κοινών επεκτ/ων"
 
 #: ../tcl/dialog_path.tcl:39
 msgid "Verbose"
@@ -476,23 +477,23 @@ msgstr "Λεπτομερής"
 
 #: ../tcl/dialog_startup.tcl:49
 msgid "Add new library"
-msgstr "Προσθήκη στη βιβλιοθήκη"
+msgstr "Προσθήκη νέας βιβλιοθήκης"
 
 #: ../tcl/dialog_startup.tcl:53
 msgid "Edit library"
-msgstr "Οργάνωση βιβλιοθήκης"
+msgstr "Επεξεργασία βιβλιοθήκης"
 
 #: ../tcl/dialog_startup.tcl:79
 msgid "Pd libraries to load on startup"
-msgstr "Βιβλιοθήκες Pd που εισάγονται κατα την εκκίνηση"
+msgstr "Βιβλιοθήκες Pd που φορτώνονται κατα την εκκίνηση"
 
 #: ../tcl/dialog_startup.tcl:82
 msgid "Startup flags:"
-msgstr "Σημαίες εκκίνησης"
+msgstr "Σημαίες εκκίνησης:"
 
 #: ../tcl/dialog_startup.tcl:91
 msgid "Real-time scheduling"
-msgstr ""
+msgstr "Δρομ/ση:πραγμ/κό-χρόνο"
 
 #: ../tcl/helpbrowser.tcl:27
 msgid "Help Browser"
@@ -510,21 +511,21 @@ msgstr "(Tcl) ΜΗ ΔΙΑΧΕΙΡΙΣΙΜΟ ΣΦΑΛΜΑ:"
 
 #: ../tcl/pd_guiprefs.tcl:153
 msgid "Cannot read GUI prefs file: "
-msgstr "Σφάλμα ανάγνωσης του αρχείου GUI προτιμήσεων: "
+msgstr "Αδυναμία ανάγνωσης αρχείου προτιμήσεων GUI: "
 
 #: ../tcl/pd_menucommands.tcl:201 ../tcl/pd_menucommands.tcl:233
 #: ../tcl/pd_menus.tcl:292 ../tcl/pd_menus.tcl:326 ../tcl/pd_menus.tcl:327
 #: ../tcl/pd_menus.tcl:470 ../tcl/pd_menus.tcl:502 ../tcl/pd_menus.tcl:516
 msgid "About Pd"
-msgstr "Περί..."
+msgstr "Περί Pd"
 
 #: ../tcl/pd_menucommands.tcl:298
 msgid "Select name for app to build...\n"
-msgstr "Επιλέξτε όνομα για το πρόγραμμά σας...⏎\n"
+msgstr "Επιλέξτε όνομα για την εφαρμογή...⏎\n"
 
 #: ../tcl/pd_menucommands.tcl:301
 msgid "Save application to..."
-msgstr "Αποθήκευση προγράμματος στο..."
+msgstr "Αποθήκευση εφαρμογής στο..."
 
 #: ../tcl/pd_menucommands.tcl:310
 msgid "Configuring Info.plist..."
@@ -532,15 +533,15 @@ msgstr "Διαμόρφωση του Info.plist..."
 
 #: ../tcl/pd_menucommands.tcl:312
 msgid "Setting patch name..."
-msgstr "Προσδιορισμός ονόματος σχεδίου"
+msgstr "Προσδιορισμός ονόματος του patch..."
 
 #: ../tcl/pd_menucommands.tcl:314
 msgid "Copying current patch..."
-msgstr "Αντιγραφή του ενεργού σχεδίου"
+msgstr "Αντιγραφή του τρέχοντος patch..."
 
 #: ../tcl/pd_menucommands.tcl:316
 msgid "Setting embedded preferences..."
-msgstr "Ρύθμιση ενσωματωμένων προτιμήσεων"
+msgstr "Ρύθμιση ενσωματωμένων προτιμήσεων..."
 
 #: ../tcl/pd_menus.tcl:56 ../tcl/pd_menus.tcl:61 ../tcl/pd_menus.tcl:78
 #: ../tcl/pd_menus.tcl:87 ../tcl/pd_menus.tcl:103 ../tcl/pd_menus.tcl:116
@@ -598,7 +599,7 @@ msgstr "Ακύρωση Αναίρεσης"
 #: ../tcl/pd_menus.tcl:184 ../tcl/pd_menus.tcl:193 ../tcl/pdtk_canvas.tcl:292
 #: ../tcl/pdtk_canvas.tcl:294
 msgid "Autopatch"
-msgstr "Αυτόματος κατάλογος"
+msgstr "Αυτόματη σύνδεση"
 
 #: ../tcl/pd_menus.tcl:68 ../tcl/pd_menus.tcl:94 ../tcl/pd_menus.tcl:124
 #: ../tcl/pd_menus.tcl:190 ../tcl/pd_menus.tcl:199 ../tcl/pdtk_canvas.tcl:306
@@ -629,7 +630,7 @@ msgstr "Άνοιγμα"
 #: ../tcl/pd_menus.tcl:553 ../tcl/pd_menus.tcl:565 ../tcl/pd_menus.tcl:567
 #: ../tcl/pd_menus.tcl:598 ../tcl/pd_menus.tcl:612
 msgid "Message..."
-msgstr "Μήνυμα"
+msgstr "Μήνυμα..."
 
 #: ../tcl/pd_menus.tcl:145 ../tcl/pd_menus.tcl:166
 msgid "Cut"
@@ -650,7 +651,7 @@ msgstr "Καθαρισμός Κονσόλας"
 
 #: ../tcl/pd_menus.tcl:183 ../tcl/pd_menus.tcl:216 ../tcl/pd_menus.tcl:217
 msgid "Object"
-msgstr "Κώδικας Διασύνδεσης"
+msgstr "Αντικείμενο"
 
 #: ../tcl/pd_menus.tcl:185 ../tcl/pd_menus.tcl:218 ../tcl/pd_menus.tcl:219
 msgid "Message"
@@ -670,7 +671,7 @@ msgstr "Σχόλιο"
 
 #: ../tcl/pd_menus.tcl:193 ../tcl/pd_menus.tcl:202
 msgid "Perf Mode"
-msgstr "Κατάσταση Εκτέλεσης"
+msgstr "Κατάσταση Τέλεσης"
 
 #: ../tcl/pd_menus.tcl:194 ../tcl/pd_menus.tcl:227 ../tcl/pd_menus.tcl:228
 msgid "Bang"
@@ -682,7 +683,7 @@ msgstr "Αυτόματη βοήθεια"
 
 #: ../tcl/pd_menus.tcl:196 ../tcl/pd_menus.tcl:229 ../tcl/pd_menus.tcl:230
 msgid "Toggle"
-msgstr "Εναλλαγή"
+msgstr "Διακόπτης"
 
 #: ../tcl/pd_menus.tcl:198 ../tcl/pd_menus.tcl:231 ../tcl/pd_menus.tcl:232
 msgid "Number2"
@@ -690,7 +691,7 @@ msgstr "Αριθμός2"
 
 #: ../tcl/pd_menus.tcl:200 ../tcl/pd_menus.tcl:233 ../tcl/pd_menus.tcl:234
 msgid "Vslider"
-msgstr "Κάθετο slider"
+msgstr "Ρυθμιστής κάθετης ολίσθησης"
 
 #: ../tcl/pd_menus.tcl:201 ../tcl/pd_menus.tcl:260 ../tcl/pd_menus.tcl:294
 #: ../tcl/pd_menus.tcl:473 ../tcl/pd_menus.tcl:519 ../tcl/pd_menus.tcl:567
@@ -700,15 +701,15 @@ msgstr "Προτιμήσεις"
 
 #: ../tcl/pd_menus.tcl:202 ../tcl/pd_menus.tcl:235 ../tcl/pd_menus.tcl:236
 msgid "Hslider"
-msgstr "Οριζόντιο slider"
+msgstr "Ρυθμιστής οριζόντιας ολίσθησης"
 
 #: ../tcl/pd_menus.tcl:204 ../tcl/pd_menus.tcl:237 ../tcl/pd_menus.tcl:238
 msgid "Vradio"
-msgstr "Υradio"
+msgstr "Κάθετο κουτί επιλογών"
 
 #: ../tcl/pd_menus.tcl:206 ../tcl/pd_menus.tcl:239 ../tcl/pd_menus.tcl:240
 msgid "Hradio"
-msgstr "Πradio"
+msgstr "Οριζόντιο κουτί επιλογών"
 
 #: ../tcl/pd_menus.tcl:208 ../tcl/pd_menus.tcl:241 ../tcl/pd_menus.tcl:242
 msgid "VU Meter"
@@ -732,7 +733,7 @@ msgstr "Εύρεση..."
 
 #: ../tcl/pd_menus.tcl:221 ../tcl/pd_menus.tcl:254 ../tcl/pd_menus.tcl:255
 msgid "Find Again"
-msgstr "Εύρεση εκ νέου"
+msgstr "Εύρεση Ξανά"
 
 #: ../tcl/pd_menus.tcl:223 ../tcl/pd_menus.tcl:256 ../tcl/pd_menus.tcl:257
 msgid "Find Last Error"
@@ -752,7 +753,7 @@ msgstr "Έλεγχος 'Ηχου και MIDI..."
 
 #: ../tcl/pd_menus.tcl:237 ../tcl/pd_menus.tcl:270 ../tcl/pd_menus.tcl:271
 msgid "Load Meter"
-msgstr "Φόρτωση Μετρητή"
+msgstr "Μετρητής Φορτίου"
 
 #: ../tcl/pd_menus.tcl:267 ../tcl/pd_menus.tcl:300 ../tcl/pd_menus.tcl:301
 msgid "Minimize"
@@ -760,23 +761,23 @@ msgstr "Ελαχιστοποιήση"
 
 #: ../tcl/pd_menus.tcl:269 ../tcl/pd_menus.tcl:302 ../tcl/pd_menus.tcl:303
 msgid "Zoom"
-msgstr "Μεγένθυνση"
+msgstr "Ζουμ"
 
 #: ../tcl/pd_menus.tcl:272 ../tcl/pd_menus.tcl:305 ../tcl/pd_menus.tcl:306
 msgid "Bring All to Front"
-msgstr "Μεταφορά Όλων σε Πρώτο Πλάνο"
+msgstr "Μεταφορά Όλων στο Προσκήνιο"
 
 #: ../tcl/pd_menus.tcl:275 ../tcl/pd_menus.tcl:308 ../tcl/pd_menus.tcl:309
 msgid "Next Window"
-msgstr "Επόμενο παράθυρο"
+msgstr "Επόμενο Παράθυρο"
 
 #: ../tcl/pd_menus.tcl:278 ../tcl/pd_menus.tcl:311 ../tcl/pd_menus.tcl:312
 msgid "Previous Window"
-msgstr "Προηγούμενο παράθυρο"
+msgstr "Προηγούμενο Παράθυρο"
 
 #: ../tcl/pd_menus.tcl:285 ../tcl/pd_menus.tcl:318 ../tcl/pd_menus.tcl:319
 msgid "Parent Window"
-msgstr "Προηγούμενο Βασικό Παράθυρο"
+msgstr "Γονικό Παράθυρο"
 
 #: ../tcl/pd_menus.tcl:291 ../tcl/pd_menus.tcl:457 ../tcl/pd_menus.tcl:503
 msgid "Audio Settings..."
@@ -800,7 +801,7 @@ msgstr "puredata.info"
 
 #: ../tcl/pd_menus.tcl:301 ../tcl/pd_menus.tcl:333 ../tcl/pd_menus.tcl:334
 msgid "Report a bug"
-msgstr "Αποστολή μηνύματος εύρεσης σφάλματος στο Pd"
+msgstr "Αναφορά ενός σφάλματος"
 
 #: ../tcl/pd_menus.tcl:304
 msgid "Tcl prompt"
@@ -808,11 +809,11 @@ msgstr "Tcl εντολή"
 
 #: ../tcl/pd_menus.tcl:328 ../tcl/pd_menus.tcl:329
 msgid "Pd Help Browser..."
-msgstr "Pd Πλοηγός Βοήθειας..."
+msgstr "Πλοηγός Βοήθειας Pd..."
 
 #: ../tcl/pd_menus.tcl:330 ../tcl/pd_menus.tcl:331
 msgid "Start Here!"
-msgstr "Αρχή!"
+msgstr "Αρχίστε Εδώ!"
 
 #: ../tcl/pd_menus.tcl:348 ../tcl/pd_menus.tcl:385 ../tcl/pd_menus.tcl:386
 msgid "Clear Menu"
@@ -850,15 +851,15 @@ msgstr "Βοήθεια"
 
 #: ../tcl/pdtk_canvas.tcl:319
 msgid " "
-msgstr ""
+msgstr " "
 
 #: ../tcl/pdwindow.tcl:217 ../tcl/pdwindow.tcl:228 ../tcl/pdwindow.tcl:312
 msgid "(Tcl) MISSING CLOSE-BRACE '}': "
-msgstr "(Tcl) ΑΠΩΛΕΙΑ ΑΓΚΥΛΗΣ ΤΕΛΟΥΣ '}': "
+msgstr "(Tcl) ΈΛΛΕΙΨΗ ΤΙΡΑΝΤΩΝ ΤΕΛΟΥΣ '}': "
 
 #: ../tcl/pdwindow.tcl:219 ../tcl/pdwindow.tcl:230 ../tcl/pdwindow.tcl:314
 msgid "(Tcl) MISSING CLOSE-BRACKET ']': "
-msgstr "(Tcl) ΑΠΩΛΕΙΑ ΠΑΡΕΝΘΕΣΗΣ ΤΕΛΟΥΣ ']': "
+msgstr "(Tcl) ΈΛΛΕΙΨΗ ΑΓΚΥΛΗΣ ΤΕΛΟΥΣ ']': "
 
 #: ../tcl/pdwindow.tcl:258 ../tcl/pdwindow.tcl:269 ../tcl/pdwindow.tcl:353
 #: ../tcl/pdwindow.tcl:464
@@ -880,15 +881,15 @@ msgstr "σφάλμα ήχου Ι/Ο "
 
 #: ../tcl/pdwindow.tcl:328 ../tcl/pdwindow.tcl:339 ../tcl/pdwindow.tcl:462
 msgid "Log:"
-msgstr "Καταγράφεας"
+msgstr "Ημερολόγιο:"
 
 #: ../tcl/pdwindow.tcl:333 ../tcl/pdwindow.tcl:344 ../tcl/pdwindow.tcl:446
 msgid "fatal"
-msgstr "τελειωτικό"
+msgstr "καίριο"
 
 #: ../tcl/pdwindow.tcl:334 ../tcl/pdwindow.tcl:345 ../tcl/pdwindow.tcl:447
 msgid "error"
-msgstr "Σφάλμα"
+msgstr "σφάλμα"
 
 #: ../tcl/pdwindow.tcl:335 ../tcl/pdwindow.tcl:346 ../tcl/pdwindow.tcl:448
 msgid "normal"
@@ -896,7 +897,7 @@ msgstr "κανονικό"
 
 #: ../tcl/pdwindow.tcl:336 ../tcl/pdwindow.tcl:347 ../tcl/pdwindow.tcl:449
 msgid "debug"
-msgstr "εντοπισμός σφαλμάτων"
+msgstr "αποσφαλμάτωση"
 
 #: ../tcl/pdwindow.tcl:337 ../tcl/pdwindow.tcl:348 ../tcl/pdwindow.tcl:450
 msgid "all"
@@ -904,11 +905,11 @@ msgstr "όλα"
 
 #: ../tcl/pdwindow.tcl:396 ../tcl/pdwindow.tcl:397
 msgid "Pd-extended"
-msgstr "Pd-Eκτεταμένη έκδοση"
+msgstr "Pd-extended"
 
 #: ../tcl/pdwindow.tcl:425
 msgid "IN"
-msgstr ""
+msgstr "ΕΙΣΟΔΟΣ"
 
 #: ../tcl/pdwindow.tcl:426
 msgid "OUT"
@@ -917,11 +918,11 @@ msgstr "ΕΞΟΔΟΣ"
 #: ../tcl/wheredoesthisgo.tcl:18 ../tcl/wheredoesthisgo.tcl:19
 #, tcl-format
 msgid "Ignoring '%s': doesn't look like a Pd-file"
-msgstr "Αγνοώ το '%s': δεν φαίνεται να είναι ένα  Pd-αρχείο"
+msgstr "Αγνόηση του  '%s': δε φαίνεται να είναι ένα αρχείο τύπου Pd"
 
 #: iemgui_dynamic_strings.tcl:11
 msgid "-------dimensions(digits)(pix):-------"
-msgstr "-------διαστάσεις(ψηφεία)(εικ/εία):-------"
+msgstr "-------διαστάσεις(ψηφία)(εικ/εία):-------"
 
 #: iemgui_dynamic_strings.tcl:12
 msgid "--------dimensions(pix)(pix):--------"
@@ -941,7 +942,7 @@ msgstr "-----------εύρος-εξόδου:-----------"
 
 #: iemgui_dynamic_strings.tcl:16
 msgid "------selectable_dimensions(pix):------"
-msgstr "------επιλεγμένες_διαστάσεις(εικ/εία):------"
+msgstr "------επιλεγόμενες_διαστάσεις(εικ/εία):------"
 
 #: iemgui_dynamic_strings.tcl:17
 msgid "------visible_rectangle(pix)(pix):------"
@@ -957,7 +958,7 @@ msgstr "ύψος:"
 
 #: iemgui_dynamic_strings.tcl:22
 msgid "hold:"
-msgstr "παύση:"
+msgstr "κράτηση:"
 
 #: iemgui_dynamic_strings.tcl:23
 msgid "intrrpt:"
@@ -973,11 +974,11 @@ msgstr "γραμμικό"
 
 #: iemgui_dynamic_strings.tcl:26
 msgid "log"
-msgstr "καταγραφή κινήσεων"
+msgstr "Ημερολόγιο"
 
 #: iemgui_dynamic_strings.tcl:27
 msgid "log-height:"
-msgstr "ύψος καταγραφέα"
+msgstr "ύψος ημερολογίου:"
 
 #: iemgui_dynamic_strings.tcl:28
 msgid "max:"
@@ -1010,7 +1011,7 @@ msgstr "πλάτος:"
 #: pd_dynamic_strings.tcl:10 pd_dynamic_strings.tcl:18
 #, tcl-format
 msgid "Do you want to save the changes you made in '%s'?"
-msgstr "Αποθήκευση αλλαγών που έγιναν στο '%s';"
+msgstr "Θέλετε να αποθηκεύσετε τις αλλαγές που πραγματοποιήσατε στο '%s';"
 
 #: pd_dynamic_strings.tcl:10
 msgid "File"
@@ -1019,7 +1020,7 @@ msgstr "Αρχείο"
 #: pd_dynamic_strings.tcl:11 pd_dynamic_strings.tcl:19
 #, tcl-format
 msgid "Discard changes to '%s'?"
-msgstr "Απόρριψη αλλαγών σε '%s';"
+msgstr "Απόρριψη αλλαγών στο '%s';"
 
 #: pd_dynamic_strings.tcl:11
 msgid "Edit"
@@ -1027,7 +1028,7 @@ msgstr "Επεξεργασία"
 
 #: pd_dynamic_strings.tcl:12 pd_dynamic_strings.tcl:20
 msgid "Close this window?"
-msgstr "Κλείσιμο παραθύρου;"
+msgstr "Κλείσιμο αυτού του παραθύρου;"
 
 #: pd_dynamic_strings.tcl:12
 msgid "Put"
@@ -1036,7 +1037,7 @@ msgstr "Προσθήκη"
 #: pd_dynamic_strings.tcl:13 pd_dynamic_strings.tcl:15
 #: pd_dynamic_strings.tcl:23
 msgid "Undo clear"
-msgstr "Αναίρεση διαγραφής;"
+msgstr "Αναίρεση διαγραφής"
 
 #: pd_dynamic_strings.tcl:13 pd_dynamic_strings.tcl:21
 msgid "really quit?"
@@ -1044,7 +1045,7 @@ msgstr "Οριστικό κλείσιμο;"
 
 #: pd_dynamic_strings.tcl:14
 msgid "Media"
-msgstr "Οπτικοακουστικό υλικό"
+msgstr "Μέσα"
 
 #: pd_dynamic_strings.tcl:14 pd_dynamic_strings.tcl:16
 #: pd_dynamic_strings.tcl:24
