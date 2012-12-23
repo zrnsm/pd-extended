@@ -43,7 +43,7 @@ template: $(TEMPLATE)
 $(TEMPLATE): $(FILES)
 	xgettext --join-existing \
 		--from-code=UTF-8 --language=Tcl --keyword=_ \
-		--sort-by-file --output=$(TEMPLATE) \
+		--sort-output --no-location --output=$(TEMPLATE) \
 		--package-name="Pure Data" --package-version=0.43 \
 		--copyright-holder='This file is put in the public domain' \
 		--foreign-user \
@@ -55,7 +55,7 @@ $(TEMPLATE): $(FILES)
 # time a .tcl file changes
 # $(POFILES): %.po: $(TEMPLATE)
 $(POFILES): %.po:
-	msgmerge --sort-by-file --update $< $(TEMPLATE)
+	msgmerge --sort-output --no-fuzzy-matching --no-location --update $< $(TEMPLATE)
 
 
 %.msg: %.po
