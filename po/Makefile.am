@@ -13,7 +13,7 @@ TCLFILES = apple_events.tcl dialog_canvas.tcl dialog_gatom.tcl dialog_path.tcl p
 FILES = $(addprefix ../tcl/, $(TCLFILES)) iemgui_dynamic_strings.tcl pd_dynamic_strings.tcl
 
 # these are the supported languages, 
-ALL_LINGUAS = af az be bg ca cs da de el en_ca en_gb es es_mx eu fr gd gu he hi hu it ja ko lt lv nl pa pt_br pt_pt ru sq sv tr vi zh_cn zh_tw
+ALL_LINGUAS = af az be bg ca cs da de el en_ca en_gb es es_mx eu fr gd gu he hi hu it ja ko lt lv nl pa pt_br pt_pt ru sk sq sv tr vi zh_cn zh_tw
 POFILES = $(ALL_LINGUAS:=.po)
 MSGFILES = $(ALL_LINGUAS:=.msg)
 
@@ -53,7 +53,7 @@ $(TEMPLATE): $(FILES)
 # I guess officially, the .po file should depend on the template.pot, but its
 # mostly annoying since it wasnts to update the template.pot and .po files any
 # time a .tcl file changes
-# $(POFILES): %.po: $(TEMPLATE)
+#$(POFILES): %.po: $(TEMPLATE)
 $(POFILES): %.po:
 	msgmerge --sort-output --no-fuzzy-matching --no-location --update $< $(TEMPLATE)
 
