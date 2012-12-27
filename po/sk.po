@@ -1,296 +1,297 @@
 # SOME DESCRIPTIVE TITLE.
 # This file is put in the public domain.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
+# Translators:
+#   <fero.kiraly@gmail.com>, 2012.
 msgid ""
 msgstr ""
-"Project-Id-Version: Pure Data 0.43\n"
+"Project-Id-Version: Pure Data\n"
 "Report-Msgid-Bugs-To: http://bugs.puredata.info\n"
 "POT-Creation-Date: 2012-12-26 12:51-0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2012-12-24 13:10+0000\n"
+"Last-Translator: paum <fero.kiraly@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: sk\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 msgid " "
-msgstr ""
+msgstr " "
 
 #, tcl-format
 msgid "%s Font"
-msgstr ""
+msgstr "%s Font"
 
 #, tcl-format
 msgid "%s Properties"
-msgstr ""
+msgstr "%s Vlastnosti"
 
 msgid "(Tcl) INVALID COMMAND NAME: "
-msgstr ""
+msgstr "(Tcl) NEPLATNÉ MENO PRÍKAZU"
 
 msgid "(Tcl) MISSING CLOSE-BRACE '}': "
-msgstr ""
+msgstr "(Tcl) CHÝBAJÚCI ZNAK '}':"
 
 msgid "(Tcl) MISSING CLOSE-BRACKET ']': "
-msgstr ""
+msgstr "(Tcl) CHÝBAJÚCI ZNAK ']':"
 
 msgid "(Tcl) UNHANDLED ERROR: "
-msgstr ""
+msgstr "(Tcl) NEOŠETRENÁ CHYBA"
 
 msgid "(same as input device) ..............      "
-msgstr ""
+msgstr "(rovnaké ako vstupné zariadenie) .............."
 
 msgid "(use arrow keys for history)"
-msgstr ""
+msgstr "(použite klávesy so šípkami pre históriu)"
 
 msgid "-----------output-range:-----------"
-msgstr ""
+msgstr "-----------výstupný-rozsah:-----------"
 
 msgid "----------dimensions(pix):-----------"
-msgstr ""
+msgstr "----------rozmery(pix):-----------"
 
 msgid "--------dimensions(pix)(pix):--------"
-msgstr ""
+msgstr "-------rozmery(pix)(pix):-------"
 
 msgid "--------flash-time(ms)(ms):---------"
-msgstr ""
+msgstr "------čas-blikania(ms)(ms):-------"
 
 msgid "-------dimensions(digits)(pix):-------"
-msgstr ""
+msgstr "-------rozmery(čísla)(pix):-------"
 
 msgid "------selectable_dimensions(pix):------"
-msgstr ""
+msgstr "------označiteľné-rozmery(pix):------"
 
 msgid "------visible_rectangle(pix)(pix):------"
-msgstr ""
+msgstr "------viditeľný_obdĺžnik(pix)(pix):------"
 
 msgid "ALSA MIDI Settings"
-msgstr ""
+msgstr "Nastavenia ALSA MIDI"
 
 msgid "About Pd"
-msgstr ""
+msgstr "O programe Pd"
 
 msgid "Add new library"
-msgstr ""
+msgstr "Pridať novú knižnicu"
 
 msgid "Appearance on parent patch"
-msgstr ""
+msgstr "Zobrazenie v rodičovskom patch-i"
 
 msgid "Apply"
-msgstr ""
+msgstr "Použiť"
 
 msgid "Array"
-msgstr ""
+msgstr "Pole"
 
 msgid "Array Properties"
-msgstr ""
+msgstr "Nastavenia Poľa"
 
 msgid "Atom Box Properties"
-msgstr ""
+msgstr "Atom Box Properties"
 
 msgid "Audio Settings"
-msgstr ""
+msgstr "Nastavenia zvuku"
 
 msgid "Audio Settings..."
-msgstr ""
+msgstr "Nastavenia zvuku..."
 
 msgid "Autopatch"
-msgstr ""
+msgstr "Autopatch"
 
 msgid "Autotips"
-msgstr ""
+msgstr "Autotipy"
 
 msgid "Background"
-msgstr ""
+msgstr "Pozadie"
 
 msgid "Background color"
-msgstr ""
+msgstr "Farba pozadia"
 
 msgid "Bang"
-msgstr ""
+msgstr "Bang"
 
 msgid "Bezier curve"
-msgstr ""
+msgstr "Beziérova krivka"
 
 msgid "Block size:"
-msgstr ""
+msgstr "Veľkosť bloku:"
 
 msgid "Bottom"
-msgstr ""
+msgstr "Spodný"
 
 msgid "Bring All to Front"
-msgstr ""
+msgstr "Daj všetko do popredia"
 
 msgid "Cancel"
-msgstr ""
+msgstr "Zrušiť"
 
 msgid "Cannot read GUI prefs file: "
-msgstr ""
+msgstr "Nemôžem čítať GUI prefs súbor:"
 
 msgid "Canvas"
-msgstr ""
+msgstr "Canvas"
 
 msgid "Canvas Properties"
-msgstr ""
+msgstr "Vlastnosti plochy"
 
 msgid "Channels:"
-msgstr ""
+msgstr "Kanály:"
 
 msgid "Clear Console"
-msgstr ""
+msgstr "Vyčisti konzolu"
 
 msgid "Clear Menu"
-msgstr ""
+msgstr "Vyčisti menu"
 
 msgid "Close"
-msgstr ""
+msgstr "Zavri"
 
 msgid "Close this window?"
-msgstr ""
+msgstr "Zatvoriť toto okno ?"
 
 msgid "Colors"
-msgstr ""
+msgstr "Farby"
 
 msgid "Comment"
-msgstr ""
+msgstr "Komentár"
 
 msgid "Compose color"
-msgstr ""
+msgstr "Vytvoriť farbu"
 
 msgid "Configuring Info.plist..."
-msgstr ""
+msgstr "Konfigurácia Info.plist..."
 
 msgid "Copy"
-msgstr ""
+msgstr "Kopírovať"
 
 msgid "Copying current patch..."
-msgstr ""
+msgstr "Kopírovanie aktuálneho patchu..."
 
 #, tcl-format
 msgid "Couldn't find '%s' in %s"
-msgstr ""
+msgstr "'%s' v %s sa nedá nájsť"
 
 msgid "Cut"
-msgstr ""
+msgstr "Vybrať"
 
 msgid "DSP"
-msgstr ""
+msgstr "DSP"
 
 msgid "DSP Off"
-msgstr ""
+msgstr "DSP vyp"
 
 msgid "DSP On"
-msgstr ""
+msgstr "DSP zap"
 
 msgid "Data Properties"
-msgstr ""
+msgstr "Vlastnosti Data"
 
 msgid "Defeat real-time scheduling"
 msgstr ""
 
 msgid "Delay (msec):"
-msgstr ""
+msgstr "Meškanie (ms)"
 
 msgid "Delete array"
-msgstr ""
+msgstr "Vymazať pole"
 
 #, tcl-format
 msgid "Discard changes to '%s'?"
-msgstr ""
+msgstr "Zrušiť zmeny v  '%s'?"
 
 #, tcl-format
 msgid "Do you want to save the changes you made in '%s'?"
-msgstr ""
+msgstr "Chceš uložiť zmeny urobené v '%s'?"
 
 msgid "Draw as:"
-msgstr ""
+msgstr "Spôsob vykreslenia:"
 
 msgid "Duplicate"
-msgstr ""
+msgstr "Duplikovať"
 
 msgid "Edit"
-msgstr ""
+msgstr "Upraviť"
 
 msgid "Edit Mode"
-msgstr ""
+msgstr "Edit mód"
 
 msgid "Edit library"
-msgstr ""
+msgstr "Upraviť knižnicu"
 
 msgid "File"
-msgstr ""
+msgstr "Súbor"
 
 msgid "Find"
-msgstr ""
+msgstr "Nájadi"
 
 msgid "Find Again"
-msgstr ""
+msgstr "Nájsť ďalšie"
 
 msgid "Find Last Error"
-msgstr ""
+msgstr "Nájsť poslednú chybu"
 
 msgid "Find..."
-msgstr ""
+msgstr "Nájsť..."
 
 msgid "Font"
-msgstr ""
+msgstr "Font"
 
 msgid "Font Size"
-msgstr ""
+msgstr "Veľkosť fontu"
 
 msgid "Foreground color"
-msgstr ""
+msgstr "Farba popredia"
 
 msgid "Front"
-msgstr ""
+msgstr "Predný"
 
 msgid "Graph"
-msgstr ""
+msgstr "Graf"
 
 msgid "Graph-On-Parent"
-msgstr ""
+msgstr "Zobraz-Na-Rodičovi"
 
 msgid "Help"
-msgstr ""
+msgstr "Pomoc"
 
 msgid "Help Browser"
-msgstr ""
+msgstr "Help Browser"
 
 msgid "Hide object name and arguments"
-msgstr ""
+msgstr "Skryť názov objektu a argumenty"
 
 msgid "Hradio"
-msgstr ""
+msgstr "Hradio"
 
 msgid "Hslider"
-msgstr ""
+msgstr "Hslider"
 
 msgid "IN"
-msgstr ""
+msgstr "VSTUP"
 
 #, tcl-format
 msgid "Ignoring '%s': doesn't look like a Pd-file"
-msgstr ""
+msgstr "Ignorujem '%s': navyzerá ako Pd-súbor"
 
 msgid "In Ports:"
-msgstr ""
+msgstr "Vstupné porty:"
 
 msgid "Init"
-msgstr ""
+msgstr "Inicializácia"
 
 msgid "Input device 1:"
-msgstr ""
+msgstr "Vstupné zariadenie 1:"
 
 msgid "Input device 2:"
-msgstr ""
+msgstr "Vstupné zariadenie 2:"
 
 msgid "Input device 3:"
-msgstr ""
+msgstr "Vstupné zariadenie 3:"
 
 msgid "Input device 4:"
-msgstr ""
+msgstr "Vstupné zariadenie 4:"
 
 msgid "Jack does not seem to be running, so Pd-extended cannot connect to it."
 msgstr ""
@@ -305,40 +306,40 @@ msgid "JackOSX is not fully installed, Pd-extended cannot use Jack without it."
 msgstr ""
 
 msgid "Jump on click"
-msgstr ""
+msgstr "Jump on click"
 
 msgid "Label"
-msgstr ""
+msgstr "Menovka"
 
 msgid "Label color"
-msgstr ""
+msgstr "Farba nápisu"
 
 msgid "Last graph"
-msgstr ""
+msgstr "Posledný graf"
 
 msgid "Left   "
-msgstr ""
+msgstr "Ľavý"
 
 msgid "Limits"
-msgstr ""
+msgstr "Limity"
 
 msgid "Load Meter"
-msgstr ""
+msgstr "Merač zaťaženia"
 
 msgid "Log:"
-msgstr ""
+msgstr "Log:"
 
 msgid "Lower:"
-msgstr ""
+msgstr "Spodný:"
 
 msgid "MIDI Settings"
-msgstr ""
+msgstr "Nastavenia MIDI"
 
 msgid "MIDI Settings..."
-msgstr ""
+msgstr "Nastavenia MIDI..."
 
 msgid "Magic Glass"
-msgstr ""
+msgstr "Magic Glass"
 
 msgid "Make app from folder..."
 msgstr ""
@@ -347,322 +348,322 @@ msgid "Make app from patch..."
 msgstr ""
 
 msgid "Margin:"
-msgstr ""
+msgstr "Okraj:"
 
 msgid "Match whole word only"
-msgstr ""
+msgstr "Iba celé slová"
 
 msgid "Media"
-msgstr ""
+msgstr "Médiá"
 
 msgid "Message"
-msgstr ""
+msgstr "Správa"
 
 msgid "Message..."
-msgstr ""
+msgstr "Správa..."
 
 msgid "Messages"
-msgstr ""
+msgstr "Správy"
 
 msgid "Minimize"
-msgstr ""
+msgstr "Minimalizovať"
 
 msgid "Name:"
-msgstr ""
+msgstr "Názov:"
 
 msgid "New"
-msgstr ""
+msgstr "Nový"
 
 msgid "New graph"
-msgstr ""
+msgstr "Nový graf"
 
 msgid "Next Window"
-msgstr ""
+msgstr "Ďalšie okno"
 
 msgid "No init"
-msgstr ""
+msgstr "Bez inicializácie"
 
 msgid "Number"
-msgstr ""
+msgstr "Číslo"
 
 msgid "Number2"
-msgstr ""
+msgstr "Číslo2"
 
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 msgid "OK (Ctrl t)"
-msgstr ""
+msgstr "OK (Ctrl t)"
 
 msgid "OUT"
-msgstr ""
+msgstr "VÝSTUP"
 
 msgid "Object"
-msgstr ""
+msgstr "Objekt"
 
 msgid "Open"
-msgstr ""
+msgstr "Otvoriť"
 
 msgid "Open List View..."
-msgstr ""
+msgstr "Ukázať obsah poľa"
 
 msgid "Open Recent"
-msgstr ""
+msgstr "Nedávno otvorené"
 
 msgid "Out Ports:"
-msgstr ""
+msgstr "Výstupné porty:"
 
 msgid "Output device 1:"
-msgstr ""
+msgstr "Výstupné zariadenie 1:"
 
 msgid "Output device 2:"
-msgstr ""
+msgstr "Výstupné zariadenie 2:"
 
 msgid "Output device 3:"
-msgstr ""
+msgstr "Výstupné zariadenie 3:"
 
 msgid "Output device 4:"
-msgstr ""
+msgstr "Výstupné zariadenie 4:"
 
 msgid "Parent Window"
-msgstr ""
+msgstr "Rodičovské okno"
 
 msgid "Paste"
-msgstr ""
+msgstr "Prilepiť"
 
 msgid "Pd Help Browser..."
-msgstr ""
+msgstr "Pd Help Browser..."
 
 msgid "Pd libraries to load on startup"
-msgstr ""
+msgstr "Pri štarte Pd načítať knižnice"
 
 msgid "Pd search path for objects, help, fonts, and other files"
-msgstr ""
+msgstr "Cesta k objektom, fontom a iným súborom"
 
 msgid "Pd window"
-msgstr ""
+msgstr "Pd okno"
 
 msgid "Pd-extended"
-msgstr ""
+msgstr "Pd-extended"
 
 msgid "Perf Mode"
-msgstr ""
+msgstr "Perf mód"
 
 msgid "Points"
-msgstr ""
+msgstr "Body"
 
 msgid "Polygon"
-msgstr ""
+msgstr "Polygón"
 
 msgid "Preferences"
-msgstr ""
+msgstr "Nastavenia"
 
 msgid "Previous Window"
-msgstr ""
+msgstr "Predchádzajúce okno"
 
 msgid "Print..."
-msgstr ""
+msgstr "Tlač..."
 
 msgid "Properties"
-msgstr ""
+msgstr "Vlastnosti"
 
 msgid "Put"
-msgstr ""
+msgstr "Vložiť"
 
 msgid "Put array into:"
-msgstr ""
+msgstr "Vložiť pole do:"
 
 msgid "Quit"
-msgstr ""
+msgstr "Ukončiť"
 
 msgid "Quit Pd-extended, start Jack, then try again."
 msgstr ""
 
 msgid "Range and size"
-msgstr ""
+msgstr "Rozsah a veľkosť"
 
 msgid "Real-time scheduling"
-msgstr ""
+msgstr "Plánovanie v reálnom čase"
 
 msgid "Receive symbol:"
-msgstr ""
+msgstr "Prijímať symbol:"
 
 msgid "Redo"
-msgstr ""
+msgstr "Redo"
 
 msgid "Redo clear"
-msgstr ""
+msgstr "Prerobiť vymazanie"
 
 msgid "Redo connect"
-msgstr ""
+msgstr "Prerobiť spojenie"
 
 msgid "Redo cut"
-msgstr ""
+msgstr "Prerobiť vystihnutie"
 
 msgid "Redo disconnect"
-msgstr ""
+msgstr "Prerobiť odpojenie"
 
 msgid "Redo duplicate"
-msgstr ""
+msgstr "Prerobiť duplikovanie"
 
 msgid "Redo motion"
-msgstr ""
+msgstr "Prerobiť posunutie"
 
 msgid "Redo paste"
-msgstr ""
+msgstr "Prerobiť vloženie"
 
 msgid "Redo typing"
-msgstr ""
+msgstr "Prerobiť písanie"
 
 msgid "Report a bug"
-msgstr ""
+msgstr "Nahlásiť chybu"
 
 msgid "Reset to Defaults"
-msgstr ""
+msgstr "Obnoviť pôvodné nastavenia"
 
 msgid "Right"
-msgstr ""
+msgstr "Pravý"
 
 msgid "Sample rate:"
-msgstr ""
+msgstr "Vzorkovacia frekvencia"
 
 msgid "Save"
-msgstr ""
+msgstr "Ulož"
 
 msgid "Save As..."
-msgstr ""
+msgstr "Uložiť ako..."
 
 msgid "Save application to..."
-msgstr ""
+msgstr "Uložiť aplikáciu do..."
 
 msgid "Save contents"
-msgstr ""
+msgstr "Ukladať obsah"
 
 msgid "Scale"
-msgstr ""
+msgstr "Mierka"
 
 msgid "Search in"
-msgstr ""
+msgstr "Hľadaj v "
 
 msgid "Select All"
-msgstr ""
+msgstr "Označ všetko"
 
 msgid "Select name for app to build...\n"
-msgstr ""
+msgstr "Vyber meno pre aplikáciu...\n"
 
 msgid "Send (Ctrl s)"
-msgstr ""
+msgstr "Poslať (Ctrl s)"
 
 msgid "Send a Pd message"
-msgstr ""
+msgstr "Odoslať správu Pd"
 
 msgid "Send symbol:"
-msgstr ""
+msgstr "Poslať symbol:"
 
 msgid "Setting embedded preferences..."
-msgstr ""
+msgstr "Pomoc"
 
 msgid "Setting patch name..."
-msgstr ""
+msgstr "Setting patch name..."
 
 msgid "Size:"
-msgstr ""
+msgstr "Veľkosť:"
 
 msgid "Start Here!"
-msgstr ""
+msgstr "Začni tu!"
 
 msgid "Startup flags:"
-msgstr ""
+msgstr "Parametre štartu"
 
 msgid "Steady on click"
-msgstr ""
+msgstr "Steady on click"
 
 msgid "Stretch"
-msgstr ""
+msgstr "Roztiahnutie"
 
 msgid "Symbol"
-msgstr ""
+msgstr "Symbol"
 
 msgid "Tcl:"
-msgstr ""
+msgstr "Tcl:"
 
 msgid "Test Audio and MIDI..."
-msgstr ""
+msgstr "Test zvuk a MIDI..."
 
 msgid "Test label"
-msgstr ""
+msgstr "Test label"
 
 msgid "Tidy Up"
-msgstr ""
+msgstr "Upratať"
 
 msgid "Toggle"
-msgstr ""
+msgstr "Toggle"
 
 msgid "Top"
-msgstr ""
+msgstr "Vrchný"
 
 msgid "Undo"
-msgstr ""
+msgstr "Undo"
 
 msgid "Undo clear"
-msgstr ""
+msgstr "Vrátiť vymazanie"
 
 msgid "Undo connect"
-msgstr ""
+msgstr "Vrátiť pripojenie"
 
 msgid "Undo cut"
-msgstr ""
+msgstr "Vrátiť vystrihnutie"
 
 msgid "Undo disconnect"
-msgstr ""
+msgstr "Vrátiť odpojenie"
 
 msgid "Undo duplicate"
-msgstr ""
+msgstr "Vrátiť duplikáciu"
 
 msgid "Undo motion"
-msgstr ""
+msgstr "Vrátiť premiestnenie"
 
 msgid "Undo paste"
-msgstr ""
+msgstr "Vrátiť vloženie"
 
 msgid "Undo typing"
-msgstr ""
+msgstr "Vrátiť prepísanie"
 
 msgid "Upper:"
-msgstr ""
+msgstr "Vrchný:"
 
 msgid "Use callbacks"
-msgstr ""
+msgstr "Použiť callbacks"
 
 msgid "Use multiple ALSA devices"
-msgstr ""
+msgstr "Použiť viac ALSA zariadení"
 
 msgid "Use multiple devices"
-msgstr ""
+msgstr "Použiť viac zariadení"
 
 msgid "Use standard extensions"
-msgstr ""
+msgstr "Použiť štandardtné rozšírenia"
 
 msgid "VU Meter"
-msgstr ""
+msgstr "VU Meter"
 
 msgid "Verbose"
-msgstr ""
+msgstr "Ukecaný"
 
 msgid "Vradio"
-msgstr ""
+msgstr "Vradio"
 
 msgid "Vslider"
-msgstr ""
+msgstr "Vslider"
 
 msgid "WARNING: unknown graphme flags received in pdtk_canvas_dialog"
-msgstr ""
+msgstr "WARNING: unknown graphme flags received in pdtk_canvas_dialog"
 
 msgid "Width:"
-msgstr ""
+msgstr "Šírka:"
 
 msgid "Window"
-msgstr ""
+msgstr "Okno"
 
 msgid "Would you like to open JackOSX.com to download Jack?"
 msgstr ""
@@ -671,103 +672,103 @@ msgid "Would you like to open JackPilot to start Jack?"
 msgstr ""
 
 msgid "X and Y"
-msgstr ""
+msgstr "X a Y"
 
 msgid "X offset"
-msgstr ""
+msgstr "X offset"
 
 msgid "X only"
-msgstr ""
+msgstr "iba X"
 
 msgid "X range, from"
-msgstr ""
+msgstr "X rozsah, od"
 
 msgid "X units per pixel:"
-msgstr ""
+msgstr "X jednotiek na pixel"
 
 msgid "Y offset"
-msgstr ""
+msgstr "Y Offset"
 
 msgid "Y only"
-msgstr ""
+msgstr "iba Y"
 
 msgid "Y range, from"
-msgstr ""
+msgstr "Y rozsah, od"
 
 msgid "Y units per pixel:"
-msgstr ""
+msgstr "Y jednotiek na pixel"
 
 msgid "Zoom"
-msgstr ""
+msgstr "Zoom"
 
 msgid "all"
-msgstr ""
+msgstr "všetko"
 
 msgid "audio I/O error"
-msgstr ""
+msgstr "chyba zvukového I/O"
 
 msgid "bottom:"
-msgstr ""
+msgstr "spodok:"
 
 msgid "debug"
-msgstr ""
+msgstr "debug"
 
 msgid "error"
-msgstr ""
+msgstr "chyba"
 
 msgid "fatal"
-msgstr ""
+msgstr "fatal"
 
 msgid "for:"
-msgstr ""
+msgstr "pre:"
 
 msgid "height:"
-msgstr ""
+msgstr "výška:"
 
 msgid "hold:"
-msgstr ""
+msgstr "podržať:"
 
 msgid "intrrpt:"
-msgstr ""
+msgstr "prerušiť:"
 
 msgid "left:"
-msgstr ""
+msgstr "na ľavo:"
 
 msgid "lin"
-msgstr ""
+msgstr "lineárne"
 
 msgid "log"
-msgstr ""
+msgstr "logaritmicky"
 
 msgid "log-height:"
-msgstr ""
+msgstr "log-height:"
 
 msgid "max:"
-msgstr ""
+msgstr "max:"
 
 msgid "min:"
-msgstr ""
+msgstr "min:"
 
 msgid "normal"
-msgstr ""
+msgstr "normal"
 
 msgid "really quit?"
-msgstr ""
+msgstr "Naozaj ukončiť?"
 
 msgid "right:"
-msgstr ""
+msgstr "na pravo:"
 
 msgid "size:"
-msgstr ""
+msgstr "veľkosť"
 
 msgid "to"
-msgstr ""
+msgstr "do"
 
 msgid "top:"
-msgstr ""
+msgstr "vrch:"
 
 msgid "value:"
-msgstr ""
+msgstr "hodnota:"
 
 msgid "width:"
-msgstr ""
+msgstr "šírka:"

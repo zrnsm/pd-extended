@@ -690,6 +690,12 @@ proc load_plugin_script {filename} {
     set tclfile [open $filename]
     set tclcode [read $tclfile]
     close $tclfile
+    # if the plugin folder includes translations, load them
+    set podir "[file dirname $filename]/po"
+    if {[file exists $podir] && [file isdir $podir]} {
+        ::pdwindow::debug [_ "Loading translations for $basename\n"]
+        ::msgcat::mcload $podir
+    }
     if {[catch {uplevel #0 $tclcode} errorname]} {
         ::pdwindow::error "-----------\n"
         ::pdwindow::error [_ "UNHANDLED ERROR: $errorInfo\n"]
@@ -697,12 +703,6 @@ proc load_plugin_script {filename} {
         ::pdwindow::error "-----------\n"
     } else {
         lappend ::loaded_plugins $basename
-        # if the plugin folder includes translations, load them
-        set podir "[file dirname $filename]/po"
-        if {[file exists $podir] && [file isdir $podir]} {
-            ::pdwindow::debug [_ "Loading translations for $basename\n"]
-            ::msgcat::mcload $podir
-        }
     }
 }
 
