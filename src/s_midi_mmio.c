@@ -4,8 +4,11 @@
 
 #include "m_pd.h"
 #include "s_stuff.h"
+#include "s_utf8.h"
 #include <stdio.h>
 
+#define UNICODE /* force TCHAR to be wchar_t */
+#define _UNICODE /* use the wide versions of functions */
 #include <windows.h>
 #include <MMSYSTEM.H>
 
@@ -55,11 +58,11 @@ static double msw_midigettimefor(LARGE_INTEGER timestamp)
 
 
 /* ------------------------- MIDI output -------------------------- */
-static void msw_midiouterror(char *s, int err)
+static void msw_midiouterror(const wchar_t *s, int err)
 {
-    char t[256];
+    wchar_t t[256];
     midiOutGetErrorText(err, t, 256);
-    fprintf(stderr, s, t);
+    fwprintf(stderr, s, t);
 }
 
 static HMIDIOUT hMidiOut[MAXMIDIOUTDEV];    /* output device */
@@ -86,13 +89,13 @@ static void msw_open_midiout(int nmidiout, int *midioutvec)
             sizeof(mocap));
         if (result != MMSYSERR_NOERROR)
         {
-            fprintf(stderr,"midiOutOpen: %s\n",midioutcaps.szPname);
-            msw_midiouterror("midiOutOpen: %s\n", result);
+            fwprintf(stderr,L"midiOutOpen: %s\n",midioutcaps.szPname);
+            msw_midiouterror(L"midiOutOpen: %s\n", result);
         }
         else
         {
             if (sys_verbose)
-                fprintf(stderr,"midiOutOpen: Open %s as Port %d\n",
+                fwprintf(stderr,L"midiOutOpen: Open %s as Port %d\n",
                     midioutcaps.szPname, dev);
             dev++;
         }
@@ -115,11 +118,11 @@ static void msw_close_midiout(void)
 
 #define INPUT_BUFFER_SIZE 1000     // size of input buffer in events
 
-static void msw_midiinerror(char *s, int err)
+static void msw_midiinerror(const wchar_t *s, int err)
 {
-    char t[256];
+    wchar_t t[256];
     midiInGetErrorText(err, t, 256);
-    fprintf(stderr, s, t);
+    fwprintf(stderr, s, t);
 }
 
 
@@ -540,7 +543,7 @@ void msw_open_midiin(int nmidiin, int *midiinvec)
         if (wRtn)
         {
             FreeCallbackInstanceData(lpCallbackInstanceData[ndev]);
-            msw_midiinerror("midiInOpen: %s\n", wRtn);
+            msw_midiinerror(L"midiInOpen: %s\n", wRtn);
         }
         else ndev++;
     }
@@ -696,8 +699,8 @@ void sys_listmididevs(void)
         wRtn = midiInGetDevCaps(i, (LPMIDIINCAPS) &micap,
             sizeof(micap));
         if (wRtn) msw_midiinerror("midiInGetDevCaps: %s\n", wRtn);
-        else fprintf(stderr,
-            "MIDI input device #%d: %s\n", i+1, micap.szPname);
+        else fwprintf(stderr,
+            L"MIDI input device #%d: %s\n", i+1, micap.szPname);
     }
 
     ndevices = midiOutGetNumDevs();
@@ -707,8 +710,8 @@ void sys_listmididevs(void)
         wRtn = midiOutGetDevCaps(i, (LPMIDIOUTCAPS) &mocap,
             sizeof(mocap));
         if (wRtn) msw_midiouterror("midiOutGetDevCaps: %s\n", wRtn);
-        else fprintf(stderr,
-            "MIDI output device #%d: %s\n", i+1, mocap.szPname);
+        else fwprintf(stderr,
+            L"MIDI output device #%d: %s\n", i+1, mocap.szPname);
     }
 
 }
@@ -719,14 +722,18 @@ void midi_getdevs(char *indevlist, int *nindevs,
 {
     int i, nin = midiInGetNumDevs(), nout = midiOutGetNumDevs();
     UINT  wRtn;
+    wchar_t ucs2name[MAXPDSTRING];
+    char name[MAXPDSTRING];
     if (nin > maxndev)
         nin = maxndev;
     for (i = 0; i < nin; i++)
     {
         MIDIINCAPS micap;
         wRtn = midiInGetDevCaps(i, (LPMIDIINCAPS) &micap, sizeof(micap));
-        strncpy(indevlist + i * devdescsize, 
-            (wRtn ? "???" : micap.szPname), devdescsize);
+        wcsncpy(ucs2name, micap.szPname, MAXPDSTRING);
+        u8_ucs2toutf8(name, MAXPDSTRING, ucs2name, wcslen(ucs2name));
+        strncpy(indevlist + i * devdescsize,
+            (wRtn ? "???" : name), devdescsize);
         indevlist[(i+1) * devdescsize - 1] = 0;
     }
     if (nout > maxndev)
@@ -735,8 +742,10 @@ void midi_getdevs(char *indevlist, int *nindevs,
     {
         MIDIOUTCAPS mocap;
         wRtn = midiOutGetDevCaps(i, (LPMIDIOUTCAPS) &mocap, sizeof(mocap));
-        strncpy(outdevlist + i * devdescsize, 
-            (wRtn ? "???" : mocap.szPname), devdescsize);
+        wcsncpy(ucs2name, mocap.szPname, MAXPDSTRING);
+        u8_ucs2toutf8(name, MAXPDSTRING, ucs2name, wcslen(ucs2name));
+        strncpy(outdevlist + i * devdescsize,
+            (wRtn ? "???" : name), devdescsize);
         outdevlist[(i+1) * devdescsize - 1] = 0;
     }
     *nindevs = nin;

@@ -7,8 +7,11 @@
 
 #include "m_pd.h"
 #include "s_stuff.h"
+#include "s_utf8.h"
 #include <stdio.h>
 
+#define UNICODE /* force TCHAR to be wchar_t */
+#define _UNICODE /* use the wide versions of functions */
 #include <windows.h>
 
 #include <MMSYSTEM.H>
@@ -56,18 +59,18 @@ t_sbuf ntsnd_invec[NAPORTS][MAXBUFFER];     /* circular buffer array */
 HWAVEIN ntsnd_indev[NAPORTS];               /* input device */
 static int ntsnd_inphase[NAPORTS];          /* index of next buffer to read */
 
-static void nt_waveinerror(char *s, int err)
+static void nt_waveinerror(const wchar_t *s, int err)
 {
-    char t[256];
+    wchar_t t[256];
     waveInGetErrorText(err, t, 256);
-    fprintf(stderr, s, t);
+    fwprintf(stderr, s, t);
 }
 
-static void nt_waveouterror(char *s, int err)
+static void nt_waveouterror(const wchar_t *s, int err)
 {
-    char t[256];
+    wchar_t t[256];
     waveOutGetErrorText(err, t, 256);
-    fprintf(stderr, s, t);
+    fwprintf(stderr, s, t);
 }
 
 static void wave_prep(t_sbuf *bp, int setdone)
@@ -176,7 +179,7 @@ int mmio_do_open_audio(void)
 
         if (mmresult != MMSYSERR_NOERROR) 
         {
-            nt_waveinerror("waveInOpen: %s\n", mmresult);
+            nt_waveinerror(L"waveInOpen: %s\n", mmresult);
             nt_nwavein = nad; /* nt_nwavein = 0 wini */
         } 
         else 
@@ -186,11 +189,11 @@ int mmio_do_open_audio(void)
                 mmresult = waveInPrepareHeader(ntsnd_indev[nad],
                     ntsnd_invec[nad][i].lpWaveHdr, sizeof(WAVEHDR));
                 if (mmresult != MMSYSERR_NOERROR)
-                    nt_waveinerror("waveinprepareheader: %s\n", mmresult);
+                    nt_waveinerror(L"waveinprepareheader: %s\n", mmresult);
                 mmresult = waveInAddBuffer(ntsnd_indev[nad],
                     ntsnd_invec[nad][i].lpWaveHdr, sizeof(WAVEHDR));
                 if (mmresult != MMSYSERR_NOERROR)
-                    nt_waveinerror("waveInAddBuffer: %s\n", mmresult);
+                    nt_waveinerror(L"waveInAddBuffer: %s\n", mmresult);
             }
         }
     }
@@ -211,7 +214,7 @@ int mmio_do_open_audio(void)
         if (mmresult != MMSYSERR_NOERROR)
         {
             fprintf(stderr,"Wave out open device %d + %d\n",nt_whichdac,nda);
-            nt_waveouterror("waveOutOpen device: %s\n",  mmresult);
+            nt_waveouterror(L"waveOutOpen device: %s\n",  mmresult);
             nt_nwaveout = nda;
         }
     }
@@ -425,7 +428,7 @@ static void nt_resyncaudio(void)
             mmresult = waveInAddBuffer(ntsnd_indev[nad], inwavehdr,
                 sizeof(WAVEHDR));
             if (mmresult != MMSYSERR_NOERROR)
-                nt_waveinerror("waveInAddBuffer: %s\n", mmresult);
+                nt_waveinerror(L"waveInAddBuffer: %s\n", mmresult);
             ntsnd_inphase[nad] = phase = WRAPFWD(phase + 1);
         }
         if (count == MAXRESYNC) post("resync error 1");
@@ -450,7 +453,7 @@ static void nt_resyncaudio(void)
             mmresult = waveOutWrite(ntsnd_outdev[nda], outwavehdr,
                 sizeof(WAVEHDR)); 
             if (mmresult != MMSYSERR_NOERROR)
-                nt_waveouterror("waveOutAddBuffer: %s\n", mmresult);
+                nt_waveouterror(L"waveOutAddBuffer: %s\n", mmresult);
             ntsnd_outphase[nda] = phase = WRAPFWD(phase + 1);
         }
         if (count == MAXRESYNC) post("resync error 2");
@@ -618,7 +621,7 @@ int mmio_send_dacs(void)
             waveInPrepareHeader(device, inwavehdr, sizeof(WAVEHDR)); 
             mmresult = waveInAddBuffer(device, inwavehdr, sizeof(WAVEHDR)); 
             if (mmresult != MMSYSERR_NOERROR)
-                nt_waveinerror("waveInAddBuffer: %s\n", mmresult);
+                nt_waveinerror(L"waveInAddBuffer: %s\n", mmresult);
             ntsnd_inphase[nad] = WRAPFWD(phase + 1);
         }
         for (nda = 0; nda < nt_nwaveout; nda++)
@@ -629,7 +632,7 @@ int mmio_send_dacs(void)
             waveOutPrepareHeader(device, outwavehdr, sizeof(WAVEHDR)); 
             mmresult = waveOutWrite(device, outwavehdr, sizeof(WAVEHDR)); 
             if (mmresult != MMSYSERR_NOERROR)
-                nt_waveouterror("waveOutWrite: %s\n", mmresult);
+                nt_waveouterror(L"waveOutWrite: %s\n", mmresult);
             ntsnd_outphase[nda] = WRAPFWD(phase + 1);
         }       
 
@@ -768,6 +771,8 @@ void mmio_getdevs(char *indevlist, int *nindevs,
         int maxndev, int devdescsize)
 {
     int  wRtn, ndev, i;
+    wchar_t ucs2name[MAXPDSTRING];
+    char name[MAXPDSTRING];
 
     *canmulti = 2;  /* supports multiple devices */
     ndev = waveInGetNumDevs();
@@ -778,7 +783,9 @@ void mmio_getdevs(char *indevlist, int *nindevs,
     {
         WAVEINCAPS wicap;
         wRtn = waveInGetDevCaps(i, (LPWAVEINCAPS) &wicap, sizeof(wicap));
-        sprintf(indevlist + i * devdescsize, (wRtn ? "???" : wicap.szPname));
+        wcsncpy(ucs2name, wicap.szPname, MAXPDSTRING);
+        u8_ucs2toutf8(name, MAXPDSTRING, ucs2name, wcslen(ucs2name));
+        sprintf(indevlist + i * devdescsize, (wRtn ? "???" : name));
     }
 
     ndev = waveOutGetNumDevs();
@@ -789,6 +796,8 @@ void mmio_getdevs(char *indevlist, int *nindevs,
     {
         WAVEOUTCAPS wocap;
         wRtn = waveOutGetDevCaps(i, (LPWAVEOUTCAPS) &wocap, sizeof(wocap));
-        sprintf(outdevlist + i * devdescsize, (wRtn ? "???" : wocap.szPname));
+        wcsncpy(ucs2name, wocap.szPname, MAXPDSTRING);
+        u8_ucs2toutf8(name, MAXPDSTRING, ucs2name, wcslen(ucs2name));
+        sprintf(outdevlist + i * devdescsize, (wRtn ? "???" : name));
     }
 }
