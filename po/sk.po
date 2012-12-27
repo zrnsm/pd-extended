@@ -1,20 +1,20 @@
 # SOME DESCRIPTIVE TITLE.
 # This file is put in the public domain.
-#
+# 
 # Translators:
 #   <fero.kiraly@gmail.com>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: Pure Data\n"
-"Report-Msgid-Bugs-To: http://bugs.puredata.info\n"
+"Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=55736&atid=478070\n"
 "POT-Creation-Date: 2012-12-26 12:51-0500\n"
-"PO-Revision-Date: 2012-12-24 13:10+0000\n"
+"PO-Revision-Date: 2012-12-27 13:12+0000\n"
 "Last-Translator: paum <fero.kiraly@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: sk\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 msgid " "
@@ -92,7 +92,7 @@ msgid "Atom Box Properties"
 msgstr "Atom Box Properties"
 
 msgid "Audio Settings"
-msgstr "Nastavenia zvuku"
+msgstr "Nastavenia Zvuku"
 
 msgid "Audio Settings..."
 msgstr "Nastavenia zvuku..."
@@ -189,7 +189,7 @@ msgid "Data Properties"
 msgstr "Vlastnosti Data"
 
 msgid "Defeat real-time scheduling"
-msgstr ""
+msgstr "Defeat real-time scheduling"
 
 msgid "Delay (msec):"
 msgstr "Meškanie (ms)"
@@ -294,16 +294,17 @@ msgid "Input device 4:"
 msgstr "Vstupné zariadenie 4:"
 
 msgid "Jack does not seem to be running, so Pd-extended cannot connect to it."
-msgstr ""
+msgstr "Pd-extended sa nemôže spojiť s Jack-om, pretože nie je spustený."
 
 msgid "Jack not installed!"
-msgstr ""
+msgstr "Jack nie je nainštalovaný!"
 
 msgid "Jack not running!"
-msgstr ""
+msgstr "Jack nie je spustený!"
 
-msgid "JackOSX is not fully installed, Pd-extended cannot use Jack without it."
-msgstr ""
+msgid ""
+"JackOSX is not fully installed, Pd-extended cannot use Jack without it."
+msgstr "JackOSX nieje kompletne nainštalovaný. Pd-extended nemôže bez toho používať Jack."
 
 msgid "Jump on click"
 msgstr "Jump on click"
@@ -342,10 +343,10 @@ msgid "Magic Glass"
 msgstr "Magic Glass"
 
 msgid "Make app from folder..."
-msgstr ""
+msgstr "Urobiť app z adresára..."
 
 msgid "Make app from patch..."
-msgstr ""
+msgstr "Urobiť app z patch-u..."
 
 msgid "Margin:"
 msgstr "Okraj:"
@@ -477,7 +478,7 @@ msgid "Quit"
 msgstr "Ukončiť"
 
 msgid "Quit Pd-extended, start Jack, then try again."
-msgstr ""
+msgstr "Ukonči Pd-extended, spusti jack a potom skús znova."
 
 msgid "Range and size"
 msgstr "Rozsah a veľkosť"
@@ -666,10 +667,10 @@ msgid "Window"
 msgstr "Okno"
 
 msgid "Would you like to open JackOSX.com to download Jack?"
-msgstr ""
+msgstr "Chceš navštíviť JackOSX pre stiahnutie Jack-u?"
 
 msgid "Would you like to open JackPilot to start Jack?"
-msgstr ""
+msgstr "Chceš otvoriť JackPilot pre spustenie Jack-u?"
 
 msgid "X and Y"
 msgstr "X a Y"
