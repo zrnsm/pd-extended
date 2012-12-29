@@ -46,7 +46,15 @@ proc ::pd_menucommands::menu_print {mytoplevel} {
                       -filetypes { {{postscript} {.ps}} }]
     if {$filename ne ""} {
         set tkcanvas [tkcanvas_name $mytoplevel]
-        $tkcanvas postscript -file $filename 
+
+        set pad 10 
+        set bbox [$tkcanvas bbox all]
+        set x [expr [lindex $bbox 0] - $pad]
+        set y [expr [lindex $bbox 1] - $pad]
+        set width  [expr [lindex $bbox 2] - $x + $pad]
+        set height [expr [lindex $bbox 3] - $y + $pad]
+
+        $tkcanvas postscript -x $x -y $y -width $width -height $height -file $filename 
     }
 }
 
