@@ -15,8 +15,7 @@ libportaudio_la_SOURCES = src/common/pa_allocation.c  \
         src/common/pa_stream.c      \
         src/common/pa_trace.c       \
         src/common/pa_debugprint.c  \
-        src/common/pa_ringbuffer.c  \
-	src/hostapi/skeleton/pa_hostapi_skeleton.c
+        src/common/pa_ringbuffer.c
 
 
 if ALSA
@@ -37,7 +36,7 @@ if COREAUDIO
 AM_CPPFLAGS += -DPA_USE_COREAUDIO
 INCLUDES += -Isrc/os/mac_osx
 libportaudio_la_SOURCES += src/os/unix/pa_unix_util.c     \
-        src/os/unix/pa_unix_hostapis.c   \
+        src/os/mac_osx/pa_mac_hostapis.c \
         src/hostapi/coreaudio/pa_mac_core.c  \
         src/hostapi/coreaudio/pa_mac_core_blocking.c  \
         src/hostapi/coreaudio/pa_mac_core_utilities.c

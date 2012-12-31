@@ -76,7 +76,6 @@ PASRC = s_audio_pa.c s_audio_paring.c \
         $(PADIR)/src/os/win/pa_win_util.c \
         $(PADIR)/src/os/win/pa_win_waveformat.c \
         $(PADIR)/src/os/win/pa_win_coinitialize.c \
-        $(PADIR)/src/hostapi/skeleton/pa_hostapi_skeleton.c \
         $(PADIR)/src/hostapi/wmme/pa_win_wmme.c
 
 ASIOSRC = 	$(PADIR)/src/hostapi/asio/iasiothiscallresolver.cpp \
