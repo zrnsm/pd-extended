@@ -253,11 +253,12 @@ Max_Neupert Katja_Vetter Pavel_Piatruk Rostislav_Raykov Max_Neupert
 V_L Γεώργιος_Κερατζάκης Ricardo_Cedeño_Montaña Ivica_Ico_Bukvic
 Peter_Brinkmann Roman_Haefeli Olsen_Wolf Ricardo_Fabbri Björn_Lindig
 Patrice_Colet Daniel_Heckenberg Izaskun_Etxebarria lemonzi42 Nico_Auvieux
-dwan Jean_Sapristi András_Murányi Lorenzo_Sutton sad@flxer.net Sei_Matsumura
+dwan Jean_Sapristi András_Murányi Lorenzo_Sutton sad@flxer.net 松村_誠一郎
 Prim_Smik Johannes_Burström crazylion Liwei_Chou Pei-Wen_Liu 鴻旗_鄭
 Dieter_Kovačič Claude_Heiland-Allen Christian_Klippel Jarno_Seppänen
 Ville_Pulkki Christoph_Kummerer Mark_Williamson Iain_Mott Fred_Jan_Kraan
-Oswald_Berthold;
+Oswald_Berthold Pierre-Olivier_Boulant Chikashi_Miyama Ricardo_Palmieri
+Mathias_Bredholt Antoine_Villeret;
 #X obj 11 411 + 20;
 #X obj 11 328 line;
 #X obj 91 7 r \$0-credits-bng;
@@ -446,11 +447,9 @@ more details about the license:;
 #X text 34 351 You can ask questions and get help in a variety of forums:
 ;
 #X text 36 376 mailing lists:;
-#X text 36 416 IRC chatroom:;
-#X obj 122 416 pddp/pddplink irc://irc.freenode.net/dataflow;
 #X text 36 389 web forums:;
-#X obj 122 389 pddp/pddplink http://puredata.hurleur.com/;
-#X obj 122 403 pddp/pddplink http://noisepages.com/groups/pd-everywhere/
-;
+#X obj 122 389 pddp/pddplink http://puredata.info/community/forums;
+#X text 36 402 IRC chatroom:;
+#X obj 122 402 pddp/pddplink irc://irc.freenode.net/dataflow;
 #X connect 2 0 10 0;
 #X connect 10 1 17 0;
