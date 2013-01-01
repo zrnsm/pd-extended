@@ -15,14 +15,8 @@ libportaudio_la_SOURCES = src/common/pa_allocation.c  \
         src/common/pa_stream.c      \
         src/common/pa_trace.c       \
         src/common/pa_debugprint.c  \
-        src/common/pa_ringbuffer.c  \
-	src/hostapi/skeleton/pa_hostapi_skeleton.c
+        src/common/pa_ringbuffer.c
 
-
-if ALSA
-AM_CPPFLAGS += -DPA_USE_ALSA
-libportaudio_la_SOURCES += src/hostapi/alsa/pa_linux_alsa.c
-endif
 
 if ASIO
 # Some old code in asio/ASIOSDK2/common/combase.h needs to be ignored,
@@ -37,19 +31,10 @@ if COREAUDIO
 AM_CPPFLAGS += -DPA_USE_COREAUDIO
 INCLUDES += -Isrc/os/mac_osx
 libportaudio_la_SOURCES += src/os/unix/pa_unix_util.c     \
-        src/os/unix/pa_unix_hostapis.c   \
+        src/os/mac_osx/pa_mac_hostapis.c \
         src/hostapi/coreaudio/pa_mac_core.c  \
         src/hostapi/coreaudio/pa_mac_core_blocking.c  \
         src/hostapi/coreaudio/pa_mac_core_utilities.c
-endif
-
-# Cygwin has a function OSS /dev/dsp, but not MIDI, and Pd is only set up to
-# handle a single MIDI API
-if OSS
-if !WINDOWS
-AM_CPPFLAGS += -DPA_USE_OSS
-libportaudio_la_SOURCES += src/hostapi/oss/pa_unix_oss.c
-endif
 endif
 
 if LINUX
