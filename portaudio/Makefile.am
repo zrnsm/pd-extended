@@ -18,11 +18,6 @@ libportaudio_la_SOURCES = src/common/pa_allocation.c  \
         src/common/pa_ringbuffer.c
 
 
-if ALSA
-AM_CPPFLAGS += -DPA_USE_ALSA
-libportaudio_la_SOURCES += src/hostapi/alsa/pa_linux_alsa.c
-endif
-
 if ASIO
 # Some old code in asio/ASIOSDK2/common/combase.h needs to be ignored,
 # we do this by setting the WINVER macro to min Windows XP aka 5.1.
@@ -40,15 +35,6 @@ libportaudio_la_SOURCES += src/os/unix/pa_unix_util.c     \
         src/hostapi/coreaudio/pa_mac_core.c  \
         src/hostapi/coreaudio/pa_mac_core_blocking.c  \
         src/hostapi/coreaudio/pa_mac_core_utilities.c
-endif
-
-# Cygwin has a function OSS /dev/dsp, but not MIDI, and Pd is only set up to
-# handle a single MIDI API
-if OSS
-if !WINDOWS
-AM_CPPFLAGS += -DPA_USE_OSS
-libportaudio_la_SOURCES += src/hostapi/oss/pa_unix_oss.c
-endif
 endif
 
 if LINUX
