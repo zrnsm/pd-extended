@@ -162,7 +162,7 @@ proc pdtk_canvas_saveas {name initialfile initialdir} {
 proc ::pdtk_canvas::pdtk_canvas_menuclose {mytoplevel reply_to_pd} {
     raise $mytoplevel
     set filename [wm title $mytoplevel]
-    set message [format {Do you want to save the changes you made in "%s"?} $filename]
+    set message [format [_ "Do you want to save the changes you made in '%s'?"] $filename]
     set answer [tk_messageBox -message $message -type yesnocancel -default "yes" \
                     -parent $mytoplevel -icon question]
     switch -- $answer {

@@ -15,7 +15,6 @@ puts [_ "Media"]
 puts [_ "Window"]
 puts [_ "Help"]
 
-puts [_ "Do you want to save the changes you made in '%s'?"]
 puts [_ "Discard changes to '%s'?"]
 puts [_ "Close this window?"]
 puts [_ "really quit?"]
