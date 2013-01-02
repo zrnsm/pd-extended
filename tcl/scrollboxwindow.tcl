@@ -64,6 +64,10 @@ proc ::scrollboxwindow::reset_to_defaults {mytoplevel} {
         "win32" {
             pdwindow::debug "Deleting preferences in HKEY_CURRENT_USER\\Software\\Pd-extended\n"
             registry delete "HKEY_CURRENT_USER\\Software\\Pd-extended"
+            pdwindow::debug "Deleting preferences in HKEY_LOCAL_MACHINE\\Software\\Pd-extended\n"
+            registry delete "HKEY_LOCAL_MACHINE\\Software\\Pd-extended"
+            pdwindow::debug "regedit /s $::sys_libdir/bin/pd-settings.reg\n"
+            exec regedit /s "$::sys_libdir/bin/pd-settings.reg"
         }
     }
     set ::startup_flags ""
