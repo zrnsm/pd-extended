@@ -414,10 +414,11 @@ proc add_app_icon {} {
 proc _ {s} {return [::msgcat::mc $s]}
 
 proc load_locale {} {
-    # on any UNIX-like environment, Tcl should automatically use LANG, LC_ALL,
-    # etc. otherwise we need to dig it up.  Mac OS X only uses LANG, etc. from
-    # the Terminal, and Windows doesn't have LANG, etc unless you manually set
-    # it up yourself.  Windows apps don't use the locale env vars usually.
+    # On any UNIX-like environment, Tcl should automatically use LANG,
+    # LC_ALL, etc.  On Windows, ::msgcat::Init automatically fetches
+    # the locale info from the registry and sets it for us.  This is
+    # supposed to happen on Mac OS X also, but it only seems to work
+    # for the $LANG env var.
     if {$::tcl_platform(os) eq "Darwin" && ! [info exists ::env(LANG)]} {
         # http://thread.gmane.org/gmane.comp.lang.tcl.mac/5215
         # http://thread.gmane.org/gmane.comp.lang.tcl.mac/6433
@@ -426,20 +427,11 @@ proc load_locale {} {
         } elseif {![catch "exec defaults read NSGlobalDomain AppleLocale" lang]} {
             ::msgcat::mclocale $lang
         }
-    } elseif {$::tcl_platform(platform) eq "windows"} {
-        # using LANG on Windows is useful for easy debugging
-        if {[info exists ::env(LANG)] && $::env(LANG) ne "C" && $::env(LANG) ne ""} {  
-            ::msgcat::mclocale $::env(LANG)
-        } elseif {![catch {package require registry}]} {
-            ::msgcat::mclocale [string tolower \
-                                    [string range \
-                                         [registry get {HKEY_CURRENT_USER\Control Panel\International} sLanguage] 0 1] ]
-        }
     }
     ::msgcat::mcload [file join [file dirname [info script]] .. po]
 
     ##--moo: force default system and stdio encoding to UTF-8
-    encoding system utf-8
+    encoding system utf-8 ;# TODO this is probably unnecessary
     fconfigure stderr -encoding utf-8
     fconfigure stdout -encoding utf-8
     ##--/moo
