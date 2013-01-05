@@ -2,21 +2,21 @@
 # This file is put in the public domain.
 # 
 # Translators:
-#   <porres@gmail.com>, 2013.
-# Ricardo Palmieri <>, 2013.
+# Hans-Christoph Steiner <hans@eds.org>, 2013.
+# João Pais <jmmmpais@googlemail.com>, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: Pure Data\n"
 "Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=55736&atid=478070\n"
 "POT-Creation-Date: 2012-12-31 20:40-0500\n"
-"PO-Revision-Date: 2013-01-03 20:42+0000\n"
-"Last-Translator: porres <porres@gmail.com>\n"
+"PO-Revision-Date: 2013-01-03 17:47+0000\n"
+"Last-Translator: João Pais <jmmmpais@googlemail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: pt_BR\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language: pt_PT\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #, tcl-format
 msgid "%s Font"
@@ -39,7 +39,7 @@ msgid "(Tcl) UNHANDLED ERROR: "
 msgstr "(Tcl) ERRO NÃO TRATADO:"
 
 msgid "(same as input device) ..............      "
-msgstr "(mesmo que o dispositivo de entrada) ..............      "
+msgstr "(igual ao dispositivo de entrada) .............."
 
 msgid "(use arrow keys for history)"
 msgstr "(use as setas do teclado para histórico)"
@@ -48,13 +48,13 @@ msgid "-----------output-range:-----------"
 msgstr "---------registro-de-saída:---------"
 
 msgid "----------dimensions(pix):-----------"
-msgstr "----------dimensões(pix):-----------"
+msgstr "--------dimensões(pix):--------"
 
 msgid "--------dimensions(pix)(pix):--------"
 msgstr "--------dimensões(pix)(pix):--------"
 
 msgid "--------flash-time(ms)(ms):---------"
-msgstr "-----tempo-de-piscada(ms)(ms):-------"
+msgstr "-----tempo-de-flash(ms)(ms):-------"
 
 msgid "-------dimensions(digits)(pix):-------"
 msgstr "------dimensões(dígitos)(pix):-------"
@@ -66,7 +66,7 @@ msgid "------visible_rectangle(pix)(pix):------"
 msgstr "-----retângulo_visível(pix)(pix):------"
 
 msgid "ALSA MIDI Settings"
-msgstr "Configurações ALSA MIDI"
+msgstr "Configuração MIDI ALSA"
 
 msgid "About Pd"
 msgstr "Sobre o Pd"
@@ -81,19 +81,19 @@ msgid "Apply"
 msgstr "Aplicar"
 
 msgid "Array"
-msgstr "Vetor"
+msgstr "Array"
 
 msgid "Array Properties"
-msgstr "Propriedades do Vetor"
+msgstr "Propriedades do array"
 
 msgid "Atom Box Properties"
-msgstr "Propriedades da Caixa de Átomos"
+msgstr "Propriedades da atom box"
 
 msgid "Audio Settings"
-msgstr "Configurações de Áudio"
+msgstr "Configuração audio"
 
 msgid "Audio Settings..."
-msgstr "Configurações de Áudio..."
+msgstr "Configuração audio..."
 
 msgid "Autopatch"
 msgstr "Autopatch"
@@ -102,22 +102,22 @@ msgid "Autotips"
 msgstr "AutoDicas"
 
 msgid "Background"
-msgstr "Plano de fundo"
+msgstr "Fundo"
 
 msgid "Background color"
-msgstr "Cor do plano de fundo"
+msgstr "Cor de fundo"
 
 msgid "Bang"
 msgstr "Bang"
 
 msgid "Bezier curve"
-msgstr "Curva de Bezier"
+msgstr "Curva de Bézier"
 
 msgid "Block size:"
 msgstr "Tamanho do bloco:"
 
 msgid "Bottom"
-msgstr "Base"
+msgstr "Abaixo"
 
 msgid "Bring All to Front"
 msgstr "Trazer Tudo para Frente"
@@ -126,22 +126,22 @@ msgid "Cancel"
 msgstr "Cancelar"
 
 msgid "Cannot read GUI prefs file: "
-msgstr "Não foi possível ler o arquivo (GUI prefs):"
+msgstr "Não foi possível ler o arquivo GUI prefs:"
 
 msgid "Canvas"
-msgstr "Tela"
+msgstr "Canvas"
 
 msgid "Canvas Properties"
-msgstr "Propriedades da Tela"
+msgstr "Propriedades da tela"
 
 msgid "Channels:"
 msgstr "Canais:"
 
 msgid "Clear Console"
-msgstr "Limpar Console"
+msgstr "Limpar consola"
 
 msgid "Clear Menu"
-msgstr "Limpar Menu"
+msgstr "Limpar menu"
 
 msgid "Close"
 msgstr "Fechar"
@@ -153,10 +153,10 @@ msgid "Colors"
 msgstr "Cores"
 
 msgid "Comment"
-msgstr "Comentário"
+msgstr "Comment"
 
 msgid "Compose color"
-msgstr "Compor cor"
+msgstr "Criar uma cor"
 
 msgid "Configuring Info.plist..."
 msgstr "Configurando Info.plist..."
@@ -165,7 +165,7 @@ msgid "Copy"
 msgstr "Copiar"
 
 msgid "Copying current patch..."
-msgstr "Copiando patch atual..."
+msgstr "Copiando patch actual..."
 
 #, tcl-format
 msgid "Couldn't find '%s' in %s"
@@ -184,24 +184,24 @@ msgid "DSP On"
 msgstr "DSP Ligado"
 
 msgid "Data Properties"
-msgstr "Propriedades de Dados"
+msgstr "Propriedades dos Dados"
 
 msgid "Defeat real-time scheduling"
 msgstr "Anular agendamento em tempo real"
 
 msgid "Delay (msec):"
-msgstr "Delay (ms):"
+msgstr "Delay (mseg):"
 
 msgid "Delete array"
-msgstr "Excluir vetor"
+msgstr "Apagar array"
 
 #, tcl-format
 msgid "Discard changes to '%s'?"
-msgstr "Descartar as mudanças em '%s'?"
+msgstr "Rejeitar modificações em '%s'?"
 
 #, tcl-format
 msgid "Do you want to save the changes you made in '%s'?"
-msgstr "Você deseja salvar as alterações feitas em '%s'?"
+msgstr "Quer gravar as modificações feitas em '%s'?"
 
 msgid "Draw as:"
 msgstr "Desenhar como:"
@@ -213,58 +213,58 @@ msgid "Edit"
 msgstr "Editar"
 
 msgid "Edit Mode"
-msgstr "Modo de Edição"
+msgstr "Modo de edição"
 
 msgid "Edit library"
 msgstr "Editar biblioteca"
 
 msgid "File"
-msgstr "Arquivo"
+msgstr "Ficheiro"
 
 msgid "Find"
-msgstr "Procurar"
+msgstr "Localizar"
 
 msgid "Find Again"
-msgstr "Procurar Novamente"
+msgstr "Localizar de novo"
 
 msgid "Find Last Error"
-msgstr "Encontrar Último Erro"
+msgstr "Localizar último erro"
 
 msgid "Find..."
-msgstr "Procurar..."
+msgstr "Localizar..."
 
 msgid "Font"
-msgstr "Fonte"
+msgstr "Tipo de letra"
 
 msgid "Font Size"
-msgstr "Tamanho da Fonte"
+msgstr "Tamanho do tipo de letra"
 
 msgid "Foreground color"
-msgstr "Cor do plano de frente"
+msgstr "Cor frontal"
 
 msgid "Front"
-msgstr "Frente"
+msgstr "Fachada"
 
 msgid "Graph"
-msgstr "Gráfico"
+msgstr "Graph"
 
 msgid "Graph-On-Parent"
-msgstr "Desenhar-No-Pai"
+msgstr "Mostrar na janela superior"
 
 msgid "Help"
 msgstr "Ajuda"
 
 msgid "Help Browser"
-msgstr "Navegador de Ajuda"
+msgstr "Navegador da Ajuda"
 
 msgid "Hide object name and arguments"
-msgstr "Esconder nome e argumentos do objeto"
+msgstr "Esconder nome e variáveis do objecto"
 
 msgid "Hradio"
-msgstr "Seleção Horizontal"
+msgstr "Hradio"
 
 msgid "Hslider"
-msgstr "Slider Horizontal"
+msgstr "Hslider"
 
 msgid "IN"
 msgstr "Entrada"
@@ -274,10 +274,10 @@ msgid "Ignoring '%s': doesn't look like a Pd-file"
 msgstr "Ignorando '%s': não parece ser um arquivo Pd válido"
 
 msgid "In Ports:"
-msgstr "Portas de Entrada:"
+msgstr "Ports de entrada:"
 
 msgid "Init"
-msgstr "Inicialização"
+msgstr "Iniciar"
 
 msgid "Input device 1:"
 msgstr "Dispositivo de entrada 1:"
@@ -292,53 +292,53 @@ msgid "Input device 4:"
 msgstr "Dispositivo de entrada 4:"
 
 msgid "Jack does not seem to be running, so Pd-extended cannot connect to it."
-msgstr "Servidor Jack não parece estar rodando, deste modo Pd-extended não pode se conectar a ele."
+msgstr "Jack não parece estar a funcionar, por isso Pd não conseguiu fazer uma ligação."
 
 msgid "Jack not installed!"
-msgstr "Servidor Jack não está instalado."
+msgstr "Jack não está instalado!"
 
 msgid "Jack not running!"
-msgstr "Servidor Jack não está rodando."
+msgstr "Jack não está a funcionar!"
 
 msgid ""
 "JackOSX is not fully installed, Pd-extended cannot use Jack without it."
-msgstr "JackOSX não está instalado corretamente, Pd-extended não pode usar o Servidor Jack sem ele."
+msgstr "JackOSC não está completamente instalado, Pd-extended não consegue usar Jack."
 
 msgid "Jump on click"
-msgstr "Pular ao clicar"
+msgstr "Saltar no clique"
 
 msgid "Label"
-msgstr "Etiqueta"
+msgstr "Legenda"
 
 msgid "Label color"
-msgstr "Cor da etiqueta"
+msgstr "Cor da legenda"
 
 msgid "Last graph"
-msgstr "Último gráfico"
+msgstr "Gráfico precedente"
 
 msgid "Left   "
-msgstr "Esquerda   "
+msgstr "Esquerda"
 
 msgid "Limits"
 msgstr "Limites"
 
 msgid "Load Meter"
-msgstr "Medidor de Carga de CPU"
+msgstr "Carregar medidor"
 
 msgid "Log:"
 msgstr "Log:"
 
 msgid "Lower:"
-msgstr "De baixo:"
+msgstr "Inferior:"
 
 msgid "MIDI Settings"
-msgstr "Configurações MIDI"
+msgstr "Configuração MIDI"
 
 msgid "MIDI Settings..."
-msgstr "Configurações MIDI..."
+msgstr "Configuração MIDI..."
 
 msgid "Magic Glass"
-msgstr "Vidro Mágico"
+msgstr "Vidro mágico"
 
 msgid "Make app from folder..."
 msgstr "Exportar app a partir da pasta..."
@@ -374,19 +374,19 @@ msgid "New"
 msgstr "Novo"
 
 msgid "New graph"
-msgstr "Novo gráfico"
+msgstr "Gráfico novo"
 
 msgid "Next Window"
 msgstr "Próxima Janela"
 
 msgid "No init"
-msgstr "Sem inicialização"
+msgstr "Não iniciar"
 
 msgid "Number"
 msgstr "Número"
 
 msgid "Number2"
-msgstr "Número2"
+msgstr "Number2"
 
 msgid "OK"
 msgstr "OK"
@@ -398,19 +398,19 @@ msgid "OUT"
 msgstr "Saída"
 
 msgid "Object"
-msgstr "Objeto"
+msgstr "Object"
 
 msgid "Open"
 msgstr "Abrir"
 
 msgid "Open List View..."
-msgstr "Abrir Visualização em Lista..."
+msgstr "Ver lista"
 
 msgid "Open Recent"
-msgstr "Abrir Recente"
+msgstr "Abrir recente"
 
 msgid "Out Ports:"
-msgstr "Portas de Saída:"
+msgstr "Ports de saída:"
 
 msgid "Output device 1:"
 msgstr "Dispositivo de saída 1:"
@@ -425,28 +425,28 @@ msgid "Output device 4:"
 msgstr "Dispositivo de saída 4:"
 
 msgid "Parent Window"
-msgstr "Janela Mãe"
+msgstr "Janela superior"
 
 msgid "Paste"
 msgstr "Colar"
 
 msgid "Pd Help Browser..."
-msgstr "Navegador de ajuda do Pd..."
+msgstr "Navegador de ajuda"
 
 msgid "Pd libraries to load on startup"
-msgstr "Bibliotecas de Pd para carregar na inicialização"
+msgstr "Bibliotecas Pd para carregar na inicialização"
 
 msgid "Pd search path for objects, help, fonts, and other files"
-msgstr "Caminho de busca do Pd para objetos, arquivos de ajuda, fontes e outros"
+msgstr "Caminho de busca do PD para objectos, arquivos de ajuda, fontes e outros fichreiros"
 
 msgid "Pd window"
-msgstr "Janela do Pd"
+msgstr "Janela Pd"
 
 msgid "Pd-extended"
 msgstr "Pd-extended"
 
 msgid "Perf Mode"
-msgstr "Modo Performance"
+msgstr "Modo de performance"
 
 msgid "Points"
 msgstr "Pontos"
@@ -461,34 +461,34 @@ msgid "Previous Window"
 msgstr "Janela Anterior"
 
 msgid "Print..."
-msgstr "Imprimir..."
+msgstr "Imprimir"
 
 msgid "Properties"
 msgstr "Propriedades"
 
 msgid "Put"
-msgstr "Inserir"
+msgstr "Put"
 
 msgid "Put array into:"
-msgstr "Inserir vetor em:"
+msgstr "Pôr array em:"
 
 msgid "Quit"
 msgstr "Sair"
 
 msgid "Quit Pd-extended, start Jack, then try again."
-msgstr "Sair do Pd-extended, iniciar o Servidor Jack e tentar novamente."
+msgstr "Saia do Pd-extended, comece o Jack, e tente outra vez."
 
 msgid "Range and size"
-msgstr "Registro e tamanho"
+msgstr "Registro de valores e tamanho"
 
 msgid "Real-time scheduling"
 msgstr "Agendamento em tempo real"
 
 msgid "Receive symbol:"
-msgstr "Símbolo de \"receive\":"
+msgstr "Símbolo para receber:"
 
 msgid "Redo"
-msgstr "Refazer"
+msgstr "Restaurar"
 
 msgid "Redo clear"
 msgstr "Refazer limpar"
@@ -506,7 +506,7 @@ msgid "Redo duplicate"
 msgstr "Refazer duplicar"
 
 msgid "Redo motion"
-msgstr "Refazer movimentar"
+msgstr "Refazer mover"
 
 msgid "Redo paste"
 msgstr "Refazer colar"
@@ -518,25 +518,25 @@ msgid "Report a bug"
 msgstr "Reportar um bug"
 
 msgid "Reset to Defaults"
-msgstr "Restaurar à Configuração Padrão"
+msgstr "Restaurar configurações padrão"
 
 msgid "Right"
 msgstr "Direita"
 
 msgid "Sample rate:"
-msgstr "Taxa de amostragem:"
+msgstr "Sample rate:"
 
 msgid "Save"
-msgstr "Salvar"
+msgstr "Guardar"
 
 msgid "Save As..."
-msgstr "Salvar Como..."
+msgstr "Guardar como..."
 
 msgid "Save application to..."
 msgstr "Savar aplicação em..."
 
 msgid "Save contents"
-msgstr "Salvar conteúdo"
+msgstr "Guardar conteúdo"
 
 msgid "Scale"
 msgstr "Escala"
@@ -545,10 +545,10 @@ msgid "Search in"
 msgstr "Procurar em"
 
 msgid "Select All"
-msgstr "Selecionar Tudo"
+msgstr "Escolher tudo"
 
 msgid "Select name for app to build...\n"
-msgstr "Selecione o nome do aplicativo a construir...⏎\n"
+msgstr "Selecione o nome do aplicativo a construir...\n"
 
 msgid "Send (Ctrl s)"
 msgstr "Enviar (Ctrl s)"
@@ -557,40 +557,40 @@ msgid "Send a Pd message"
 msgstr "Enviar uma mensagem Pd"
 
 msgid "Send symbol:"
-msgstr "Símbolo de \"send\":"
+msgstr "Símbolo para enviar:"
 
 msgid "Setting embedded preferences..."
-msgstr "Configurando preferências de \"embedded\" ???"
+msgstr "Ajuda"
 
 msgid "Setting patch name..."
-msgstr "Ajustando nome do patch..."
+msgstr "Selecionando o nome do patch..."
 
 msgid "Size:"
 msgstr "Tamanho:"
 
 msgid "Start Here!"
-msgstr "Comece Aqui!"
+msgstr "Comece aqui!"
 
 msgid "Startup flags:"
 msgstr "Flags de inicialização:"
 
 msgid "Steady on click"
-msgstr "Fixo ao clicar"
+msgstr "Manter no clique"
 
 msgid "Stretch"
-msgstr "Esticar"
+msgstr "Expandir"
 
 msgid "Symbol"
-msgstr "Símbolo"
+msgstr "Symbol"
 
 msgid "Tcl:"
 msgstr "Tcl:"
 
 msgid "Test Audio and MIDI..."
-msgstr "Testar Áudio e MIDI..."
+msgstr "Testar audio e MIDI..."
 
 msgid "Test label"
-msgstr "Etiqueta de teste"
+msgstr "teste"
 
 msgid "Tidy Up"
 msgstr "Arrumar"
@@ -599,10 +599,10 @@ msgid "Toggle"
 msgstr "Toggle"
 
 msgid "Top"
-msgstr "Topo"
+msgstr "Acima"
 
 msgid "Undo"
-msgstr "Desfazer"
+msgstr "Anular"
 
 msgid "Undo clear"
 msgstr "Desfazer limpar"
@@ -620,7 +620,7 @@ msgid "Undo duplicate"
 msgstr "Desfazer duplicar"
 
 msgid "Undo motion"
-msgstr "Desfazer movimentar"
+msgstr "Desfazer mover"
 
 msgid "Undo paste"
 msgstr "Desfazer colar"
@@ -629,31 +629,31 @@ msgid "Undo typing"
 msgstr "Desfazer digitação"
 
 msgid "Upper:"
-msgstr "De cima:"
+msgstr "Superior:"
 
 msgid "Use callbacks"
 msgstr "Usar callbacks"
 
 msgid "Use multiple ALSA devices"
-msgstr "Usar múltiplos dispositivos ALSA"
+msgstr "Usar vários dispositivos ALSA"
 
 msgid "Use multiple devices"
-msgstr "Usar múltiplos dispositivos"
+msgstr "Usar vários dispositivos"
 
 msgid "Use standard extensions"
-msgstr "Usar extensões padrões"
+msgstr "Usar extensões padrão"
 
 msgid "VU Meter"
-msgstr "Medidor de VU"
+msgstr "VU Meter"
 
 msgid "Verbose"
-msgstr "Informativo"
+msgstr "Verboso"
 
 msgid "Vradio"
-msgstr "Seleção Vertical"
+msgstr "Vradio"
 
 msgid "Vslider"
-msgstr "Slider Vertical"
+msgstr "Vslider"
 
 msgid "WARNING: unknown graphme flags received in pdtk_canvas_dialog"
 msgstr "AVISO: flags graphme desconhecidas recebidas em pdtk_canvas_dialog"
@@ -665,40 +665,40 @@ msgid "Window"
 msgstr "Janela"
 
 msgid "Would you like to open JackOSX.com to download Jack?"
-msgstr "Voce gostaria de ir até JackOSX.com para baixar o Servidor Jack?"
+msgstr "Gostaria de abrir JackOSX.com para descarregar Jack?"
 
 msgid "Would you like to open JackPilot to start Jack?"
-msgstr "Voce gostaria de abrir o JackPilot para iniciar o servidor Jack?"
+msgstr "Gostaria de abrir JackPilot para começar Jack?"
 
 msgid "X and Y"
 msgstr "X e Y"
 
 msgid "X offset"
-msgstr "Deslocamento X"
+msgstr "Posição X"
 
 msgid "X only"
-msgstr "Somente X"
+msgstr "Apenas X"
 
 msgid "X range, from"
-msgstr "Registro de X, de"
+msgstr "Faixa X, de"
 
 msgid "X units per pixel:"
-msgstr "Unidades X por pixel:"
+msgstr "Unidades de X por pixel"
 
 msgid "Y offset"
-msgstr "Deslocamento Y"
+msgstr "Posição Y"
 
 msgid "Y only"
-msgstr "Somente Y"
+msgstr "Apenas Y"
 
 msgid "Y range, from"
-msgstr "Registro de Y, de"
+msgstr "Faixa Y, de"
 
 msgid "Y units per pixel:"
-msgstr "Unidades Y por pixel:"
+msgstr "Unidades de Y por pixel"
 
 msgid "Zoom"
-msgstr "Ampliar"
+msgstr "Zoom"
 
 msgid "all"
 msgstr "tudo"
@@ -710,7 +710,7 @@ msgid "bottom:"
 msgstr "fundo:"
 
 msgid "debug"
-msgstr "debugar"
+msgstr "debug"
 
 msgid "error"
 msgstr "erro"
@@ -719,7 +719,7 @@ msgid "fatal"
 msgstr "fatal"
 
 msgid "for:"
-msgstr "para:"
+msgstr "por:"
 
 msgid "height:"
 msgstr "altura:"
@@ -737,7 +737,7 @@ msgid "left:"
 msgstr "esquerda:"
 
 msgid "lin"
-msgstr "linear"
+msgstr "lin"
 
 msgid "log"
 msgstr "log"
@@ -749,13 +749,13 @@ msgid "max:"
 msgstr "máx:"
 
 msgid "min:"
-msgstr "mín:"
+msgstr "min:"
 
 msgid "normal"
 msgstr "normal"
 
 msgid "really quit?"
-msgstr "deseja realmente sair?"
+msgstr "Fechar mesmo?"
 
 msgid "right:"
 msgstr "direita:"
