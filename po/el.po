@@ -546,7 +546,7 @@ msgid "Select All"
 msgstr "Επιλογή Όλων"
 
 msgid "Select name for app to build...\n"
-msgstr "Επιλέξτε όνομα για την εφαρμογή...⏎\n"
+msgstr "Επιλέξτε όνομα για την εφαρμογή...\n"
 
 msgid "Send (Ctrl s)"
 msgstr "Αποστολή (Ctrl s)"

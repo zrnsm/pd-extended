@@ -548,7 +548,7 @@ msgid "Select All"
 msgstr "Selecionar Tudo"
 
 msgid "Select name for app to build...\n"
-msgstr "Selecione o nome do aplicativo a construir...⏎\n"
+msgstr "Selecione o nome do aplicativo a construir...\n"
 
 msgid "Send (Ctrl s)"
 msgstr "Enviar (Ctrl s)"

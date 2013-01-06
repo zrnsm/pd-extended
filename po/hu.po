@@ -546,7 +546,7 @@ msgid "Select All"
 msgstr "Mindent kijelöl"
 
 msgid "Select name for app to build...\n"
-msgstr "Létrehozandó alkalmazás nevének kiválasztása...\\n"
+msgstr "Létrehozandó alkalmazás nevének kiválasztása...\n"
 
 msgid "Send (Ctrl s)"
 msgstr "Küld (Ctrl s)"
