@@ -1,26 +1,20 @@
 # SOME DESCRIPTIVE TITLE.
 # This file is put in the public domain.
-#
+# 
 # Translators:
-#   <kt@labyrinthos.gr>, 2012.
-# V L <vl_artcode@yahoo.com>, 2012.
-# Γεώργιος Κερατζάκης <geokeratz@gmail.com>, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: Pure Data\n"
-"Report-Msgid-Bugs-To: http://bugs.puredata.info\n"
-"POT-Creation-Date: 2012-12-26 12:51-0500\n"
-"PO-Revision-Date: 2012-12-22 19:06+0000\n"
-"Last-Translator: ktsoukalas <subscriber@labyrinthos.gr>\n"
+"Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=55736&atid=478070\n"
+"POT-Creation-Date: 2012-12-31 20:40-0500\n"
+"PO-Revision-Date: 2012-12-26 18:03+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: el\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-
-msgid " "
-msgstr " "
 
 #, tcl-format
 msgid "%s Font"
@@ -191,7 +185,7 @@ msgid "Data Properties"
 msgstr "Ιδιότητες δεδομένων"
 
 msgid "Defeat real-time scheduling"
-msgstr ""
+msgstr "Πρόβλημα στην εκτέλεση σε πραγματικό χρόνο "
 
 msgid "Delay (msec):"
 msgstr "Καθυστέρηση (msec):"
@@ -304,7 +298,8 @@ msgstr ""
 msgid "Jack not running!"
 msgstr ""
 
-msgid "JackOSX is not fully installed, Pd-extended cannot use Jack without it."
+msgid ""
+"JackOSX is not fully installed, Pd-extended cannot use Jack without it."
 msgstr ""
 
 msgid "Jump on click"
@@ -659,9 +654,7 @@ msgid "Vslider"
 msgstr "Ρυθμιστής κάθετης ολίσθησης"
 
 msgid "WARNING: unknown graphme flags received in pdtk_canvas_dialog"
-msgstr ""
-"ΠΡΟΕΙΔΟΠΟΙΗΣΗ: έχουν ληφθεί άγνωστα στοιχεία τύπου graphme στο "
-"pdtk_canvas_dialog"
+msgstr "ΠΡΟΕΙΔΟΠΟΙΗΣΗ: έχουν ληφθεί άγνωστα στοιχεία τύπου graphme στο pdtk_canvas_dialog"
 
 msgid "Width:"
 msgstr "Εύρος:"
@@ -731,6 +724,9 @@ msgstr "ύψος:"
 
 msgid "hold:"
 msgstr "κράτηση:"
+
+msgid "http://puredata.info/docs/StartHere"
+msgstr ""
 
 msgid "intrrpt:"
 msgstr "διακοπή:"
