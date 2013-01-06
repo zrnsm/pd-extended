@@ -1,24 +1,21 @@
 # SOME DESCRIPTIVE TITLE.
 # This file is put in the public domain.
-#
+# 
 # Translators:
 #   <mathiasbredholt@gmail.com>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: Pure Data\n"
-"Report-Msgid-Bugs-To: http://bugs.puredata.info\n"
-"POT-Creation-Date: 2012-12-26 12:51-0500\n"
-"PO-Revision-Date: 2012-12-22 21:12+0000\n"
+"Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=55736&atid=478070\n"
+"POT-Creation-Date: 2012-12-31 20:40-0500\n"
+"PO-Revision-Date: 2013-01-01 08:39+0000\n"
 "Last-Translator: mathiasbredholt <mathiasbredholt@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: da\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-
-msgid " "
-msgstr " "
 
 #, tcl-format
 msgid "%s Font"
@@ -297,13 +294,14 @@ msgid "Jack does not seem to be running, so Pd-extended cannot connect to it."
 msgstr ""
 
 msgid "Jack not installed!"
-msgstr ""
+msgstr "Jack er ikke installeret!"
 
 msgid "Jack not running!"
-msgstr ""
+msgstr "Jack kører ikke!"
 
-msgid "JackOSX is not fully installed, Pd-extended cannot use Jack without it."
-msgstr ""
+msgid ""
+"JackOSX is not fully installed, Pd-extended cannot use Jack without it."
+msgstr "JackOSX er ikke fuldtud installeret, Pd-extended kan ikke bruge Jack uden det."
 
 msgid "Jump on click"
 msgstr "Hop ved klik"
@@ -342,10 +340,10 @@ msgid "Magic Glass"
 msgstr "Magiske briller"
 
 msgid "Make app from folder..."
-msgstr ""
+msgstr "Lav app fra mappe..."
 
 msgid "Make app from patch..."
-msgstr ""
+msgstr "Lav app fra patch..."
 
 msgid "Margin:"
 msgstr "Margen:"
@@ -477,7 +475,7 @@ msgid "Quit"
 msgstr "Luk"
 
 msgid "Quit Pd-extended, start Jack, then try again."
-msgstr ""
+msgstr "Luk Pd-extended, start Jack og prøv igen."
 
 msgid "Range and size"
 msgstr "Område og størrelse"
@@ -666,10 +664,10 @@ msgid "Window"
 msgstr "Vindue"
 
 msgid "Would you like to open JackOSX.com to download Jack?"
-msgstr ""
+msgstr "Vil du gå til JackOSC.com for at downloade Jack?"
 
 msgid "Would you like to open JackPilot to start Jack?"
-msgstr ""
+msgstr "Vil du åbne JackPilot for at starte Jack?"
 
 msgid "X and Y"
 msgstr "X og Y"
@@ -728,6 +726,9 @@ msgstr "højde:"
 msgid "hold:"
 msgstr "hold:"
 
+msgid "http://puredata.info/docs/StartHere"
+msgstr ""
+
 msgid "intrrpt:"
 msgstr "afbr:"
 
@@ -772,27 +773,3 @@ msgstr "værdi:"
 
 msgid "width:"
 msgstr "bredde:"
-
-#~ msgid "Browser..."
-#~ msgstr "Browser..."
-
-#~ msgid "HTML Manual..."
-#~ msgstr "HTML Manual..."
-
-#~ msgid "Path..."
-#~ msgstr "Sti..."
-
-#~ msgid "Pd"
-#~ msgstr "Pd"
-
-#~ msgid "Save All Settings"
-#~ msgstr "Gem Alle Indstillinger"
-
-#~ msgid "Startup..."
-#~ msgstr "Opstart..."
-
-#~ msgid "Tcl prompt"
-#~ msgstr "Tcl forespørgsel"
-
-#~ msgid "puredata.info"
-#~ msgstr "puredata.info"
