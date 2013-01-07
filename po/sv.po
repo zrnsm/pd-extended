@@ -40,7 +40,7 @@ msgid "(same as input device) ..............      "
 msgstr ""
 
 msgid "(use arrow keys for history)"
-msgstr ""
+msgstr "(använd piltangenterna för historik)"
 
 msgid "-----------output-range:-----------"
 msgstr ""
@@ -112,7 +112,7 @@ msgid "Bezier curve"
 msgstr "Bezier-kurva"
 
 msgid "Block size:"
-msgstr ""
+msgstr "Blockstorlek:"
 
 msgid "Bottom"
 msgstr "Underkant"
@@ -312,7 +312,7 @@ msgid "Label color"
 msgstr "Textfärg"
 
 msgid "Last graph"
-msgstr ""
+msgstr "Senaste graf"
 
 msgid "Left   "
 msgstr "Vänster"
@@ -357,7 +357,7 @@ msgid "Message"
 msgstr "Meddelande"
 
 msgid "Message..."
-msgstr ""
+msgstr "Meddelande..."
 
 msgid "Messages"
 msgstr "Meddelanden"
@@ -372,10 +372,10 @@ msgid "New"
 msgstr "Ny"
 
 msgid "New graph"
-msgstr ""
+msgstr "Ny graf"
 
 msgid "Next Window"
-msgstr ""
+msgstr "Nästa fönster"
 
 msgid "No init"
 msgstr "Initiera inte"
@@ -456,7 +456,7 @@ msgid "Preferences"
 msgstr "Inställningar"
 
 msgid "Previous Window"
-msgstr ""
+msgstr "Tidigare fönster"
 
 msgid "Print..."
 msgstr "Skriv ut..."
@@ -513,7 +513,7 @@ msgid "Redo typing"
 msgstr ""
 
 msgid "Report a bug"
-msgstr ""
+msgstr "Rapportera ett fel"
 
 msgid "Reset to Defaults"
 msgstr ""
@@ -549,13 +549,13 @@ msgid "Select name for app to build...\n"
 msgstr ""
 
 msgid "Send (Ctrl s)"
-msgstr ""
+msgstr "Sänd (Ctrl s)"
 
 msgid "Send a Pd message"
-msgstr ""
+msgstr "Sänd ett Pd-meddelande"
 
 msgid "Send symbol:"
-msgstr ""
+msgstr "Sänd symbol:"
 
 msgid "Setting embedded preferences..."
 msgstr "Hjälp"
@@ -708,7 +708,7 @@ msgid "bottom:"
 msgstr ""
 
 msgid "debug"
-msgstr ""
+msgstr "felsök"
 
 msgid "error"
 msgstr ""

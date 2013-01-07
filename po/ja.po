@@ -47,7 +47,7 @@ msgid "-----------output-range:-----------"
 msgstr "-----------出力範囲:-----------"
 
 msgid "----------dimensions(pix):-----------"
-msgstr "水平ラジオボタン"
+msgstr "-------表示サイズ(pix):-------"
 
 msgid "--------dimensions(pix)(pix):--------"
 msgstr "-------表示(pix)(pix):-------"
@@ -80,7 +80,7 @@ msgid "Apply"
 msgstr "適用"
 
 msgid "Array"
-msgstr "(履歴には矢印キーを使用)"
+msgstr "アレイ"
 
 msgid "Array Properties"
 msgstr "アレイ プロパティ"
@@ -101,7 +101,7 @@ msgid "Autotips"
 msgstr "自動ヒント"
 
 msgid "Background"
-msgstr "表示領域のY値（ピクセル）:"
+msgstr "背景"
 
 msgid "Background color"
 msgstr "背景色"
@@ -325,7 +325,7 @@ msgid "Load Meter"
 msgstr "CPUロードメーター"
 
 msgid "Log:"
-msgstr "描き方:"
+msgstr "ログ:"
 
 msgid "Lower:"
 msgstr "最小値:"
@@ -577,7 +577,7 @@ msgid "Steady on click"
 msgstr "クリックで移動しない"
 
 msgid "Stretch"
-msgstr "Arrayを含ませる:"
+msgstr "拡張"
 
 msgid "Symbol"
 msgstr "シンボルボックス"
