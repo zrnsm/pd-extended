@@ -932,15 +932,27 @@ static void *subcanvas_new(t_symbol *s)
 {
     t_atom a[6];
     t_canvas *x, *owner = canvas_getcurrent();
+    t_canvas *open_parent = owner;
     if (!*s->s_name) s = gensym("/SUBPATCH/");
+    /* find the first open parent patch and use its location */
+    while (open_parent->gl_owner && !open_parent->gl_editor)
+	open_parent = open_parent->gl_owner;
     /* ideally we'd know the scroll position of the owner window and
      * adjust these calculations accordingly.  That would make it so
      * that the subpatch's window always pops up over where the [pd]
      * object was created on the owner.  Currently only pd-gui knows
      * the scrollbar position, so this placement logic should be
      * really be handled there. */
-    SETFLOAT(a, owner->gl_screenx1 + owner->gl_editor->e_xwas);
-    SETFLOAT(a+1, owner->gl_screeny1 + owner->gl_editor->e_ywas);
+    if (open_parent->gl_editor)
+    {
+	SETFLOAT(a, open_parent->gl_screenx1 + open_parent->gl_editor->e_xwas);
+	SETFLOAT(a+1, open_parent->gl_screeny1 + open_parent->gl_editor->e_ywas);
+    }
+    else /* sometimes there is no gl_editor, like when the parent is vis 0 */
+    {
+	SETFLOAT(a, 0);
+	SETFLOAT(a+1, GLIST_DEFCANVASYLOC);
+    }
     SETFLOAT(a+2, GLIST_DEFCANVASWIDTH);
     SETFLOAT(a+3, GLIST_DEFCANVASHEIGHT);
     SETSYMBOL(a+4, s);
