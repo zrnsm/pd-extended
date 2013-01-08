@@ -591,7 +591,7 @@ proc singleton {key} {
     if {![catch { selection get -selection $key }]} {
         return 0
     }
-    selection handle -selection $key . "singleton_request"
+    selection handle -selection $key -format UTF8_STRING . "singleton_request"
     selection own -command first_lost -selection $key .
     return 1
 }
@@ -645,7 +645,7 @@ proc check_for_running_instances {argc argv} {
             if {![singleton PUREDATA_MANAGER]} {
                 # other instances called by wish/pd-gui (exempt 'pd' by 5400 arg)
                 if {$argc == 1 && [string is int $argv] && $argv >= 5400} {return}
-                selection handle -selection PUREDATA . "send_args"
+                selection handle -selection PUREDATA -format UTF8_STRING . "send_args"
                 selection own -command others_lost -selection PUREDATA .
                 after 5000 set ::singleton_state "timeout"
                 vwait ::singleton_state
