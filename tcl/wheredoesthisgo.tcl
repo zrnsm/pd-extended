@@ -6,6 +6,39 @@ package provide wheredoesthisgo 0.1
 proc open_file {filename} {
     set directory [file normalize [file dirname $filename]]
     set basename [file tail $filename]
+    # if a Max binary patch, convert to a text patch using cyclist
+    if {[regexp -nocase -- "\.(pat|mxb|help)$" $basename]} {
+        switch -- $::windowingsystem {
+            "x11" {
+                # on GNU/Linux, cyclist is installed into /usr/bin usually
+                set cyclist "/usr/bin/cyclist"
+                set tmpdir "/tmp"
+            }
+            "win32" {
+                set cyclist "$::sys_libdir/bin/cyclist"
+                set tmpdir [file normalize $::env(TMP)]
+            }
+            "aqua" {
+                set cyclist "$::sys_libdir/bin/cyclist"
+                set tmpdir "/tmp"
+            }
+        }
+        ::pdwindow::debug [format [_ "Running: '%s %s'"] $cyclist $filename]\n
+        # convert Max binary to text .pat
+        set binport [open "| \"$cyclist\" \"$filename\""]
+        set convertedtext [read $binport]
+        if {$convertedtext ne "" && ! [catch {close $binport} err]} {
+            if {! [file writable $directory]} { set directory tmpdir }
+            set basename "$basename.mxt"
+            # override $filename so that it loads with the logic in the next if {}
+            set filename [file join $directory $basename]
+            set textpatfile [open "$filename" w]
+            puts $textpatfile $convertedtext
+            close $textpatfile
+            ::pdwindow::post [concat [_ "converted Max binary to text format:"] \
+                                  "'$filename'"]\n
+        }
+    }
     if {
         [file exists $filename]
         && [regexp -nocase -- "\.(pd|pat|mxt)$" $filename]
@@ -18,7 +51,7 @@ proc open_file {filename} {
         ::pdwindow::post [format [_ "Ignoring '%s': doesn't look like a Pd-file"] $filename]
     }
 }
-    
+
 # ------------------------------------------------------------------------------
 # procs for panels (openpanel, savepanel)
 

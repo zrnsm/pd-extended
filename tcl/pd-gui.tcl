@@ -305,10 +305,12 @@ proc init_for_platform {} {
             # set file types that open/save recognize
             set ::filetypes \
                 [list \
-                     [list [_ "Associated Files"]  {.pd .pat .mxt} ] \
+                     [list [_ "Associated Files"]  {.pd .pat .mxt .mxb .help} ] \
                      [list [_ "Pd Files"]          {.pd}  ] \
                      [list [_ "Max Patch Files"]   {.pat} ] \
                      [list [_ "Max Text Files"]    {.mxt} ] \
+                     [list [_ "Max Binary Files"]  {.mxb} ] \
+                     [list [_ "Max Help Files"]    {.help} ] \
                     ]
             # some platforms have a menubar on the top, so place below them
             set ::menubarsize 0
@@ -338,10 +340,12 @@ proc init_for_platform {} {
             # set file types that open/save recognize
             set ::filetypes \
                 [list \
-                     [list [_ "Associated Files"]       {.pd .pat .mxt} ] \
+                     [list [_ "Associated Files"]       {.pd .pat .mxt .mxb .help} ] \
                      [list [_ "Pd Files"]               {.pd}  ] \
-                     [list [_ "Max Patch Files (.pat)"] {.pat} ] \
-                     [list [_ "Max Text Files (.mxt)"]  {.mxt} ] \
+                     [list [concat [_ "Max Patch Files"] " (.pat)"] {.pat} ] \
+                     [list [concat [_ "Max Text Files"] " (.mxt)"]  {.mxt} ] \
+                     [list [concat [_ "Max Binary Files"] " (.mxb)"] {.mxb} ] \
+                     [list [concat [_ "Max Help Files"] "(.help)"] {.help} ] \
                 ]
             # some platforms have a menubar on the top, so place below them
             set ::menubarsize 22
@@ -373,10 +377,12 @@ proc init_for_platform {} {
             # set file types that open/save recognize
             set ::filetypes \
                 [list \
-                     [list [_ "Associated Files"]  {.pd .pat .mxt} ] \
+                     [list [_ "Associated Files"]  {.pd .pat .mxt .mxb .help} ] \
                      [list [_ "Pd Files"]          {.pd}  ] \
                      [list [_ "Max Patch Files"]   {.pat} ] \
                      [list [_ "Max Text Files"]    {.mxt} ] \
+                     [list [_ "Max Binary Files"]  {.mxb} ] \
+                     [list [_ "Max Help Files"]    {.help} ] \
                     ]
             # some platforms have a menubar on the top, so place below them
             set ::menubarsize 0
