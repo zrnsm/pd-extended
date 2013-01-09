@@ -36,3 +36,11 @@ puts [_ "Redo duplicate"]
 puts [_ "Redo motion"]
 puts [_ "Redo paste"]
 puts [_ "Redo typing"]
+
+# these should be found in pd-gui.tcl, but they're not... arg
+puts [_ "Associated Files"]
+puts [_ "Pd Files"]
+puts [_ "Max Patch Files"]
+puts [_ "Max Text Files"]
+puts [_ "Max Binary Files"]
+puts [_ "Max Help Files"]
