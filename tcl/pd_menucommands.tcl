@@ -318,7 +318,7 @@ proc ::pd_menucommands::menu_makeapp {isdir} {
     set patch [::makeapp::getpatchname $top_window]
     if {$patch == ""} {
         pdtk_post \
-            "No patch found! Select an open parent patch with the mouse, then try again.\n"
+            [_ "No patch found! Select an open parent patch with the mouse, then try again."]\n
         return
     }
     # TODO set -parent to patch being turned into app
@@ -342,7 +342,7 @@ proc ::pd_menucommands::menu_makeapp {isdir} {
             ::makeapp::copycurrentpatch $appdir $patch $patchname $isdir
             .makeapp.label configure -text [_ "Setting embedded preferences..."]
             ::makeapp::embedprefs $appdir "app-auto-load/$patchname.pd"
-            pdtk_post [_ "$appdir is complete!\n"]
+            pdtk_post [format [_ "%s is complete!"]\n $appdir]
             destroy .makeapp
         }
     }

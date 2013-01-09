@@ -48,7 +48,7 @@ proc open_file {filename} {
         # now this is done in pd_guiprefs
         ::pd_guiprefs::update_recentfiles $filename
     } {
-        ::pdwindow::post [format [_ "Ignoring '%s': doesn't look like a Pd-file"] $filename]
+        ::pdwindow::post [format [_ "Ignoring '%s': doesn't look like a Pd-file"]\n $filename]
     }
 }
 

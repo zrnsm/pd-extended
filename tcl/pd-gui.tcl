@@ -464,7 +464,7 @@ proc find_default_font {} {
             break
         }
     }
-    ::pdwindow::verbose 0 "Default font: $::font_family\n"
+    ::pdwindow::verbose 0 [format [_ "Default font: %s"]\n $::font_family]
 }
 
 proc set_base_font {family weight} {
@@ -472,7 +472,7 @@ proc set_base_font {family weight} {
         set ::font_family $family
     } else {
         ::pdwindow::post [format \
-            [_ "WARNING: Font family '%s' not found, using default (%s)\n"] \
+            [_ "WARNING: Font family '%s' not found, using default (%s)"]\n \
                 $family $::font_family]
     }
     if {[lsearch -exact {bold normal} $weight] > -1} {
@@ -480,7 +480,7 @@ proc set_base_font {family weight} {
         set using_defaults 0
     } else {
         ::pdwindow::post [format \
-            [_ "WARNING: Font weight '%s' not found, using default (%s)\n"] \
+            [_ "WARNING: Font weight '%s' not found, using default (%s)"]\n \
                 $weight $::font_weight]
     }
 }
@@ -675,24 +675,26 @@ proc load_plugin_script {filename} {
 
     set basename [file tail $filename]
     if {[lsearch $::loaded_plugins $basename] > -1} {
-        ::pdwindow::post [_ "'$basename' already loaded, ignoring: '$filename'\n"]
+        ::pdwindow::post \
+            [format [_ "'%s' already loaded, ignoring %s"]\n \
+                 $basename $filename]
         return
     }
 
-    ::pdwindow::debug [_ "Loading plugin: $filename\n"]
+    ::pdwindow::debug [format [_ "Loading plugin: %s"]\n $filename]
     set tclfile [open $filename]
     set tclcode [read $tclfile]
     close $tclfile
     # if the plugin folder includes translations, load them
     set podir "[file dirname $filename]/po"
     if {[file exists $podir] && [file isdir $podir]} {
-        ::pdwindow::debug [_ "Loading translations for $basename\n"]
+        ::pdwindow::debug [format [_ "Loading translations for %s"]\n $basename]
         ::msgcat::mcload $podir
     }
     if {[catch {uplevel #0 $tclcode} errorname]} {
         ::pdwindow::error "-----------\n"
-        ::pdwindow::error [_ "UNHANDLED ERROR: $errorInfo\n"]
-        ::pdwindow::error [_ "FAILED TO LOAD $filename\n"]
+        ::pdwindow::error [concat [_ "(Tcl) UNHANDLED ERROR: "] $errorInfo "\n"]
+        ::pdwindow::error [format [_ "FAILED TO LOAD %s"]\n $filename]
         ::pdwindow::error "-----------\n"
     } else {
         lappend ::loaded_plugins $basename
@@ -703,7 +705,8 @@ proc load_startup_plugins {} {
     foreach pathdir [concat $::sys_searchpath $::sys_staticpath] {
         set dir [file normalize $pathdir]
         if { ! [file readable $dir] || ! [file isdirectory $dir]} {
-            ::pdwindow::debug "Cannot read plugins folder: '$dir'\n"
+            ::pdwindow::debug \
+                [format [_ "Cannot read plugins folder: '%s'"]\n $dir]
             continue
         }
         foreach filename [glob -directory $dir -nocomplain -types {f} -- \
