@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Pure Data 0.43\n"
 "Report-Msgid-Bugs-To: http://bugs.puredata.info\n"
-"POT-Creation-Date: 2012-12-31 20:40-0500\n"
-"PO-Revision-Date: 2012-12-31 20:45-0500\n"
+"POT-Creation-Date: 2013-01-09 00:45-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -22,6 +22,14 @@ msgstr ""
 
 #, tcl-format
 msgid "%s Properties"
+msgstr ""
+
+#, tcl-format
+msgid "%s is complete!"
+msgstr ""
+
+#, tcl-format
+msgid "'%s' already loaded, ignoring %s"
 msgstr ""
 
 msgid "(Tcl) INVALID COMMAND NAME: "
@@ -84,6 +92,9 @@ msgstr ""
 msgid "Array Properties"
 msgstr ""
 
+msgid "Associated Files"
+msgstr ""
+
 msgid "Atom Box Properties"
 msgstr ""
 
@@ -124,6 +135,10 @@ msgid "Cancel"
 msgstr ""
 
 msgid "Cannot read GUI prefs file: "
+msgstr ""
+
+#, tcl-format
+msgid "Cannot read plugins folder: '%s'"
 msgstr ""
 
 msgid "Canvas"
@@ -184,6 +199,10 @@ msgstr ""
 msgid "Data Properties"
 msgstr ""
 
+#, tcl-format
+msgid "Default font: %s"
+msgstr ""
+
 msgid "Defeat real-time scheduling"
 msgstr ""
 
@@ -214,6 +233,10 @@ msgid "Edit Mode"
 msgstr ""
 
 msgid "Edit library"
+msgstr ""
+
+#, tcl-format
+msgid "FAILED TO LOAD %s"
 msgstr ""
 
 msgid "File"
@@ -322,6 +345,14 @@ msgstr ""
 msgid "Load Meter"
 msgstr ""
 
+#, tcl-format
+msgid "Loading plugin: %s"
+msgstr ""
+
+#, tcl-format
+msgid "Loading translations for %s"
+msgstr ""
+
 msgid "Log:"
 msgstr ""
 
@@ -343,10 +374,29 @@ msgstr ""
 msgid "Make app from patch..."
 msgstr ""
 
+msgid "Making App"
+msgstr ""
+
+#, tcl-format
+msgid "Making App in %s..."
+msgstr ""
+
 msgid "Margin:"
 msgstr ""
 
 msgid "Match whole word only"
+msgstr ""
+
+msgid "Max Binary Files"
+msgstr ""
+
+msgid "Max Help Files"
+msgstr ""
+
+msgid "Max Patch Files"
+msgstr ""
+
+msgid "Max Text Files"
 msgstr ""
 
 msgid "Media"
@@ -377,6 +427,10 @@ msgid "Next Window"
 msgstr ""
 
 msgid "No init"
+msgstr ""
+
+msgid ""
+"No patch found! Select an open parent patch with the mouse, then try again."
 msgstr ""
 
 msgid "Number"
@@ -425,6 +479,9 @@ msgid "Parent Window"
 msgstr ""
 
 msgid "Paste"
+msgstr ""
+
+msgid "Pd Files"
 msgstr ""
 
 msgid "Pd Help Browser..."
@@ -520,6 +577,10 @@ msgstr ""
 msgid "Right"
 msgstr ""
 
+#, tcl-format
+msgid "Running: '%s %s'"
+msgstr ""
+
 msgid "Sample rate:"
 msgstr ""
 
@@ -560,6 +621,10 @@ msgid "Setting embedded preferences..."
 msgstr ""
 
 msgid "Setting patch name..."
+msgstr ""
+
+#, tcl-format
+msgid "Setting up %s/Contents/Info.plist"
 msgstr ""
 
 msgid "Size:"
@@ -652,6 +717,14 @@ msgstr ""
 msgid "Vslider"
 msgstr ""
 
+#, tcl-format
+msgid "WARNING: Font family '%s' not found, using default (%s)"
+msgstr ""
+
+#, tcl-format
+msgid "WARNING: Font weight '%s' not found, using default (%s)"
+msgstr ""
+
 msgid "WARNING: unknown graphme flags received in pdtk_canvas_dialog"
 msgstr ""
 
@@ -704,6 +777,9 @@ msgid "audio I/O error"
 msgstr ""
 
 msgid "bottom:"
+msgstr ""
+
+msgid "converted Max binary to text format:"
 msgstr ""
 
 msgid "debug"
