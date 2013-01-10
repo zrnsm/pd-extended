@@ -2,16 +2,16 @@
 # This file is put in the public domain.
 # 
 # Translators:
-# dwan  <dwanafite@yahoo.fr>, 2012.
+# dwan  <dwanafite@yahoo.fr>, 2012-2013.
 # Hans-Christoph Steiner <hans@eds.org>, 2013.
 # Pierre-Olivier Boulant <po.boulant@free.fr>, 2012-2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: Pure Data\n"
 "Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=55736&atid=478070\n"
-"POT-Creation-Date: 2012-12-31 20:40-0500\n"
-"PO-Revision-Date: 2013-01-01 19:48+0000\n"
-"Last-Translator: Pierre-Olivier Boulant <po.boulant@free.fr>\n"
+"POT-Creation-Date: 2013-01-09 00:45-0500\n"
+"PO-Revision-Date: 2013-01-09 10:25+0000\n"
+"Last-Translator: dwan <dwanafite@yahoo.fr>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,6 +26,14 @@ msgstr "Police de %s"
 #, tcl-format
 msgid "%s Properties"
 msgstr "Propriétés de %s"
+
+#, tcl-format
+msgid "%s is complete!"
+msgstr "%s est terminé !"
+
+#, tcl-format
+msgid "'%s' already loaded, ignoring %s"
+msgstr "'%s' déjà chargé, '%s' ignoré"
 
 msgid "(Tcl) INVALID COMMAND NAME: "
 msgstr "(Tcl) NOM DE COMMANDE INVALIDE :"
@@ -87,6 +95,9 @@ msgstr "Tableau"
 msgid "Array Properties"
 msgstr "Propriétés du tableau"
 
+msgid "Associated Files"
+msgstr "Fichiers associés"
+
 msgid "Atom Box Properties"
 msgstr "Propriétés de l'élément"
 
@@ -128,6 +139,10 @@ msgstr "Annuler"
 
 msgid "Cannot read GUI prefs file: "
 msgstr "Impossible de lire les préférences de l'interface : "
+
+#, tcl-format
+msgid "Cannot read plugins folder: '%s'"
+msgstr "Impossible de lire le dossier des plugins : '%s'"
 
 msgid "Canvas"
 msgstr "Canevas"
@@ -187,6 +202,10 @@ msgstr "Audio ON"
 msgid "Data Properties"
 msgstr "Propriétés des données"
 
+#, tcl-format
+msgid "Default font: %s"
+msgstr "Police par défaut : %s"
+
 msgid "Defeat real-time scheduling"
 msgstr "Débrayer l'ordonnanceur temps-réel"
 
@@ -218,6 +237,10 @@ msgstr "Mode Édition"
 
 msgid "Edit library"
 msgstr "Éditer la bibliothèque"
+
+#, tcl-format
+msgid "FAILED TO LOAD %s"
+msgstr "IMPOSSIBLE DE CHARGER %s"
 
 msgid "File"
 msgstr "Fichier"
@@ -326,6 +349,14 @@ msgstr "Limites"
 msgid "Load Meter"
 msgstr "CPU-mètre"
 
+#, tcl-format
+msgid "Loading plugin: %s"
+msgstr "Chargement du plugin : %s"
+
+#, tcl-format
+msgid "Loading translations for %s"
+msgstr "Chargement des traductions pour %s"
+
 msgid "Log:"
 msgstr "Journal :"
 
@@ -347,11 +378,30 @@ msgstr "Faire une application à partir du dossier..."
 msgid "Make app from patch..."
 msgstr "Faire une application à partir du patch..."
 
+msgid "Making App"
+msgstr "Fabrication de l'application"
+
+#, tcl-format
+msgid "Making App in %s..."
+msgstr "Fabrication de l'application dans %s..."
+
 msgid "Margin:"
 msgstr "Marge"
 
 msgid "Match whole word only"
 msgstr "Rechercher le mot complet uniquement"
+
+msgid "Max Binary Files"
+msgstr "Fichiers binaires Max"
+
+msgid "Max Help Files"
+msgstr "Fichiers d'aide Max"
+
+msgid "Max Patch Files"
+msgstr "Patchs Max"
+
+msgid "Max Text Files"
+msgstr "Fichiers texte Max"
 
 msgid "Media"
 msgstr "Média"
@@ -382,6 +432,10 @@ msgstr "Fenêtre suivante"
 
 msgid "No init"
 msgstr "Ne pas initialiser"
+
+msgid ""
+"No patch found! Select an open parent patch with the mouse, then try again."
+msgstr "Patch non trouvé ! Sélectionnez un patch parent ouvert avec la souris, puis réessayez."
 
 msgid "Number"
 msgstr "Nombre"
@@ -430,6 +484,9 @@ msgstr "Fenêtre parente"
 
 msgid "Paste"
 msgstr "Coller"
+
+msgid "Pd Files"
+msgstr "Fichiers Pd"
 
 msgid "Pd Help Browser..."
 msgstr "Navigateur d'aide Pd..."
@@ -524,6 +581,10 @@ msgstr "Valeurs par défaut"
 msgid "Right"
 msgstr "Droite"
 
+#, tcl-format
+msgid "Running: '%s %s'"
+msgstr "En cours : '%s %s'"
+
 msgid "Sample rate:"
 msgstr "Échantillonnage :"
 
@@ -565,6 +626,10 @@ msgstr "Installation des préférences embarquées..."
 
 msgid "Setting patch name..."
 msgstr "Installation du nom du patch..."
+
+#, tcl-format
+msgid "Setting up %s/Contents/Info.plist"
+msgstr "Mise en place de %s/Contents/Info.plist"
 
 msgid "Size:"
 msgstr "Taille :"
@@ -656,6 +721,14 @@ msgstr "Boutons verticaux"
 msgid "Vslider"
 msgstr "Glissière verticale"
 
+#, tcl-format
+msgid "WARNING: Font family '%s' not found, using default (%s)"
+msgstr "ATTENTION : famille de police '%s' non trouvée, utilisation de la famille par défaut (%s)"
+
+#, tcl-format
+msgid "WARNING: Font weight '%s' not found, using default (%s)"
+msgstr "ATTENTION : graisse '%s' non trouvée, utilisation de la graisse par défaut (%s)"
+
 msgid "WARNING: unknown graphme flags received in pdtk_canvas_dialog"
 msgstr "ATTENTION : option inconnue de graphme reçue dans pdtk_canvas_dialog"
 
@@ -709,6 +782,9 @@ msgstr "erreur E/S audio"
 
 msgid "bottom:"
 msgstr "bas :"
+
+msgid "converted Max binary to text format:"
+msgstr "Binaire Max converti au format texte :"
 
 msgid "debug"
 msgstr "débogage"
