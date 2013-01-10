@@ -768,14 +768,13 @@ char* cm_get_full_endpoint_name(MIDIEndpointRef endpoint)
     CFStringRef deviceName = NULL;
 #endif
     CFStringRef fullName = NULL;
-    CFStringEncoding defaultEncoding;
     char* newName;
-
-    /* get the default string encoding */
-    defaultEncoding = CFStringGetSystemEncoding();
+    CFIndex usedBufferLength;
+    CFRange rangeToProcess;
+    CFIndex numChars;
 
     fullName = ConnectedEndpointName(endpoint);
-    
+
 #ifdef OLDCODE
     /* get the entity and device info */
     MIDIEndpointGetEntity(endpoint, &entity);
@@ -792,9 +791,12 @@ char* cm_get_full_endpoint_name(MIDIEndpointRef endpoint)
     }
 #endif    
     /* copy the string into our buffer */
-    newName = (char *) malloc(CFStringGetLength(fullName) + 1);
-    CFStringGetCString(fullName, newName, CFStringGetLength(fullName) + 1,
-                       defaultEncoding);
+    rangeToProcess = CFRangeMake(0, CFStringGetLength(fullName));
+    numChars = CFStringGetBytes(fullName, rangeToProcess, kCFStringEncodingUTF8,
+				'?', FALSE, NULL, 100, &usedBufferLength);
+    newName = malloc(numChars + 1);
+    CFStringGetBytes(fullName, rangeToProcess, kCFStringEncodingUTF8,
+		     '?', FALSE, (UInt8 *)newName, 100, &usedBufferLength);
 
     /* clean up */
 #ifdef OLDCODE
