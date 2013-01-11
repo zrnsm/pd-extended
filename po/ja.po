@@ -2,13 +2,13 @@
 # This file is put in the public domain.
 # 
 # Translators:
-# Sei Matsumura <serv@low-tech-ism.com>, 2012.
+# Sei Matsumura <serv@low-tech-ism.com>, 2012-2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: Pure Data\n"
 "Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=55736&atid=478070\n"
-"POT-Creation-Date: 2012-12-31 20:40-0500\n"
-"PO-Revision-Date: 2013-01-01 08:39+0000\n"
+"POT-Creation-Date: 2013-01-09 00:45-0500\n"
+"PO-Revision-Date: 2013-01-10 06:08+0000\n"
 "Last-Translator: Sei Matsumura <serv@low-tech-ism.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -25,14 +25,22 @@ msgstr "%s フォント"
 msgid "%s Properties"
 msgstr "%s プロパティ"
 
+#, tcl-format
+msgid "%s is complete!"
+msgstr "%s は完了しました!"
+
+#, tcl-format
+msgid "'%s' already loaded, ignoring %s"
+msgstr "'%s' はすでにロード済みなので %s は無視します。"
+
 msgid "(Tcl) INVALID COMMAND NAME: "
 msgstr "(Tcl) 不適切なコマンド名:"
 
 msgid "(Tcl) MISSING CLOSE-BRACE '}': "
-msgstr "(Tcl) 閉じるカッコがありません。'}':"
+msgstr "(Tcl) カッコ閉じがありません。'}':"
 
 msgid "(Tcl) MISSING CLOSE-BRACKET ']': "
-msgstr "(Tcl) 閉じるカッコがありません。']':"
+msgstr "(Tcl) カッコ閉じがありません。']':"
 
 msgid "(Tcl) UNHANDLED ERROR: "
 msgstr "(Tcl) 操作不能エラー:"
@@ -41,7 +49,7 @@ msgid "(same as input device) ..............      "
 msgstr "(入力デバイスと同じ)............"
 
 msgid "(use arrow keys for history)"
-msgstr "(履歴に矢印キーを使用)"
+msgstr "(履歴移動に矢印キーを使用)"
 
 msgid "-----------output-range:-----------"
 msgstr "-----------出力範囲:-----------"
@@ -83,7 +91,10 @@ msgid "Array"
 msgstr "アレイ"
 
 msgid "Array Properties"
-msgstr "アレイ プロパティ"
+msgstr "アレイのプロパティ"
+
+msgid "Associated Files"
+msgstr "関連ファイル"
 
 msgid "Atom Box Properties"
 msgstr "ナンバーボックス プロパティ"
@@ -126,6 +137,10 @@ msgstr "キャンセル"
 
 msgid "Cannot read GUI prefs file: "
 msgstr "GUI設定ファイルを読み込めません:"
+
+#, tcl-format
+msgid "Cannot read plugins folder: '%s'"
+msgstr "プラグインフォルダーを読み込めません: '%s'"
 
 msgid "Canvas"
 msgstr "キャンバス"
@@ -171,7 +186,7 @@ msgid "Couldn't find '%s' in %s"
 msgstr "%sの中で'%s'が見つかりません"
 
 msgid "Cut"
-msgstr "カット"
+msgstr "切り取り"
 
 msgid "DSP"
 msgstr "DSP"
@@ -185,14 +200,18 @@ msgstr "DSP オン"
 msgid "Data Properties"
 msgstr "データ プロパティ"
 
+#, tcl-format
+msgid "Default font: %s"
+msgstr "既定のフォント: %s"
+
 msgid "Defeat real-time scheduling"
 msgstr "リアルタイムスケジューリングの無効化"
 
 msgid "Delay (msec):"
-msgstr "ディレイ(ミリ秒):"
+msgstr "遅延(ミリ秒):"
 
 msgid "Delete array"
-msgstr "Arrayを削除"
+msgstr "アレイを削除"
 
 #, tcl-format
 msgid "Discard changes to '%s'?"
@@ -216,6 +235,10 @@ msgstr "編集モード"
 
 msgid "Edit library"
 msgstr "ライブラリの編集"
+
+#, tcl-format
+msgid "FAILED TO LOAD %s"
+msgstr "%sのロードに失敗しました。"
 
 msgid "File"
 msgstr "ファイル"
@@ -257,7 +280,7 @@ msgid "Help Browser"
 msgstr "ヘルプブラウザ"
 
 msgid "Hide object name and arguments"
-msgstr "オブジェクト名とアーギュメントの非表示"
+msgstr "オブジェクト名と引数の非表示"
 
 msgid "Hradio"
 msgstr "水平ラジオボタン"
@@ -273,7 +296,7 @@ msgid "Ignoring '%s': doesn't look like a Pd-file"
 msgstr "'%s'を無視: Pdのファイルではありません"
 
 msgid "In Ports:"
-msgstr "データ プロパティ"
+msgstr "入力ポート:"
 
 msgid "Init"
 msgstr "初期値を記録"
@@ -324,6 +347,14 @@ msgstr "出力範囲"
 msgid "Load Meter"
 msgstr "CPUロードメーター"
 
+#, tcl-format
+msgid "Loading plugin: %s"
+msgstr "プラグインをロード中: %s"
+
+#, tcl-format
+msgid "Loading translations for %s"
+msgstr "%s のための翻訳をロード。"
+
 msgid "Log:"
 msgstr "ログ:"
 
@@ -345,11 +376,30 @@ msgstr "フォルダからアプリケーションを作成"
 msgid "Make app from patch..."
 msgstr "パッチからアプリケーションを作成"
 
+msgid "Making App"
+msgstr "アプリを作成"
+
+#, tcl-format
+msgid "Making App in %s..."
+msgstr "%s の中にアプリを作成..."
+
 msgid "Margin:"
 msgstr "マージン:"
 
 msgid "Match whole word only"
-msgstr "全文適合検索"
+msgstr "全単語適合検索"
+
+msgid "Max Binary Files"
+msgstr "Max バイナリファイル"
+
+msgid "Max Help Files"
+msgstr "Max ヘルプファイル"
+
+msgid "Max Patch Files"
+msgstr "Max パッチファイル"
+
+msgid "Max Text Files"
+msgstr "Max テキストファイル"
 
 msgid "Media"
 msgstr "メディア"
@@ -380,6 +430,10 @@ msgstr "次のウィンドウ"
 
 msgid "No init"
 msgstr "初期値なし"
+
+msgid ""
+"No patch found! Select an open parent patch with the mouse, then try again."
+msgstr "パッチが見つかりません!マウスを使って親パッチを選択してからやり直してください。"
 
 msgid "Number"
 msgstr "ナンバーボックス"
@@ -427,7 +481,10 @@ msgid "Parent Window"
 msgstr "親パッチのウィンドウ"
 
 msgid "Paste"
-msgstr "ペースト"
+msgstr "貼り付け"
+
+msgid "Pd Files"
+msgstr "Pdファイル"
 
 msgid "Pd Help Browser..."
 msgstr "Pdヘルプブラウザ"
@@ -469,7 +526,7 @@ msgid "Put"
 msgstr "配置"
 
 msgid "Put array into:"
-msgstr "Arrayの格納先:"
+msgstr "アレイの格納先:"
 
 msgid "Quit"
 msgstr "終了"
@@ -496,7 +553,7 @@ msgid "Redo connect"
 msgstr "ライン接続のやり直し"
 
 msgid "Redo cut"
-msgstr "カットのやり直し"
+msgstr "切り取りのやり直し"
 
 msgid "Redo disconnect"
 msgstr "ライン解除のやり直し"
@@ -508,7 +565,7 @@ msgid "Redo motion"
 msgstr "移動のやり直し"
 
 msgid "Redo paste"
-msgstr "ペーストのやり直し"
+msgstr "貼り付けのやり直し"
 
 msgid "Redo typing"
 msgstr "入力のやり直し"
@@ -521,6 +578,10 @@ msgstr "デフォルトに初期化"
 
 msgid "Right"
 msgstr "右"
+
+#, tcl-format
+msgid "Running: '%s %s'"
+msgstr "動作中: '%s %s'"
 
 msgid "Sample rate:"
 msgstr "サンプリングレート:"
@@ -564,6 +625,10 @@ msgstr "初期設定の埋め込み..."
 msgid "Setting patch name..."
 msgstr "パッチ名を設定..."
 
+#, tcl-format
+msgid "Setting up %s/Contents/Info.plist"
+msgstr " %s/Contents/Info.plist をセットアップ。"
+
 msgid "Size:"
 msgstr "サイズ:"
 
@@ -571,7 +636,7 @@ msgid "Start Here!"
 msgstr "ここからスタート!"
 
 msgid "Startup flags:"
-msgstr "スタートアップフラッグ:"
+msgstr "スタートアップフラグ:"
 
 msgid "Steady on click"
 msgstr "クリックで移動しない"
@@ -589,7 +654,7 @@ msgid "Test Audio and MIDI..."
 msgstr "オーディオとMIDIのテスト"
 
 msgid "Test label"
-msgstr "テストラベル"
+msgstr "ラベルのテスト"
 
 msgid "Tidy Up"
 msgstr "整列"
@@ -601,7 +666,7 @@ msgid "Top"
 msgstr "上"
 
 msgid "Undo"
-msgstr "取り消す"
+msgstr "取り消し"
 
 msgid "Undo clear"
 msgstr "クリアの取り消し"
@@ -610,7 +675,7 @@ msgid "Undo connect"
 msgstr "ライン接続の取り消し"
 
 msgid "Undo cut"
-msgstr "カットの取り消し"
+msgstr "切り取りの取り消し"
 
 msgid "Undo disconnect"
 msgstr "ライン解除の取り消し"
@@ -622,7 +687,7 @@ msgid "Undo motion"
 msgstr "移動の取り消し"
 
 msgid "Undo paste"
-msgstr "ペーストの取り消し"
+msgstr "貼り付けの取り消し"
 
 msgid "Undo typing"
 msgstr "入力の取り消し"
@@ -653,6 +718,14 @@ msgstr "垂直ラジオボタン"
 
 msgid "Vslider"
 msgstr "垂直スライダー"
+
+#, tcl-format
+msgid "WARNING: Font family '%s' not found, using default (%s)"
+msgstr "警告: フォント'%s' が見つかりません。既定 (%s) を使用します。"
+
+#, tcl-format
+msgid "WARNING: Font weight '%s' not found, using default (%s)"
+msgstr "警告: フォントの太さ '%s' はありません。既定の太さ (%s) を使用します。"
 
 msgid "WARNING: unknown graphme flags received in pdtk_canvas_dialog"
 msgstr "警告: pdtk_canvas_dialogで不明のgraphme flagsが入力されました"
@@ -697,7 +770,7 @@ msgid "Y units per pixel:"
 msgstr "表示領域のY値（ピクセル）:"
 
 msgid "Zoom"
-msgstr "全画面表示"
+msgstr "最大化"
 
 msgid "all"
 msgstr "すべて"
@@ -707,6 +780,9 @@ msgstr "オーディオ I/O エラー"
 
 msgid "bottom:"
 msgstr "下:"
+
+msgid "converted Max binary to text format:"
+msgstr "Maxバイナリをテキストフォーマットに変換:"
 
 msgid "debug"
 msgstr "デバッグ"
@@ -727,7 +803,7 @@ msgid "hold:"
 msgstr "点灯時間:"
 
 msgid "http://puredata.info/docs/StartHere"
-msgstr ""
+msgstr "http://puredata.info/docs/StartHereJapanese"
 
 msgid "intrrpt:"
 msgstr "点滅間隔:"
@@ -736,7 +812,7 @@ msgid "left:"
 msgstr "左:"
 
 msgid "lin"
-msgstr "リニア"
+msgstr "lin"
 
 msgid "log"
 msgstr "log"
