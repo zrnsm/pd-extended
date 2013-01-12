@@ -50,24 +50,52 @@ proc ::scrollboxwindow::reset_to_defaults {mytoplevel} {
         "x11" {
             set preffile "$::env(HOME)/.pdextended"
             if {[file exists $preffile]} {
-                pdwindow::debug "Deleting preferences file: $preffile\n"
+                pdwindow::debug [format [_ "Deleting preferences file: %s"]\n $preffile]
                 file delete -- $preffile
             }
         }
         "aqua" {
             set preffile "$::env(HOME)/Library/Preferences/org.puredata.pdextended.plist"
             if {[file exists $preffile]} {
-                pdwindow::debug "Deleting preferences file: $preffile\n"
+                pdwindow::debug [format [_ "Deleting preferences file: %s"]\n $preffile]
                 file delete -- $preffile
             }
         }
         "win32" {
-            pdwindow::debug "Deleting preferences in HKEY_CURRENT_USER\\Software\\Pd-extended\n"
+            pdwindow::debug [_ "Deleting preferences in HKEY_CURRENT_USER\\Software\\Pd-extended"]\n
             registry delete "HKEY_CURRENT_USER\\Software\\Pd-extended"
-            pdwindow::debug "Deleting preferences in HKEY_LOCAL_MACHINE\\Software\\Pd-extended\n"
-            registry delete "HKEY_LOCAL_MACHINE\\Software\\Pd-extended"
-            pdwindow::debug "regedit /s $::sys_libdir/bin/pd-settings.reg\n"
-            exec regedit /s "$::sys_libdir/bin/pd-settings.reg"
+            pdwindow::debug [_ "Deleting preferences in HKEY_LOCAL_MACHINE\\Software\\Pd-extended"]\n
+            if {[catch {registry delete "HKEY_LOCAL_MACHINE\\Software\\Pd-extended"} fid]} {
+                pdwindow::post [_ "Could not delete 'HKEY_LOCAL_MACHINE\\Software\\Pd-extended':"]
+                pdwindow::post "\n$fid"
+            }
+            set regfilename "$::sys_libdir/bin/pd-settings.reg"
+            if {[file exists $regfilename]} {
+                pdwindow::debug [format [_ "Reseting registry from %s"]\n $regfilename]
+                set regfile [open $regfilename]
+                set regdata [read $regfile]
+
+                # use the first HKEY name found, ignore the rest
+                if {![regexp -line -- {\[(HKEY_[A-Za-z0-9_\\-]+).*\]} $regdata ignored hkey]} {
+                    ::pdwindow::error [format [_ "Could not parse registry file: '%s'"]\n $regfilename]
+                    return
+                }
+
+                set lines [split $regdata "\n"]
+                foreach line $lines {
+                    if {[regexp -- {"(\w+)"="(.*)"} $line ignored valueName data]} {
+                        registry set $hkey $valueName $data
+                    }
+                    if {[regexp -- {"(\w+)"=hex\([0-9]+\):([0-9a-f,]+)} $line ignored valueName data]} {
+                        set str ""
+                        foreach {byte0 byte1} [split $data ","] {
+                            set char [expr 0x$byte0 + (0x$byte1 * 10)]
+                            set str "$str[format %c $char]"
+                        }
+                        registry set $hkey $valueName $str expand_sz
+                    }
+                }
+            }
         }
     }
     set ::startup_flags ""
