@@ -2,13 +2,14 @@
 # This file is put in the public domain.
 # 
 # Translators:
+#   <muranyia@gmail.com>, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: Pure Data\n"
 "Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=55736&atid=478070\n"
-"POT-Creation-Date: 2012-12-31 20:40-0500\n"
-"PO-Revision-Date: 2013-01-02 16:40+0000\n"
-"Last-Translator: Hans-Christoph Steiner <hans@eds.org>\n"
+"POT-Creation-Date: 2013-01-09 00:45-0500\n"
+"PO-Revision-Date: 2013-01-10 00:55+0000\n"
+"Last-Translator: muranyia <muranyia@gmail.com>\n"
 "Language-Team: Hungarian (http://www.transifex.com/projects/p/puredata/language/hu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,8 +25,16 @@ msgstr "%s betűkészlet"
 msgid "%s Properties"
 msgstr "%s tulajdonságai"
 
+#, tcl-format
+msgid "%s is complete!"
+msgstr "%s kész!"
+
+#, tcl-format
+msgid "'%s' already loaded, ignoring %s"
+msgstr "'%s' már be van töltve, %s mellőzve"
+
 msgid "(Tcl) INVALID COMMAND NAME: "
-msgstr "(Tcl) HIBÁS PARANCSSZÓ:"
+msgstr "(Tcl) HIBÁS PARANCSNÉV:"
 
 msgid "(Tcl) MISSING CLOSE-BRACE '}': "
 msgstr "(Tcl) HIÁNYZÓ ZÁRÓJEL '}':"
@@ -84,6 +93,9 @@ msgstr "Tömb"
 msgid "Array Properties"
 msgstr "Tömb tulajdonságai"
 
+msgid "Associated Files"
+msgstr "Társított fájlok"
+
 msgid "Atom Box Properties"
 msgstr "Atom Box tulajdonságai"
 
@@ -125,6 +137,10 @@ msgstr "Mégsem"
 
 msgid "Cannot read GUI prefs file: "
 msgstr "Nem sikerül a GUI beállításokat olvasni:"
+
+#, tcl-format
+msgid "Cannot read plugins folder: '%s'"
+msgstr ""
 
 msgid "Canvas"
 msgstr "Canvas"
@@ -184,6 +200,10 @@ msgstr "DSP be"
 msgid "Data Properties"
 msgstr "Adat tulajdonságai"
 
+#, tcl-format
+msgid "Default font: %s"
+msgstr "Alapértelmezett betűtípus: %s"
+
 msgid "Defeat real-time scheduling"
 msgstr "Valós idejű ütemezés ki"
 
@@ -215,6 +235,10 @@ msgstr "Szerkesztő üzemmód"
 
 msgid "Edit library"
 msgstr "Könyvtár szerkesztése"
+
+#, tcl-format
+msgid "FAILED TO LOAD %s"
+msgstr "NEM SIKERÜLT BETÖLTENI: %s"
 
 msgid "File"
 msgstr "Fájl"
@@ -290,17 +314,17 @@ msgid "Input device 4:"
 msgstr "4. bemeneti eszköz:"
 
 msgid "Jack does not seem to be running, so Pd-extended cannot connect to it."
-msgstr ""
+msgstr "Úgy tűnik, nem fut a Jack, így a Pd-extended nem tud hozzá csatlakozni."
 
 msgid "Jack not installed!"
-msgstr ""
+msgstr "A Jack nincs telepítve!"
 
 msgid "Jack not running!"
-msgstr ""
+msgstr "A Jack nem fut!"
 
 msgid ""
 "JackOSX is not fully installed, Pd-extended cannot use Jack without it."
-msgstr ""
+msgstr "A JackOSX nincs megfelelően telepítve, nélküle a Pd-extended nem tudja a Jacket használni."
 
 msgid "Jump on click"
 msgstr "Kattintásra ugorjon"
@@ -323,6 +347,14 @@ msgstr "Korlátok"
 msgid "Load Meter"
 msgstr "Terhelésmérő"
 
+#, tcl-format
+msgid "Loading plugin: %s"
+msgstr "Plugin betöltése: %s"
+
+#, tcl-format
+msgid "Loading translations for %s"
+msgstr "Fordítások betöltése: %s"
+
 msgid "Log:"
 msgstr "Napló:"
 
@@ -344,11 +376,30 @@ msgstr ""
 msgid "Make app from patch..."
 msgstr ""
 
+msgid "Making App"
+msgstr ""
+
+#, tcl-format
+msgid "Making App in %s..."
+msgstr ""
+
 msgid "Margin:"
 msgstr "Margó:"
 
 msgid "Match whole word only"
 msgstr "Csak egész szavas egyezés"
+
+msgid "Max Binary Files"
+msgstr "Max bináris fájlok"
+
+msgid "Max Help Files"
+msgstr "Max súgó fájlok"
+
+msgid "Max Patch Files"
+msgstr "Max patch fájlok"
+
+msgid "Max Text Files"
+msgstr "Max szöveg fájlok"
 
 msgid "Media"
 msgstr "Média"
@@ -379,6 +430,10 @@ msgstr "Következő ablak"
 
 msgid "No init"
 msgstr "Nincs kezdőérték"
+
+msgid ""
+"No patch found! Select an open parent patch with the mouse, then try again."
+msgstr ""
 
 msgid "Number"
 msgstr "Szám"
@@ -428,6 +483,9 @@ msgstr "Szülő ablak"
 msgid "Paste"
 msgstr "Beilleszt"
 
+msgid "Pd Files"
+msgstr "Pd fájlok"
+
 msgid "Pd Help Browser..."
 msgstr "Pd súgó böngésző..."
 
@@ -474,7 +532,7 @@ msgid "Quit"
 msgstr "Kilép"
 
 msgid "Quit Pd-extended, start Jack, then try again."
-msgstr ""
+msgstr "Lépj ki a Pd-extendedből, indítsd el a Jacket, és utána próbáld újra."
 
 msgid "Range and size"
 msgstr "Tartomány és méret"
@@ -521,6 +579,10 @@ msgstr "Vissza az alapbeállításokhoz"
 msgid "Right"
 msgstr "Jobb"
 
+#, tcl-format
+msgid "Running: '%s %s'"
+msgstr "Futtatás: '%s %s'"
+
 msgid "Sample rate:"
 msgstr "Mintavétel (Hz):"
 
@@ -562,6 +624,10 @@ msgstr "Súgó"
 
 msgid "Setting patch name..."
 msgstr "Patch nevének beállítása..."
+
+#, tcl-format
+msgid "Setting up %s/Contents/Info.plist"
+msgstr "%s/Contents/Info.plist beállítása"
 
 msgid "Size:"
 msgstr "Méret:"
@@ -653,6 +719,14 @@ msgstr "Vradio"
 msgid "Vslider"
 msgstr "Vslider"
 
+#, tcl-format
+msgid "WARNING: Font family '%s' not found, using default (%s)"
+msgstr ""
+
+#, tcl-format
+msgid "WARNING: Font weight '%s' not found, using default (%s)"
+msgstr ""
+
 msgid "WARNING: unknown graphme flags received in pdtk_canvas_dialog"
 msgstr "FIGYELEM: pdtk_canvas_dialog ismeretlen graphme flaget kapott"
 
@@ -706,6 +780,9 @@ msgstr "hang I/O hiba"
 
 msgid "bottom:"
 msgstr "alja:"
+
+msgid "converted Max binary to text format:"
+msgstr "Max bináris szöveggé konvertálva:"
 
 msgid "debug"
 msgstr "hibakeresés"
