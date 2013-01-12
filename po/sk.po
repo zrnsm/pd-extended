@@ -2,13 +2,13 @@
 # This file is put in the public domain.
 # 
 # Translators:
-#   <fero.kiraly@gmail.com>, 2012.
+#   <fero.kiraly@gmail.com>, 2012-2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: Pure Data\n"
 "Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=55736&atid=478070\n"
-"POT-Creation-Date: 2012-12-31 20:40-0500\n"
-"PO-Revision-Date: 2013-01-01 08:39+0000\n"
+"POT-Creation-Date: 2013-01-09 00:45-0500\n"
+"PO-Revision-Date: 2013-01-09 10:50+0000\n"
 "Last-Translator: paum <fero.kiraly@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -24,6 +24,14 @@ msgstr "%s Font"
 #, tcl-format
 msgid "%s Properties"
 msgstr "%s Vlastnosti"
+
+#, tcl-format
+msgid "%s is complete!"
+msgstr "%s je dokončené!"
+
+#, tcl-format
+msgid "'%s' already loaded, ignoring %s"
+msgstr "'%s' je už načítané, ignorujem %s"
 
 msgid "(Tcl) INVALID COMMAND NAME: "
 msgstr "(Tcl) NEPLATNÉ MENO PRÍKAZU"
@@ -85,6 +93,9 @@ msgstr "Pole"
 msgid "Array Properties"
 msgstr "Nastavenia Poľa"
 
+msgid "Associated Files"
+msgstr "Priradené súbory"
+
 msgid "Atom Box Properties"
 msgstr "Atom Box Properties"
 
@@ -126,6 +137,10 @@ msgstr "Zrušiť"
 
 msgid "Cannot read GUI prefs file: "
 msgstr "Nemôžem čítať GUI prefs súbor:"
+
+#, tcl-format
+msgid "Cannot read plugins folder: '%s'"
+msgstr "Nemôžem načítať adresár pluginov: '%s'"
 
 msgid "Canvas"
 msgstr "Canvas"
@@ -185,6 +200,10 @@ msgstr "DSP zap"
 msgid "Data Properties"
 msgstr "Vlastnosti Data"
 
+#, tcl-format
+msgid "Default font: %s"
+msgstr "Default font: %s"
+
 msgid "Defeat real-time scheduling"
 msgstr "Defeat real-time scheduling"
 
@@ -216,6 +235,10 @@ msgstr "Edit mód"
 
 msgid "Edit library"
 msgstr "Upraviť knižnicu"
+
+#, tcl-format
+msgid "FAILED TO LOAD %s"
+msgstr "ZLYHALO NAČÍTANIE %s"
 
 msgid "File"
 msgstr "Súbor"
@@ -324,6 +347,14 @@ msgstr "Limity"
 msgid "Load Meter"
 msgstr "Merač zaťaženia"
 
+#, tcl-format
+msgid "Loading plugin: %s"
+msgstr "Načítavam plugin: %s"
+
+#, tcl-format
+msgid "Loading translations for %s"
+msgstr ""
+
 msgid "Log:"
 msgstr "Log:"
 
@@ -345,11 +376,30 @@ msgstr "Urobiť app z adresára..."
 msgid "Make app from patch..."
 msgstr "Urobiť app z patch-u..."
 
+msgid "Making App"
+msgstr ""
+
+#, tcl-format
+msgid "Making App in %s..."
+msgstr ""
+
 msgid "Margin:"
 msgstr "Okraj:"
 
 msgid "Match whole word only"
 msgstr "Iba celé slová"
+
+msgid "Max Binary Files"
+msgstr ""
+
+msgid "Max Help Files"
+msgstr ""
+
+msgid "Max Patch Files"
+msgstr ""
+
+msgid "Max Text Files"
+msgstr ""
 
 msgid "Media"
 msgstr "Médiá"
@@ -380,6 +430,10 @@ msgstr "Ďalšie okno"
 
 msgid "No init"
 msgstr "Bez inicializácie"
+
+msgid ""
+"No patch found! Select an open parent patch with the mouse, then try again."
+msgstr ""
 
 msgid "Number"
 msgstr "Číslo"
@@ -428,6 +482,9 @@ msgstr "Rodičovské okno"
 
 msgid "Paste"
 msgstr "Prilepiť"
+
+msgid "Pd Files"
+msgstr "Pd súbory"
 
 msgid "Pd Help Browser..."
 msgstr "Pd Help Browser..."
@@ -522,6 +579,10 @@ msgstr "Obnoviť pôvodné nastavenia"
 msgid "Right"
 msgstr "Pravý"
 
+#, tcl-format
+msgid "Running: '%s %s'"
+msgstr "Spustené: '%s %s'"
+
 msgid "Sample rate:"
 msgstr "Vzorkovacia frekvencia"
 
@@ -563,6 +624,10 @@ msgstr "Pomoc"
 
 msgid "Setting patch name..."
 msgstr "Setting patch name..."
+
+#, tcl-format
+msgid "Setting up %s/Contents/Info.plist"
+msgstr ""
 
 msgid "Size:"
 msgstr "Veľkosť:"
@@ -654,6 +719,14 @@ msgstr "Vradio"
 msgid "Vslider"
 msgstr "Vslider"
 
+#, tcl-format
+msgid "WARNING: Font family '%s' not found, using default (%s)"
+msgstr ""
+
+#, tcl-format
+msgid "WARNING: Font weight '%s' not found, using default (%s)"
+msgstr ""
+
 msgid "WARNING: unknown graphme flags received in pdtk_canvas_dialog"
 msgstr "WARNING: unknown graphme flags received in pdtk_canvas_dialog"
 
@@ -708,6 +781,9 @@ msgstr "chyba zvukového I/O"
 msgid "bottom:"
 msgstr "spodok:"
 
+msgid "converted Max binary to text format:"
+msgstr "konvertovaná Max binárka do textového formátu:"
+
 msgid "debug"
 msgstr "debug"
 
@@ -727,7 +803,7 @@ msgid "hold:"
 msgstr "podržať:"
 
 msgid "http://puredata.info/docs/StartHere"
-msgstr ""
+msgstr "http://puredata.info/docs/StartHere"
 
 msgid "intrrpt:"
 msgstr "prerušiť:"
