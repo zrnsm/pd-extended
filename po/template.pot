@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Pure Data 0.43\n"
 "Report-Msgid-Bugs-To: http://bugs.puredata.info\n"
-"POT-Creation-Date: 2013-01-09 00:45-0500\n"
+"POT-Creation-Date: 2013-01-11 23:46-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -180,6 +180,13 @@ msgstr ""
 msgid "Copying current patch..."
 msgstr ""
 
+msgid "Could not delete 'HKEY_LOCAL_MACHINE\\Software\\Pd-extended':"
+msgstr ""
+
+#, tcl-format
+msgid "Could not parse registry file: '%s'"
+msgstr ""
+
 #, tcl-format
 msgid "Couldn't find '%s' in %s"
 msgstr ""
@@ -210,6 +217,16 @@ msgid "Delay (msec):"
 msgstr ""
 
 msgid "Delete array"
+msgstr ""
+
+#, tcl-format
+msgid "Deleting preferences file: %s"
+msgstr ""
+
+msgid "Deleting preferences in HKEY_CURRENT_USER\\Software\\Pd-extended"
+msgstr ""
+
+msgid "Deleting preferences in HKEY_LOCAL_MACHINE\\Software\\Pd-extended"
 msgstr ""
 
 #, tcl-format
@@ -572,6 +589,10 @@ msgid "Report a bug"
 msgstr ""
 
 msgid "Reset to Defaults"
+msgstr ""
+
+#, tcl-format
+msgid "Reseting registry from %s"
 msgstr ""
 
 msgid "Right"
