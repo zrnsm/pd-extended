@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Pure Data\n"
 "Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=55736&atid=478070\n"
-"POT-Creation-Date: 2012-12-31 20:40-0500\n"
+"POT-Creation-Date: 2013-01-11 23:46-0500\n"
 "PO-Revision-Date: 2012-12-26 18:03+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,6 +22,14 @@ msgstr "%s Font"
 
 #, tcl-format
 msgid "%s Properties"
+msgstr ""
+
+#, tcl-format
+msgid "%s is complete!"
+msgstr ""
+
+#, tcl-format
+msgid "'%s' already loaded, ignoring %s"
 msgstr ""
 
 msgid "(Tcl) INVALID COMMAND NAME: "
@@ -82,10 +90,13 @@ msgid "Array"
 msgstr "Pole"
 
 msgid "Array Properties"
+msgstr "Vlasnosti pole"
+
+msgid "Associated Files"
 msgstr ""
 
 msgid "Atom Box Properties"
-msgstr ""
+msgstr "Vlastnosti Atom Boxu"
 
 msgid "Audio Settings"
 msgstr "Nastavení zvuku"
@@ -124,6 +135,10 @@ msgid "Cancel"
 msgstr "Zrušit"
 
 msgid "Cannot read GUI prefs file: "
+msgstr ""
+
+#, tcl-format
+msgid "Cannot read plugins folder: '%s'"
 msgstr ""
 
 msgid "Canvas"
@@ -165,6 +180,13 @@ msgstr "kopírovat"
 msgid "Copying current patch..."
 msgstr "Kopírování aktuální opravy ..."
 
+msgid "Could not delete 'HKEY_LOCAL_MACHINE\\Software\\Pd-extended':"
+msgstr ""
+
+#, tcl-format
+msgid "Could not parse registry file: '%s'"
+msgstr ""
+
 #, tcl-format
 msgid "Couldn't find '%s' in %s"
 msgstr "Nemohu najít '%s' v %s"
@@ -182,6 +204,10 @@ msgid "DSP On"
 msgstr "DSP On"
 
 msgid "Data Properties"
+msgstr "Vlastnosti dat"
+
+#, tcl-format
+msgid "Default font: %s"
 msgstr ""
 
 msgid "Defeat real-time scheduling"
@@ -192,6 +218,16 @@ msgstr "Zpoždění (ms):"
 
 msgid "Delete array"
 msgstr "Smazat pole"
+
+#, tcl-format
+msgid "Deleting preferences file: %s"
+msgstr ""
+
+msgid "Deleting preferences in HKEY_CURRENT_USER\\Software\\Pd-extended"
+msgstr ""
+
+msgid "Deleting preferences in HKEY_LOCAL_MACHINE\\Software\\Pd-extended"
+msgstr ""
 
 #, tcl-format
 msgid "Discard changes to '%s'?"
@@ -215,6 +251,10 @@ msgstr ""
 
 msgid "Edit library"
 msgstr "Upravit knihovnu"
+
+#, tcl-format
+msgid "FAILED TO LOAD %s"
+msgstr ""
 
 msgid "File"
 msgstr "Soubor"
@@ -253,7 +293,7 @@ msgid "Help"
 msgstr "Nápověda"
 
 msgid "Help Browser"
-msgstr ""
+msgstr "Prohlížeč nápovědy"
 
 msgid "Hide object name and arguments"
 msgstr "Skrýt název objektu a argumenty"
@@ -323,6 +363,14 @@ msgstr "Limity"
 msgid "Load Meter"
 msgstr ""
 
+#, tcl-format
+msgid "Loading plugin: %s"
+msgstr ""
+
+#, tcl-format
+msgid "Loading translations for %s"
+msgstr ""
+
 msgid "Log:"
 msgstr "Log:"
 
@@ -344,11 +392,30 @@ msgstr ""
 msgid "Make app from patch..."
 msgstr ""
 
+msgid "Making App"
+msgstr ""
+
+#, tcl-format
+msgid "Making App in %s..."
+msgstr ""
+
 msgid "Margin:"
 msgstr "Okraj:"
 
 msgid "Match whole word only"
 msgstr "Pouze celá slova"
+
+msgid "Max Binary Files"
+msgstr ""
+
+msgid "Max Help Files"
+msgstr ""
+
+msgid "Max Patch Files"
+msgstr ""
+
+msgid "Max Text Files"
+msgstr ""
 
 msgid "Media"
 msgstr ""
@@ -380,11 +447,15 @@ msgstr "Další okno"
 msgid "No init"
 msgstr "Bez inicializace"
 
+msgid ""
+"No patch found! Select an open parent patch with the mouse, then try again."
+msgstr ""
+
 msgid "Number"
 msgstr "Číslo"
 
 msgid "Number2"
-msgstr ""
+msgstr "Číslo2"
 
 msgid "OK"
 msgstr "OK"
@@ -402,7 +473,7 @@ msgid "Open"
 msgstr "Otevřít"
 
 msgid "Open List View..."
-msgstr ""
+msgstr "Otevření Seznamu zobrazení ..."
 
 msgid "Open Recent"
 msgstr "Nedávno otevřené"
@@ -427,6 +498,9 @@ msgstr "Mateřské okno"
 
 msgid "Paste"
 msgstr "vložit"
+
+msgid "Pd Files"
+msgstr ""
 
 msgid "Pd Help Browser..."
 msgstr ""
@@ -518,8 +592,16 @@ msgstr "Nahlásit chybu"
 msgid "Reset to Defaults"
 msgstr "Obnovit výchozí nastavení"
 
+#, tcl-format
+msgid "Reseting registry from %s"
+msgstr ""
+
 msgid "Right"
 msgstr "Levý"
+
+#, tcl-format
+msgid "Running: '%s %s'"
+msgstr ""
 
 msgid "Sample rate:"
 msgstr "Vzorkovací frekvence:"
@@ -563,6 +645,10 @@ msgstr "Nastavení vložených předvoleb ..."
 msgid "Setting patch name..."
 msgstr "Nastavení názvu opravy ..."
 
+#, tcl-format
+msgid "Setting up %s/Contents/Info.plist"
+msgstr ""
+
 msgid "Size:"
 msgstr "Velikost:"
 
@@ -570,7 +656,7 @@ msgid "Start Here!"
 msgstr "Začněte zde!"
 
 msgid "Startup flags:"
-msgstr ""
+msgstr "Startovací praporek:"
 
 msgid "Steady on click"
 msgstr ""
@@ -653,8 +739,16 @@ msgstr ""
 msgid "Vslider"
 msgstr ""
 
-msgid "WARNING: unknown graphme flags received in pdtk_canvas_dialog"
+#, tcl-format
+msgid "WARNING: Font family '%s' not found, using default (%s)"
 msgstr ""
+
+#, tcl-format
+msgid "WARNING: Font weight '%s' not found, using default (%s)"
+msgstr ""
+
+msgid "WARNING: unknown graphme flags received in pdtk_canvas_dialog"
+msgstr "UPOZORNĚNÍ: neznámé graphme praporky přijaté v pdtk_canvas_dialog"
 
 msgid "Width:"
 msgstr "Šířka:"
@@ -706,6 +800,9 @@ msgstr "chyba zvukového I/O "
 
 msgid "bottom:"
 msgstr "dole:"
+
+msgid "converted Max binary to text format:"
+msgstr ""
 
 msgid "debug"
 msgstr "ladit"
