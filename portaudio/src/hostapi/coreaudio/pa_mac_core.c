@@ -658,6 +658,10 @@ static PaError InitializeDeviceInfo( PaMacAUHAL *auhalHostApi,
     char *name;
     PaError err = paNoError;
     UInt32 propSize;
+    CFStringRef fullName = NULL;
+    CFIndex usedBufferLength;
+    CFRange rangeToProcess;
+    CFIndex numChars;
 
     VVDBUG(("InitializeDeviceInfo(): macCoreDeviceId=%ld\n", macCoreDeviceId));
 
@@ -667,16 +671,19 @@ static PaError InitializeDeviceInfo( PaMacAUHAL *auhalHostApi,
     deviceInfo->hostApi = hostApiIndex;
 
     /* Get the device name.  Fail if we can't get it. */
-    err = ERR(AudioDeviceGetPropertyInfo(macCoreDeviceId, 0, 0, kAudioDevicePropertyDeviceName, &propSize, NULL));
+    err = ERR(AudioDeviceGetPropertyInfo(macCoreDeviceId, 0, 0, kAudioDevicePropertyDeviceNameCFString, &propSize, NULL));
     if (err)
         return err;
 
-    name = PaUtil_GroupAllocateMemory(auhalHostApi->allocations,propSize);
-    if ( !name )
-        return paInsufficientMemory;
-    err = ERR(AudioDeviceGetProperty(macCoreDeviceId, 0, 0, kAudioDevicePropertyDeviceName, &propSize, name));
+    err = ERR(AudioDeviceGetProperty(macCoreDeviceId, 0, 0, kAudioDevicePropertyDeviceNameCFString, &propSize, &fullName));
     if (err)
         return err;
+    rangeToProcess = CFRangeMake(0, CFStringGetLength(fullName));
+    numChars = CFStringGetBytes(fullName, rangeToProcess, kCFStringEncodingUTF8, '?', FALSE, NULL, 100, &usedBufferLength);
+    name = PaUtil_GroupAllocateMemory(auhalHostApi->allocations, numChars + 1);
+    if ( !name )
+        return paInsufficientMemory;
+    CFStringGetBytes(fullName, rangeToProcess, kCFStringEncodingUTF8, '?', FALSE, (UInt8 *)name, 100, &usedBufferLength);
     deviceInfo->name = name;
 
     /* Try to get the default sample rate.  Don't fail if we can't get this. */
