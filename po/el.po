@@ -2,13 +2,14 @@
 # This file is put in the public domain.
 # 
 # Translators:
+#  <subscriber@labyrinthos.gr>, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: Pure Data\n"
 "Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=55736&atid=478070\n"
-"POT-Creation-Date: 2012-12-31 20:40-0500\n"
-"PO-Revision-Date: 2012-12-26 18:03+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2013-01-11 23:46-0500\n"
+"PO-Revision-Date: 2013-01-18 03:30+0000\n"
+"Last-Translator: ktsoukalas <subscriber@labyrinthos.gr>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,6 +24,14 @@ msgstr "Γραμματοσειρά %s"
 #, tcl-format
 msgid "%s Properties"
 msgstr "%s Ιδιότητες"
+
+#, tcl-format
+msgid "%s is complete!"
+msgstr "To %s είναι ολοκληρωμένο!"
+
+#, tcl-format
+msgid "'%s' already loaded, ignoring %s"
+msgstr "'%s' ήδη φορτωμένο, αγνόηση του %s"
 
 msgid "(Tcl) INVALID COMMAND NAME: "
 msgstr "(Tcl) ΑΚΥΡΟ ΟΝΟΜΑ ΕΝΤΟΛΗΣ:"
@@ -84,6 +93,9 @@ msgstr "Πίνακας"
 msgid "Array Properties"
 msgstr "Ιδιότητες Πίνακα"
 
+msgid "Associated Files"
+msgstr "Σχετικά αρχεία"
+
 msgid "Atom Box Properties"
 msgstr "Ιδιότητες κουτιού Atom"
 
@@ -126,6 +138,10 @@ msgstr "Ακύρωση"
 msgid "Cannot read GUI prefs file: "
 msgstr "Αδυναμία ανάγνωσης αρχείου προτιμήσεων GUI: "
 
+#, tcl-format
+msgid "Cannot read plugins folder: '%s'"
+msgstr "Αδυναμία ανάγνωσης φακέλου plugins: '%s'"
+
 msgid "Canvas"
 msgstr "Καμβάς"
 
@@ -165,6 +181,13 @@ msgstr "Αντιγραφή"
 msgid "Copying current patch..."
 msgstr "Αντιγραφή του τρέχοντος patch..."
 
+msgid "Could not delete 'HKEY_LOCAL_MACHINE\\Software\\Pd-extended':"
+msgstr ""
+
+#, tcl-format
+msgid "Could not parse registry file: '%s'"
+msgstr ""
+
 #, tcl-format
 msgid "Couldn't find '%s' in %s"
 msgstr "Αδυναμία εύρεσης του '%s' στο %s"
@@ -184,6 +207,10 @@ msgstr "Ενεργοποίηση DSP"
 msgid "Data Properties"
 msgstr "Ιδιότητες δεδομένων"
 
+#, tcl-format
+msgid "Default font: %s"
+msgstr "Προκαθορισμένη γραμματοσειρά: %s"
+
 msgid "Defeat real-time scheduling"
 msgstr "Πρόβλημα στην εκτέλεση σε πραγματικό χρόνο "
 
@@ -192,6 +219,16 @@ msgstr "Καθυστέρηση (msec):"
 
 msgid "Delete array"
 msgstr "Διαγραφή πίνακα"
+
+#, tcl-format
+msgid "Deleting preferences file: %s"
+msgstr "Διαγραφή αρχείου προτιμήσεων: %s"
+
+msgid "Deleting preferences in HKEY_CURRENT_USER\\Software\\Pd-extended"
+msgstr ""
+
+msgid "Deleting preferences in HKEY_LOCAL_MACHINE\\Software\\Pd-extended"
+msgstr ""
 
 #, tcl-format
 msgid "Discard changes to '%s'?"
@@ -215,6 +252,10 @@ msgstr "Κατάσταση Επεξεργασίας"
 
 msgid "Edit library"
 msgstr "Επεξεργασία βιβλιοθήκης"
+
+#, tcl-format
+msgid "FAILED TO LOAD %s"
+msgstr "ΑΠΟΤΥΧΙΑ ΦΟΡΤΩΣΗΣ %s"
 
 msgid "File"
 msgstr "Αρχείο"
@@ -290,17 +331,17 @@ msgid "Input device 4:"
 msgstr "Συσκευή εισόδου 4:"
 
 msgid "Jack does not seem to be running, so Pd-extended cannot connect to it."
-msgstr ""
+msgstr "Το Jack φαίνεται να μη λειτουργεί, έτσι το Pd-extended δεν μπορεί να συνδεθεί με αυτό."
 
 msgid "Jack not installed!"
-msgstr ""
+msgstr "Δεν είναι  εγκατεστημένο το Jack!"
 
 msgid "Jack not running!"
-msgstr ""
+msgstr "Δε λειτουργεί το Jack!"
 
 msgid ""
 "JackOSX is not fully installed, Pd-extended cannot use Jack without it."
-msgstr ""
+msgstr "Το JackOSX δεν είναι πλήρως εγκατεστημένο, to Pd-extended δεν μπορεί να χρησιμοποιήσει το Jack χωρίς αυτό."
 
 msgid "Jump on click"
 msgstr "Υπερπήδηση μετά από κλικ"
@@ -323,6 +364,14 @@ msgstr "Όρια"
 msgid "Load Meter"
 msgstr "Μετρητής Φορτίου"
 
+#, tcl-format
+msgid "Loading plugin: %s"
+msgstr "Φόρτωση plugin: %s"
+
+#, tcl-format
+msgid "Loading translations for %s"
+msgstr "Φόρτωση μεταφράσεων για %s"
+
 msgid "Log:"
 msgstr "Ημερολόγιο:"
 
@@ -339,16 +388,35 @@ msgid "Magic Glass"
 msgstr "Προβολή διερχόμενων δεδομένων"
 
 msgid "Make app from folder..."
-msgstr ""
+msgstr "Φτιάξε εφαρμογή από φάκελο..."
 
 msgid "Make app from patch..."
-msgstr ""
+msgstr "Φτιάξε εφαρμογή από patch..."
+
+msgid "Making App"
+msgstr "Δημιουργία Εφαρμογής"
+
+#, tcl-format
+msgid "Making App in %s..."
+msgstr "Δημιουργία Εφαρμογής σε %s..."
 
 msgid "Margin:"
 msgstr "Περιθώριο:"
 
 msgid "Match whole word only"
 msgstr "Ταύτιση μόνο ολόκληρης λέξης"
+
+msgid "Max Binary Files"
+msgstr "Δυαδικά αρχεία του Max"
+
+msgid "Max Help Files"
+msgstr "Αρχεία βοήθειας του Max"
+
+msgid "Max Patch Files"
+msgstr "Αρχεία patch του Max"
+
+msgid "Max Text Files"
+msgstr "Αρχεία κειμένου του Max"
 
 msgid "Media"
 msgstr "Μέσα"
@@ -379,6 +447,10 @@ msgstr "Επόμενο Παράθυρο"
 
 msgid "No init"
 msgstr "Χωρίς αρχικοποίηση"
+
+msgid ""
+"No patch found! Select an open parent patch with the mouse, then try again."
+msgstr ""
 
 msgid "Number"
 msgstr "Αριθμός"
@@ -428,6 +500,9 @@ msgstr "Γονικό Παράθυρο"
 msgid "Paste"
 msgstr "Επικόλληση"
 
+msgid "Pd Files"
+msgstr "Αρχεία Pd"
+
 msgid "Pd Help Browser..."
 msgstr "Πλοηγός Βοήθειας Pd..."
 
@@ -474,7 +549,7 @@ msgid "Quit"
 msgstr "Έξοδος"
 
 msgid "Quit Pd-extended, start Jack, then try again."
-msgstr ""
+msgstr "Κλείστε το Pd-extended, ξεκινήστε το Jack, και προσπαθήστε ξανά."
 
 msgid "Range and size"
 msgstr "Περιοχή και μέγεθος"
@@ -518,8 +593,16 @@ msgstr "Αναφορά ενός σφάλματος"
 msgid "Reset to Defaults"
 msgstr "Προκαθορισμένα"
 
+#, tcl-format
+msgid "Reseting registry from %s"
+msgstr ""
+
 msgid "Right"
 msgstr "Δεξί"
+
+#, tcl-format
+msgid "Running: '%s %s'"
+msgstr "Λειτουργεί: '%s %s'"
 
 msgid "Sample rate:"
 msgstr "Τιμή δειγματοληψίας:"
@@ -562,6 +645,10 @@ msgstr "Ρύθμιση ενσωματωμένων προτιμήσεων..."
 
 msgid "Setting patch name..."
 msgstr "Προσδιορισμός ονόματος του patch..."
+
+#, tcl-format
+msgid "Setting up %s/Contents/Info.plist"
+msgstr ""
 
 msgid "Size:"
 msgstr "Μέγεθος:"
@@ -653,6 +740,14 @@ msgstr "Κάθετο κουτί επιλογών"
 msgid "Vslider"
 msgstr "Ρυθμιστής κάθετης ολίσθησης"
 
+#, tcl-format
+msgid "WARNING: Font family '%s' not found, using default (%s)"
+msgstr ""
+
+#, tcl-format
+msgid "WARNING: Font weight '%s' not found, using default (%s)"
+msgstr ""
+
 msgid "WARNING: unknown graphme flags received in pdtk_canvas_dialog"
 msgstr "ΠΡΟΕΙΔΟΠΟΙΗΣΗ: έχουν ληφθεί άγνωστα στοιχεία τύπου graphme στο pdtk_canvas_dialog"
 
@@ -706,6 +801,9 @@ msgstr "σφάλμα ήχου Ι/Ο "
 
 msgid "bottom:"
 msgstr "βάση:"
+
+msgid "converted Max binary to text format:"
+msgstr "μετατράπηκε η δυαδική σε μορφή κειμένου του Max:"
 
 msgid "debug"
 msgstr "αποσφαλμάτωση"
