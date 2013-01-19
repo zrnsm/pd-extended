@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Pure Data\n"
 "Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=55736&atid=478070\n"
-"POT-Creation-Date: 2013-01-09 00:45-0500\n"
-"PO-Revision-Date: 2013-01-10 06:08+0000\n"
+"POT-Creation-Date: 2013-01-11 23:46-0500\n"
+"PO-Revision-Date: 2013-01-19 05:52+0000\n"
 "Last-Translator: Sei Matsumura <serv@low-tech-ism.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -181,6 +181,13 @@ msgstr "コピー"
 msgid "Copying current patch..."
 msgstr "現在のパッチをコピー..."
 
+msgid "Could not delete 'HKEY_LOCAL_MACHINE\\Software\\Pd-extended':"
+msgstr "'HKEY_LOCAL_MACHINE\\Software\\Pd-extended' を削除できませんでした:"
+
+#, tcl-format
+msgid "Could not parse registry file: '%s'"
+msgstr "レジストリファイルを貼り付けられませんでした: '%s'"
+
 #, tcl-format
 msgid "Couldn't find '%s' in %s"
 msgstr "%sの中で'%s'が見つかりません"
@@ -212,6 +219,16 @@ msgstr "遅延(ミリ秒):"
 
 msgid "Delete array"
 msgstr "アレイを削除"
+
+#, tcl-format
+msgid "Deleting preferences file: %s"
+msgstr "初期設定ファイルを削除します: %s"
+
+msgid "Deleting preferences in HKEY_CURRENT_USER\\Software\\Pd-extended"
+msgstr " HKEY_CURRENT_USER\\Software\\Pd-extended の初期設定を削除します。"
+
+msgid "Deleting preferences in HKEY_LOCAL_MACHINE\\Software\\Pd-extended"
+msgstr "HKEY_LOCAL_MACHINE\\Software\\Pd-extended の初期設定を削除します。"
 
 #, tcl-format
 msgid "Discard changes to '%s'?"
@@ -575,6 +592,10 @@ msgstr "バグを報告する"
 
 msgid "Reset to Defaults"
 msgstr "デフォルトに初期化"
+
+#, tcl-format
+msgid "Reseting registry from %s"
+msgstr "%s からレジストリを再設定します。"
 
 msgid "Right"
 msgstr "右"
