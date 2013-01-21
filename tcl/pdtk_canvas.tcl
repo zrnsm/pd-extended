@@ -508,9 +508,9 @@ proc ::pdtk_canvas::pdtk_canvas_getscroll {tkcanvas} {
 }
 
 proc ::pdtk_canvas::pdtk_canvas_do_getscroll {tkcanvas} {
-    set mytoplevel [winfo toplevel $tkcanvas]
     # check canvas exists, windows close before [after idle] returns
-    if {![winfo exists $mytoplevel]} {return}
+    if {![winfo exists $tkcanvas]} {return}
+    set mytoplevel [winfo toplevel $tkcanvas]
     set bbox [$tkcanvas bbox all]
     if {$bbox eq "" || [llength $bbox] != 4} {return}
     set xupperleft [lindex $bbox 0]
