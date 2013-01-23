@@ -1087,7 +1087,7 @@ static void sys_loadstartup(void)
 #elif defined(__gnu_linux__) || defined(__AVAILABLE_MAC_OS_X_VERSION_10_6_AND_LATER)
                 /* safe, non-standard format of realpath(), with NULL resolved_name */
                 char* tmp = realpath(buf, NULL);
-                char resolved_path[strlen(tmp)];
+                char resolved_path[strlen(tmp)+1];
                 strcpy(resolved_path, tmp);
                 free(tmp);
 #else
