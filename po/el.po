@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Pure Data\n"
 "Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=55736&atid=478070\n"
 "POT-Creation-Date: 2013-01-11 23:46-0500\n"
-"PO-Revision-Date: 2013-01-18 03:30+0000\n"
+"PO-Revision-Date: 2013-01-31 01:40+0000\n"
 "Last-Translator: ktsoukalas <subscriber@labyrinthos.gr>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -182,11 +182,11 @@ msgid "Copying current patch..."
 msgstr "Αντιγραφή του τρέχοντος patch..."
 
 msgid "Could not delete 'HKEY_LOCAL_MACHINE\\Software\\Pd-extended':"
-msgstr ""
+msgstr "Αδυναμία διαγραφής του 'HKEY_LOCAL_MACHINE\\Software\\Pd-extended':"
 
 #, tcl-format
 msgid "Could not parse registry file: '%s'"
-msgstr ""
+msgstr "Αδυναμία ανάλυσης αρχείου μητρώου: '%s'"
 
 #, tcl-format
 msgid "Couldn't find '%s' in %s"
@@ -225,10 +225,10 @@ msgid "Deleting preferences file: %s"
 msgstr "Διαγραφή αρχείου προτιμήσεων: %s"
 
 msgid "Deleting preferences in HKEY_CURRENT_USER\\Software\\Pd-extended"
-msgstr ""
+msgstr "Διαγραφή προτιμήσεων στο  HKEY_CURRENT_USER\\Software\\Pd-extended"
 
 msgid "Deleting preferences in HKEY_LOCAL_MACHINE\\Software\\Pd-extended"
-msgstr ""
+msgstr "Διαγραφή προτιμήσεων στο  HKEY_LOCAL_MACHINE\\Software\\Pd-extended"
 
 #, tcl-format
 msgid "Discard changes to '%s'?"
@@ -450,7 +450,7 @@ msgstr "Χωρίς αρχικοποίηση"
 
 msgid ""
 "No patch found! Select an open parent patch with the mouse, then try again."
-msgstr ""
+msgstr "Δεν βρέθηκε patch! Επιλέξτε ένα ανοιχτό γονικό patch με το ποντίκι και προσπαθήστε ξανά."
 
 msgid "Number"
 msgstr "Αριθμός"
@@ -595,7 +595,7 @@ msgstr "Προκαθορισμένα"
 
 #, tcl-format
 msgid "Reseting registry from %s"
-msgstr ""
+msgstr "Αναστοιχειοθέτηση μητρώου από %s"
 
 msgid "Right"
 msgstr "Δεξί"
@@ -742,11 +742,11 @@ msgstr "Ρυθμιστής κάθετης ολίσθησης"
 
 #, tcl-format
 msgid "WARNING: Font family '%s' not found, using default (%s)"
-msgstr ""
+msgstr "ΠΡΟΕΙΔΟΠΟΙΗΣΗ: Η οικογένεια γραμματοσειράς '%s' δεν βρέθηκε, χρήση της προκαθορισμένης (%s)"
 
 #, tcl-format
 msgid "WARNING: Font weight '%s' not found, using default (%s)"
-msgstr ""
+msgstr "ΠΡΟΕΙΔΟΠΟΙΗΣΗ: Το βάρος γραμματοσειράς '%s' δεν βρέθηκε, χρήση προκαθορισμένου (%s)"
 
 msgid "WARNING: unknown graphme flags received in pdtk_canvas_dialog"
 msgstr "ΠΡΟΕΙΔΟΠΟΙΗΣΗ: έχουν ληφθεί άγνωστα στοιχεία τύπου graphme στο pdtk_canvas_dialog"
@@ -758,10 +758,10 @@ msgid "Window"
 msgstr "Παράθυρο"
 
 msgid "Would you like to open JackOSX.com to download Jack?"
-msgstr ""
+msgstr "Θα θέλατε να ανοίξετε το URL JackOSX.com για να μεταφορτώσετε την εφαρμογή Jack;"
 
 msgid "Would you like to open JackPilot to start Jack?"
-msgstr ""
+msgstr "Θα θέλατε να ανοίξετε την εφαρμογή JackPilot για να εκκινήσετε  την εφαρμογή Jack;"
 
 msgid "X and Y"
 msgstr "Χ και Y"
