@@ -36,12 +36,12 @@ MORECFLAGS = -O3 -funroll-loops -fomit-frame-pointer
 PADIR = $(pd_src)/portaudio
 ASIODIR = $(pd_src)/asio/ASIOSDK2
 ASIOINC = -I$(ASIODIR)/common -I$(ASIODIR)/host -I$(ASIODIR)/host/pc
-INCPA = -I$(PADIR) -I$(PADIR)/include -I$(PADIR)/src/common -I$(PADIR)/src/os/win $(ASIOINC)
 INCLUDE = -I$(pd_src)/src 
+INCPA = -I$(PADIR) -I$(PADIR)/include -I$(PADIR)/src/common -I$(PADIR)/src/os/win $(ASIOINC) -I"$(PROGRAMFILES)/Jack/includes"
 GINCLUDE = -I/usr/local/include $(INCLUDE)
 
 LDFLAGS = 
-LIBS = -lm -lwsock32 -lwinmm -lole32 -lpthreadGC2
+LIBS = -lm -lwsock32 -lwinmm -lole32 -lpthreadGC2 -lregex "$(PROGRAMFILES)/Jack/lib/libjack.lib"
 
 OPT_CFLAGS = 
 
@@ -53,7 +53,8 @@ WARN_CFLAGS = -Wall -W -Wstrict-prototypes -Wno-unused \
 # XP SP1.  WINVER isnt' fine-grained enough for that, so we use the
 # next minor version of Windows, 5.2.
 ARCH_CFLAGS = -DPD -DPD_INTERNAL -DPA_USE_ASIO -DPA_USE_WMME -DWINVER=0x0502 \
-	-DUSEAPI_MMIO -DUSEAPI_PORTAUDIO -mms-bitfields -DWISHAPP='"wish85.exe"'
+	-DUSEAPI_MMIO -DUSEAPI_PORTAUDIO -DUSEAPI_JACK -DJACK_XRUN \
+	-mms-bitfields -DWISHAPP='"wish85.exe"'
 
 CFLAGS += $(ARCH_CFLAGS) $(WARN_CFLAGS) $(OPT_CFLAGS) $(MORECFLAGS)
 
@@ -61,7 +62,7 @@ STRIP = strip --strip-unneeded -R .note -R .comment
 
 # the sources
 
-PASRC = s_audio_pa.c s_audio_paring.c \
+PASRC = s_audio_pa.c s_audio_paring.c s_audio_jack.c \
 	s_audio_mmio.c s_midi_mmio.c \
 	$(PADIR)/src/common/pa_stream.c \
         $(PADIR)/src/common/pa_trace.c \

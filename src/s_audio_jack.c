@@ -10,6 +10,7 @@
 #include "s_stuff.h"
 #include <jack/jack.h>
 #include <regex.h>
+#include <pthread.h>
 
 #define MAX_CLIENTS 100
 #define MAX_JACK_PORTS 128  /* seems like higher values give bad xrun problems */
