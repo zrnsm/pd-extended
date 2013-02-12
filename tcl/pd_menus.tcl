@@ -476,7 +476,7 @@ proc ::pd_menus::add_list_to_menu {mymenu window parentlist} {
 # update the list of windows on the Window menu. This expects run on the
 # Window menu, and to insert below the last separator
 proc ::pd_menus::update_window_menu {} {
-    set mymenu $::patch_menubar.window
+    set mymenu .menubar.window
     # find the last separator and delete everything after that
     for {set i 0} {$i <= [$mymenu index end]} {incr i} {
         if {[$mymenu type $i] eq "separator"} {

@@ -77,7 +77,7 @@ proc pdtk_canvas_new {mytoplevel width height geometry editable} {
     set ::loaded($mytoplevel) 0
     toplevel $mytoplevel -width $width -height $height -class PatchWindow
     wm group $mytoplevel .
-    $mytoplevel configure -menu $::patch_menubar
+    if {$::windowingsystem ne "aqua"} {$mytoplevel configure -menu .menubar}
 
     # we have to wait until $mytoplevel exists before we can generate
     # a <<Loading>> event for it, that's why this is here and not in the

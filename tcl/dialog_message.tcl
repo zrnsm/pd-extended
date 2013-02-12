@@ -62,7 +62,6 @@ proc ::dialog_message::create_dialog {mytoplevel} {
     wm geometry .message =400x80+150+150
     wm resizable .message 1 0
     wm minsize .message 250 80
-    .message configure -menu $::dialog_menubar
     .message configure -padx 10 -pady 5
     ::pd_bindings::dialog_bindings .message "message"
     # not all Tcl/Tk versions or platforms support -topmost, so catch the error

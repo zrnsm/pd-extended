@@ -27,10 +27,6 @@ proc ::helpbrowser::open_helpbrowser {} {
         wm title .help_browser [_ "Help Browser"]
         bind .help_browser <$::modifier-Key-w> "wm withdraw .help_browser"
 
-        if {$::windowingsystem eq "aqua"} {
-            .help_browser configure -menu $::dialog_menubar
-        }
-
         wm resizable .help_browser 0 0
         frame .help_browser.frame
         pack .help_browser.frame -side top -fill both

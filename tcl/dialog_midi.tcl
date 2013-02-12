@@ -88,7 +88,6 @@ proc ::dialog_midi::pdtk_midi_dialog {id indev1 indev2 indev3 indev4 \
     wm group $id .
     wm resizable $id 0 0
     wm transient $id
-    $id configure -menu $::dialog_menubar
     $id configure -padx 10 -pady 5
     ::pd_bindings::dialog_bindings $id "midi"
     # not all Tcl/Tk versions or platforms support -topmost, so catch the error
@@ -229,7 +228,6 @@ proc ::dialog_midi::pdtk_alsa_midi_dialog {id indev1 indev2 indev3 indev4 \
     
     toplevel $id
     wm title $id [_ "ALSA MIDI Settings"]
-    if {$::windowingsystem eq "aqua"} {$id configure -menu .menubar}
     ::pd_bindings::dialog_bindings $id "midi"
 
     frame $id.buttonframe

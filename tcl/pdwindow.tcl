@@ -412,7 +412,7 @@ proc ::pdwindow::create_window {} {
         wm minsize .pdwindow 400 51
     }
     wm geometry .pdwindow =500x400+20+50
-    .pdwindow configure -menu .menubar
+    if {$::windowingsystem ne "aqua"} {.pdwindow configure -menu .menubar}
 
     frame .pdwindow.header -borderwidth 1 -relief flat
     pack .pdwindow.header -side top -fill x -ipady 5

@@ -211,11 +211,6 @@ array set windowname {}    ;# window names based on mytoplevel IDs
 array set childwindows {}  ;# all child windows based on mytoplevel IDs
 array set parentwindows {} ;# topmost parent window ID based on mytoplevel IDs
 
-# variables for holding the menubar to allow for configuration by plugins
-set ::pdwindow_menubar ".menubar"
-set ::patch_menubar   ".menubar"
-set ::dialog_menubar   ""
-
 # minimum size of the canvas window of a patch
 set canvas_minwidth 50
 set canvas_minheight 20
@@ -336,8 +331,6 @@ proc init_for_platform {} {
             option add *DialogWindow*Entry.highlightBackground "#E8E8E8" startupFile
             option add *DialogWindow*Button.highlightBackground "#E8E8E8" startupFile
             option add *DialogWindow*Entry.background "white" startupFile
-            # Mac OS X needs a menubar all the time
-            set ::dialog_menubar ".menubar"
             # set file types that open/save recognize
             set ::filetypes \
                 [list \

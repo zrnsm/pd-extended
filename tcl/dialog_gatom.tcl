@@ -98,7 +98,6 @@ proc ::dialog_gatom::create_dialog {mytoplevel} {
     wm group $mytoplevel .
     wm resizable $mytoplevel 0 0
     wm transient $mytoplevel $::focused_window
-    $mytoplevel configure -menu $::dialog_menubar
     $mytoplevel configure -padx 0 -pady 0
     ::pd_bindings::dialog_bindings $mytoplevel "gatom"
 
